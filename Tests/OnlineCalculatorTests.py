@@ -1,33 +1,28 @@
-import unittest
-
 import time
-
-from Elements.CalculatorElements import CalculatorElements
-from selenium import webdriver
+from Elements.TestBase import CalculatorBase
 
 
-class CalculatorTests(unittest.TestCase):
-    driver = webdriver.Chrome()
 
-    def setUp(self):
-        self.driver.get('http://www.calculator.net/')
-        self.calculator = CalculatorElements(self.driver)
-
-    def tearDown(self):
-        self.driver.quit()
+class CalculatorTests(CalculatorBase):
 
 
     def testOpenScientificCalculator(self):
         self.calculator.openCalculator().click()
-        time.sleep(5)
-        assert self.calculator.scientificCalculator().is_displayed()
-
+        time.sleep(1)
+        self.assertTrue(self.calculator.scientificCalculator().is_displayed())
 
     def testScientificCalculatorSum1(self):
         self.calculator.openCalculator().click()
-        time.sleep(5)
-        self.calculator.numberButton(2).click()
-        self.calculator.plusButton().click()
-        self.calculator.numberButton(2).click()
-        self.calculator.equalButton().click()
-        self.assertEqual (self.calculator.result().text, '4.')
+        time.sleep(1)
+        self.assertTrue((self.calculator.sum(2, 2, 4)))
+
+    def testScientificCalculatorSum2(self):
+        self.calculator.openCalculator().click()
+        time.sleep(1)
+        self.assertTrue((self.calculator.sum(-2, 2, 0)))
+
+    def testScientificCalculatorSum3(self):
+        self.calculator.openCalculator().click()
+        time.sleep(1)
+        self.assertTrue((self.calculator.bigSum(1000, 1000, 2000)))
+

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Webdriver/WebdriverBase.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Webdriver/geckodriver.log" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Elements/TestBase.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/__init__.py" afterPath="$PROJECT_DIR$/Elements/CalculatorElements.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Webdriver/__init__.py" afterPath="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" afterPath="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Elements/CalculatorElements.py" afterPath="$PROJECT_DIR$/Elements/Calculator.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +28,20 @@
       <file leaf-file-name="OnlineCalculatorTests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/OnlineCalculatorTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="306">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestBase.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Elements/TestBase.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -38,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalculatorElements.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Elements/CalculatorElements.py">
+      <file leaf-file-name="Calculator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Elements/Calculator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,7 +82,10 @@
         <option value="$PROJECT_DIR$/../Selenium/Webdriver/WebdriverBase.py" />
         <option value="$PROJECT_DIR$/Webdriver/WebdriverBase.py" />
         <option value="$PROJECT_DIR$/Elements/CalculatorElements.py" />
+        <option value="$PROJECT_DIR$/Elements/CalculatorBase.py" />
+        <option value="$PROJECT_DIR$/Elements/TestBase.py" />
         <option value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
+        <option value="$PROJECT_DIR$/Elements/Calculator.py" />
       </list>
     </option>
   </component>
@@ -158,95 +172,7 @@
       </pane>
     </panes>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest CalculatorTests.testScientificCalculatorSum1">
-    <configuration default="false" name="Unittests in CalculatorTests (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
-      <option name="CLASS_NAME" value="CalculatorTests" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in CalculatorTests (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
-      <option name="CLASS_NAME" value="CalculatorTests" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest CalculatorTests.testOpenFullScreenCalculator" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
-      <option name="CLASS_NAME" value="CalculatorTests" />
-      <option name="METHOD_NAME" value="testOpenFullScreenCalculator" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest CalculatorTests.testOpenScientificCalculator" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
-      <option name="CLASS_NAME" value="CalculatorTests" />
-      <option name="METHOD_NAME" value="testOpenScientificCalculator" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests in OnlineCalculatorTests">
     <configuration default="false" name="Unittest CalculatorTests.testScientificCalculatorSum1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -260,6 +186,94 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
       <option name="CLASS_NAME" value="CalculatorTests" />
       <option name="METHOD_NAME" value="testScientificCalculatorSum1" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in OnlineCalculatorTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SeleniumPython" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in CalculatorTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SeleniumPython" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
+      <option name="CLASS_NAME" value="CalculatorTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest CalculatorTests.testScientificCalculatorSum2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SeleniumPython" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
+      <option name="CLASS_NAME" value="CalculatorTests" />
+      <option name="METHOD_NAME" value="testScientificCalculatorSum2" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest CalculatorTests.testScientificCalculatorSum3" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SeleniumPython" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
+      <option name="CLASS_NAME" value="CalculatorTests" />
+      <option name="METHOD_NAME" value="testScientificCalculatorSum3" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -404,19 +418,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in CalculatorTests (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in CalculatorTests (2)" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testOpenFullScreenCalculator" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testOpenScientificCalculator" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum1" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum1" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in OnlineCalculatorTests" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in CalculatorTests" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum2" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum3" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum1" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testOpenScientificCalculator" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testOpenFullScreenCalculator" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in CalculatorTests (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in CalculatorTests (2)" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in OnlineCalculatorTests" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum2" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum3" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum1" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in CalculatorTests" />
       </list>
     </recent_temporary>
   </component>
@@ -441,46 +455,53 @@
       <option name="project" value="LOCAL" />
       <updated>1478796706736</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="online calculator tests">
+      <created>1478812686632</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1478812686632</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_CalculatorTests_testOpenScientificCalculator - 2016.11.10 at 21h 53m 27s.xml">
-      <configuration name="Unittest CalculatorTests.testOpenScientificCalculator" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testOpenScientificCalculator - 2016.11.10 at 21h 54m 00s.xml">
-      <configuration name="Unittest CalculatorTests.testOpenScientificCalculator" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum1 - 2016.11.10 at 22h 05m 09s.xml">
+    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum1 - 2016.11.10 at 23h 01m 08s.xml">
       <configuration name="Unittest CalculatorTests.testScientificCalculatorSum1" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum1 - 2016.11.10 at 22h 05m 38s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum1" configurationId="tests" />
+    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum2 - 2016.11.10 at 23h 03m 47s.xml">
+      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum2" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum1 - 2016.11.10 at 22h 06m 39s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum1" configurationId="tests" />
+    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum2 - 2016.11.10 at 23h 13m 49s.xml">
+      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum2" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum1 - 2016.11.10 at 22h 08m 30s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum1" configurationId="tests" />
+    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum2 - 2016.11.10 at 23h 16m 45s.xml">
+      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum2" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum1 - 2016.11.10 at 22h 14m 05s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum1" configurationId="tests" />
+    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum2 - 2016.11.10 at 23h 18m 21s.xml">
+      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum2" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum1 - 2016.11.10 at 22h 15m 22s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum1" configurationId="tests" />
+    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum3 - 2016.11.10 at 23h 09m 53s.xml">
+      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum3" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum1 - 2016.11.10 at 22h 15m 49s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum1" configurationId="tests" />
+    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum3 - 2016.11.10 at 23h 10m 34s.xml">
+      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum3" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum1 - 2016.11.10 at 22h 16m 24s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum1" configurationId="tests" />
+    <history-entry file="Unittests_in_CalculatorTests - 2016.11.10 at 22h 59m 36s.xml">
+      <configuration name="Unittests in CalculatorTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2016.11.10 at 23h 03m 01s.xml">
+      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2016.11.10 at 23h 19m 25s.xml">
+      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -512,7 +533,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="online calculator tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="online calculator tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -540,7 +562,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -574,7 +596,7 @@
         <state relative-caret-position="238">
           <caret line="17" column="19" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="32" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -643,20 +665,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Elements/CalculatorElements.py">
+    <entry file="file://$PROJECT_DIR$/Elements/TestBase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state relative-caret-position="323">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elements/Calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/OnlineCalculatorTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="306">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="36" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
