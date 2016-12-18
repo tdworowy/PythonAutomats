@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Elements/TestBase.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Calculator/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" afterPath="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Elements/CalculatorElements.py" afterPath="$PROJECT_DIR$/Elements/Calculator.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Elements/Calculator.py" afterPath="$PROJECT_DIR$/Calculator/Elements/Calculator.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Elements/TestBase.py" afterPath="$PROJECT_DIR$/Calculator/Elements/TestBase.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" afterPath="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Utils/__init__.py" afterPath="$PROJECT_DIR$/Calculator/Utils/__init__.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OnlineCalculatorTests.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Tests/OnlineCalculatorTests.py">
+      <file leaf-file-name="OnlineCalculatorTests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="36" />
+            <state relative-caret-position="85">
+              <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -37,11 +41,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Calculator/Utils/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TestBase.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Elements/TestBase.py">
+        <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="19" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -49,11 +63,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calculator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Elements/Calculator.py">
+      <file leaf-file-name="songOfTheDay.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="419">
+              <caret line="65" column="72" lean-forward="false" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="72" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/imp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utrunner.py" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Calculator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -72,7 +118,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Develop" />
       </map>
     </option>
   </component>
@@ -86,6 +132,8 @@
         <option value="$PROJECT_DIR$/Elements/TestBase.py" />
         <option value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
         <option value="$PROJECT_DIR$/Elements/Calculator.py" />
+        <option value="$PROJECT_DIR$/Calculator/Elements/TestBase.py" />
+        <option value="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" />
       </list>
     </option>
   </component>
@@ -94,16 +142,6 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -120,14 +158,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="SeleniumPython" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SeleniumPython" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chromedriver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -139,6 +185,10 @@
               <option name="myItemId" value="SeleniumPython" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SongOfTheDay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -147,6 +197,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SeleniumPython" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calculator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SeleniumPython" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SeleniumPython" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calculator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -164,6 +232,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Calculator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Elements" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -172,63 +244,28 @@
       </pane>
     </panes>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in OnlineCalculatorTests">
-    <configuration default="false" name="Unittest CalculatorTests.testScientificCalculatorSum1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Google_drive\Python\SeleniumPython\Calculator" />
+      <recent name="D:\Google_drive\Python\SeleniumPython\Calculator\Elements" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests in songOfTheDay (2)">
+    <configuration default="false" name="Unittests in songOfTheDay (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SongOfTheDay" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
-      <option name="CLASS_NAME" value="CalculatorTests" />
-      <option name="METHOD_NAME" value="testScientificCalculatorSum1" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in OnlineCalculatorTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in CalculatorTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
-      <option name="CLASS_NAME" value="CalculatorTests" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" />
+      <option name="CLASS_NAME" value="songOfTheDay" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_CLASS" />
@@ -239,21 +276,21 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest CalculatorTests.testScientificCalculatorSum2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in songOfTheDay (3)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SongOfTheDay" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
-      <option name="CLASS_NAME" value="CalculatorTests" />
-      <option name="METHOD_NAME" value="testScientificCalculatorSum2" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" />
+      <option name="CLASS_NAME" value="songOfTheDay" />
+      <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -261,21 +298,65 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest CalculatorTests.testScientificCalculatorSum3" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in songOfTheDay (4)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SongOfTheDay" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OnlineCalculatorTests.py" />
-      <option name="CLASS_NAME" value="CalculatorTests" />
-      <option name="METHOD_NAME" value="testScientificCalculatorSum3" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" />
+      <option name="CLASS_NAME" value="songOfTheDay" />
+      <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in songOfTheDay (5)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SongOfTheDay" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SeleniumPython" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" />
+      <option name="CLASS_NAME" value="songOfTheDay" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in songOfTheDay (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SongOfTheDay" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SeleniumPython" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" />
+      <option name="CLASS_NAME" value="songOfTheDay" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -418,19 +499,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum1" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in OnlineCalculatorTests" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in CalculatorTests" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum2" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum3" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (3)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (4)" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (5)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (2)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in OnlineCalculatorTests" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum2" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum3" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum1" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in CalculatorTests" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (2)" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (5)" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (4)" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (3)" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -462,43 +543,50 @@
       <option name="project" value="LOCAL" />
       <updated>1478812686632</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="online calculator tests update">
+      <created>1478816380405</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1478816380405</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum1 - 2016.11.10 at 23h 01m 08s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum1" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.18 at 19h 12m 45s.xml">
+      <configuration name="Unittests in songOfTheDay" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum2 - 2016.11.10 at 23h 03m 47s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum2" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay_(1) - 2016.12.18 at 19h 13m 28s.xml">
+      <configuration name="Unittests in songOfTheDay (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum2 - 2016.11.10 at 23h 13m 49s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum2" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay_(2) - 2016.12.18 at 19h 11m 42s.xml">
+      <configuration name="Unittests in songOfTheDay (2)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum2 - 2016.11.10 at 23h 16m 45s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum2" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay_(2) - 2016.12.18 at 19h 21m 00s.xml">
+      <configuration name="Unittests in songOfTheDay (2)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum2 - 2016.11.10 at 23h 18m 21s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum2" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay_(3) - 2016.12.18 at 19h 03m 58s.xml">
+      <configuration name="Unittests in songOfTheDay (3)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum3 - 2016.11.10 at 23h 09m 53s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum3" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay_(3) - 2016.12.18 at 19h 13m 58s.xml">
+      <configuration name="Unittests in songOfTheDay (3)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum3 - 2016.11.10 at 23h 10m 34s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum3" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay_(4) - 2016.12.18 at 19h 05m 32s.xml">
+      <configuration name="Unittests in songOfTheDay (4)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_CalculatorTests - 2016.11.10 at 22h 59m 36s.xml">
-      <configuration name="Unittests in CalculatorTests" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay_(4) - 2016.12.18 at 19h 15m 21s.xml">
+      <configuration name="Unittests in songOfTheDay (4)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2016.11.10 at 23h 03m 01s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay_(5) - 2016.12.18 at 19h 10m 29s.xml">
+      <configuration name="Unittests in songOfTheDay (5)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2016.11.10 at 23h 19m 25s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay_(5) - 2016.12.18 at 19h 19m 25s.xml">
+      <configuration name="Unittests in songOfTheDay (5)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -510,7 +598,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -534,161 +622,198 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="online calculator tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="online calculator tests" />
+    <MESSAGE value="online calculator tests update" />
+    <option name="LAST_COMMIT_MESSAGE" value="online calculator tests update" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/__init__.py">
+    <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/OnlineCalculatorTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Webdriver/geckodriver.log">
+    <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/OnlineCalculatorTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webdriver/geckodriver.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webdriver/geckodriver.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Elements/TestBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="34">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="19" selection-end-column="19" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Elements/Calculator.py">
+    <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/OnlineCalculatorTests.py">
+    <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="36" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py" />
+    <entry file="file://$PROJECT_DIR$/Tests/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Webdriver/geckodriver.log" />
+    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py" />
+    <entry file="file://$PROJECT_DIR$/Tests/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Webdriver/geckodriver.log" />
+    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py" />
+    <entry file="file://$PROJECT_DIR$/Tests/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py" />
+    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py" />
+    <entry file="file://$PROJECT_DIR$/Webdriver/geckodriver.log" />
+    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py" />
+    <entry file="file://$PROJECT_DIR$/Tests/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Calculator/Utils/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/imp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="65" column="72" lean-forward="false" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

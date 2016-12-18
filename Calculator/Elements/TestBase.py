@@ -1,7 +1,8 @@
 import unittest
 
-from Elements.Calculator import CalculatorElements
 from selenium import webdriver
+
+from Calculator.Elements.Calculator import CalculatorElements
 
 class CalculatorBase(unittest.TestCase):
 

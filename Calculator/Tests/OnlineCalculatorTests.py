@@ -1,6 +1,6 @@
 import time
-from Elements.TestBase import CalculatorBase
 
+from Calculator.Elements.TestBase import CalculatorBase
 
 
 class CalculatorTests(CalculatorBase):
