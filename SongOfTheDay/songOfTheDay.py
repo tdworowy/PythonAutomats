@@ -2,7 +2,6 @@ import unittest
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
-from Calculator.Elements.Calculator import CalculatorElements
 
 
 class songOfTheDay(unittest.TestCase):
@@ -38,15 +37,16 @@ class songOfTheDay(unittest.TestCase):
         loginButton = self.driver.find_element_by_id("loginbutton")
         loginButton.click()
         self.driver.implicitly_wait(60)
-        self.driver.implicitly_wait(30)
-        searchSkype = self.driver.find_element_by_css_selector("div[class='input.active'] input[role='search']") # fail
+
+        searchSkype = self.driver.find_element_by_css_selector("div.input input.inputField.fontSize-h4")
         searchSkype.click()
+        searchSkype = self.driver.find_element_by_css_selector("div.input.active input.inputField.fontSize-h4")
         searchSkype.send_keys("A smiechom i szopom nie było konca")
-
-        group = self.driver.find_element_by_class_name("strong")
+        self.driver.implicitly_wait(5)
+        group = self.driver.find_element_by_class_name("list-selectable")
         group.click()
-
-        messageImput = self.driver.find_element_by_id("chatInputContainer")
+        self.driver.implicitly_wait(5)
+        messageImput = self.driver.find_element_by_css_selector("div#chatInputContainer.container textarea#chatInputAreaWithQuotes")# fail
         messageImput.click()
         messageImput.send_keys("Piosenka Dnia [AUTO]")
         messageImput.send_keys(Keys.ENTER)
@@ -55,7 +55,6 @@ class songOfTheDay(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
-
         self.driver.maximize_window()
         self.driver.implicitly_wait(2)
 
@@ -63,7 +62,7 @@ class songOfTheDay(unittest.TestCase):
         self.driver.quit()
 
     def testsongOfTheDay(self):
-         self.sentSong(["***","****"],self.findSong("paranoid")) # TODO load data from file
+         self.sentSong(["dworowytomasz@gmail.com","Jefferson Airplane1966!"],self.findSong("paranoid")) # TODO load data from file
 
 
 if __name__ == '__main__':
