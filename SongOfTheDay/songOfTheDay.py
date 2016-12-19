@@ -62,7 +62,7 @@ class songOfTheDay(unittest.TestCase):
         self.driver.quit()
 
     def testsongOfTheDay(self):
-         self.sentSong(["dworowytomasz@gmail.com","Jefferson Airplane1966!"],self.findSong("paranoid")) # TODO load data from file
+         self.sentSong(["**","***"],self.findSong("paranoid")) # TODO load data from file
 
 
 if __name__ == '__main__':
