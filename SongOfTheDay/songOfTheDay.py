@@ -49,7 +49,7 @@ class songOfTheDay():
 
         searchSkype = self.driver.find_element_by_css_selector("div.input.active input.inputField.fontSize-h4")
         searchSkype.send_keys(name)
-        self.driver.implicitly_wait(5)
+        time.sleep(1)
         group = self.driver.find_element_by_class_name("list-selectable")
         group.click()
 
@@ -64,7 +64,7 @@ class songOfTheDay():
         searchButton.click()
 
         time.sleep(2)
-        firstResoult = self.driver.find_element_by_css_selector("h3")
+        firstResoult = self.driver.find_element_by_css_selector("h3 a")
         firstResoult.click()
         time.sleep(2)
 
@@ -100,7 +100,7 @@ def main():
 
       song = songOfTheDay()
 
-      autentycation = ["dworowytomasz@gmail.com","Jefferson Airplane1966!"]
+      autentycation = ["***","***"]
 
       url= song.findSong("paranoid")
       song.sentSong(autentycation , url)
@@ -108,6 +108,7 @@ def main():
 
   except Exception  as err:
     print(err)
+
   finally:
     quit()
 
