@@ -1,4 +1,3 @@
-import unittest
 
 import time
 
@@ -15,7 +14,7 @@ class songOfTheDay():
         self.setUp()
 
     def sendMessageToSelected(self,message):
-        element = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.TAG_NAME, 'swx-textarea')))
+        element = WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.TAG_NAME, 'swx-textarea')))
         element = element.find_element_by_tag_name("textarea")
         element.click()
         element.clear()
@@ -40,8 +39,8 @@ class songOfTheDay():
 
         loginButton = self.driver.find_element_by_id("loginbutton")
         loginButton.click()
-        WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.CLASS_NAME, 'summary')))
-        WebDriverWait(self.driver, 30).until_not(EC.visibility_of_element_located((By.CLASS_NAME, 'shellSplashContent')))
+        WebDriverWait(self.driver, 40).until(EC.visibility_of_any_elements_located((By.CSS_SELECTOR, "div.input input.inputField.fontSize-h4")))
+
 
     def select(self,name):
         searchSkype = self.driver.find_element_by_css_selector("div.input input.inputField.fontSize-h4")
@@ -53,8 +52,6 @@ class songOfTheDay():
         self.driver.implicitly_wait(5)
         group = self.driver.find_element_by_class_name("list-selectable")
         group.click()
-        self.driver.implicitly_wait(5)
-        time.sleep(2)
 
 
 
@@ -66,10 +63,11 @@ class songOfTheDay():
         input.send_keys(song)
         searchButton.click()
 
-        self.driver.implicitly_wait(5)
+        time.sleep(2)
         firstResoult = self.driver.find_element_by_css_selector("h3")
         firstResoult.click()
-        self.driver.implicitly_wait(3)
+        time.sleep(2)
+
         return self.driver.current_url
 
 
@@ -80,9 +78,8 @@ class songOfTheDay():
         self.login(autentycation)
 
         self.select("A smiechom i szopom nie było konca")
-
         self.sendMessageToSelected("Piosenka dina [Auto]")
-        self.sendMessageToSelected("songURL")
+        self.sendMessageToSelected(songURL)
 
     def setUp(self):
         self.driver = webdriver.Chrome()

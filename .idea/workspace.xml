@@ -48,7 +48,7 @@
       <file leaf-file-name="TestBase.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="255">
               <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="19" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -60,10 +60,10 @@
       <file leaf-file-name="songOfTheDay.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="493">
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#1#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,7 +72,7 @@
       <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/unittest/case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
+            <state relative-caret-position="10047">
               <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
               <folding />
             </state>
@@ -162,8 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -246,6 +244,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -507,10 +507,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.songOfTheDay" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (2)" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (3)" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (2)" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in songOfTheDay (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -563,23 +563,30 @@
       <option name="project" value="LOCAL" />
       <updated>1482167584839</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update">
+      <created>1482252211960</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1482252211960</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_songOfTheDay_testsongOfTheDay - 2016.12.20 at 17h 07m 10s.xml">
-      <configuration name="Unittest songOfTheDay.testsongOfTheDay" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_songOfTheDay_testsongOfTheDay - 2016.12.20 at 17h 08m 18s.xml">
-      <configuration name="Unittest songOfTheDay.testsongOfTheDay" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_songOfTheDay_testsongOfTheDay - 2016.12.20 at 17h 08m 20s.xml">
-      <configuration name="Unittest songOfTheDay.testsongOfTheDay" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_songOfTheDay_testsongOfTheDay - 2016.12.20 at 17h 13m 10s.xml">
-      <configuration name="Unittest songOfTheDay.testsongOfTheDay" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 17h 15m 55s.xml">
+      <configuration name="Unittests in songOfTheDay" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 17h 50m 53s.xml">
+      <configuration name="Unittests in songOfTheDay" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 17h 53m 36s.xml">
+      <configuration name="Unittests in songOfTheDay" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 17h 57m 58s.xml">
+      <configuration name="Unittests in songOfTheDay" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 17h 58m 06s.xml">
       <configuration name="Unittests in songOfTheDay" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_songOfTheDay_(1) - 2016.12.20 at 17h 11m 16s.xml">
@@ -635,20 +642,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="online calculator tests" />
     <MESSAGE value="online calculator tests update" />
-    <MESSAGE value="update" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="13" />
+          <line>16</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -718,7 +730,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#1#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -788,7 +800,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#1#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -970,7 +982,7 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
+        <state relative-caret-position="10047">
           <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
           <folding />
         </state>
@@ -978,7 +990,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="255">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="19" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -996,10 +1008,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="493">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#1#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
