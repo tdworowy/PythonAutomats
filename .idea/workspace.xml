@@ -36,11 +36,21 @@
       <file leaf-file-name="songOfTheDay.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="118" column="19" lean-forward="true" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
+            <state relative-caret-position="401">
+              <caret line="111" column="26" lean-forward="true" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="suite.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/unittest/suite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-136">
+              <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -510,30 +520,37 @@
       <option name="project" value="LOCAL" />
       <updated>1482252211960</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update">
+      <created>1482258816285</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1482258816285</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 17h 15m 55s.xml">
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 22h 29m 10s.xml">
       <configuration name="Unittests in songOfTheDay" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 17h 50m 53s.xml">
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 22h 29m 13s.xml">
       <configuration name="Unittests in songOfTheDay" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 17h 53m 36s.xml">
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 22h 34m 23s.xml">
       <configuration name="Unittests in songOfTheDay" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 17h 57m 58s.xml">
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 22h 54m 08s.xml">
       <configuration name="Unittests in songOfTheDay" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 17h 58m 06s.xml">
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 23h 12m 20s.xml">
       <configuration name="Unittests in songOfTheDay" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_songOfTheDay_(1) - 2016.12.20 at 17h 11m 16s.xml">
-      <configuration name="Unittests in songOfTheDay (1)" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 23h 18m 43s.xml">
+      <configuration name="Unittests in songOfTheDay" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_songOfTheDay_(1) - 2016.12.20 at 17h 24m 49s.xml">
-      <configuration name="Unittests in songOfTheDay (1)" configurationId="tests" />
+    <history-entry file="Unittests_in_songOfTheDay - 2016.12.20 at 23h 20m 52s.xml">
+      <configuration name="Unittests in songOfTheDay" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_songOfTheDay_(2) - 2016.12.20 at 17h 23m 07s.xml">
       <configuration name="Unittests in songOfTheDay (2)" configurationId="tests" />
@@ -549,7 +566,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.246875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -591,28 +608,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py</url>
           <line>52</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3145">
-          <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py" />
     <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
     <entry file="file://$PROJECT_DIR$/Calculator/Utils/__init__.py" />
@@ -732,10 +736,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="118" column="19" lean-forward="true" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
+        <state relative-caret-position="401">
+          <caret line="111" column="26" lean-forward="true" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
