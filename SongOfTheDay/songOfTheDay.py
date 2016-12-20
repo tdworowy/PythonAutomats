@@ -1,4 +1,4 @@
-
+import getpass
 import time
 
 from selenium.webdriver.common.by import By
@@ -95,12 +95,12 @@ class songOfTheDay():
 
 
 
-def main():
+def main(login,password):
   try:
 
       song = songOfTheDay()
 
-      autentycation = ["***","***"]
+      autentycation = [login,password]
 
       url= song.findSong("paranoid")
       song.sentSong(autentycation , url)
@@ -114,4 +114,6 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    var1 = input("Login: ")
+    var2 = getpass.getpass("Pass: ")
+    main(var1,var2)
