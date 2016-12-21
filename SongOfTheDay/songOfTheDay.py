@@ -1,4 +1,5 @@
 import getpass
+import random
 import time
 
 from selenium.webdriver import ActionChains
@@ -61,7 +62,7 @@ class songOfTheDay():
         input.click()
         input.send_keys(song)
         searchButton.click()
-
+        time.sleep(2)
         firstResoult = self.driver.find_element_by_css_selector("h3 a")
         firstResoult.click()
         time.sleep(1)
@@ -93,10 +94,15 @@ def main(login, password):
     try:
 
         song = songOfTheDay()
-
+        f = open('file.txt', 'r')
+        songsList = f.read()
+        songsList=songsList.split("\n")
         autentycation = [login, password]
 
-        url = song.findSong("paranoid")
+        ran= random.randrange(len(songsList))
+        print(songsList[ran])
+        url = song.findSong(songsList[ran].strip())
+       # url = song.findSong("Paranoid")
         song.sentSong(autentycation, url)
         song.tearDown()
 
