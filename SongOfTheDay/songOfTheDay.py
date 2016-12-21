@@ -74,7 +74,7 @@ class songOfTheDay():
 
         self.select("Echo")
         self.select("A smiechom i szopom nie było konca")
-        self.sendMessageToSelected("Piosenka dina [Auto]")
+        self.sendMessageToSelected("Piosenka dnia [Auto]")
         self.sendMessageToSelected(songURL)
 
     def setUp(self):
@@ -85,9 +85,6 @@ class songOfTheDay():
     def tearDown(self):
         self.driver.quit()
 
-    def testsongOfTheDay(self):
-        self.sentSong(["dworowytomasz@gmail.com", "Jefferson Airplane1966!"],
-                      self.findSong("paranoid"))  # TODO load data from file
 
 
 def main(login, password):
@@ -102,7 +99,6 @@ def main(login, password):
         ran= random.randrange(len(songsList))
         print(songsList[ran])
         url = song.findSong(songsList[ran].strip())
-       # url = song.findSong("Paranoid")
         song.sentSong(autentycation, url)
         song.tearDown()
 
