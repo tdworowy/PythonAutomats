@@ -128,6 +128,8 @@ def main(login, password):
 
 
 if __name__ == '__main__':
-    var1 = input("Login: ")
-    var2 = input("Pass: ")
-    main(var1, var2)
+    # var1 = input("Login: ")
+    #var2 = input("Pass: ")
+    f= open("aut.txt")
+
+    main(f.readline().strip(), f.readline().strip())
