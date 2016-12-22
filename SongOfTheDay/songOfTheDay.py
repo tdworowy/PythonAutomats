@@ -8,11 +8,29 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
+import datetime
+from datetime import date
+import calendar
+
 
 
 class songOfTheDay():
     def __init__(self):
         self.setUp()
+
+    def mesageByTime(self):
+        now = datetime.datetime.now()
+        today7 = now.replace(hour=7, minute=0, second=0, microsecond=0)
+        today16 = now.replace(hour=16, minute=0, second=0, microsecond=0)
+        today20 = now.replace(hour=16, minute=0, second=0, microsecond=0)
+        dateToday = date.today()
+
+        if calendar.day_name[dateToday.weekday()] is "Saturday" : "Piosenka na sobote[auto]"
+        elif calendar.day_name[dateToday.weekday()] is "Sunday": "Piosenka na niedziele[auto]"
+        elif today7 <= now <= today16 : return  "Piosenka dnia[auto]"
+        elif today16 <  now <= today20: return "Piosenka na wieczór[auto]"
+        elif  now > today20: return "Piosenka na noc[auto]"
+
 
     def sendMessageToSelected(self, message):
 
@@ -74,7 +92,7 @@ class songOfTheDay():
 
         self.select("Echo")
         self.select("A smiechom i szopom nie było konca")
-        self.sendMessageToSelected("Piosenka dnia [Auto]")
+        self.sendMessageToSelected(self.mesageByTime())
         self.sendMessageToSelected(songURL)
 
     def setUp(self):
