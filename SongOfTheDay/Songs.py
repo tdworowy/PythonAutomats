@@ -15,7 +15,7 @@ def getSongs():
         for text in titles:
             #print(text)
            if "—" in text:
-               i = text.index("—")+1
+               i = text.index("title=\"")+7
                print(text[i:-1])
                print(text[i:-1], file=f)
 
