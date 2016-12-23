@@ -1,4 +1,5 @@
 import getpass
+import os
 import random
 import time
 
@@ -109,7 +110,7 @@ def main(login, password):
     try:
 
         song = songOfTheDay()
-        f = open('D:\Google_drive\Python\SeleniumPython\SongOfTheDay\\file.txt', 'r')
+        f = open(os.path.dirname(os.path.abspath(__file__))+'\\file.txt', 'r')
         songsList = f.read()
         songsList=songsList.split("\n")
         autentycation = [login, password]
@@ -130,6 +131,6 @@ def main(login, password):
 if __name__ == '__main__':
     # var1 = input("Login: ")
     #var2 = input("Pass: ")
-    f= open("D:\Google_drive\Python\SeleniumPython\SongOfTheDay\\aut.txt")
+    f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
 
     main(f.readline().strip(), f.readline().strip())
