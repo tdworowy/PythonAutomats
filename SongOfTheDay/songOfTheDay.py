@@ -109,7 +109,7 @@ def main(login, password):
     try:
 
         song = songOfTheDay()
-        f = open('file.txt', 'r')
+        f = open('D:\Google_drive\Python\SeleniumPython\SongOfTheDay\\file.txt', 'r')
         songsList = f.read()
         songsList=songsList.split("\n")
         autentycation = [login, password]
@@ -130,6 +130,6 @@ def main(login, password):
 if __name__ == '__main__':
     # var1 = input("Login: ")
     #var2 = input("Pass: ")
-    f= open("aut.txt")
+    f= open("D:\Google_drive\Python\SeleniumPython\SongOfTheDay\\aut.txt")
 
     main(f.readline().strip(), f.readline().strip())
