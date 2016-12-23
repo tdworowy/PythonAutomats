@@ -23,7 +23,7 @@ class songOfTheDay():
         now = datetime.datetime.now()
         today7 = now.replace(hour=7, minute=0, second=0, microsecond=0)
         today16 = now.replace(hour=16, minute=0, second=0, microsecond=0)
-        today20 = now.replace(hour=16, minute=0, second=0, microsecond=0)
+        today20 = now.replace(hour=20, minute=0, second=0, microsecond=0)
         dateToday = date.today()
 
         if dateToday.month == 12:
@@ -31,7 +31,7 @@ class songOfTheDay():
             if dateToday.day == 25: return "Piosenka na pierwszy dzień świąt bożego narodzenia[Auto]"
             if dateToday.day == 26: return "Piosenka na drugi dzień świąt bożego narodzenia[Auto]"
             if dateToday.day == 31: return "Piosenka na Sylwestra ![Auto]"
-        elif calendar.day_name[dateToday.weekday()] is "Saturday" : "Piosenka na sobote[Auto]"
+        if calendar.day_name[dateToday.weekday()] is "Saturday" : "Piosenka na sobote[Auto]"
         elif calendar.day_name[dateToday.weekday()] is "Sunday": "Piosenka na niedziele[Auto]"
         elif today7 <= now <= today16 : return  "Piosenka dnia[Auto]"
         elif today16 <  now <= today20: return "Piosenka na wieczór[Auto]"
@@ -133,9 +133,11 @@ def main(login, password):
         quit()
 
 
+
 if __name__ == '__main__':
     # var1 = input("Login: ")
     #var2 = input("Pass: ")
-    f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
+   f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
 
-    main(f.readline().strip(), f.readline().strip())
+   main(f.readline().strip(), f.readline().strip())
+   main()
