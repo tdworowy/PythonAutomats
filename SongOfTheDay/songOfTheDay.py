@@ -26,11 +26,16 @@ class songOfTheDay():
         today20 = now.replace(hour=16, minute=0, second=0, microsecond=0)
         dateToday = date.today()
 
-        if calendar.day_name[dateToday.weekday()] is "Saturday" : "Piosenka na sobote[auto]"
-        elif calendar.day_name[dateToday.weekday()] is "Sunday": "Piosenka na niedziele[auto]"
-        elif today7 <= now <= today16 : return  "Piosenka dnia[auto]"
-        elif today16 <  now <= today20: return "Piosenka na wieczór[auto]"
-        elif  now > today20: return "Piosenka na noc[auto]"
+        if dateToday.month == 12:
+            if dateToday.day == 24: return "Piosenka na wigilie[Auto]"
+            if dateToday.day == 25: return "Piosenka na pierwszy dzień świąt bożego narodzenia[Auto]"
+            if dateToday.day == 26: return "Piosenka na drugi dzień świąt bożego narodzenia[Auto]"
+            if dateToday.day == 31: return "Piosenka na Sylwestra ![Auto]"
+        elif calendar.day_name[dateToday.weekday()] is "Saturday" : "Piosenka na sobote[Auto]"
+        elif calendar.day_name[dateToday.weekday()] is "Sunday": "Piosenka na niedziele[Auto]"
+        elif today7 <= now <= today16 : return  "Piosenka dnia[Auto]"
+        elif today16 <  now <= today20: return "Piosenka na wieczór[Auto]"
+        elif  now > today20: return "Piosenka na noc[Auto]"
 
 
     def sendMessageToSelected(self, message):
