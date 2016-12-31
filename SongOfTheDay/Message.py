@@ -21,8 +21,7 @@ def main(login, password):
 
 
 if __name__ == '__main__':
-    # var1 = input("Login: ")
-    #var2 = input("Pass: ")
+
    f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
    main(f.readline().strip(), f.readline().strip())
    main()
