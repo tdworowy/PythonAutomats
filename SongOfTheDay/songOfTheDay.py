@@ -31,6 +31,7 @@ class songOfTheDay():
             if dateToday.day == 25: return "Piosenka na pierwszy dzień świąt bożego narodzenia[Auto]"
             if dateToday.day == 26: return "Piosenka na drugi dzień świąt bożego narodzenia[Auto]"
             if dateToday.day == 31: return "Piosenka na Sylwestra ![Auto]"
+        if dateToday.month == 1 and dateToday.day == 1:return "Piosenka na nowy rok ![Auto]"
         if calendar.day_name[dateToday.weekday()] is "Saturday" : "Piosenka na sobote[Auto]"
         elif calendar.day_name[dateToday.weekday()] is "Sunday": "Piosenka na niedziele[Auto]"
         elif today7 <= now <= today16 : return  "Piosenka dnia[Auto]"
