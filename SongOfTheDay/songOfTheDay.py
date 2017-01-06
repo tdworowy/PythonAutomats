@@ -13,6 +13,7 @@ import datetime
 from datetime import date
 import calendar
 
+from SongOfTheDay.Songs import getSongs
 
 
 class songOfTheDay():
@@ -95,6 +96,7 @@ class songOfTheDay():
         return self.driver.current_url
 
     def sentSong(self, autentycation, songURL):
+        getSongs()
         self.login(autentycation)
 
         self.select("Echo")
