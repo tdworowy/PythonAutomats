@@ -13,7 +13,6 @@ import datetime
 from datetime import date
 import calendar
 
-from SongOfTheDay.Songs import getSongs
 
 
 class songOfTheDay():
@@ -104,7 +103,6 @@ class songOfTheDay():
         self.sendMessageToSelected(songURL)
 
     def setUp(self):
-        getSongs()
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.implicitly_wait(2)
