@@ -96,7 +96,6 @@ class songOfTheDay():
         return self.driver.current_url
 
     def sentSong(self, autentycation, songURL):
-        getSongs()
         self.login(autentycation)
 
         self.select("Echo")
@@ -105,6 +104,7 @@ class songOfTheDay():
         self.sendMessageToSelected(songURL)
 
     def setUp(self):
+        getSongs()
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.implicitly_wait(2)
