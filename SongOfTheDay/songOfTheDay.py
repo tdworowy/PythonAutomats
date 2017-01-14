@@ -1,18 +1,18 @@
-import getpass
+import calendar
+import datetime
 import os
 import random
 import time
+from datetime import date
 
+from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-from selenium import webdriver
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-import datetime
-from datetime import date
-import calendar
 
+from chromedriver.chromeDriverPath import chromeDriverPath
 
 
 class songOfTheDay():
@@ -103,7 +103,7 @@ class songOfTheDay():
         self.sendMessageToSelected(songURL)
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(chromeDriverPath())
         self.driver.maximize_window()
         self.driver.implicitly_wait(2)
 
@@ -139,6 +139,5 @@ if __name__ == '__main__':
     # var1 = input("Login: ")
     #var2 = input("Pass: ")
    f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
-
    main(f.readline().strip(), f.readline().strip())
-   main()
+

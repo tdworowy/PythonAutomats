@@ -1,10 +1,8 @@
-import random
-
 import requests
 from bs4 import BeautifulSoup
 
 
-def getSongs(self):
+def getSongs():
             f= open('file.txt', 'w')
             for i in range(25):
                 response = requests.get('http://www.last.fm/pl/user/TotaledThomas/loved?page='+str(i)).text
