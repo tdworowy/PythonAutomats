@@ -2,6 +2,7 @@ import calendar
 import datetime
 import os
 import random
+import sys
 import time
 from datetime import date
 
@@ -11,8 +12,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-
-from chromedriver.chromeDriverPath import chromeDriverPath
 
 
 class songOfTheDay():
@@ -103,7 +102,9 @@ class songOfTheDay():
         self.sendMessageToSelected(songURL)
 
     def setUp(self):
-        self.driver = webdriver.Chrome(chromeDriverPath())
+        sys.path.append('D:\Google_drive\Python_\SeleniumPython\chromedriverFolder\\')
+        import chromeDriverPath
+        self.driver = webdriver.Chrome(chromeDriverPath.getChromeDriverPath())
         self.driver.maximize_window()
         self.driver.implicitly_wait(2)
 
@@ -117,7 +118,8 @@ def main(login, password):
 
         song = songOfTheDay()
         f = open(os.path.dirname(os.path.abspath(__file__))+'\\file.txt', 'r')
-        songsList = f.read()
+        print("Read song list")
+        songsList = f.read();
         songsList=songsList.split("\n")
         autentycation = [login, password]
 
