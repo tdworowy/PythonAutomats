@@ -2,7 +2,6 @@ import calendar
 import datetime
 import os
 import random
-import sys
 import time
 from datetime import date
 
@@ -102,9 +101,9 @@ class songOfTheDay():
         self.sendMessageToSelected(songURL)
 
     def setUp(self):
-        sys.path.append('D:\Google_drive\Python_\SeleniumPython\chromedriverFolder\\')
-        import chromeDriverPath
-        self.driver = webdriver.Chrome(chromeDriverPath.getChromeDriverPath())
+        chromeDriverPath =os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..'))+'\chromedriverFolder\\chromedriver.exe'
+        print("PATH",chromeDriverPath)
+        self.driver = webdriver.Chrome(chromeDriverPath)
         self.driver.maximize_window()
         self.driver.implicitly_wait(2)
 
