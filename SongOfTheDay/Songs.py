@@ -15,8 +15,9 @@ def getSongs():
                     #print(text)
                         if "—" in text:
                            i = text.index("title=\"")+7
-                           print(text[i:-1])
-                           print(text[i:-1].replace("—","-"), file=f)
+                           temp = text[i:-1].replace("—","-")         
+                           print(temp)
+                           print(temp, file=f)
                     except Exception as ex:
                         print(ex)
                         continue
