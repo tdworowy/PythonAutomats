@@ -102,7 +102,6 @@ class songOfTheDay():
 
     def setUp(self):
         chromeDriverPath =os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..'))+'\chromedriverFolder\\chromedriver.exe'
-        print("PATH",chromeDriverPath)
         self.driver = webdriver.Chrome(chromeDriverPath)
         self.driver.maximize_window()
         self.driver.implicitly_wait(2)
@@ -126,6 +125,7 @@ def main(login, password):
         print(songsList[ran])
         url = song.findSong(songsList[ran].strip())
         song.sentSong(autentycation, url)
+        #song.sentSong(autentycation, "https://www.youtube.com/watch?v=dQw4w9WgXcQ")
         song.tearDown()
 
     except Exception  as err:
