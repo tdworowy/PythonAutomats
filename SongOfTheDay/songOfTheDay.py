@@ -6,11 +6,9 @@ import time
 from datetime import date
 
 from selenium import webdriver
-from selenium.webdriver import ActionChains
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
+
+from SkypeBot.skypeBot import skypeBot
+from SongOfTheDay import Songs
 
 
 class songOfTheDay():
@@ -37,46 +35,6 @@ class songOfTheDay():
         elif  now > today20: return "Piosenka na noc[Auto]"
 
 
-    def sendMessageToSelected(self, message):
-
-
-        actions = ActionChains(self.driver)
-        actions.send_keys(message)
-        actions.send_keys(Keys.ENTER)
-        actions.perform()
-        time.sleep(1)
-
-
-    def login(self, autentycation):
-        self.driver.get('https://web.skype.com/pl/')
-        self.driver.implicitly_wait(3)
-        loginFB = self.driver.find_element_by_id("loginWithFacebook")
-        loginFB.click()
-
-        loginField = self.driver.find_element_by_id("email")
-        loginField.click()
-        loginField.send_keys(autentycation[0])
-
-        passField = self.driver.find_element_by_id("pass")
-        passField.click()
-        passField.send_keys(autentycation[1])
-
-        loginButton = self.driver.find_element_by_id("loginbutton")
-        loginButton.click()
-        WebDriverWait(self.driver, 40).until(EC.visibility_of_any_elements_located((By.CSS_SELECTOR, "div.input input.inputField.fontSize-h4")))
-        time.sleep(1)
-
-    def select(self, name):
-        searchSkype = self.driver.find_element_by_css_selector("div.input input.inputField.fontSize-h4")
-        searchSkype.click()
-        time.sleep(1)
-
-        searchSkype = self.driver.find_element_by_css_selector("div.input.active input.inputField.fontSize-h4")
-        searchSkype.send_keys(name)
-        time.sleep(1)
-        group = self.driver.find_element_by_class_name("list-selectable")
-        group.click()
-        time.sleep(2)
 
     def findSong(self, song):
         self.driver.get('https://www.youtube.com')
@@ -93,18 +51,20 @@ class songOfTheDay():
         return self.driver.current_url
 
     def sentSong(self, autentycation, songURL):
-        self.login(autentycation)
+        self.skypeBot.loginFacebook(autentycation)
 
-        self.select("Echo")
-        self.select("A smiechom i szopom nie było konca")
-        self.sendMessageToSelected(self.mesageByTime())
-        self.sendMessageToSelected(songURL)
+        self.skypeBot.select("Echo")
+        self.skypeBot.select("A smiechom i szopom nie było konca")
+        self.skypeBot.sendMessageToSelected(self.mesageByTime())
+        self.skypeBot.sendMessageToSelected(songURL)
 
     def setUp(self):
         chromeDriverPath =os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..'))+'\chromedriverFolder\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
         self.driver.maximize_window()
         self.driver.implicitly_wait(2)
+        self.skypeBot = skypeBot(self.driver)
+        Songs.getSongs()
 
     def tearDown(self):
         self.driver.quit()
