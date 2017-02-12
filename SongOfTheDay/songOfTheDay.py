@@ -76,7 +76,7 @@ def main(login, password):
 
         song = songOfTheDay()
         f = open(os.path.dirname(os.path.abspath(__file__))+'\\file.txt', 'r')
-        print("Read song list")
+        print("Get random song")
         songsList = f.read();
         songsList=songsList.split("\n")
         autentycation = [login, password]
