@@ -8,7 +8,6 @@ from datetime import date
 from selenium import webdriver
 
 from SkypeBot.skypeBot import skypeBot
-from SongOfTheDay import Songs
 
 
 class songOfTheDay():
@@ -64,7 +63,7 @@ class songOfTheDay():
         self.driver.maximize_window()
         self.driver.implicitly_wait(2)
         self.skypeBot = skypeBot(self.driver)
-        Songs.getSongs()
+        #Songs.getSongs() #it takes lot of time
 
     def tearDown(self):
         self.driver.quit()

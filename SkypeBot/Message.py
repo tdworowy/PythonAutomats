@@ -1,13 +1,13 @@
 import os
 
-from SongOfTheDay.songOfTheDay import songOfTheDay
+from SkypeBot.skypeBot import skypeBot
 
 
 def main(login, password):
     try:
         autentycation = [login,password]
-        message = songOfTheDay()
-        message.login(autentycation)
+        message = skypeBot()
+        message.loginFacebook(autentycation)
 
         message.select("Echo")
         message.select("A smiechom i szopom nie było konca")
