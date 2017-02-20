@@ -8,6 +8,7 @@ from datetime import date
 from selenium import webdriver
 
 from SkypeBot.skypeBot import skypeBot
+from utils import log
 
 
 class songOfTheDay():
@@ -54,6 +55,8 @@ class songOfTheDay():
 
         self.skypeBot.select("Echo")
         self.skypeBot.select("A smiechom i szopom nie było konca")
+        log(self.mesageByTime())
+        log(songURL)
         self.skypeBot.sendMessageToSelected(self.mesageByTime())
         self.skypeBot.sendMessageToSelected(songURL)
 
@@ -75,20 +78,20 @@ def main(login, password):
 
         song = songOfTheDay()
         f = open(os.path.dirname(os.path.abspath(__file__))+'\\file.txt', 'r')
-        print("Get random song")
+        log("Get random song")
         songsList = f.read();
         songsList=songsList.split("\n")
         autentycation = [login, password]
 
         ran= random.randrange(len(songsList))
-        print(songsList[ran])
+        log(songsList[ran])
         url = song.findSong(songsList[ran].strip())
         song.sentSong(autentycation, url)
         #song.sentSong(autentycation, "https://www.youtube.com/watch?v=dQw4w9WgXcQ")
         song.tearDown()
 
     except Exception  as err:
-        print(err)
+        log(err)
 
     finally:
         quit()
