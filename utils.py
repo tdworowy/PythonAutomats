@@ -1,8 +1,8 @@
-import datetime
+import time
 
 def log (text):
-    time = '{%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
-    log = time+" "+text
+    timeStumo = time.strftime('%Y-%m-%d %H:%M:%S')
+    log = timeStumo+" "+text +"/n"
     print(log)
-    with open("log.txt", "a") as myfile:
-        myfile.write(log)
+    with open("log.txt", "a+") as logFile:
+        logFile.write(log)

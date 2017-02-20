@@ -6,7 +6,7 @@ def getSongs():
             print("Generate songs list")
             f= open('file.txt', 'w')
             count = 0
-            for i in range(655):
+            for i in range(658):
                # response = requests.get('http://www.last.fm/pl/user/TotaledThomas/loved?page='+str(i)).text
                 response = requests.get('http://www.last.fm/pl/user/TotaledThomas/library/tracks?page='+str(i)).text
                 soup = BeautifulSoup(response)
@@ -20,7 +20,7 @@ def getSongs():
                            i = text.index("title=\"")+7
                            temp = text[i:-1].replace("—","-")         
                            print(temp)
-                           count =+1
+                           count +=1
                            print(temp, file=f)
                     except Exception as ex:
                         print(ex)
