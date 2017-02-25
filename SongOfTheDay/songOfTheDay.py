@@ -64,7 +64,7 @@ class songOfTheDay():
 
     def setUp(self):
         updateSongs()
-        chromeDriverPath =getDriverPath+'\\chromedriver.exe'
+        chromeDriverPath =getDriverPath()+'\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
         self.driver.maximize_window()
         self.driver.implicitly_wait(2)

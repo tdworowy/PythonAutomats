@@ -22,7 +22,7 @@ def clearTitels(titles):
             if "—" in text:
                 i = text.index("title=\"") + 7
                 temp = text[i:-1].replace("—", "-")
-                cleanTitels.append(temp)
+                cleanTitels.append(temp+"\n")
 
         except Exception as ex:
             print(ex)
@@ -40,9 +40,9 @@ def getSongs():
                 try:
                     print(text)
                     count +=1
-                    print(text+"\n", file=f)
+                    print(text, file=f)
                 except Exception as ex:
-                        print(ex)
+                        print(str(ex))
                         continue
             print("Songs count: ",count)
             f.close()
@@ -50,14 +50,19 @@ def getSongs():
 
 def updateSongs():
     log("Update songs list")
-    f = open('file.txt', 'a+')
-    oldTitels = [line.split('\n') for line in f.readlines()]
+    f1 = open('file.txt')
+    f2 = open('file.txt', 'a')
+    oldTitels = [line for line in f1.readlines()]
     newTitles = clearTitels(getTitels(5,"https://www.last.fm/pl/user/TotaledThomas/library?page="))
     for title in newTitles:
-            if title not in oldTitels:
-                f.write(title+"\n")
+          try:
+              if title not in oldTitels:
+                  f2.write(title)
+          except Exception as ex:
+                  print(str(ex))
+                  continue
 
-    f.flush()
+    f2.flush()
 
 
 #getSongs()
