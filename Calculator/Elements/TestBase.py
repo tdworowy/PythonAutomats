@@ -3,12 +3,15 @@ import unittest
 from selenium import webdriver
 
 from Calculator.Elements.Calculator import CalculatorElements
+from chromedriverFolder.driverPath import getDriverPath
+
 
 class CalculatorBase(unittest.TestCase):
 
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        chromeDriverPath = getDriverPath()+ '\\chromedriver.exe'
+        self.driver = webdriver.Chrome(chromeDriverPath)
         self.driver.get('http://www.calculator.net/')
         self.calculator = CalculatorElements(self.driver)
         self.driver.maximize_window()

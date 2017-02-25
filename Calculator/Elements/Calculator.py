@@ -5,7 +5,7 @@ class CalculatorElements:
         self.driver = driverArg
 
     def openCalculator(self):
-        return self.driver.find_element_by_link_text("Scientific")
+        return self.driver.find_element_by_link_text("Scientific Calculator")
 
     def scientificCalculator(self):
         return self.driver.find_element_by_id("sciout")
