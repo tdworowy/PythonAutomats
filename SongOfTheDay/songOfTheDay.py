@@ -8,8 +8,9 @@ from datetime import date
 from selenium import webdriver
 
 from SkypeBot.skypeBot import skypeBot
+from SongOfTheDay.Songs import updateSongs
+from Utils.utils import log
 from chromedriverFolder.driverPath import getDriverPath
-from utils import log
 
 
 class songOfTheDay():
@@ -62,6 +63,7 @@ class songOfTheDay():
         self.skypeBot.sendMessageToSelected(songURL)
 
     def setUp(self):
+        updateSongs()
         chromeDriverPath =getDriverPath+'\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
         self.driver.maximize_window()
@@ -92,7 +94,7 @@ def main(login, password):
         song.tearDown()
 
     except Exception  as err:
-        log(err)
+        log(str(err))
 
     finally:
         quit()
