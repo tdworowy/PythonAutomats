@@ -1,8 +1,11 @@
+import os
+
 import requests
 from bs4 import BeautifulSoup
 
 from Utils.utils import log
 
+filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
 
 def getTitels(count,url):
     log("get songs from last fm")
@@ -32,7 +35,7 @@ def clearTitels(titles):
 
 def getSongs():
             log("Generate songs list")
-            f= open('file.txt', 'w')
+            f= open(filePath, 'w')
             count = 0
             titles =clearTitels(getTitels(659,'http://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
                 #print(titles)
@@ -50,8 +53,8 @@ def getSongs():
 
 def updateSongs():
     log("Update songs list")
-    f1 = open('file.txt')
-    f2 = open('file.txt', 'a')
+    f1 = open(filePath)
+    f2 = open(filePath, 'a')
     oldTitels = [line for line in f1.readlines()]
     newTitles = clearTitels(getTitels(5,"https://www.last.fm/pl/user/TotaledThomas/library?page="))
     for title in newTitles:
