@@ -8,7 +8,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class skypeBot():
     def __init__(self,webdriver):
-        self.driver= webdriver;
+        self.driver= webdriver
 
 
 
