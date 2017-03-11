@@ -19,6 +19,11 @@ class skypeBot():
         actions.perform()
         time.sleep(1)
 
+    def sendEnter(self):
+        actions = ActionChains(self.driver)
+        actions.send_keys(Keys.ENTER)
+        actions.perform()
+
 
     def loginFacebook(self, autentycation):
         self.driver.get('https://web.skype.com/pl/')
@@ -38,6 +43,26 @@ class skypeBot():
         loginButton.click()
         WebDriverWait(self.driver, 40).until(EC.visibility_of_any_elements_located((By.CSS_SELECTOR, "div.input input.inputField.fontSize-h4")))
         time.sleep(1)
+
+    def login(self, autentycation):
+        self.driver.get('https://web.skype.com/pl/')
+
+        loginField = self.driver.find_element_by_id("username")
+        loginField.click()
+        loginField.send_keys(autentycation[0])
+
+        loginButton = self.driver.find_element_by_id("signIn")
+        loginButton.click()
+
+        passField = self.driver.find_element_by_name("passwd")
+        passField.click()
+        passField.send_keys(autentycation[1])
+
+        self.sendEnter()
+
+        WebDriverWait(self.driver, 40).until(EC.visibility_of_any_elements_located((By.CSS_SELECTOR, "div.input input.inputField.fontSize-h4")))
+        time.sleep(1)
+
 
     def select(self, name):
         searchSkype = self.driver.find_element_by_css_selector("div.input input.inputField.fontSize-h4")

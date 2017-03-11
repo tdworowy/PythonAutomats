@@ -53,7 +53,8 @@ class songOfTheDay():
         return self.driver.current_url
 
     def sentSong(self, autentycation, songURL):
-        self.skypeBot.loginFacebook(autentycation)
+        #self.skypeBot.loginFacebook(autentycation)
+        self.skypeBot.login(autentycation)
 
         self.skypeBot.select("Echo")
         self.skypeBot.select("A smiechom i szopom nie było konca")

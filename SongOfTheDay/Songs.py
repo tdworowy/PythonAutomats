@@ -12,7 +12,7 @@ def getTitels(count,url):
     for i in range(count):
         # response = requests.get('http://www.last.fm/pl/user/TotaledThomas/loved?page='+str(i)).text
         response = requests.get(url + str(i)).text
-        soup = BeautifulSoup(response)
+        soup = BeautifulSoup(response,"html.parser")
         titles = soup.find_all("a", class_="link-block-target")
         titles = str(titles).split(">")
     return titles
@@ -68,4 +68,5 @@ def updateSongs():
     f2.flush()
 
 
-#getSongs()
+if __name__ == '__main__':
+    updateSongs()
