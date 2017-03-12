@@ -1,28 +1,53 @@
 import time
+import unittest
 
 from Calculator.Elements.TestBase import CalculatorBase
+from Utils.utils import logResult
 
 
 class CalculatorTests(CalculatorBase):
 
 
     def testOpenScientificCalculator(self):
-        self.calculator.openCalculator().click()
-        time.sleep(1)
-        self.assertTrue(self.calculator.scientificCalculator().is_displayed())
-
+        try:
+            self.calculator.openCalculator().click()
+            time.sleep(1)
+            self.assertTrue(self.calculator.scientificCalculator().is_displayed())
+            logResult("testOpenScientificCalculator", "Pass")
+        except AssertionError:
+            logResult("testOpenScientificCalculator", "Fail")
+            self.fail("fail")
     def testScientificCalculatorSum1(self):
-        self.calculator.openCalculator().click()
-        time.sleep(1)
-        self.assertTrue((self.calculator.sum(2, 2, 4)))
+        try:
+            self.calculator.openCalculator().click()
+            time.sleep(1)
+            self.assertTrue((self.calculator.sum(2, 2, 4)))
+            logResult("testScientificCalculatorSum1", "Pass")
+        except AssertionError:
+            logResult("testScientificCalculatorSum1", "Fail")
+            self.fail("fail")
 
     def testScientificCalculatorSum2(self):
-        self.calculator.openCalculator().click()
-        time.sleep(1)
-        self.assertTrue((self.calculator.sum(-2, 2, 0)))
+        try:
+            self.calculator.openCalculator().click()
+            time.sleep(1)
+            self.assertTrue((self.calculator.sum(-2, 2, 0)))
+            logResult("testScientificCalculatorSum2", "Pass")
+        except AssertionError:
+            logResult("testScientificCalculatorSum2", "Fail")
+            self.fail("fail")
 
     def testScientificCalculatorSum3(self):
-        self.calculator.openCalculator().click()
-        time.sleep(1)
-        self.assertTrue((self.calculator.bigSum(1000, 1000, 2000)))
+        try:
+            self.calculator.openCalculator().click()
+            time.sleep(1)
+            self.assertTrue((self.calculator.bigSum(1000, 1000, 2000)))
+            logResult("testScientificCalculatorSum3", "Pass")
+        except AssertionError:
+            logResult("testScientificCalculatorSum3", "Fail")
+            self.fail("fail")
+
+
+if __name__ == '__main__':
+    test_program = unittest.main()
 

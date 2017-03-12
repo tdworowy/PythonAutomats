@@ -1,6 +1,7 @@
 import time
 
 class CalculatorElements:
+
     def __init__(self, driverArg):
         self.driver = driverArg
 
@@ -60,3 +61,5 @@ class CalculatorElements:
             return True
         else:
             return False
+
+
