@@ -23,7 +23,7 @@ class songOfTheDay():
         today16 = now.replace(hour=16, minute=0, second=0, microsecond=0)
         today20 = now.replace(hour=20, minute=0, second=0, microsecond=0)
         dateToday = date.today()
-
+        print("Today is: ",calendar.day_name[dateToday.weekday()]," ",date.today())
         if dateToday.month == 12:
             if dateToday.day == 24: return "Piosenka na wigilie[Auto]"
             if dateToday.day == 25: return "Piosenka na pierwszy dzień świąt bożego narodzenia[Auto]"
@@ -31,10 +31,10 @@ class songOfTheDay():
             if dateToday.day == 31: return "Piosenka na Sylwestra ![Auto]"
         if dateToday.month == 1 and dateToday.day == 1:return "Piosenka na nowy rok ![Auto]"
         if calendar.day_name[dateToday.weekday()] is "Saturday" : return"Piosenka na sobote[Auto]"
-        elif calendar.day_name[dateToday.weekday()] is "Sunday": return"Piosenka na niedziele[Auto]"
-        elif today7 <= now <= today16 : return  "Piosenka dnia[Auto]"
-        elif today16 <  now <= today20: return "Piosenka na wieczór[Auto]"
-        elif  now > today20: return "Piosenka na noc[Auto]"
+        if calendar.day_name[dateToday.weekday()] is "Sunday": return"Piosenka na niedziele[Auto]"
+        if today7 <= now <= today16 : return  "Piosenka dnia[Auto]"
+        if today16 <  now <= today20: return "Piosenka na wieczór[Auto]"
+        if  now > today20: return "Piosenka na noc[Auto]"
 
 
 
