@@ -70,7 +70,7 @@ class songOfTheDay():
         self.driver.maximize_window()
         self.driver.implicitly_wait(2)
         self.skypeBot = skypeBot(self.driver)
-        #Songs.getSongs() #it takes lot of time
+
 
     def tearDown(self):
         self.driver.quit()
