@@ -32,8 +32,8 @@ class songOfTheDay():
         if dateToday.month == 4:
             if dateToday.day == 1: return "Piosenka na Prima aprilis[Auto]"
         if dateToday.month == 1 and dateToday.day == 1:return "Piosenka na nowy rok ![Auto]"
-        if calendar.day_name[dateToday.weekday()] is "Saturday" : return"Piosenka na sobote[Auto]"
-        if calendar.day_name[dateToday.weekday()] is "Sunday": return"Piosenka na niedziele[Auto]"
+        if calendar.day_name[dateToday.weekday()] == "Saturday" : return"Piosenka na sobote[Auto]"
+        if calendar.day_name[dateToday.weekday()] == "Sunday": return"Piosenka na niedziele[Auto]"
         if today7 <= now <= today16 : return  "Piosenka dnia[Auto]"
         if today16 <  now <= today20: return "Piosenka na wieczór[Auto]"
         if  now > today20: return "Piosenka na noc[Auto]"
@@ -93,7 +93,7 @@ def main(login, password):
         ran= random.randrange(len(songsList))
         log(songsList[ran])
         url = song.findSong(songsList[ran].strip())
-        song.sentSong(autentycation, url)
+        song.sentSong(autentycation, [url])
         #song.sentSong(autentycation, "https://www.youtube.com/watch?v=dQw4w9WgXcQ")
         song.tearDown()
 
@@ -122,8 +122,7 @@ def rickAndRollSpam(login, password,count):
 
 
 if __name__ == '__main__':
-    # var1 = input("Login: ")
-    #var2 = input("Pass: ")
+
    f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
    dateToday = date.today()
    if dateToday.month == 4:
