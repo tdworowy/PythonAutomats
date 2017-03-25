@@ -23,12 +23,14 @@ class songOfTheDay():
         today16 = now.replace(hour=16, minute=0, second=0, microsecond=0)
         today20 = now.replace(hour=20, minute=0, second=0, microsecond=0)
         dateToday = date.today()
-        log("Today is: ",calendar.day_name[dateToday.weekday()]+" "+str(date.today()))
+        log("Today is: "+calendar.day_name[dateToday.weekday()]+" "+str(date.today()))
         if dateToday.month == 12:
             if dateToday.day == 24: return "Piosenka na wigilie[Auto]"
             if dateToday.day == 25: return "Piosenka na pierwszy dzień świąt bożego narodzenia[Auto]"
             if dateToday.day == 26: return "Piosenka na drugi dzień świąt bożego narodzenia[Auto]"
             if dateToday.day == 31: return "Piosenka na Sylwestra ![Auto]"
+        if dateToday.month == 4:
+            if dateToday.day == 1: return "Piosenka na Prima aprilis[Auto]"
         if dateToday.month == 1 and dateToday.day == 1:return "Piosenka na nowy rok ![Auto]"
         if calendar.day_name[dateToday.weekday()] is "Saturday" : return"Piosenka na sobote[Auto]"
         if calendar.day_name[dateToday.weekday()] is "Sunday": return"Piosenka na niedziele[Auto]"
@@ -52,16 +54,17 @@ class songOfTheDay():
 
         return self.driver.current_url
 
-    def sentSong(self, autentycation, songURL):
+    def sentSong(self, autentycation, songURLs):
         #self.skypeBot.loginFacebook(autentycation)
         self.skypeBot.login(autentycation)
 
         self.skypeBot.select("Echo")
         self.skypeBot.select("A smiechom i szopom nie było konca")
         log(self.mesageByTime())
-        log(songURL)
-        self.skypeBot.sendMessageToSelected(self.mesageByTime())
-        self.skypeBot.sendMessageToSelected(songURL)
+        for songURL in songURLs:
+            log(songURL)
+            self.skypeBot.sendMessageToSelected(self.mesageByTime())
+            self.skypeBot.sendMessageToSelected(songURL)
 
     def setUp(self):
         updateSongs()
@@ -100,11 +103,31 @@ def main(login, password):
     finally:
         quit()
 
+def rickAndRollSpam(login, password,count):
+    try:
+
+        song = songOfTheDay()
+
+        autentycation = [login, password]
+        urlList = ["https://www.youtube.com/watch?v=dQw4w9WgXcQ" for x in range(count)]
+        song.sentSong(autentycation, urlList)
+        song.tearDown()
+
+    except Exception  as err:
+        log(str(err))
+
+    finally:
+        quit()
+
 
 
 if __name__ == '__main__':
     # var1 = input("Login: ")
     #var2 = input("Pass: ")
    f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
-   main(f.readline().strip(), f.readline().strip())
+   dateToday = date.today()
+   if dateToday.month == 4:
+        if dateToday.day == 1: rickAndRollSpam(f.readline().strip(), f.readline().strip(),10)
+   else:
+       main(f.readline().strip(), f.readline().strip())
 
