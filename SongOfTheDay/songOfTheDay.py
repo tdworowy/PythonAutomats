@@ -6,6 +6,8 @@ import time
 from datetime import date
 
 from selenium import webdriver
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.keys import Keys
 
 from SkypeBot.skypeBot import skypeBot
 from SongOfTheDay.Songs import updateSongs
@@ -42,11 +44,12 @@ class songOfTheDay():
 
     def findSong(self, song):
         self.driver.get('https://www.youtube.com')
+        actions = ActionChains(self.driver)
+
         input = self.driver.find_element_by_id("masthead-search-term")
-        searchButton = self.driver.find_element_by_css_selector("button[type='submit']")
         input.click()
         input.send_keys(song)
-        searchButton.click()
+        actions.send_keys(Keys.ENTER)
         time.sleep(2)
         firstResoult = self.driver.find_element_by_css_selector("h3 a")
         firstResoult.click()
