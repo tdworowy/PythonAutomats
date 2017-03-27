@@ -50,6 +50,7 @@ class songOfTheDay():
         input.click()
         input.send_keys(song)
         actions.send_keys(Keys.ENTER)
+        actions.perform()
         time.sleep(2)
         firstResoult = self.driver.find_element_by_css_selector("h3 a")
         firstResoult.click()
