@@ -6,6 +6,7 @@ from Utils.utils import logResult
 
 
 class CalculatorTests(CalculatorBase):
+    CalculatorBase.setRemote(CalculatorBase,True)
 
 
     def testOpenScientificCalculator(self):

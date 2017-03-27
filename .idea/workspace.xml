@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SongOfTheDay/file.txt" afterPath="$PROJECT_DIR$/SongOfTheDay/file.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" afterPath="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator/Elements/TestBase.py" afterPath="$PROJECT_DIR$/Calculator/Elements/TestBase.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" afterPath="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +24,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="songOfTheDay.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="songOfTheDay.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+            <state relative-caret-position="761">
+              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnlineCalculatorTests.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestBase.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="19" column="87" lean-forward="false" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Calculator/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Calculator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SongOfTheDay/file.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508334">
+              <caret line="29902" column="25" lean-forward="false" selection-start-line="29902" selection-start-column="25" selection-end-line="29902" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -49,58 +101,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="facebookBot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/facebookBot/facebookBot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="77" column="23" lean-forward="false" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aut.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/facebookBot/aut.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="driverPath.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chromedriverFolder/driverPath.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/facebookBot/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OnlineCalculatorTests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -176,13 +176,13 @@
         <option value="$PROJECT_DIR$/SkypeBot/skypeBot.py" />
         <option value="$PROJECT_DIR$/SongOfTheDay/Songs.py" />
         <option value="$PROJECT_DIR$/Calculator/Elements/Calculator.py" />
-        <option value="$PROJECT_DIR$/Calculator/Elements/TestBase.py" />
-        <option value="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
         <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/facebookBot/__init__.py" />
         <option value="$PROJECT_DIR$/facebookBot/aut.txt" />
         <option value="$PROJECT_DIR$/facebookBot/facebookBot.py" />
         <option value="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" />
+        <option value="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
+        <option value="$PROJECT_DIR$/Calculator/Elements/TestBase.py" />
       </list>
     </option>
   </component>
@@ -372,7 +372,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.songOfTheDay">
+  <component name="RunManager" selected="Python tests.Unittests in OnlineCalculatorTests">
     <configuration default="false" name="Unittests in OnlineCalculatorTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -619,9 +619,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.songOfTheDay" />
-        <item index="1" class="java.lang.String" itemvalue="Python.facebookBot" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in OnlineCalculatorTests" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in OnlineCalculatorTests" />
+        <item index="1" class="java.lang.String" itemvalue="Python.songOfTheDay" />
+        <item index="2" class="java.lang.String" itemvalue="Python.facebookBot" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum2" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testOpenScientificCalculator" />
       </list>
@@ -659,13 +659,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00002" summary="online calculator tests">
-      <created>1478812686632</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1478812686632</updated>
     </task>
     <task id="LOCAL-00003" summary="online calculator tests update">
       <created>1478816380405</created>
@@ -1003,54 +996,61 @@
       <option name="project" value="LOCAL" />
       <updated>1490453607283</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="fix">
+      <created>1490544235563</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1490544235563</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_CalculatorTests_testScientificCalculatorSum2 - 2017.03.17 at 17h 36m 02s.xml">
-      <configuration name="Unittest CalculatorTests.testScientificCalculatorSum2" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.12 at 11h 04m 43s.xml">
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 35m 19s.xml">
       <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.12 at 11h 14m 06s.xml">
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 36m 43s.xml">
       <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.12 at 11h 14m 44s.xml">
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 37m 34s.xml">
       <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.12 at 11h 16m 18s.xml">
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 38m 10s.xml">
       <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.12 at 11h 18m 01s.xml">
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 43m 02s.xml">
       <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.12 at 11h 21m 13s.xml">
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 45m 56s.xml">
       <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.17 at 17h 34m 27s.xml">
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 46m 44s.xml">
       <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.17 at 17h 37m 05s.xml">
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 47m 53s.xml">
       <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_songOfTheDay_(4) - 2016.12.20 at 17h 11m 50s.xml">
-      <configuration name="Unittests in songOfTheDay (4)" configurationId="tests" />
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 48m 59s.xml">
+      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 56m 20s.xml">
+      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1936" height="1047" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19189766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19402985" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32176656" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32166302" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32166302" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206934" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206934" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1093,12 +1093,11 @@
           <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="35" />
+      <option name="time" value="36" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Tests/__init__.py" />
     <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
     <entry file="file://$PROJECT_DIR$/Webdriver/geckodriver.log" />
     <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py" />
@@ -1180,13 +1179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SongOfTheDay/file.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508334">
-          <caret line="29902" column="25" lean-forward="false" selection-start-line="29902" selection-start-column="25" selection-end-line="29902" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SongOfTheDay/aut.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1205,29 +1197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2074">
           <caret line="127" column="8" lean-forward="false" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1282,14 +1251,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/TestsResultLog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SkypeBot/skypeBot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1298,10 +1259,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SongOfTheDay/file.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508334">
+          <caret line="29902" column="25" lean-forward="false" selection-start-line="29902" selection-start-column="25" selection-end-line="29902" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+        <state relative-caret-position="761">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/TestsResultLog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="87" lean-forward="false" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
           <folding />
         </state>
       </provider>
