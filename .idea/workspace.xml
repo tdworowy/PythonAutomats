@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator/Elements/TestBase.py" afterPath="$PROJECT_DIR$/Calculator/Elements/TestBase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" afterPath="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +26,19 @@
         <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="761">
-              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-              <folding />
+              <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+              <folding>
+                <marker date="1490630530116" expanded="true" signature="408:3148" ph="..." />
+                <marker date="1490630530116" expanded="true" signature="1873:2341" ph="..." />
+                <marker date="1490630530116" expanded="true" signature="2391:2808" ph="..." />
+                <marker date="1490630530116" expanded="true" signature="2657:2808" ph="..." />
+                <marker date="1490630530116" expanded="true" signature="2830:3095" ph="..." />
+                <marker date="1490630530116" expanded="true" signature="3121:3148" ph="..." />
+                <marker date="1490630530116" expanded="true" signature="3178:3802" ph="..." />
+                <marker date="1490630530116" expanded="true" signature="3187:3720" ph="..." />
+                <marker date="1490630530116" expanded="true" signature="3847:4170" ph="..." />
+                <marker date="1490630530116" expanded="true" signature="3856:4088" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,10 +57,8 @@
         <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="19" column="87" lean-forward="false" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+              <caret line="20" column="87" lean-forward="false" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -181,8 +188,8 @@
         <option value="$PROJECT_DIR$/facebookBot/aut.txt" />
         <option value="$PROJECT_DIR$/facebookBot/facebookBot.py" />
         <option value="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" />
-        <option value="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
         <option value="$PROJECT_DIR$/Calculator/Elements/TestBase.py" />
+        <option value="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
       </list>
     </option>
   </component>
@@ -660,13 +667,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00003" summary="online calculator tests update">
-      <created>1478816380405</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1478816380405</updated>
-    </task>
     <task id="LOCAL-00004" summary="update">
       <created>1482166544617</created>
       <option name="number" value="00004" />
@@ -1003,7 +1003,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490544235563</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="update for selenium grid">
+      <created>1490630506787</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1490630506788</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1041,12 +1048,12 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1936" height="1047" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19402985" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19402985" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32176656" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32166302" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32166302" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1082,7 +1089,8 @@
     <MESSAGE value="upfate" />
     <MESSAGE value="update" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="update for selenium grid" />
+    <option name="LAST_COMMIT_MESSAGE" value="update for selenium grid" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1270,8 +1278,19 @@
     <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="761">
-          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding />
+          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding>
+            <marker date="1490630530116" expanded="true" signature="408:3148" ph="..." />
+            <marker date="1490630530116" expanded="true" signature="1873:2341" ph="..." />
+            <marker date="1490630530116" expanded="true" signature="2391:2808" ph="..." />
+            <marker date="1490630530116" expanded="true" signature="2657:2808" ph="..." />
+            <marker date="1490630530116" expanded="true" signature="2830:3095" ph="..." />
+            <marker date="1490630530116" expanded="true" signature="3121:3148" ph="..." />
+            <marker date="1490630530116" expanded="true" signature="3178:3802" ph="..." />
+            <marker date="1490630530116" expanded="true" signature="3187:3720" ph="..." />
+            <marker date="1490630530116" expanded="true" signature="3847:4170" ph="..." />
+            <marker date="1490630530116" expanded="true" signature="3856:4088" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1302,10 +1321,8 @@
     <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="19" column="87" lean-forward="false" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+          <caret line="20" column="87" lean-forward="false" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
+          <folding />
         </state>
       </provider>
     </entry>
