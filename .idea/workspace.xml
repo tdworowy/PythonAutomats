@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Utils/startHubLinuks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SeleniumPython.iml" afterPath="$PROJECT_DIR$/.idea/SeleniumPython.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Utils/startNodeLinuks.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/startHub.py" afterPath="$PROJECT_DIR$/Utils/startHub.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/StartNode.py" afterPath="$PROJECT_DIR$/Utils/StartNode.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,12 +34,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnlineCalculatorTests.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OnlineCalculatorTests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="450">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,18 +51,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
               <caret line="19" column="76" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="19" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="startHubLinuks.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="startHubLinuks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils/startHubLinuks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+            <state relative-caret-position="340">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,8 +69,28 @@
       <file leaf-file-name="TestBase.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="40">
+              <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartNode.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/StartNode.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="59" lean-forward="false" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="startNodeLinuks.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/startNodeLinuks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,16 +121,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="598040">
               <caret line="29902" column="25" lean-forward="false" selection-start-line="29902" selection-start-column="25" selection-end-line="29902" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="skypeBot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SkypeBot/skypeBot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -177,6 +185,8 @@
         <option value="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
         <option value="$PROJECT_DIR$/Utils/startHub.py" />
         <option value="$PROJECT_DIR$/Utils/startHubLinuks.py" />
+        <option value="$PROJECT_DIR$/Utils/startNodeLinuks.py" />
+        <option value="$PROJECT_DIR$/Utils/StartNode.py" />
       </list>
     </option>
   </component>
@@ -352,7 +362,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.startHub">
+  <component name="RunManager" selected="Python tests.Unittests in OnlineCalculatorTests">
     <configuration default="false" name="Unittests in OnlineCalculatorTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -386,41 +396,6 @@
       <option name="_new_legacyInformationCopiedToNew" value="true" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest CalculatorTests.testScientificCalculatorSum2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Calculator/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
-      <option name="CLASS_NAME" value="CalculatorTests" />
-      <option name="METHOD_NAME" value="testScientificCalculatorSum2" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Calculator/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_pattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_legacyInformationCopiedToNew" value="true" />
-      <option name="_new_target" value="&quot;Calculator.Tests.OnlineCalculatorTests.CalculatorTests.testScientificCalculatorSum2&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
     <configuration default="false" name="facebookBot" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -475,6 +450,21 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests for Calculator.Tests.OnlineCalculatorTests.CalculatorTests.testOpenScientificCalculator" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Selenium" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Calculator.Tests.OnlineCalculatorTests.CalculatorTests.testOpenScientificCalculator&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -575,18 +565,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in OnlineCalculatorTests" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum2" />
-      <item index="2" class="java.lang.String" itemvalue="Python.facebookBot" />
-      <item index="3" class="java.lang.String" itemvalue="Python.songOfTheDay" />
-      <item index="4" class="java.lang.String" itemvalue="Python.startHub" />
+      <item index="1" class="java.lang.String" itemvalue="Python.facebookBot" />
+      <item index="2" class="java.lang.String" itemvalue="Python.songOfTheDay" />
+      <item index="3" class="java.lang.String" itemvalue="Python.startHub" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for Calculator.Tests.OnlineCalculatorTests.CalculatorTests.testOpenScientificCalculator" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.startHub" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in OnlineCalculatorTests" />
-        <item index="2" class="java.lang.String" itemvalue="Python.songOfTheDay" />
-        <item index="3" class="java.lang.String" itemvalue="Python.facebookBot" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest CalculatorTests.testScientificCalculatorSum2" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in OnlineCalculatorTests" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for Calculator.Tests.OnlineCalculatorTests.CalculatorTests.testOpenScientificCalculator" />
+        <item index="2" class="java.lang.String" itemvalue="Python.startHub" />
+        <item index="3" class="java.lang.String" itemvalue="Python.songOfTheDay" />
+        <item index="4" class="java.lang.String" itemvalue="Python.facebookBot" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -622,13 +612,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00005" summary="fix">
-      <created>1482167584839</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1482167584839</updated>
     </task>
     <task id="LOCAL-00006" summary="update">
       <created>1482252211960</created>
@@ -966,19 +949,17 @@
       <option name="project" value="LOCAL" />
       <updated>1490630538939</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="update for selenium grid">
+      <created>1490974118398</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1490974118399</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 43m 02s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 45m 56s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 46m 44s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 17h 47m 53s.xml">
       <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
@@ -1000,6 +981,15 @@
     <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.27 at 18h 11m 45s.xml">
       <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.31 at 17h 36m 47s.xml">
+      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.31 at 17h 38m 28s.xml">
+      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_OnlineCalculatorTests - 2017.03.31 at 17h 51m 20s.xml">
+      <configuration name="Unittests in OnlineCalculatorTests" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1013,11 +1003,11 @@
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19033675" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19033675" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32176656" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206934" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.55414015" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1066,13 +1056,11 @@
           <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py" />
-    <entry file="file://$PROJECT_DIR$/Tests/__init__.py" />
     <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
     <entry file="file://$PROJECT_DIR$/Webdriver/geckodriver.log" />
     <entry file="file://$PROJECT_DIR$/Webdriver/WebdriverBase.py" />
@@ -1225,37 +1213,53 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils/TestsResultLog.txt" />
-    <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
+    <entry file="file://$PROJECT_DIR$/Utils/startHub.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="380">
+          <caret line="19" column="76" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="19" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="40">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/startHub.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="76" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="19" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils/startHubLinuks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        <state relative-caret-position="340">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/startNodeLinuks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/StartNode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="59" lean-forward="false" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
