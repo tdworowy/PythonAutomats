@@ -1,7 +1,9 @@
 import _thread
 
+from chromedriverFolder.driverPath import getDriverPath
+
 seleniumServerPath = "D:\selenium"
-driverPath ="D:\Google_drive\Python_\SeleniumPython\chromedriverFolder\chromedriver.exe"
+driverPath =getDriverPath()+ '\\chromedriver.exe'
 hub = "java -jar selenium-server-standalone-2.49.1.jar -host http://localhost -port 4444 -role hub"
 node ="java -jar selenium-server-standalone-2.49.1.jar -host localhost -role webdriver -hub http://localhost:4444/grid/register  -port 5555 -browser browserName=chrome,maxInstances=5,platform=WINDOWS  -Dwebdriver.chrome.driver="+driverPath
 
