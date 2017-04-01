@@ -130,7 +130,7 @@ if __name__ == '__main__':
    f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
    dateToday = date.today()
    if dateToday.month == 4:
-        if dateToday.day == 1: rickAndRollSpam(f.readline().strip(), f.readline().strip(),10)
+        if dateToday.day == 1: rickAndRollSpam(f.readline().strip(), f.readline().strip(),1)
    else:
        main(f.readline().strip(), f.readline().strip())
 
