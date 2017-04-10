@@ -11,9 +11,7 @@ server = 'http://www.calculator.net/'
 
 class CalculatorBase(unittest.TestCase):
 
-    def setRemote(self,remote):
-        self.remote = remote
-
+    remote = False
 
     def setUp(self):
         if(self.remote):

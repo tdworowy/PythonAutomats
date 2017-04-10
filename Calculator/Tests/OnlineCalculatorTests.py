@@ -6,21 +6,21 @@ from Utils.utils import logResult
 
 
 class CalculatorTests(CalculatorBase):
-    CalculatorBase.setRemote(CalculatorBase,True)
 
 
     def testOpenScientificCalculator(self):
         try:
-            self.calculator.openCalculator().click()
+            self.calculator.openCalculator()
             time.sleep(1)
-            self.assertTrue(self.calculator.scientificCalculator().is_displayed())
+            self.assertTrue(self.calculator.scientificCalculatorCheck())
             logResult("testOpenScientificCalculator", "Pass")
         except AssertionError:
             logResult("testOpenScientificCalculator", "Fail")
             self.fail("fail")
+
     def testScientificCalculatorSum1(self):
         try:
-            self.calculator.openCalculator().click()
+            self.calculator.openCalculator()
             time.sleep(1)
             self.assertTrue((self.calculator.sum(2, 2, 4)))
             logResult("testScientificCalculatorSum1", "Pass")
@@ -30,7 +30,7 @@ class CalculatorTests(CalculatorBase):
 
     def testScientificCalculatorSum2(self):
         try:
-            self.calculator.openCalculator().click()
+            self.calculator.openCalculator()
             time.sleep(1)
             self.assertTrue((self.calculator.sum(-2, 2, 0)))
             logResult("testScientificCalculatorSum2", "Pass")
@@ -40,7 +40,7 @@ class CalculatorTests(CalculatorBase):
 
     def testScientificCalculatorSum3(self):
         try:
-            self.calculator.openCalculator().click()
+            self.calculator.openCalculator()
             time.sleep(1)
             self.assertTrue((self.calculator.bigSum(1000, 1000, 2000)))
             logResult("testScientificCalculatorSum3", "Pass")
@@ -51,4 +51,3 @@ class CalculatorTests(CalculatorBase):
 
 if __name__ == '__main__':
     test_program = unittest.main()
-
