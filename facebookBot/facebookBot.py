@@ -3,14 +3,8 @@ import time
 
 from selenium import webdriver
 
+from Utils.utils import Enum
 from chromedriverFolder.driverPath import getDriverPath
-
-
-class Enum(set):
-    def __getattr__(self, name):
-        if name in self:
-            return name
-        raise AttributeError
 
 visibilityEnum= Enum(["friends",'public','me'])
 
