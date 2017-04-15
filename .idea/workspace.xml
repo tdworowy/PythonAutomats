@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator/Elements/Calculator.py" afterPath="$PROJECT_DIR$/Calculator/Elements/Calculator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator/Elements/TestBase.py" afterPath="$PROJECT_DIR$/Calculator/Elements/TestBase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" afterPath="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SkypeBot/skypeBot.py" afterPath="$PROJECT_DIR$/SkypeBot/skypeBot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SongOfTheDay/file.txt" afterPath="$PROJECT_DIR$/SongOfTheDay/file.txt" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +27,9 @@
       <file leaf-file-name="TestBase.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="272">
               <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -40,21 +37,19 @@
       <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Python/Lib/unittest/case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="9979">
               <caret line="600" column="0" lean-forward="false" selection-start-line="600" selection-start-column="0" selection-end-line="600" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnlineCalculatorTests.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OnlineCalculatorTests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="519">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,7 +57,7 @@
       <file leaf-file-name="loader.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Python/Lib/unittest/loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
+            <state relative-caret-position="6528">
               <caret line="394" column="0" lean-forward="false" selection-start-line="394" selection-start-column="0" selection-end-line="394" selection-end-column="0" />
               <folding />
             </state>
@@ -82,8 +77,8 @@
       <file leaf-file-name="Calculator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+            <state relative-caret-position="187">
+              <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="39" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -91,11 +86,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webdriver.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Python/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <file leaf-file-name="TestsResultLog.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/TestsResultLog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="235" column="0" lean-forward="false" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="skypeBot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SkypeBot/skypeBot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="songOfTheDay.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2074">
+              <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,28 +121,8 @@
       <file leaf-file-name="errorhandler.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Python/Lib/site-packages/selenium/webdriver/remote/errorhandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
+            <state relative-caret-position="2992">
               <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/log.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3272">
-              <caret line="266" column="0" lean-forward="true" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SongOfTheDay/file.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508334">
-              <caret line="29902" column="25" lean-forward="false" selection-start-line="29902" selection-start-column="25" selection-end-line="29902" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -178,7 +175,6 @@
         <option value="$PROJECT_DIR$/chromedriverFolder/driverPath.py" />
         <option value="$PROJECT_DIR$/SongOfTheDay/file.txt" />
         <option value="$PROJECT_DIR$/SongOfTheDay/aut.txt" />
-        <option value="$PROJECT_DIR$/SkypeBot/skypeBot.py" />
         <option value="$PROJECT_DIR$/SongOfTheDay/Songs.py" />
         <option value="$PROJECT_DIR$/facebookBot/__init__.py" />
         <option value="$PROJECT_DIR$/facebookBot/aut.txt" />
@@ -190,9 +186,10 @@
         <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/facebookBot/facebookBot.py" />
         <option value="$PROJECT_DIR$/Utils/log.txt" />
-        <option value="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
         <option value="$PROJECT_DIR$/Calculator/Elements/TestBase.py" />
         <option value="$PROJECT_DIR$/Calculator/Elements/Calculator.py" />
+        <option value="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
+        <option value="$PROJECT_DIR$/SkypeBot/skypeBot.py" />
       </list>
     </option>
   </component>
@@ -218,6 +215,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,7 +350,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -383,7 +380,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in OnlineCalculatorTests">
+  <component name="RunManager" selected="Python.songOfTheDay">
     <configuration default="false" name="Unittests in OnlineCalculatorTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -590,11 +587,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in OnlineCalculatorTests" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for Calculator.Elements.TestBase.CalculatorBase" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for Calculator.Tests.OnlineCalculatorTests.CalculatorTests.testOpenScientificCalculator" />
-        <item index="3" class="java.lang.String" itemvalue="Python.startHub" />
-        <item index="4" class="java.lang.String" itemvalue="Python.songOfTheDay" />
+        <item index="0" class="java.lang.String" itemvalue="Python.songOfTheDay" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in OnlineCalculatorTests" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for Calculator.Elements.TestBase.CalculatorBase" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for Calculator.Tests.OnlineCalculatorTests.CalculatorTests.testOpenScientificCalculator" />
+        <item index="4" class="java.lang.String" itemvalue="Python.startHub" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -630,13 +627,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00008" summary="update">
-      <created>1482273276144</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1482273276144</updated>
     </task>
     <task id="LOCAL-00009" summary="update">
       <created>1482278647544</created>
@@ -974,7 +964,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491836415324</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Refactor">
+      <created>1491840878279</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1491840878279</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1021,7 +1018,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20309168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20948827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32176656" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34561214" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
@@ -1063,7 +1060,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="update for selenium grid" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1071,7 +1069,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Calculator/Elements/Calculator.py</url>
-          <line>7</line>
+          <line>8</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1081,7 +1079,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Calculator/Elements/Calculator.py</url>
-          <line>21</line>
+          <line>22</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
@@ -1182,18 +1180,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/facebookBot/aut.txt" />
     <entry file="file://$PROJECT_DIR$/Utils/Friday 2017-03-24" />
-    <entry file="file://$PROJECT_DIR$/SkypeBot/skypeBot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/startHub.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,7 +1191,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1209,7 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1217,17 +1205,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1235,7 +1212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1243,17 +1219,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/TestsResultLog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1261,7 +1226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3272">
           <caret line="266" column="0" lean-forward="true" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1275,7 +1239,7 @@
     </entry>
     <entry file="file://D:/Python/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="3774">
           <caret line="235" column="0" lean-forward="false" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
           <folding />
         </state>
@@ -1283,7 +1247,7 @@
     </entry>
     <entry file="file://D:/Python/Lib/site-packages/selenium/webdriver/remote/errorhandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
+        <state relative-caret-position="2992">
           <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
           <folding />
         </state>
@@ -1299,7 +1263,7 @@
     </entry>
     <entry file="file://D:/Python/Lib/unittest/loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
+        <state relative-caret-position="6528">
           <caret line="394" column="0" lean-forward="false" selection-start-line="394" selection-start-column="0" selection-end-line="394" selection-end-column="0" />
           <folding />
         </state>
@@ -1307,7 +1271,7 @@
     </entry>
     <entry file="file://D:/Python/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="9979">
           <caret line="600" column="0" lean-forward="false" selection-start-line="600" selection-start-column="0" selection-end-line="600" selection-end-column="0" />
           <folding />
         </state>
@@ -1315,31 +1279,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/Elements/TestBase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="272">
           <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py">
+    <entry file="file://$PROJECT_DIR$/Utils/TestsResultLog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="519">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Elements/Calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="39" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SkypeBot/skypeBot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2074">
+          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
