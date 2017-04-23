@@ -1,0 +1,21 @@
+INFO:root:2017-04-23 12:24:37
+INFO:root:Feature name: Scientific Calculator
+INFO:root:Scenario started: Open Scientific Calculator
+INFO:root:Step: open scientific calculator
+INFO:root:Step: check calculator
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 2 + 2 = 4
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum -2 + 2 = 0
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 1000 + 1000 = 2000
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished

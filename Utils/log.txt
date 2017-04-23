@@ -1,0 +1,361 @@
+2017-02-25 16:23:25 Update songs list
+2017-02-25 16:23:25 get songs from last fm
+2017-02-25 16:25:13 Update songs list
+2017-02-25 16:25:15 get songs from last fm
+2017-02-25 16:26:14 Update songs list
+2017-02-25 16:26:14 get songs from last fm
+2017-02-25 16:26:59 Update songs list
+2017-02-25 16:26:59 get songs from last fm
+2017-02-25 16:27:08 not readable
+2017-02-25 16:27:43 Update songs list
+2017-02-25 16:27:43 get songs from last fm
+2017-02-25 16:27:52 not readable
+2017-02-25 16:28:20 Update songs list
+2017-02-25 16:28:20 get songs from last fm
+2017-02-25 16:28:30 unsupported operand type(s) for +: 'function' and 'str'
+2017-02-25 16:29:35 Update songs list
+2017-02-25 16:29:35 get songs from last fm
+2017-02-25 16:29:46 unsupported operand type(s) for +: 'function' and 'str'
+2017-02-25 16:30:39 Update songs list
+2017-02-25 16:30:40 get songs from last fm
+2017-02-25 16:33:42 Update songs list
+2017-02-25 16:33:43 get songs from last fm
+2017-02-25 16:47:24 Generate songs list
+2017-02-25 16:47:24 get songs from last fm
+2017-02-25 16:47:38 Generate songs list
+2017-02-25 16:47:38 get songs from last fm
+2017-02-25 16:49:30 Update songs list
+2017-02-25 16:49:30 get songs from last fm
+2017-02-25 16:49:39 'charmap' codec can't encode character '\xe5' in position 19: character maps to <undefined>
+2017-02-25 16:50:32 Update songs list
+2017-02-25 16:50:34 get songs from last fm
+2017-02-25 16:53:28 Update songs list
+2017-02-25 16:53:30 get songs from last fm
+2017-02-25 16:56:19 Update songs list
+2017-02-25 16:56:28 get songs from last fm
+2017-02-25 16:58:27 Update songs list
+2017-02-25 16:58:27 get songs from last fm
+2017-02-25 16:58:35 'charmap' codec can't encode character '\xe5' in position 19: character maps to <undefined>
+2017-02-25 17:06:56 Update songs list
+2017-02-25 17:07:11 get songs from last fm
+2017-02-25 17:08:21 Update songs list
+2017-02-25 17:08:24 get songs from last fm
+2017-02-25 17:09:55 Update songs list
+2017-02-25 17:10:02 get songs from last fm
+2017-02-25 17:12:17 Update songs list
+2017-02-25 17:12:17 get songs from last fm
+2017-02-25 17:12:27 unsupported operand type(s) for +: 'function' and 'str'
+2017-02-25 17:13:42 Update songs list
+2017-02-25 17:13:42 get songs from last fm
+2017-02-25 17:13:49 Update songs list
+2017-02-25 17:13:49 get songs from last fm
+2017-02-25 17:14:02 Get random song
+2017-02-25 17:14:02 Dälek - (Subversive Script)
+2017-02-25 17:14:32 Piosenka na wieczór[Auto]
+2017-02-25 17:14:32 https://www.youtube.com/watch?v=8f2QoxVZ0Vg
+2017-02-26 18:00:16 Update songs list
+2017-02-26 18:00:16 [Errno 2] No such file or directory: 'file.txt'
+2017-02-26 18:10:12 Update songs list
+2017-02-26 18:10:12 [Errno 2] No such file or directory: 'file.txt'
+2017-02-26 18:10:28 Update songs list
+2017-02-26 18:10:28 [Errno 2] No such file or directory: 'file.txt'
+2017-02-26 18:12:54 Update songs list
+2017-02-26 18:12:54 get songs from last fm
+2017-02-26 18:13:07 Get random song
+2017-02-26 18:13:07 The Rolling Stones - Time Is On My Side - Live In Ireland / 1965
+2017-02-26 18:13:38 Piosenka na wieczór[Auto]
+2017-02-26 18:13:38 https://www.youtube.com/watch?v=KukWz1xQQCw
+2017-02-27 17:22:13 Update songs list
+2017-02-27 17:22:13 get songs from last fm
+2017-02-27 17:22:25 Get random song
+2017-02-27 17:22:25 The Sword - Acheron/Unearthing the Orb
+2017-02-27 17:22:56 Piosenka na wieczór[Auto]
+2017-02-27 17:22:56 https://www.youtube.com/watch?v=OYmgjk22qXA
+2017-03-01 20:32:41 Update songs list
+2017-03-01 20:32:41 get songs from last fm
+2017-03-01 20:32:56 Get random song
+2017-03-01 20:32:56 Anarchy Club - Enemy Ace
+2017-03-01 20:33:40 Piosenka na noc[Auto]
+2017-03-01 20:33:40 https://www.youtube.com/watch?v=1UOmssVPD5Y
+2017-03-02 17:20:01 Update songs list
+2017-03-02 17:20:01 get songs from last fm
+2017-03-02 17:20:14 Get random song
+2017-03-02 17:20:14 Tom Waits - Black Wings
+2017-03-02 17:20:46 Piosenka na wieczór[Auto]
+2017-03-02 17:20:46 https://www.youtube.com/watch?v=0i3cEdaM6y4
+2017-03-04 17:39:09 Update songs list
+2017-03-04 17:39:10 get songs from last fm
+2017-03-04 17:39:23 Get random song
+2017-03-04 17:39:23 Homo Twist - sarajevo
+2017-03-04 17:39:53 Piosenka na wieczór[Auto]
+2017-03-04 17:39:53 https://www.youtube.com/watch?v=hv6KNC428eQ
+2017-03-05 17:43:01 Update songs list
+2017-03-05 17:43:02 get songs from last fm
+2017-03-05 17:43:15 Get random song
+2017-03-05 17:43:15 Bob Dylan - Don't Think Twice, It's All Right
+2017-03-05 17:43:48 Piosenka na wieczór[Auto]
+2017-03-05 17:43:48 https://www.youtube.com/watch?v=u-Y3KfJs6T0
+2017-03-06 18:49:27 Update songs list
+2017-03-06 18:49:27 get songs from last fm
+2017-03-06 18:49:40 Get random song
+2017-03-06 18:49:41 Nine Inch Nails - Non-Entity
+2017-03-06 18:50:10 Piosenka na wieczór[Auto]
+2017-03-06 18:50:10 https://www.youtube.com/watch?v=lOx5FZlX2JE
+2017-03-08 18:02:46 Update songs list
+2017-03-08 18:02:46 get songs from last fm
+2017-03-08 18:03:03 Get random song
+2017-03-08 18:03:03 Jucifer - Thermidor
+2017-03-08 18:03:37 Piosenka na wieczór[Auto]
+2017-03-08 18:03:37 https://www.youtube.com/watch?v=h-LvtBuj73Y
+2017-03-10 18:26:24 Update songs list
+2017-03-10 18:26:25 get songs from last fm
+2017-03-10 18:26:38 Get random song
+2017-03-10 18:26:38 Dope D.O.D. - Combust
+2017-03-10 18:27:33 Message: 
+
+2017-03-11 18:32:27 Update songs list
+2017-03-11 18:32:27 get songs from last fm
+2017-03-11 18:32:40 Get random song
+2017-03-11 18:32:40 In Gowan Ring - Within Rings (With Dreambox)
+2017-03-11 18:33:36 Message: 
+
+2017-03-11 22:19:00 Update songs list
+2017-03-11 22:19:01 get songs from last fm
+2017-03-11 22:19:13 Get random song
+2017-03-11 22:19:13 The White Stripes - Blue Orchid
+2017-03-11 22:20:08 Message: 
+
+2017-03-11 22:20:55 Update songs list
+2017-03-11 22:20:55 get songs from last fm
+2017-03-11 22:21:08 Get random song
+2017-03-11 22:21:08 Volbeat - For Evigt
+2017-03-11 22:21:36 Piosenka na noc[Auto]
+2017-03-11 22:21:36 https://www.youtube.com/watch?v=TAhyZegVkhw
+2017-03-11 22:22:49 Update songs list
+2017-03-11 22:22:49 get songs from last fm
+2017-03-12 17:56:24 Update songs list
+2017-03-12 17:56:24 get songs from last fm
+2017-03-12 17:56:38 Get random song
+2017-03-12 17:56:38 Tiamat - Cold Seed
+2017-03-12 17:57:14 Piosenka na wieczór[Auto]
+2017-03-12 17:57:14 https://www.youtube.com/watch?v=R6_AjxwBUw0
+2017-03-13 20:42:05 Update songs list
+2017-03-13 20:42:05 get songs from last fm
+2017-03-13 20:42:21 Get random song
+2017-03-13 20:42:21 Tom Waits - Black Market Baby
+2017-03-13 20:42:55 Piosenka na noc[Auto]
+2017-03-13 20:42:55 https://www.youtube.com/watch?v=qjTCVyLbb8k
+2017-03-15 19:18:11 Update songs list
+2017-03-15 19:18:12 get songs from last fm
+2017-03-15 19:18:27 Get random song
+2017-03-15 19:18:27 Grateful Dead - China Cat Sunflower
+2017-03-15 19:18:59 Piosenka na wieczór[Auto]
+2017-03-15 19:18:59 https://www.youtube.com/watch?v=xCgZxrf8nrU
+2017-03-16 19:04:42 Update songs list
+2017-03-16 19:04:42 get songs from last fm
+2017-03-16 19:04:59 Get random song
+2017-03-16 19:04:59 Sanctity - Beneath The Machine
+2017-03-16 19:05:36 Piosenka na wieczór[Auto]
+2017-03-16 19:05:37 https://www.youtube.com/watch?v=n1EPuegdyic
+2017-03-17 17:26:19 Update songs list
+2017-03-17 17:26:20 get songs from last fm
+2017-03-17 17:26:40 Get random song
+2017-03-17 17:26:40 Jethro Tull - Salamander
+2017-03-17 17:27:18 Piosenka na wieczór[Auto]
+2017-03-17 17:27:18 https://www.youtube.com/watch?v=n17jefFkHmI
+2017-03-18 17:40:03 Update songs list
+2017-03-18 17:40:03 get songs from last fm
+2017-03-18 17:40:20 Get random song
+2017-03-18 17:40:20 The Cramps - Domino
+2017-03-18 17:40:53 Piosenka na wieczór[Auto]
+2017-03-18 17:40:53 https://www.youtube.com/watch?v=XKJ-apLC-cQ
+2017-03-19 17:09:42 Update songs list
+2017-03-19 17:09:42 get songs from last fm
+2017-03-19 17:10:00 Get random song
+2017-03-19 17:10:00 The Pineapple Thief - One More Step Away
+2017-03-19 17:10:45 Piosenka na wieczór[Auto]
+2017-03-19 17:10:45 https://www.youtube.com/watch?v=Ha0_k-lAnNQ
+2017-03-20 17:05:46 Update songs list
+2017-03-20 17:05:46 get songs from last fm
+2017-03-20 17:06:09 Get random song
+2017-03-20 17:06:09 Iggy Pop - Rock and Roll Party
+2017-03-20 17:06:56 Piosenka na wieczór[Auto]
+2017-03-20 17:06:56 https://www.youtube.com/watch?v=UxL4-K5W_Js
+2017-03-21 18:50:17 Update songs list
+2017-03-21 18:50:17 get songs from last fm
+2017-03-21 18:50:30 Get random song
+2017-03-21 18:50:30 Disturbed - Living After Midnight
+2017-03-21 18:52:40 'NoneType' object has no attribute 'click'
+2017-03-24 18:49:12 Update songs list
+2017-03-24 18:49:12 get songs from last fm
+2017-03-24 18:49:26 Get random song
+2017-03-24 18:49:26 Charon - Colder
+2017-03-24 18:49:58 Piosenka na wieczór[Auto]
+2017-03-24 18:49:58 https://www.youtube.com/watch?v=tCsJeV-OgeE
+2017-03-25 15:46:54 Update songs list
+2017-03-25 15:46:54 get songs from last fm
+2017-03-25 15:47:06 Get random song
+2017-03-25 15:47:06 Ghoultown - Intro
+2017-03-25 15:47:40 Today is: Saturday 2017-03-25
+2017-03-25 15:47:40 Piosenka dnia[Auto]
+2017-03-25 15:47:40 h
+2017-03-25 15:47:40 Today is: Saturday 2017-03-25
+2017-03-25 15:47:42 t
+2017-03-25 15:47:42 Today is: Saturday 2017-03-25
+2017-03-25 15:47:44 t
+2017-03-25 15:47:44 Today is: Saturday 2017-03-25
+2017-03-25 15:47:46 p
+2017-03-25 15:47:46 Today is: Saturday 2017-03-25
+2017-03-25 15:47:49 s
+2017-03-25 15:47:49 Today is: Saturday 2017-03-25
+2017-03-25 15:49:50 Update songs list
+2017-03-25 15:49:50 get songs from last fm
+2017-03-25 15:50:04 Get random song
+2017-03-25 15:50:04 Dälek - Ever Somber
+2017-03-25 15:50:35 Today is: Saturday 2017-03-25
+2017-03-25 15:50:35 Piosenka dnia[Auto]
+2017-03-25 15:50:35 https://www.youtube.com/watch?v=i789TMw49rE
+2017-03-25 15:50:35 Today is: Saturday 2017-03-25
+2017-03-26 17:49:10 Update songs list
+2017-03-26 17:49:10 get songs from last fm
+2017-03-26 17:49:37 Get random song
+2017-03-26 17:49:37 The Who - Sally Simpson
+2017-03-26 17:49:50 Message: no such element: Unable to locate element: {"method":"id","selector":"masthead-search-term"}
+  (Session info: chrome=57.0.2987.110)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.14393 x86_64)
+
+2017-03-26 17:58:31 Update songs list
+2017-03-26 17:58:31 get songs from last fm
+2017-03-26 17:58:55 Get random song
+2017-03-26 17:58:55 Dead Can Dance - Wild In The Woods (Remastered)
+2017-03-26 18:00:10 Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.input.active input.inputField.fontSize-h4"}
+  (Session info: chrome=57.0.2987.110)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.14393 x86_64)
+
+2017-03-26 18:02:03 Update songs list
+2017-03-26 18:02:03 get songs from last fm
+2017-03-26 18:02:25 Get random song
+2017-03-26 18:02:25 Greensky Bluegrass - Fixin' To Ruin
+2017-03-26 18:03:37 Today is: Sunday 2017-03-26
+2017-03-26 18:03:37 Piosenka na niedziele[Auto]
+2017-03-26 18:03:37 https://www.youtube.com/watch?v=lZOctySeCoE
+2017-03-26 18:03:37 Today is: Sunday 2017-03-26
+2017-04-01 17:06:37 Update songs list
+2017-04-01 17:06:37 get songs from last fm
+2017-04-01 17:07:18 Today is: Saturday 2017-04-01
+2017-04-01 17:07:18 Piosenka na Prima aprilis[Auto]
+2017-04-01 17:07:18 https://www.youtube.com/watch?v=dQw4w9WgXcQ
+2017-04-01 17:07:18 Today is: Saturday 2017-04-01
+2017-04-01 19:06:45 Update songs list
+2017-04-01 19:06:45 get songs from last fm
+2017-04-07 19:03:24 Update songs list
+2017-04-07 19:03:24 get songs from last fm
+2017-04-07 19:03:40 Get random song
+2017-04-07 19:03:40 Soil - Crucified
+2017-04-07 19:04:10 Today is: Friday 2017-04-07
+2017-04-07 19:04:10 Piosenka na wieczór[Auto]
+2017-04-07 19:04:10 https://www.youtube.com/watch?v=DiHPgTfapSc
+2017-04-07 19:04:10 Today is: Friday 2017-04-07
+2017-04-08 17:05:25 Update songs list
+2017-04-08 17:05:25 get songs from last fm
+2017-04-08 17:05:39 Get random song
+2017-04-08 17:05:39 Shabazz Palaces - MindGlitch Keytar TM Theme
+2017-04-08 17:06:13 Today is: Saturday 2017-04-08
+2017-04-08 17:06:13 Piosenka na sobote[Auto]
+2017-04-08 17:06:13 https://www.youtube.com/watch?v=Z5RezLigTOQ
+2017-04-08 17:06:13 Today is: Saturday 2017-04-08
+2017-04-12 13:53:03 Update songs list
+2017-04-12 13:53:03 get songs from last fm
+2017-04-12 13:53:20 Get random song
+2017-04-12 13:53:20 Disturbed - Devour
+2017-04-12 13:53:54 Today is: Wednesday 2017-04-12
+2017-04-12 13:53:54 Piosenka dnia[Auto]
+2017-04-12 13:53:54 https://www.youtube.com/watch?v=p8T0nzX0Tmw
+2017-04-12 13:53:54 Today is: Wednesday 2017-04-12
+2017-04-15 19:03:07 Update songs list
+2017-04-15 19:03:07 get songs from last fm
+2017-04-15 19:03:21 Get random song
+2017-04-15 19:03:21 Powerwolf - Behind the Leathermask
+2017-04-15 19:03:52 Today is: Saturday 2017-04-15
+2017-04-15 19:03:52 Piosenka na sobote[Auto]
+2017-04-15 19:03:52 https://www.youtube.com/watch?v=jpqWCsUbZLE
+2017-04-15 19:03:52 Today is: Saturday 2017-04-15
+2017-04-15 22:54:52 Update songs list
+2017-04-15 22:54:52 get songs from last fm
+2017-04-15 22:56:25 Update songs list
+2017-04-15 22:56:25 get songs from last fm
+2017-04-15 22:56:38 Get random song
+2017-04-15 22:56:38 And So I Watch You From Afar - Trails
+2017-04-15 22:56:49 Message: unknown error: 'using' must be a string
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64)
+
+2017-04-15 22:58:08 Update songs list
+2017-04-15 22:58:08 get songs from last fm
+2017-04-15 22:58:20 Get random song
+2017-04-15 22:58:20 Hyperion - Pacem
+2017-04-15 22:58:30 'WebDriver' object has no attribute 'find'
+2017-04-15 22:58:55 Update songs list
+2017-04-15 22:58:55 get songs from last fm
+2017-04-15 22:59:08 Get random song
+2017-04-15 22:59:08 Ozric Tentacles - Oddweird
+2017-04-15 22:59:22 Message: no such element: Unable to locate element: {"method":"id","selector":"passwd"}
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64)
+
+2017-04-15 23:00:28 Update songs list
+2017-04-15 23:00:28 get songs from last fm
+2017-04-15 23:00:40 Get random song
+2017-04-15 23:00:40 Cult of Luna - Finland
+2017-04-15 23:01:10 Today is: Saturday 2017-04-15
+2017-04-15 23:01:10 Piosenka na sobote[Auto]
+2017-04-15 23:01:10 https://www.youtube.com/watch?v=bDtTI9ryibc
+2017-04-15 23:01:10 Today is: Saturday 2017-04-15
+2017-04-18 19:05:51 Update songs list
+2017-04-18 19:05:51 get songs from last fm
+2017-04-18 19:06:05 Get random song
+2017-04-18 19:06:06 Blue Öyster Cult - (Don't Fear) The Reaper
+2017-04-18 19:06:39 Message: element not visible
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64)
+
+2017-04-18 19:11:18 Update songs list
+2017-04-18 19:11:18 get songs from last fm
+2017-04-18 19:11:34 Get random song
+2017-04-18 19:11:34 AC/DC - Playing With Girls
+2017-04-18 19:12:09 Today is: Tuesday 2017-04-18
+2017-04-18 19:12:09 Piosenka na wieczór[Auto]
+2017-04-18 19:12:09 https://www.youtube.com/watch?v=rrENWd8E6c4
+2017-04-18 19:12:09 Today is: Tuesday 2017-04-18
+2017-04-19 19:08:24 Update songs list
+2017-04-19 19:08:24 get songs from last fm
+2017-04-19 19:08:42 Get random song
+2017-04-19 19:08:42 Björk - Thunderbolt
+2017-04-19 19:09:18 Today is: Wednesday 2017-04-19
+2017-04-19 19:09:18 Piosenka na wieczór[Auto]
+2017-04-19 19:09:18 https://www.youtube.com/watch?v=4dFRKQssVIg
+2017-04-19 19:09:18 Today is: Wednesday 2017-04-19
+2017-04-20 17:34:27 Update songs list
+2017-04-20 17:34:27 get songs from last fm
+2017-04-20 17:34:45 Get random song
+2017-04-20 17:34:45 Judas Priest - Crawler
+2017-04-20 17:35:26 Today is: Thursday 2017-04-20
+2017-04-20 17:35:26 Piosenka na wieczór[Auto]
+2017-04-20 17:35:26 https://www.youtube.com/watch?v=FMFHao3w5Ak
+2017-04-20 17:35:26 Today is: Thursday 2017-04-20
+2017-04-21 22:34:10 Update songs list
+2017-04-21 22:34:10 get songs from last fm
+2017-04-21 22:34:30 Get random song
+2017-04-21 22:34:30 The Atomic Bitchwax - So Come On
+2017-04-21 22:35:01 Today is: Friday 2017-04-21
+2017-04-21 22:35:01 Piosenka na noc[Auto]
+2017-04-21 22:35:01 https://www.youtube.com/watch?v=h97Go2xHUOw
+2017-04-21 22:35:01 Today is: Friday 2017-04-21
+2017-04-22 18:47:20 Update songs list
+2017-04-22 18:47:20 get songs from last fm
+2017-04-22 18:47:39 Get random song
+2017-04-22 18:47:39 Kiss - Christine Sixteen
+2017-04-22 18:48:13 Today is: Saturday 2017-04-22
+2017-04-22 18:48:13 Piosenka na sobote[Auto]
+2017-04-22 18:48:13 https://www.youtube.com/watch?v=xUL_3hdFSEE
+2017-04-22 18:48:13 Today is: Saturday 2017-04-22

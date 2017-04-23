@@ -2,8 +2,8 @@ import os
 import time
 
 def log (text,file = "log.txt"):
-    timeStumo = time.strftime('%Y-%m-%d %H:%M:%S')
-    log = timeStumo+" "+text +"\n"
+    timeStump = time.strftime('%Y-%m-%d %H:%M:%S')
+    log = timeStump+" "+text +"\n"
     print(log)
     path = os.path.dirname(os.path.abspath(__file__))+"\\"+file
     print(path)
