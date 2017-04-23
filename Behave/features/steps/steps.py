@@ -30,6 +30,20 @@ class calculatorBDD:
     def openCalculator(self):
         self.calculator.openCalculator()
         time.sleep(1)
+
+    @when('sum 2 + 2')
+    def sum1(self):
+        self.sum = self.calculator.sum(2, 2, 4)
+
+
     @then('check calculator')
     def checkifCalculatorIsDisplayed(self):
         assert (self.calculator.scientificCalculatorCheck()) is True
+
+    @then('check result')
+    def checkResult(self):
+        assert self.sum is True
+
+    @then('tear down')
+    def tearDown(self):
+        self.driver.quit()
