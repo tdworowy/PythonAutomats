@@ -10,40 +10,45 @@ from chromedriverFolder.driverPath import getDriverPath
 
 server = 'http://www.calculator.net/'
 
-class calculatorBDD:
-
-    @given('Set up')
-    def SetUp(self):
-            self.remote = False
-            if (self.remote):
+def SetUp(context):
+            remote = False
+            if (remote):
                 # self.driver = WebDriver("http://localhost:4444/wd/hub", "chrome", "ANY")
-                self.driver = WebDriver("http://localhost:4444", DesiredCapabilities.CHROME)
+                context.driver = WebDriver("http://localhost:4444", DesiredCapabilities.CHROME)
             else:
                 chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
-                self.driver = webdriver.Chrome(chromeDriverPath)
-            self.driver.get(server)
-            self.calculator = CalculatorElements(self.driver)
-            self.driver.maximize_window()
-            self.driver.implicitly_wait(10)
+                context.driver = webdriver.Chrome(chromeDriverPath)
+            context.driver.get(server)
+            context.calculator = CalculatorElements(context.driver)
+            context.driver.maximize_window()
+            context.driver.implicitly_wait(10)
 
-    @when('open calculator')
-    def openCalculator(self):
-        self.calculator.openCalculator()
+def tearDown(context):
+        context.driver.quit()
+
+@given('open scientific calculator')
+def openscientificCalculator(context):
+        context.calculator.openCalculator()
+        context.open =context.calculator.scientificCalculatorCheck()
         time.sleep(1)
 
-    @when('sum 2 + 2')
-    def sum1(self):
-        self.sum = self.calculator.sum(2, 2, 4)
+@when('sum 2 + 2')
+def sum1(context):
+    context.sum = context.calculator.sum(2, 2, 4)
 
+@when('sum -2 + 2')
+def sum2(context):
+    context.sum = context.calculator.sum(-2, 2, 0)
 
-    @then('check calculator')
-    def checkifCalculatorIsDisplayed(self):
-        assert (self.calculator.scientificCalculatorCheck()) is True
+@when('sum 1000 + 1000')
+def sum3(context):
+    context.sum = context.calculator.bigSum(1000,1000, 2000)
 
-    @then('check result')
-    def checkResult(self):
-        assert self.sum is True
+@then('check calculator')
+def checkifCalculatorIsDisplayed(context):
+    assert context.open is True
 
-    @then('tear down')
-    def tearDown(self):
-        self.driver.quit()
+@then('check result')
+def checkResult(context):
+    assert context.sum is True
+
