@@ -9,7 +9,7 @@ from Calculator.Elements.Calculator import CalculatorElements
 from chromedriverFolder.driverPath import getDriverPath
 
 server = 'http://www.calculator.net/'
-
+@given('set up')
 def SetUp(context):
             remote = False
             if (remote):
@@ -45,8 +45,8 @@ def sum3(context):
     context.sum = context.calculator.bigSum(1000,1000, 2000)
 
 
-@when('sum {first:d} {second:d}')
-def sum2(context,first,second):
+@when('sum {first} {second}')
+def sumP(context,first,second):
     resoult= int(first) + int(second)
     context.sum = context.calculator.sum(int(first), int(second), resoult)
 

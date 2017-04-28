@@ -19,3 +19,114 @@ INFO:root:Step: open scientific calculator
 INFO:root:Step: sum -2 + 2
 INFO:root:Step: check result
 INFO:root:Test Finished
+INFO:root:2017-04-28 17:22:17
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Open Scientific Calculator
+INFO:root:Step: open scientific calculator
+INFO:root:Step: check calculator
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 2 + 2 = 4
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum -2 + 2 = 0
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 1000 + 1000 = 2000
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:26:17
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Open Scientific Calculator
+INFO:root:Step: open scientific calculator
+INFO:root:Step: check calculator
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 2 + 2 = 4
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum -2 + 2 = 0
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 1000 + 1000 = 2000
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:28:22
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Open Scientific Calculator
+INFO:root:Step: open scientific calculator
+INFO:root:Step: check calculator
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 2 + 2 = 4
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum -2 + 2 = 0
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 1000 + 1000 = 2000
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:30:30
+INFO:root:2017-04-28 17:30:49
+INFO:root:2017-04-28 17:31:03
+INFO:root:2017-04-28 17:31:21
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Open Scientific Calculator
+INFO:root:Step: open scientific calculator
+INFO:root:Step: check calculator
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 2 + 2 = 4
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum -2 + 2 = 0
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 1000 + 1000 = 2000
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:32:41
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:39:52
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:43:56
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:45:53
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:46:25
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:48:55
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:49:05
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:49:53
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:50:20
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:50:41
+INFO:root:Feature name: Scientific Calculator2
