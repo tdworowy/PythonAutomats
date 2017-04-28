@@ -391,3 +391,11 @@
 2017-04-27 18:20:56 Piosenka na wieczór[Auto]
 2017-04-27 18:20:56 https://www.youtube.com/watch?v=Jo-wu2okc2M
 2017-04-27 18:20:56 Today is: Thursday 2017-04-27
+2017-04-28 17:55:13 Update songs list
+2017-04-28 17:55:13 get songs from last fm
+2017-04-28 17:55:32 Get random song
+2017-04-28 17:55:32 Amon Tobin - Always
+2017-04-28 17:56:06 Today is: Friday 2017-04-28
+2017-04-28 17:56:06 Piosenka na wieczór[Auto]
+2017-04-28 17:56:06 https://www.youtube.com/watch?v=UdJpK5jY_jA
+2017-04-28 17:56:06 Today is: Friday 2017-04-28

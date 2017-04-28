@@ -5,6 +5,7 @@ from Calculator.Behave.features.steps.steps import SetUp, tearDown
 
 logging.basicConfig(level=logging.INFO, filename="Logs.log")
 
+BEHAVE_DEBUG = True
 
 def before_all(context):
     timeStump = time.strftime('%Y-%m-%d %H:%M:%S')
@@ -24,3 +25,15 @@ def before_step(context, step):
 def after_scenario(context, scenario):
     logging.info("Test Finished")
     tearDown(context)
+
+def after_step(context, step):
+    if BEHAVE_DEBUG and step.status == "failed":
+        import ipdb
+        logging.info(ipdb.post_mortem(step.exc_traceback))
+
+def after_feature(context,feature):
+        logging.info("Feature name: "+feature.name)
+        logging.info("Skip reason: "+str(feature.skip_reason))
+        logging.info("Status: "+feature.status)
+
+

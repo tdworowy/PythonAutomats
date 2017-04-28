@@ -45,7 +45,7 @@ def sum3(context):
     context.sum = context.calculator.bigSum(1000,1000, 2000)
 
 
-@when('sum {first} {second}')
+@when('sum "{first}" "{second}"')
 def sumP(context,first,second):
     resoult= int(first) + int(second)
     context.sum = context.calculator.sum(int(first), int(second), resoult)

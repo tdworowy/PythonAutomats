@@ -130,3 +130,32 @@ INFO:root:2017-04-28 17:50:20
 INFO:root:Feature name: Scientific Calculator2
 INFO:root:2017-04-28 17:50:41
 INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:56:54
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 17:59:39
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 18:01:58
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 18:04:38
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 18:05:54
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 18:06:22
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cached_status', 'add_scenario', 'background', 'compute_status', 'description', 'duration', 'filename', 'final_status', 'keyword', 'line', 'location', 'mark_skipped', 'name', 'parser', 'replay', 'reset', 'run', 'scenarios', 'should_run', 'should_run_with_tags', 'should_skip', 'skip', 'skip_reason', 'status', 'tags', 'type', 'walk_scenarios']
+INFO:root:2017-04-28 18:07:58
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Scientific Calculator2
+INFO:root:('passed', 'failed', 'skipped')
+INFO:root:None
+INFO:root:skipped
+INFO:root:2017-04-28 18:09:33
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 18:09:53
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:2017-04-28 18:10:16
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
