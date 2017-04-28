@@ -1,7 +1,7 @@
 import logging
 import time
 
-from Behave.features.steps.steps import SetUp, tearDown
+from Calculator.Behave.features.steps.steps import SetUp, tearDown
 
 logging.basicConfig(level=logging.INFO, filename="Logs.log")
 

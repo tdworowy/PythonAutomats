@@ -44,6 +44,14 @@ def sum2(context):
 def sum3(context):
     context.sum = context.calculator.bigSum(1000,1000, 2000)
 
+
+@when('sum {first:d} {second:d}')
+def sum2(context,first,second):
+    resoult= int(first) + int(second)
+    context.sum = context.calculator.sum(int(first), int(second), resoult)
+
+
+
 @then('check calculator')
 def checkifCalculatorIsDisplayed(context):
     assert context.open is True
@@ -51,4 +59,6 @@ def checkifCalculatorIsDisplayed(context):
 @then('check result')
 def checkResult(context):
     assert context.sum is True
+
+
 

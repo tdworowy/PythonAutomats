@@ -1,4 +1,4 @@
-Feature: Scientific Calculator
+Feature: Scientific Calculator1
     Scenario: Open Scientific Calculator
     Given open scientific calculator
     Then check calculator

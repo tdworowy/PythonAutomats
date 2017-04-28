@@ -359,3 +359,35 @@
 2017-04-22 18:48:13 Piosenka na sobote[Auto]
 2017-04-22 18:48:13 https://www.youtube.com/watch?v=xUL_3hdFSEE
 2017-04-22 18:48:13 Today is: Saturday 2017-04-22
+2017-04-23 18:41:54 Update songs list
+2017-04-23 18:41:54 get songs from last fm
+2017-04-23 18:42:15 Get random song
+2017-04-23 18:42:15 Cain's Offering - Gather The Faithful
+2017-04-23 18:42:51 Today is: Sunday 2017-04-23
+2017-04-23 18:42:51 Piosenka na niedziele[Auto]
+2017-04-23 18:42:51 https://www.youtube.com/watch?v=9up11Msvioc
+2017-04-23 18:42:51 Today is: Sunday 2017-04-23
+2017-04-25 19:17:28 Update songs list
+2017-04-25 19:17:28 get songs from last fm
+2017-04-25 19:17:47 Get random song
+2017-04-25 19:17:47 U2 - Mothers of the Disappeared
+2017-04-25 19:18:24 Today is: Tuesday 2017-04-25
+2017-04-25 19:18:24 Piosenka na wieczór[Auto]
+2017-04-25 19:18:24 https://www.youtube.com/watch?v=TxGckWETzdE
+2017-04-25 19:18:24 Today is: Tuesday 2017-04-25
+2017-04-26 19:24:28 Update songs list
+2017-04-26 19:24:28 get songs from last fm
+2017-04-26 19:24:50 Get random song
+2017-04-26 19:24:50 Dream Theater - These Walls
+2017-04-26 19:25:47 Today is: Wednesday 2017-04-26
+2017-04-26 19:25:47 Piosenka na wieczór[Auto]
+2017-04-26 19:25:47 https://www.youtube.com/watch?v=MzovR0s7EbI
+2017-04-26 19:25:47 Today is: Wednesday 2017-04-26
+2017-04-27 18:19:55 Update songs list
+2017-04-27 18:19:55 get songs from last fm
+2017-04-27 18:20:15 Get random song
+2017-04-27 18:20:15 Nico - Eulogy to Lenny Bruce
+2017-04-27 18:20:56 Today is: Thursday 2017-04-27
+2017-04-27 18:20:56 Piosenka na wieczór[Auto]
+2017-04-27 18:20:56 https://www.youtube.com/watch?v=Jo-wu2okc2M
+2017-04-27 18:20:56 Today is: Thursday 2017-04-27
