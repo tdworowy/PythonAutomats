@@ -22,7 +22,8 @@ class CalculatorTests(CalculatorBase):
         try:
             self.calculator.openCalculator()
             time.sleep(1)
-            self.assertTrue((self.calculator.sum(2, 2, 4)))
+            self.calculator.sum(2, 2)
+            self.assertEqual(self.calculator.getCalcResult(),"4.")
             logResult("testScientificCalculatorSum1", "Pass")
         except AssertionError:
             logResult("testScientificCalculatorSum1", "Fail")
@@ -32,7 +33,8 @@ class CalculatorTests(CalculatorBase):
         try:
             self.calculator.openCalculator()
             time.sleep(1)
-            self.assertTrue((self.calculator.sum(-2, 2, 0)))
+            self.calculator.sum(-2, 2)
+            self.assertEqual(self.calculator.getCalcResult(), "0.")
             logResult("testScientificCalculatorSum2", "Pass")
         except AssertionError:
             logResult("testScientificCalculatorSum2", "Fail")
@@ -42,7 +44,8 @@ class CalculatorTests(CalculatorBase):
         try:
             self.calculator.openCalculator()
             time.sleep(1)
-            self.assertTrue((self.calculator.bigSum(1000, 1000, 2000)))
+            self.calculator.bigSum(1000, 1000)
+            self.assertEqual(self.calculator.getCalcResult(), "2000.")
             logResult("testScientificCalculatorSum3", "Pass")
         except AssertionError:
             logResult("testScientificCalculatorSum3", "Fail")

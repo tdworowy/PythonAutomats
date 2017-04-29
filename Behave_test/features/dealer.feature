@@ -1,6 +1,6 @@
 Feature: The dealer for the game of 21
 
-Scenario Outline: Get hand total
+  Scenario Outline: Get hand total
   Given a <hand>
   When the dealer sums the cards
   Then the <total> is correct

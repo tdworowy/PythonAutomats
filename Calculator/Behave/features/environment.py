@@ -9,6 +9,7 @@ BEHAVE_DEBUG = True
 
 def before_all(context):
     timeStump = time.strftime('%Y-%m-%d %H:%M:%S')
+    context.log = logging
     logging.info(timeStump)
 
 def before_feature(context,feature):

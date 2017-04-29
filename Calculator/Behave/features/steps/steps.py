@@ -34,15 +34,19 @@ def openscientificCalculator(context):
 
 @when('sum 2 + 2')
 def sum1(context):
-    context.sum = context.calculator.sum(2, 2, 4)
+    context.sum = context.calculator.sum(2, 2)
+    context.result = "4."
 
 @when('sum -2 + 2')
 def sum2(context):
-    context.sum = context.calculator.sum(-2, 2, 0)
+    context.sum = context.calculator.sum(-2, 2)
+    context.result = "0."
+
 
 @when('sum 1000 + 1000')
 def sum3(context):
-    context.sum = context.calculator.bigSum(1000,1000, 2000)
+    context.calculator.bigSum(1000,1000)
+    context.result = "2000."
 
 
 @when('sum {sum}')
@@ -51,8 +55,9 @@ def sumP(context,sum):
     x =int(ele[0])
     y =int(ele[1])
 
-    context.resoult= x + y
-    context.calculator.bigSum(x, y, context.resoult)
+    resoult= x + y
+    context.log.info("Result: "+str(resoult))
+    context.calculator.bigSum(x, y, resoult)
 
 
 @then('check calculator')
@@ -61,11 +66,17 @@ def checkifCalculatorIsDisplayed(context):
 
 @then('check result')
 def checkResult(context):
-    assert context.sum is True
+    actual = context.calculator.getCalcResult()
+    context.log.info("Check result: " + context.result)
+    context.log.info("Actual result: " + actual)
+    assert context.result == context.calculator.getCalcResult()
 
 @then('check {result}')
 def checkResult2(context,result):
-    assert context.resoult is result
+    actual = context.calculator.getCalcResult()
+    context.log.info("Check result: " + result)
+    context.log.info("Actual result: " + actual)
+    assert result == context.calculator.actual()
 
 
 

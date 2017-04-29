@@ -1,5 +1,3 @@
-import time
-
 from selenium.webdriver.common.by import By
 
 
@@ -12,7 +10,7 @@ class CalculatorElements:
         self.PlusButton = (By.CSS_SELECTOR, "span[onclick=\"r('+')\"]")
         self.ChangeButton = (By.CSS_SELECTOR, "span[onclick=\"r('+/-')\"]")
         self.EqualButton = (By.CSS_SELECTOR, "span[onclick=\"r('=')\"]")
-        self.NumberButtons = [(By.CSS_SELECTOR, "span[onclick=\"r(%s)\"]" % number) for number in range(0, 9)]
+        self.NumberButtons = [(By.CSS_SELECTOR, "span[onclick=\"r(%s)\"]" % number) for number in range(0, 10)]
 
 
 
@@ -41,9 +39,7 @@ class CalculatorElements:
     def equalButtonClick(self):
         self.driver.find_element(*self.EqualButton).click()
 
-    def sum(self, num1, num2, result):
-        res = str(result) + "."
-
+    def sum(self, num1, num2):
         self.numberButtonClick(abs(num1))
         if num1 < 0: self.changeButtonClick()
 
@@ -52,15 +48,9 @@ class CalculatorElements:
         self.numberButtonClick(abs(num2))
         if num2 < 0: self.changeButtonClick()
         self.equalButtonClick()
-        time.sleep(1)
-        if res == self.getCalcResult():
-            return True
-        else:
-            return False
 
-    def bigSum(self, num1, num2, result):
-        res = str(result) + "."
 
+    def bigSum(self, num1, num2):
         num1List = list(str(num1))
         num2List = list(str(num2))
         self.clickNumbers(num1List)
@@ -68,11 +58,6 @@ class CalculatorElements:
         self.clickNumbers(num2List)
 
         self.equalButtonClick()
-        time.sleep(1)
-        if res == self.getCalcResult():
-            return True
-        else:
-            return False
 
     def clickNumbers(self,numList):
         for n in numList:
