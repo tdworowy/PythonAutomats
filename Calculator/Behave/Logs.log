@@ -455,3 +455,58 @@ INFO:root:Scenario started: Sum scenario -- @1.1 Numbers
 INFO:root:Step: open scientific calculator
 INFO:root:Step: sum 100,100
 INFO:root:Result: 200
+INFO:root:2017-04-29 11:35:15
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Scenario started: Sum scenario -- @1.1 Numbers
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 100,100
+INFO:root:Step: check 200.
+INFO:root:Check result: 200.
+INFO:root:Actual result: 200.
+INFO:root:2017-04-29 11:48:53
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Scenario started: Sum scenario -- @1.1 Numbers
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 100,100
+INFO:root:Step: check 200.
+INFO:root:Check result: 200.
+INFO:root:Actual result: 200.
+INFO:root:Test Finished
+INFO:root:Scenario started: Sum scenario -- @1.2 Numbers
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 0,0
+INFO:root:Step: check 0.
+INFO:root:Check result: 0.
+INFO:root:Actual result: 0.
+INFO:root:Test Finished
+INFO:root:Scenario started: Sum scenario -- @1.3 Numbers
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 9,1
+INFO:root:Step: check 10.
+INFO:root:Check result: 10.
+INFO:root:Actual result: 10.
+INFO:root:Test Finished
+INFO:root:Scenario started: Sum scenario -- @1.4 Numbers
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 99,1
+INFO:root:Step: check 100.
+INFO:root:Check result: 100.
+INFO:root:Actual result: 100.
+INFO:root:Test Finished
+INFO:root:Scenario started: Sum scenario -- @1.5 Numbers
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 999,0
+INFO:root:Step: check 999.
+INFO:root:Check result: 999.
+INFO:root:Actual result: 999.
+INFO:root:Test Finished
+INFO:root:Scenario started: Sum scenario -- @1.6 Numbers
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 0,9999
+INFO:root:Step: check 9999.
+INFO:root:Check result: 9999.
+INFO:root:Actual result: 9999.
+INFO:root:Test Finished
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Skip reason: None
+INFO:root:Status: passed

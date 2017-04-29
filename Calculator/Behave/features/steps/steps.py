@@ -54,11 +54,7 @@ def sumP(context,sum):
     ele = sum.split(',')
     x =int(ele[0])
     y =int(ele[1])
-
-    resoult= x + y
-    context.log.info("Result: "+str(resoult))
-    context.calculator.bigSum(x, y, resoult)
-
+    context.calculator.bigSum(x, y)
 
 @then('check calculator')
 def checkifCalculatorIsDisplayed(context):
@@ -76,7 +72,7 @@ def checkResult2(context,result):
     actual = context.calculator.getCalcResult()
     context.log.info("Check result: " + result)
     context.log.info("Actual result: " + actual)
-    assert result == context.calculator.actual()
+    assert result == context.calculator.getCalcResult()
 
 
 
