@@ -1,14 +1,18 @@
 
 from behave import *
 
+from Behave_test.twentyone import Dealer
 
 
-@given("Add {numbers:d} {result:d}")
-def sumP(context,numbers,result):
-    ele = numbers.split(',')
-    x =int(ele[0])
-    y =int(ele[1])
-    assert x+y is result
+@given('a {hand}')
+def step_impl(context, hand):
+    context.dealer = Dealer()
+    context.dealer.hand = hand.split(',')
 
+@when('the dealer sums the cards')
+def step_impl(context):
+    context.dealer_total = context.dealer.get_hand_total()
 
-
+@then('the {total:d} is correct')
+def step_impl(context, total):
+    assert (context.dealer_total == total)
