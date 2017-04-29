@@ -159,3 +159,72 @@ INFO:root:Feature name: Scientific Calculator2
 INFO:root:Feature name: Scientific Calculator2
 INFO:root:Skip reason: None
 INFO:root:Status: skipped
+INFO:root:2017-04-29 09:04:50
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Open Scientific Calculator
+INFO:root:Step: open scientific calculator
+INFO:root:Step: check calculator
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 2 + 2 = 4
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum -2 + 2 = 0
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 1000 + 1000 = 2000
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Test Finished
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Skip reason: None
+INFO:root:Status: passed
+INFO:root:2017-04-29 09:13:27
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+INFO:root:2017-04-29 09:13:51
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+INFO:root:2017-04-29 09:14:14
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+INFO:root:2017-04-29 09:31:58
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+INFO:root:2017-04-29 09:32:22
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+INFO:root:2017-04-29 09:33:29
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+INFO:root:2017-04-29 09:34:52
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+INFO:root:2017-04-29 09:50:27
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+INFO:root:2017-04-29 09:53:38
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Skip reason: None
+INFO:root:Status: skipped

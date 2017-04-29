@@ -18,3 +18,4 @@ Feature: Scientific Calculator1
     Given open scientific calculator
     When sum -2 + 2
     Then check result
+

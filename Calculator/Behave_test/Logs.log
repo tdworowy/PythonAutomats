@@ -1,0 +1,96 @@
+DEBUG:parse:format 'sum {sum} {result}' -> 'sum (?P<sum>.+?) (?P<result>.+?)'
+INFO:root:2017-04-29 09:59:08
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'sum {sum:d} {result:d}' -> 'sum (?P<sum>[-+ ]?\\d+|0[xX][0-9a-fA-F]+|[0-9a-fA-F]+|0[bB][01]+|0[oO][0-7]+) (?P<result>[-+ ]?\\d+|0[xX][0-9a-fA-F]+|[0-9a-fA-F]+|0[bB][01]+|0[oO][0-7]+)'
+INFO:root:2017-04-29 10:00:25
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'sum' -> 'sum'
+INFO:root:2017-04-29 10:01:28
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'Add {sum} {result}' -> 'Add (?P<sum>.+?) (?P<result>.+?)'
+INFO:root:2017-04-29 10:02:29
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'Add {sum} {result}' -> 'Add (?P<sum>.+?) (?P<result>.+?)'
+INFO:root:2017-04-29 10:03:00
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'Add {numbers} {result}' -> 'Add (?P<numbers>.+?) (?P<result>.+?)'
+INFO:root:2017-04-29 10:04:13
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'Add {numbers} {result}' -> 'Add (?P<numbers>.+?) (?P<result>.+?)'
+INFO:root:2017-04-29 10:04:51
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'Add {numbers} {result}' -> 'Add (?P<numbers>.+?) (?P<result>.+?)'
+INFO:root:2017-04-29 10:06:01
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'Add' -> 'Add'
+INFO:root:2017-04-29 10:06:45
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'Add {*} {*}' -> 'Add {\\*} {\\*}'
+INFO:root:2017-04-29 10:07:11
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'Add {[1-9]*} {[1-9]*}' -> 'Add {\\[1-9\\]\\*} {\\[1-9\\]\\*}'
+INFO:root:2017-04-29 10:07:51
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'Add {[1-9]*} {[1-9]*}' -> 'Add {\\[1-9\\]\\*} {\\[1-9\\]\\*}'
+INFO:root:2017-04-29 10:12:26
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'Add {[1-9]*} {[1-9]*}' -> 'Add {\\[1-9\\]\\*} {\\[1-9\\]\\*}'
+INFO:root:2017-04-29 10:16:45
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format "Add {'numbers'} {'result'}" -> "Add {'numbers'} {'result'}"
+INFO:root:2017-04-29 10:17:41
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format "Add {'numbers'} {'result'}" -> "Add {'numbers'} {'result'}"
+INFO:root:2017-04-29 10:17:53
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
+DEBUG:parse:format 'Add {numbers} {result}' -> 'Add (?P<numbers>.+?) (?P<result>.+?)'
+INFO:root:2017-04-29 10:18:25
+INFO:root:Feature name: sumFeature
+INFO:root:Feature name: sumFeature
+INFO:root:Skip reason: None
+INFO:root:Status: skipped
