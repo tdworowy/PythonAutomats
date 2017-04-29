@@ -3,7 +3,7 @@ from behave import *
 
 
 
-@given("Add {numbers} {result}")
+@given("Add {numbers:d} {result:d}")
 def sumP(context,numbers,result):
     ele = numbers.split(',')
     x =int(ele[0])
