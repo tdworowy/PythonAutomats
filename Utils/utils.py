@@ -15,11 +15,3 @@ def logResult(TestName,Result):
         message = "Name: {x} Result {y}".format(x=TestName, y=Result)
         print(message)
         log(message,"TestsResultLog.txt")
-
-
-
-class Enum(set):
-    def __getattr__(self, name):
-        if name in self:
-            return name
-        raise AttributeError

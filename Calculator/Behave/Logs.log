@@ -380,7 +380,7 @@ INFO:root:Step: open scientific calculator
 INFO:root:Step: sum 99,1
 INFO:root:Resoult: 100
 INFO:root:Step: check 100
-INFO:root:Check resoult: 100
+INFO:root:Check gm: 100
 INFO:root:Test Finished
 INFO:root:Scenario started: Sum scenario -- @1.5 Numbers
 INFO:root:Step: open scientific calculator

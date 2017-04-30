@@ -399,3 +399,19 @@
 2017-04-28 17:56:06 Piosenka na wieczór[Auto]
 2017-04-28 17:56:06 https://www.youtube.com/watch?v=UdJpK5jY_jA
 2017-04-28 17:56:06 Today is: Friday 2017-04-28
+2017-04-29 18:46:31 Update songs list
+2017-04-29 18:46:31 get songs from last fm
+2017-04-29 18:46:52 Get random song
+2017-04-29 18:46:52 The Residents - Infant Tango
+2017-04-29 18:47:34 Today is: Saturday 2017-04-29
+2017-04-29 18:47:34 Piosenka na sobote[Auto]
+2017-04-29 18:47:34 https://www.youtube.com/watch?v=ahUti2Qcf3o
+2017-04-29 18:47:34 Today is: Saturday 2017-04-29
+2017-04-30 17:04:00 Update songs list
+2017-04-30 17:04:00 get songs from last fm
+2017-04-30 17:04:19 Get random song
+2017-04-30 17:04:19 Poisonblack - Raivotar
+2017-04-30 17:04:51 Today is: Sunday 2017-04-30
+2017-04-30 17:04:51 Piosenka na niedziele[Auto]
+2017-04-30 17:04:51 https://www.youtube.com/watch?v=WCSx9sECe4A
+2017-04-30 17:04:51 Today is: Sunday 2017-04-30
