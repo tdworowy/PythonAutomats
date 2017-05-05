@@ -9,25 +9,38 @@ from Calculator.Elements.Calculator import CalculatorElements
 from chromedriverFolder.driverPath import getDriverPath
 
 server = 'http://www.calculator.net/'
+chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+driver = webdriver.Chrome(chromeDriverPath) #somethin don't work
 @given('set up')
 def setUp(context):
             remote = False
             if (remote):
                 # self.driver = WebDriver("http://localhost:4444/wd/hub", "chrome", "ANY")
-                context.driver = WebDriver("http://localhost:4444", DesiredCapabilities.CHROME)
+                driver = WebDriver("http://localhost:4444", DesiredCapabilities.CHROME)
+                context.driver = driver
             else:
-                chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
-                context.driver = webdriver.Chrome(chromeDriverPath)
-            context.driver.get(server)
-            context.calculator = CalculatorElements(context.driver)
-            context.driver.maximize_window()
-            context.driver.implicitly_wait(10)
+                pass
+                # chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+                # driver =webdriver.Chrome(chromeDriverPath)
+                # setDriver(context)
+            driver.get(server)
+            context.calculator = CalculatorElements(driver)
+            driver.maximize_window()
+            driver.implicitly_wait(10)
+#
+# def setDriver(context):
+#     context.driver = driver
 
 def takeScreenshot(context,file):
-    context.driver.get_screenshot_as_file('/screens/'+file+'.png')
+    driver.get_screenshot_as_file('/screens/'+file+'.png')
 
+def getURL(context):
+    return context.driver.current_url
+
+# def tearDown(context):
+#     context.driver.quit()
 def tearDown(context):
-        context.driver.quit()
+    driver.quit()
 
 @given('open scientific calculator')
 def openscientificCalculator(context):

@@ -1,7 +1,7 @@
 import logging
 import time
 
-from Calculator.Behave.features.steps.steps import setUp, tearDown, takeScreenshot
+from Calculator.Behave.features.steps.steps import setUp, tearDown, takeScreenshot, getURL
 
 logging.basicConfig(level=logging.DEBUG, filename="Logs.log")
 
@@ -17,8 +17,9 @@ def before_feature(context,feature):
 
 def before_scenario(context, scenario):
     logging.info("Scenario started: " + scenario.name)
-    logging.info("URL: ",context.driver.current_url)
     setUp(context)
+    logging.info("URL: "+getURL(context))
+
 
 
 def before_step(context, step):
