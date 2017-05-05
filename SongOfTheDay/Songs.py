@@ -60,12 +60,13 @@ def updateSongs():
     for title in newTitles:
           try:
               if title not in oldTitels:
+                  print(title)
                   f2.write(title)
+                  f2.flush()
           except Exception as ex:
                   print(str(ex))
                   continue
 
-    f2.flush()
 
 
 if __name__ == '__main__':
