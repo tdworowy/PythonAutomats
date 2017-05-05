@@ -10,7 +10,6 @@ filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
 def getTitels(count,url):
     log("get songs from last fm")
     for i in range(count):
-        # response = requests.get('http://www.last.fm/pl/user/TotaledThomas/loved?page='+str(i)).text
         response = requests.get(url + str(i)).text
         soup = BeautifulSoup(response,"html.parser")
         titles = soup.find_all("a", class_="link-block-target")
@@ -28,7 +27,7 @@ def clearTitels(titles):
                 cleanTitels.append(temp+"\n")
 
         except Exception as ex:
-            print(ex)
+            log(ex)
             continue
     return cleanTitels
 
@@ -47,7 +46,7 @@ def getSongs():
                 except Exception as ex:
                         print(str(ex))
                         continue
-            print("Songs count: ",count)
+            log("Songs count: ",count)
             f.close()
 
 
@@ -57,15 +56,14 @@ def updateSongs():
     f2 = open(filePath, 'a')
     oldTitels = [line for line in f1.readlines()]
     newTitles = clearTitels(getTitels(10,"http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_7_DAYS&page="))
-    print("New titles: "+newTitles)
+    log("New titles: "+str(newTitles))
     for title in newTitles:
           try:
               if title not in oldTitels:
-                  print(title)
                   f2.write(title)
                   f2.flush()
           except Exception as ex:
-                  print(str(ex))
+                  log(str(ex))
                   continue
 
 
