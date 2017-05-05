@@ -1,7 +1,7 @@
 import logging
 import time
 
-from Calculator.Behave.features.steps.steps import SetUp, tearDown, takeScreenshot
+from Calculator.Behave.features.steps.steps import setUp, tearDown, takeScreenshot
 
 logging.basicConfig(level=logging.DEBUG, filename="Logs.log")
 
@@ -18,7 +18,7 @@ def before_feature(context,feature):
 def before_scenario(context, scenario):
     logging.info("Scenario started: " + scenario.name)
     logging.info("URL: ",context.driver.current_url)
-    SetUp(context)
+    setUp(context)
 
 
 def before_step(context, step):
@@ -29,7 +29,7 @@ def after_scenario(context, scenario):
     tearDown(context)
 
 def after_step(context, step):
-    takeScreenshot(step.name)
+    takeScreenshot(context,step.name)
     if BEHAVE_DEBUG and step.status == "failed":
         import ipdb
         logging.info(ipdb.post_mortem(step.exc_traceback))

@@ -10,7 +10,7 @@ from chromedriverFolder.driverPath import getDriverPath
 
 server = 'http://www.calculator.net/'
 @given('set up')
-def SetUp(context):
+def setUp(context):
             remote = False
             if (remote):
                 # self.driver = WebDriver("http://localhost:4444/wd/hub", "chrome", "ANY")
@@ -24,7 +24,7 @@ def SetUp(context):
             context.driver.implicitly_wait(10)
 
 def takeScreenshot(context,file):
-    context.driver.get_screenshot_as_file('/screens/'+file+".png")
+    context.driver.get_screenshot_as_file('/screens/'+file+'.png')
 
 def tearDown(context):
         context.driver.quit()
