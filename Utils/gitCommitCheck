@@ -1,0 +1,5 @@
+if [ -n "$(git status --porcelain)" ]; then
+   cd SongOfTheDay   && git commit -m "Commit from jenkins" file.txt
+else
+  echo "no changes";
+fi
