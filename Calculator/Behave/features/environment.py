@@ -29,6 +29,7 @@ def after_scenario(context, scenario):
     tearDown(context)
 
 def after_step(context, step):
+    context.driver.get_screenshot_as_file('/screens/'+step.name+".png")
     if BEHAVE_DEBUG and step.status == "failed":
         import ipdb
         logging.info(ipdb.post_mortem(step.exc_traceback))
