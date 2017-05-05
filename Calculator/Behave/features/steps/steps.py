@@ -23,6 +23,9 @@ def SetUp(context):
             context.driver.maximize_window()
             context.driver.implicitly_wait(10)
 
+def takeScreenshot(context,file):
+    context.driver.get_screenshot_as_file('/screens/'+file+".png")
+
 def tearDown(context):
         context.driver.quit()
 

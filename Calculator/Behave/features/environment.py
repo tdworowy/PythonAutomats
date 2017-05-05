@@ -1,7 +1,7 @@
 import logging
 import time
 
-from Calculator.Behave.features.steps.steps import SetUp, tearDown
+from Calculator.Behave.features.steps.steps import SetUp, tearDown, takeScreenshot
 
 logging.basicConfig(level=logging.DEBUG, filename="Logs.log")
 
@@ -29,7 +29,7 @@ def after_scenario(context, scenario):
     tearDown(context)
 
 def after_step(context, step):
-    context.driver.get_screenshot_as_file('/screens/'+step.name+".png")
+    takeScreenshot(step.name)
     if BEHAVE_DEBUG and step.status == "failed":
         import ipdb
         logging.info(ipdb.post_mortem(step.exc_traceback))
