@@ -2,6 +2,7 @@ import calendar
 import datetime
 import os
 import random
+import sys
 import time
 from datetime import date
 
@@ -127,10 +128,16 @@ def rickAndRollSpam(login, password,count):
 
 if __name__ == '__main__':
 
-   f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
+   if len(sys.argv) <2:
+     f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
+     user = f.readline().strip()
+     passw = f.readline().strip()
+   else:
+       user = sys.argv[1]
+       passw = sys.argv[2]
    dateToday = date.today()
    if dateToday.month == 4 and dateToday.day == 1:
-         rickAndRollSpam(f.readline().strip(), f.readline().strip(),1)
+         rickAndRollSpam(user, passw,1)
    else:
-       main(f.readline().strip(), f.readline().strip())
+       main(user, passw)
 
