@@ -54,6 +54,7 @@ def updateSongs():
     log("Update songs list")
     f1 = open(filePath)
     f2 = open(filePath, 'a')
+    log("Files opened Correctly")
     oldTitels = [line for line in f1.readlines()]
     newTitles = clearTitels(getTitels(10,"http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_7_DAYS&page="))
     log("New titles: "+str(newTitles))
