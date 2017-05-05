@@ -56,7 +56,7 @@ def updateSongs():
     f1 = open(filePath)
     f2 = open(filePath, 'a')
     oldTitels = [line for line in f1.readlines()]
-    newTitles = clearTitels(getTitels(5,"https://www.last.fm/pl/user/TotaledThomas/library?page="))
+    newTitles = clearTitels(getTitels(30,"https://www.last.fm/pl/user/TotaledThomas/library?page="))
     for title in newTitles:
           try:
               if title not in oldTitels:
