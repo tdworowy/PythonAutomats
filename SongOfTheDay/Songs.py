@@ -8,12 +8,13 @@ from Utils.utils import log
 filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
 
 def getTitels(count,url):
-    log("get songs from last fm")
+    log("Get songs from last fm --- START")
     for i in range(count):
         response = requests.get(url + str(i)).text
         soup = BeautifulSoup(response,"html.parser")
         titles = soup.find_all("a", class_="link-block-target")
         titles = str(titles).split(">")
+    log("Get songs from last fm --- DONE")
     return titles
 
 def clearTitels(titles):
@@ -64,10 +65,12 @@ def updateSongs():
                   f2.write(title)
                   f2.flush()
           except Exception as ex:
+                  log("Error while updating song list")
                   log(str(ex))
                   continue
-
+    log("Song List update correctly")
 
 
 if __name__ == '__main__':
+    log("__main__")
     updateSongs()
