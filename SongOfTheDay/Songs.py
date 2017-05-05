@@ -44,7 +44,7 @@ def getSongs():
                     count +=1
                     print(text, file=f)
                 except Exception as ex:
-                        print(str(ex))
+                        log(str(ex))
                         continue
             log("Songs count: ",count)
             f.close()
