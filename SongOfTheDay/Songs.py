@@ -68,7 +68,7 @@ def updateSongs():
                   log("Error while updating song list")
                   log(str(ex))
                   continue
-    log("Song List update correctly")
+    log("Song List updated correctly")
 
 
 if __name__ == '__main__':
