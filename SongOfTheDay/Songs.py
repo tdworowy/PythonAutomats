@@ -68,8 +68,8 @@ def updateSongs():
                   log("Error while updating song list")
                   log(str(ex))
                   continue
-    f2.write("UPDATED") #DEBUG
     f2.flush()
+    f2.close()
     log("Song List updated correctly")
 
 
