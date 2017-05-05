@@ -510,3 +510,35 @@ INFO:root:Test Finished
 INFO:root:Feature name: Scientific Calculator2
 INFO:root:Skip reason: None
 INFO:root:Status: passed
+INFO:root:2017-05-05 12:50:14
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Open Scientific Calculator
+INFO:root:Step: open scientific calculator
+INFO:root:Step: check calculator
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 2 + 2 = 4
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum 2 + 2
+INFO:root:Step: check result
+INFO:root:Check result: 4.
+INFO:root:Actual result: 4.
+INFO:root:Test Finished
+INFO:root:Scenario started: sum -2 + 2 = 0
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Check result: 0.
+INFO:root:Actual result: 0.
+INFO:root:Test Finished
+INFO:root:Scenario started: sum 1000 + 1000 = 2000
+INFO:root:Step: open scientific calculator
+INFO:root:Step: sum -2 + 2
+INFO:root:Step: check result
+INFO:root:Check result: 0.
+INFO:root:Actual result: 0.
+INFO:root:Test Finished
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Skip reason: None
+INFO:root:Status: passed
+INFO:root:Feature name: Scientific Calculator2
+INFO:root:Scenario started: Sum scenario -- @1.1 Numbers

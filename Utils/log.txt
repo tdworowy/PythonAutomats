@@ -415,3 +415,35 @@
 2017-04-30 17:04:51 Piosenka na niedziele[Auto]
 2017-04-30 17:04:51 https://www.youtube.com/watch?v=WCSx9sECe4A
 2017-04-30 17:04:51 Today is: Sunday 2017-04-30
+2017-05-02 17:40:39 Update songs list
+2017-05-02 17:40:39 get songs from last fm
+2017-05-02 17:41:01 Get random song
+2017-05-02 17:41:01 Darkseed - The Dark One
+2017-05-02 17:41:36 Today is: Tuesday 2017-05-02
+2017-05-02 17:41:36 Piosenka na wieczór[Auto]
+2017-05-02 17:41:36 https://www.youtube.com/watch?v=n6xhXZpbwuo
+2017-05-02 17:41:36 Today is: Tuesday 2017-05-02
+2017-05-03 17:16:12 Update songs list
+2017-05-03 17:16:12 get songs from last fm
+2017-05-03 17:16:31 Get random song
+2017-05-03 17:16:31 Tracy Chapman - Subcity
+2017-05-03 17:16:36 Message: no such element: Unable to locate element: {"method":"id","selector":"masthead-search-term"}
+  (Session info: chrome=58.0.3029.96)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64)
+
+2017-05-03 18:32:29 Update songs list
+2017-05-03 18:32:29 get songs from last fm
+2017-05-03 18:32:50 Get random song
+2017-05-03 18:32:50 Godsmack - What If?
+2017-05-03 18:33:28 Today is: Wednesday 2017-05-03
+2017-05-03 18:33:28 Piosenka na wieczór[Auto]
+2017-05-03 18:33:28 https://www.youtube.com/watch?v=D_JSOYxaPtM
+2017-05-03 18:33:28 Today is: Wednesday 2017-05-03
+2017-05-04 18:16:34 Update songs list
+2017-05-04 18:16:34 get songs from last fm
+2017-05-04 18:16:56 Get random song
+2017-05-04 18:16:56 Motörhead - Devils in My Head
+2017-05-04 18:17:33 Today is: Thursday 2017-05-04
+2017-05-04 18:17:33 Piosenka na wieczór[Auto]
+2017-05-04 18:17:33 https://www.youtube.com/watch?v=odJpEYueCeE
+2017-05-04 18:17:33 Today is: Thursday 2017-05-04
