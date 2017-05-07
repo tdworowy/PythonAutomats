@@ -8,5 +8,5 @@ def catchAssertion(f):
             logResult(f.__name__, "Pass")
         except AssertionError:
             logResult(f.__name__, "Fail")
-            f.fail("fail")
+            self.fail("fail")
     return func
