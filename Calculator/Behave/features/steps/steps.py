@@ -2,7 +2,6 @@ import time
 
 from behave import *
 from selenium import webdriver
-from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.remote.webdriver import WebDriver
 
 from Calculator.Behave.screens.screenPath import getScreenPath
@@ -10,21 +9,28 @@ from Calculator.Elements.Calculator import CalculatorElements
 from chromedriverFolder.driverPath import getDriverPath
 
 server = 'http://www.calculator.net/'
-# chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
-# driver = webdriver.Chrome(chromeDriverPath) #somethin don't work
+chrome = {
+        "browserName": "chrome",
+        "version": "58",
+        "platform": "ANY"
+    }
+
 @given('set up')
 def setUp(context):
-            remote = True
+            remote = False
             if (remote):
                 # self.driver = WebDriver("http://localhost:4444/wd/hub", "chrome", "ANY")
               # context.driver = WebDriver("http://192.168.99.100:5000", DesiredCapabilities.CHROME)
-                context.driver = WebDriver(command_executor="http://192.168.99.100:5000/wd/hub", desired_capabilities=DesiredCapabilities.CHROME,proxy=None)
+              #   context.driver = WebDriver(command_executor="http://192.168.99.100:5000/wd/hub", desired_capabilities=DesiredCapabilities.CHROME,proxy=None)
+              #   options = webdriver.ChromeOptions
+                context.driver = WebDriver(command_executor="http://192.168.99.100:5000/wd/hub",desired_capabilities=chrome)
                 # context.driver = webdriver.Remote(
                 #     command_executor='http://192.168.99.100:5000/wd/hub',
                 #     desired_capabilities={'browserName': 'chrome', 'javascriptEnabled': True})
+                # don't work becouse grid bug
             else:
                 chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
-                context.driver = webdriver.Chrome(chromeDriverPath)  # somethin don't work
+                context.driver = webdriver.Chrome(chromeDriverPath)
             context.driver.get(server)
             context.calculator = CalculatorElements(context.driver)
            # context.driver.maximize_window()
