@@ -14,16 +14,20 @@ server = 'http://www.calculator.net/'
 # driver = webdriver.Chrome(chromeDriverPath) #somethin don't work
 @given('set up')
 def setUp(context):
-            remote = False
+            remote = True
             if (remote):
                 # self.driver = WebDriver("http://localhost:4444/wd/hub", "chrome", "ANY")
-                context.driver = WebDriver("http://localhost:4444", DesiredCapabilities.CHROME)
+              # context.driver = WebDriver("http://192.168.99.100:5000", DesiredCapabilities.CHROME)
+                context.driver = WebDriver(command_executor="http://192.168.99.100:5000/wd/hub", desired_capabilities=DesiredCapabilities.CHROME,proxy=None)
+                # context.driver = webdriver.Remote(
+                #     command_executor='http://192.168.99.100:5000/wd/hub',
+                #     desired_capabilities={'browserName': 'chrome', 'javascriptEnabled': True})
             else:
                 chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
                 context.driver = webdriver.Chrome(chromeDriverPath)  # somethin don't work
             context.driver.get(server)
             context.calculator = CalculatorElements(context.driver)
-            context.driver.maximize_window()
+           # context.driver.maximize_window()
             context.driver.implicitly_wait(10)
 #
 # def setDriver(context):
