@@ -9,7 +9,7 @@ def setUp(context):
     chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
     context.driver = webdriver.Chrome(chromeDriverPath)
     context.driver.get(server)
-    context.driver.implicitly_wait(10)
+    context.driver.implicitly_wait(1)
     context.loginPage = LoginPage(context.driver)
     context.adminPage = AdminPage(context.driver)
 
