@@ -1,8 +1,8 @@
 import logging
 import time
 
-from BlogTests.Pages.basePage import setUp, tearDown
-from BlogTests.features.steps.steps import getURL, takeScreenshot
+from BlogTests.Pages.basePage import tearDown
+from BlogTests.features.steps.steps import takeScreenshot
 
 logging.basicConfig(level=logging.DEBUG, filename="Logs.log")
 
@@ -18,10 +18,6 @@ def before_feature(context,feature):
 
 def before_scenario(context, scenario):
     logging.info("Scenario started: " + scenario.name)
-    setUp(context)
-    logging.info("URL: "+getURL(context))
-
-
 
 def before_step(context, step):
     logging.info("Step: " + step.name)
