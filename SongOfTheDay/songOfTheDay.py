@@ -13,7 +13,7 @@ from selenium.webdriver.common.keys import Keys
 from SkypeBot.skypeBot import skypeBot
 from SongOfTheDay.Songs import updateSongs
 from Utils.utils import log
-from phantomjs.phantomjsPath import getPhantomPath
+from chromedriverFolder.driverPath import getDriverPath
 
 
 class songOfTheDay():
@@ -73,9 +73,9 @@ class songOfTheDay():
 
     def setUp(self):
         updateSongs()
-        # chromeDriverPath =getDriverPath()+'\\chromedriver.exe'
-        # self.driver = webdriver.Chrome(chromeDriverPath)
-        self.driver = webdriver.PhantomJS(getPhantomPath()+'\\phantomjs.exe')
+        chromeDriverPath =getDriverPath()+'\\chromedriver.exe'
+        self.driver = webdriver.Chrome(chromeDriverPath)
+        # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\phantomjs.exe')
         self.driver.implicitly_wait(2)
         self.skypeBot = skypeBot(self.driver)
 
