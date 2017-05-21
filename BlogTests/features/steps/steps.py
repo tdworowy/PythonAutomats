@@ -6,6 +6,10 @@ from BlogTests.screens.screenPath import getScreenPath
 loginPage = "http://localhost:8081/admin/login/"
 blogPage = "http://localhost:8081/blog/"
 
+
+adminLogin = "admin"
+adminPass = "AdminPass123"
+
 def takeScreenshot(context,file):
     context.driver.save_screenshot(getScreenPath()+"//"+file.replace(' ','_')+'.png')
 
@@ -28,7 +32,7 @@ def checkLoginPage(context):
 
 @when('login admin')
 def loginAdmin(context):
-    context.loginPage.logIn("admin","AdminPass123")
+    context.loginPage.logIn(adminLogin,adminPass)
 
 @then('admin page is opened')
 def checkAdminPage(context):
