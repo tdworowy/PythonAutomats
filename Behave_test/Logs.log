@@ -248,3 +248,26 @@ INFO:root:Step: the 13 is correct
 INFO:root:Feature name: The dealer for the game of 21
 INFO:root:Skip reason: None
 INFO:root:Status: passed
+DEBUG:parse:format 'a {hand}' -> 'a (?P<hand>.+?)'
+DEBUG:parse:format 'the dealer sums the cards' -> 'the dealer sums the cards'
+DEBUG:parse:format 'the {total:d} is correct' -> 'the (?P<total>[-+ ]?\\d+|0[xX][0-9a-fA-F]+|[0-9a-fA-F]+|0[bB][01]+|0[oO][0-7]+) is correct'
+INFO:root:2017-05-25 16:59:32
+INFO:root:Feature name: The dealer for the game of 21
+INFO:root:Step: a 5,7
+INFO:root:Step: the dealer sums the cards
+INFO:root:Step: the 12 is correct
+INFO:root:Step: a 5,Q
+INFO:root:Step: the dealer sums the cards
+INFO:root:Step: the 15 is correct
+INFO:root:Step: a Q,Q,A
+INFO:root:Step: the dealer sums the cards
+INFO:root:Step: the 21 is correct
+INFO:root:Step: a Q,A
+INFO:root:Step: the dealer sums the cards
+INFO:root:Step: the 21 is correct
+INFO:root:Step: a A,A,A
+INFO:root:Step: the dealer sums the cards
+INFO:root:Step: the 13 is correct
+INFO:root:Feature name: The dealer for the game of 21
+INFO:root:Skip reason: None
+INFO:root:Status: passed

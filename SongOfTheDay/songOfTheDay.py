@@ -5,7 +5,6 @@ import random
 import sys
 import time
 from datetime import date
-
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -22,24 +21,9 @@ class songOfTheDay():
 
     def mesageByTime(self):
         now = datetime.datetime.now()
-        today7 = now.replace(hour=7, minute=0, second=0, microsecond=0)
-        today16 = now.replace(hour=16, minute=0, second=0, microsecond=0)
-        today20 = now.replace(hour=20, minute=0, second=0, microsecond=0)
         dateToday = date.today()
         log("Today is: "+calendar.day_name[dateToday.weekday()]+" "+str(date.today()))
-        if dateToday.month == 12:
-            if dateToday.day == 24: return "Piosenka na wigilie[Auto]"
-            if dateToday.day == 25: return "Piosenka na pierwszy dzień świąt bożego narodzenia[Auto]"
-            if dateToday.day == 26: return "Piosenka na drugi dzień świąt bożego narodzenia[Auto]"
-            if dateToday.day == 31: return "Piosenka na Sylwestra ![Auto]"
-        if dateToday.month == 4:
-            if dateToday.day == 1: return "Piosenka na Prima aprilis[Auto]"
-        if dateToday.month == 1 and dateToday.day == 1:return "Piosenka na nowy rok ![Auto]"
-        if calendar.day_name[dateToday.weekday()] == "Saturday" : return"Piosenka na sobote[Auto]"
-        if calendar.day_name[dateToday.weekday()] == "Sunday": return"Piosenka na niedziele[Auto]"
-        if today7 <= now <= today16 : return  "Piosenka dnia[Auto]"
-        if today16 <  now <= today20: return "Piosenka na wieczór[Auto]"
-        if  now > today20: return "Piosenka na noc[Auto]"
+        return "Song for "+calendar.day_name[dateToday.weekday()]+" "+str(date.today() + " [AUTO] ")
 
 
 
@@ -54,13 +38,13 @@ class songOfTheDay():
         actions.perform()
         time.sleep(2)
         firstResoult = self.driver.find_element_by_css_selector("h3 a")
+
         firstResoult.click()
         time.sleep(1)
 
         return self.driver.current_url
 
     def sentSong(self, autentycation, songURLs):
-        #self.skypeBot.loginFacebook(autentycation)
         self.skypeBot.login(autentycation)
 
         self.skypeBot.select("Echo")
@@ -99,7 +83,6 @@ def main(login, password):
         log(songsList[ran])
         url = song.findSong(songsList[ran].strip())
         song.sentSong(autentycation, [url])
-        #song.sentSong(autentycation, "https://www.youtube.com/watch?v=dQw4w9WgXcQ")
         song.tearDown()
 
     except Exception  as err:
@@ -135,9 +118,5 @@ if __name__ == '__main__':
    else:
        user = sys.argv[1]
        passw = sys.argv[2]
-   dateToday = date.today()
-   if dateToday.month == 4 and dateToday.day == 1:
-         rickAndRollSpam(user, passw,1)
-   else:
-       main(user, passw)
+   main(user, passw)
 
