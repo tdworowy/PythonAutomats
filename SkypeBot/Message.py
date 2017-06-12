@@ -1,22 +1,18 @@
 import os
 
 from SkypeBot.skypeBot import skypeBot
+from Utils.decorators import logExeption
 
 
+@logExeption
 def main(login, password):
-    try:
-        autentycation = [login,password]
-        message = skypeBot()
-        message.loginFacebook(autentycation)
 
-        message.select("Echo")
-        message.select("A smiechom i szopom nie było konca")
-        message.sendMessageToSelected("Szczęsliwego Nowego roku !! [Auto]")
-    except Exception  as err:
-        print(err)
-
-    finally:
-        quit()
+     autentycation = [login,password]
+     message = skypeBot()
+     message.loginFacebook(autentycation)
+     message.select("Echo")
+     message.select("A smiechom i szopom nie było konca")
+     message.sendMessageToSelected("Szczęsliwego Nowego roku !! [Auto]")
 
 
 
