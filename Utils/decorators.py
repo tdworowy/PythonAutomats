@@ -1,4 +1,4 @@
-from Utils.utils import logResult
+from Utils.utils import logResult, log
 
 
 def catchAssertion(f):
@@ -14,9 +14,9 @@ def catchAssertion(f):
 
 
 def logExeption(f):
-    def func(self):
+    def func():
         try:
-            f(self)
+            f()
         except Exception  as err:
             log(str(err))
         finally:
