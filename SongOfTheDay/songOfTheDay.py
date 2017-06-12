@@ -68,10 +68,8 @@ class songOfTheDay():
         self.driver.quit()
 
 
-
+@logExeption
 def main(login, password):
-    try:
-
         song = songOfTheDay()
         f = open(os.path.dirname(os.path.abspath(__file__))+'\\file.txt', 'r')
         log("Get random song")
@@ -85,27 +83,14 @@ def main(login, password):
         song.sentSong(autentycation, [url])
         song.tearDown()
 
-    except Exception  as err:
-        log(str(err))
-
-    finally:
-        quit()
-
+@logExeption
 def rickAndRollSpam(login, password,count):
-    try:
-
         song = songOfTheDay()
 
         autentycation = [login, password]
         urlList = ["https://www.youtube.com/watch?v=dQw4w9WgXcQ" for x in range(count)]
         song.sentSong(autentycation, urlList)
         song.tearDown()
-
-    except Exception  as err:
-        log(str(err))
-
-    finally:
-        quit()
 
 
 

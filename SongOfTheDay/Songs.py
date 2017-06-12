@@ -1,5 +1,4 @@
 import os
-
 import requests
 from bs4 import BeautifulSoup
 
@@ -35,18 +34,18 @@ def clearTitels(titles):
 
 def getSongs():
             log("Generate songs list")
-            f= open(filePath, 'w')
+            f = open(filePath, 'w')
             count = 0
             titles =clearTitels(getTitels(659,'http://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
                 #print(titles)
             for text in titles:
                 try:
-                    print(text)
-                    count +=1
-                    print(text, file=f)
+                     print(text)
+                     count +=1
+                     print(text, file=f)
                 except Exception as ex:
-                        log(str(ex))
-                        continue
+                     log(str(ex))
+                     continue
             log("Songs count: ",count)
             f.close()
 
