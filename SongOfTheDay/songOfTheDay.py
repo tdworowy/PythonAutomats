@@ -11,6 +11,7 @@ from selenium.webdriver.common.keys import Keys
 
 from SkypeBot.skypeBot import skypeBot
 from SongOfTheDay.Songs import updateSongs
+from Utils.decorators import logExeption
 from Utils.utils import log
 from chromedriverFolder.driverPath import getDriverPath
 
