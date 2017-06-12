@@ -22,7 +22,7 @@ class songOfTheDay():
     def mesageByTime(self):
         now = datetime.datetime.now()
         dateToday = date.today()
-        log("Today is: "+calendar.day_name[dateToday.weekday()]+" "+str(date.today()))
+        log("Today is: "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today()))
         return "Song for "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today() + " [AUTO] ")
 
 
