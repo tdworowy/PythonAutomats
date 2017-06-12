@@ -14,9 +14,9 @@ def catchAssertion(f):
 
 
 def logExeption(f):
-    def func():
+    def func(*args):
         try:
-            f()
+            f(*args)
         except Exception  as err:
             log(str(err))
         finally:
