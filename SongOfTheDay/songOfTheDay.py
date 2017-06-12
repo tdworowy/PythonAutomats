@@ -23,7 +23,7 @@ class songOfTheDay():
         now = datetime.datetime.now()
         dateToday = date.today()
         log("Today is: "+calendar.day_name[dateToday.weekday()]+" "+str(date.today()))
-        return "Song for "+calendar.day_name[dateToday.weekday()]+" "+str(date.today() + " [AUTO] ")
+        return "Song for "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today() + " [AUTO] ")
 
 
 
