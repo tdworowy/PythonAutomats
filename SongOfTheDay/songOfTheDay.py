@@ -5,15 +5,15 @@ import random
 import sys
 import time
 from datetime import date
-from selenium import webdriver
-from selenium.webdriver import ActionChains
-from selenium.webdriver.common.keys import Keys
 
 from SkypeBot.skypeBot import skypeBot
 from SongOfTheDay.Songs import updateSongs
 from Utils.decorators import logExeption
 from Utils.utils import log
 from chromedriverFolder.driverPath import getDriverPath
+from selenium import webdriver
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.keys import Keys
 
 
 class songOfTheDay():
@@ -24,7 +24,7 @@ class songOfTheDay():
         now = datetime.datetime.now()
         dateToday = date.today()
         log("Today is: "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today()))
-        return "Song for "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today() + " [AUTO] ")
+        return "Song for "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today()) + " [AUTO] "
 
 
 
