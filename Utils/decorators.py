@@ -19,6 +19,7 @@ def logExeption(f):
             f(*args)
         except Exception  as err:
             log(str(err))
+            raise err
         finally:
             quit()
     return func
