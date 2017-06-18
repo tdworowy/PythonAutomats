@@ -5,7 +5,7 @@ from Calculator.Behave.features.steps.steps import setUp, tearDown, takeScreensh
 # logging.basicConfig(level=logging.DEBUG, filename="Logs.log")
 from Calculator.Behave.screens.screenPath import getScreenPath
 
-# TODO loging for ewry scenario to separated file
+# TODO loging for ewery scenario to separated file
 
 BEHAVE_DEBUG = True
 
@@ -22,9 +22,9 @@ def before_scenario(context, scenario):
     context.screanDirName = getScreenPath()+"\\"+ scenario.name +"_"+ context.timeStump.replace(":","_")
     createDir(context, context.screanDirName)
 
-    # logging.basicConfig(level=logging.DEBUG, filename= context.screanDirName+"\\"+scenario.name+".log")
-    # context.log = logging
-
+    logFile = open(context.screanDirName+"\\Log.log",'a+')
+    logging.basicConfig(level=logging.DEBUG, filename= logFile.name,filemode='a+')#TODO don't work
+    context.log = logging
     logging.info(context.timeStump)
 
     logging.info("Scenario started: " + scenario.name)
