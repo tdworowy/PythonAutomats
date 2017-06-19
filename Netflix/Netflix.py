@@ -1,10 +1,11 @@
 import sys
 
-from chromedriverFolder.driverPath import getDriverPath
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+
+from chromedriverFolder.driverPath import getDriverPath
 
 netflixUrl = "https://www.netflix.com/browse"
 generUrl = "https://www.netflix.com/browse/genre/"
@@ -32,7 +33,9 @@ def getAllCategories(login,password):
         driver.get(generUrl+str(i))
         try:
             category = driver.find_element(*genreTitle).text
-            result.append((category,i))
+            res = (category,i)
+            print(res)
+            result.append(res)
         except:
             continue
 
