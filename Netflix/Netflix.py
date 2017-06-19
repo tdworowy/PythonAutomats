@@ -1,3 +1,5 @@
+import sys
+
 from chromedriverFolder.driverPath import getDriverPath
 from selenium import webdriver
 from selenium.webdriver import ActionChains
@@ -39,4 +41,6 @@ def getAllCategories(login,password):
 
 
 if __name__ == '__main__':
-    print(getAllCategories("dworowytomasz@gmail.com","JudasPrist1970"))
+    user = sys.argv[1]
+    passw = sys.argv[2]
+    print(getAllCategories(user,passw))
