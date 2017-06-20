@@ -27,19 +27,16 @@ def getAllCategories(login,password):
     actions.send_keys(Keys.ENTER).perform()
 
     driver.find_element(*avatar).click()
-    result = []
+
     for i in range(1,9999):
 
         driver.get(generUrl+str(i))
         try:
             category = driver.find_element(*genreTitle).text
-            res = (category,i)
-            print(res)
-            result.append(res)
+            print((category,i))
+
         except:
             continue
-
-    return result
 
 
 
