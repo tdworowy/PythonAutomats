@@ -42,7 +42,7 @@ def getAllCategories(login,password):
 
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     user = sys.argv[1]
     passw = sys.argv[2]
-    print(getAllCategories(user,passw))
+#     print(getAllCategories(user,passw))
