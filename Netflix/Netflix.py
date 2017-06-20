@@ -18,7 +18,6 @@ avatar = (By.CLASS_NAME, 'avatar-wrapper')
 
 
 def getAllCategories(login,password):
-
     chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
     driver = webdriver.Chrome(chromeDriverPath)
     driver.get(netflixUrl)
@@ -42,8 +41,7 @@ def getAllCategories(login,password):
 
 
 
-
 if __name__ == '__main__':
     user = sys.argv[1]
     passw = sys.argv[2]
-    # print(getAllCategories(user,passw))
+    getAllCategories(user,passw)
