@@ -28,13 +28,13 @@ def getAllCategories(login,password):
     actions.send_keys(Keys.ENTER).perform()
 
     driver.find_element(*avatar).click()
-
+    f = open("cat", 'w')
     for i in range(1,9999):
 
         driver.get(generUrl+str(i))
         try:
             category = driver.find_element(*genreTitle).text
-            print((category,i))
+            print((category,i),file=f)
 
         except:
             continue
