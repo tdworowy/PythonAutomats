@@ -1,4 +1,4 @@
-print("Print all netflix categories")
+
 import sys
 
 from selenium import webdriver
