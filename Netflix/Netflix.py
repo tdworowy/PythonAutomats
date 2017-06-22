@@ -28,8 +28,8 @@ def getAllCategories(login,password):
     actions.send_keys(Keys.ENTER).perform()
 
     driver.find_element(*avatar).click()
-    f = open("cat.txt", 'w')
-    for i in range(1,9999):
+    f = open("cat.txt", 'a')
+    for i in range(1,10000):
 
         driver.get(generUrl+str(i))
         try:
