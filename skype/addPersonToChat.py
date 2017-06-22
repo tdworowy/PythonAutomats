@@ -36,8 +36,6 @@ class AddPersonToChat:
     def tearDown(self):
         self.driver.quit()
 
-    def checkContent(self):
-        self.skypeBot
 
 if __name__ == '__main__':
 
