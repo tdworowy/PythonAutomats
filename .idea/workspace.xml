@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SkypeBot/Message.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SkypeBot/SkypeBot.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SkypeBot/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SongOfTheDay/Songs.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SongOfTheDay/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SongOfTheDay/file.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skype/addPersonToChat.py" afterPath="$PROJECT_DIR$/skype/addPersonToChat.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SkypeBot/__init__.py" afterPath="$PROJECT_DIR$/skype/__init__.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Songs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SongOfTheDay/Songs.py">
+      <file leaf-file-name="Songs.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/skype/SongOfTheDay/Songs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="15" lean-forward="false" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+            <state relative-caret-position="680">
+              <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="41" selection-end-column="20" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -68,7 +76,7 @@
         </entry>
       </file>
       <file leaf-file-name="SkypeBot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SkypeBot/SkypeBot.py">
+        <entry file="file://$PROJECT_DIR$/skype/SkypeBot/SkypeBot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="451">
               <caret line="123" column="24" lean-forward="true" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
@@ -78,7 +86,7 @@
         </entry>
       </file>
       <file leaf-file-name="Message.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SkypeBot/Message.py">
+        <entry file="file://$PROJECT_DIR$/skype/SkypeBot/Message.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
@@ -88,25 +96,21 @@
         </entry>
       </file>
       <file leaf-file-name="songOfTheDay.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
+        <entry file="file://$PROJECT_DIR$/skype/SongOfTheDay/songOfTheDay.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
               <caret line="105" column="6" lean-forward="false" selection-start-line="105" selection-start-column="6" selection-end-line="106" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addPersonToChat.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addPersonToChat.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skype/addPersonToChat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="799">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -255,49 +259,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SongOfTheDay" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SeleniumPython" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SeleniumPython" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SkypeBot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SeleniumPython" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SeleniumPython" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="skype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SeleniumPython" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SeleniumPython" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Netflix" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -312,19 +274,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Google_drive\Python_\SeleniumPython\skype" />
+      <recent name="D:\Google_drive\Python_\SeleniumPython\BlogTests\Pages" />
+      <recent name="D:\Google_drive\Python_\SeleniumPython\Utils\grid" />
+      <recent name="D:\Google_drive\Python_\SeleniumPython\Behave_test2\features" />
+      <recent name="D:\Google_drive\Python_\SeleniumPython\Behave_test\features" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Google_drive\Python_\SeleniumPython\phantomjs" />
       <recent name="D:\Google_drive\Python_\SeleniumPython\BlogTests" />
       <recent name="D:\Google_drive\Python_\SeleniumPython" />
       <recent name="D:\Google_drive\Python_\SeleniumPython\Behave_test" />
       <recent name="D:\Google_drive\Python_\SeleniumPython\Calculator\Behave_test" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Google_drive\Python_\SeleniumPython\BlogTests\Pages" />
-      <recent name="D:\Google_drive\Python_\SeleniumPython\Utils\grid" />
-      <recent name="D:\Google_drive\Python_\SeleniumPython\Behave_test2\features" />
-      <recent name="D:\Google_drive\Python_\SeleniumPython\Behave_test\features" />
-      <recent name="D:\Google_drive\Python_\SeleniumPython" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -575,20 +537,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00086" summary="update">
-      <created>1493997713309</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1493997713309</updated>
-    </task>
-    <task id="LOCAL-00087" summary="update">
-      <created>1493998684879</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1493998684879</updated>
     </task>
     <task id="LOCAL-00088" summary="update">
       <created>1493998740588</created>
@@ -919,7 +867,21 @@
       <option name="project" value="LOCAL" />
       <updated>1498133270679</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="update">
+      <created>1498133380889</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1498133380889</updated>
+    </task>
+    <task id="LOCAL-00136" summary="update">
+      <created>1498133412616</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1498133412616</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1047,22 +1009,22 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SongOfTheDay/Songs.py</url>
+          <url>file://$PROJECT_DIR$/skype/SongOfTheDay/Songs.py</url>
           <line>53</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SongOfTheDay/Songs.py</url>
+          <url>file://$PROJECT_DIR$/skype/SongOfTheDay/Songs.py</url>
           <line>29</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/skype/addPersonToChat.py</url>
-          <line>46</line>
+          <line>45</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SkypeBot/SkypeBot.py</url>
+          <url>file://$PROJECT_DIR$/skype/SkypeBot/SkypeBot.py</url>
           <line>113</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
@@ -1104,14 +1066,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SongOfTheDay/aut.txt">
+    <entry file="file://$PROJECT_DIR$/skype/SongOfTheDay/aut.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SongOfTheDay/ghostdriver.log">
+    <entry file="file://$PROJECT_DIR$/skype/SongOfTheDay/ghostdriver.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -1258,16 +1220,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Netflix/test.py" />
-    <entry file="file://$PROJECT_DIR$/SongOfTheDay/Songs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="15" lean-forward="false" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Lib/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28985">
@@ -1276,7 +1228,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SkypeBot/Message.py">
+    <entry file="file://$PROJECT_DIR$/skype/SkypeBot/Message.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
@@ -1294,7 +1246,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SkypeBot/SkypeBot.py">
+    <entry file="file://$PROJECT_DIR$/skype/SkypeBot/SkypeBot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
           <caret line="123" column="24" lean-forward="true" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
@@ -1302,22 +1254,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py">
+    <entry file="file://$PROJECT_DIR$/skype/SongOfTheDay/songOfTheDay.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
           <caret line="105" column="6" lean-forward="false" selection-start-line="105" selection-start-column="6" selection-end-line="106" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/skype/addPersonToChat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        <state relative-caret-position="799">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skype/SongOfTheDay/Songs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="41" selection-end-column="20" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
