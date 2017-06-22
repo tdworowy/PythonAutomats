@@ -23,9 +23,12 @@ class SkypeBot():
 
         self.addPersonButton =(By.CSS_SELECTOR,"button[class=\"btn secondary circle stroke\"]")
         self.addButton = (By.CSS_SELECTOR, "button[aria-label=\"Add\"]")
-        self.searchItem =(By.CLASS_NAME, "searchItem")
 
 
+        self.content = (By.CSS_SELECTOR, "div[class=\"content\"] p" )
+
+    def setSearchItem(self,user):
+        self.searchItem = (By.CSS_SELECTOR, "li[title=\"" + user + "\"")
 
     def __init__(self,webdriver):
         self.driver= webdriver
@@ -104,5 +107,18 @@ class SkypeBot():
     def addButtonClick(self):
             self.driver.find_element(*self.addButton).click()
 
-    def searchItemClick(self):
-        self.driver.find_element(*self.searchItem).click()
+    def searchItemClick(self,user):
+        try:
+            self.setSearchItem(user)
+            self.driver.find_element(*self.searchItem).click()
+            self.addButtonClick()
+        except:
+            time.sleep(2)
+
+    def checkContent(self,toCheck):#don't work as should
+        try:
+            print(self.driver.find_element(*self.content).text)
+            if   self.driver.find_element(*self.content).text == toCheck:  return True
+            else: return False
+        except:
+            return False

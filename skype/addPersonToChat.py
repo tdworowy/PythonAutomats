@@ -28,14 +28,18 @@ class AddPersonToChat:
         actions = ActionChains(self.driver)
         actions.send_keys(name)
         actions.perform()
-        self.skypeBot.searchItemClick()
-        self.skypeBot.addButtonClick()
+        self.skypeBot.searchItemClick(name)
+
 
     def tearDown(self):
         self.driver.quit()
 
+    def checkContent(self):
+        self.skypeBot
+
 if __name__ == '__main__':
+
     ap = AddPersonToChat()
     ap.login(["mrcripted","JudasPrist1970"])
-    ap.addPersonToChat("Adam Franica")
-    ap.tearDown()
+    while(1):
+       ap.addPersonToChat("Adam Franica")
