@@ -1,6 +1,3 @@
-
-import sys
-
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
@@ -29,7 +26,7 @@ def getAllCategories(login,password):
 
     driver.find_element(*avatar).click()
     f = open("cat.txt", 'a')
-    for i in range(1,10000):
+    for i in range(10100,12000):
 
         driver.get(generUrl+str(i))
         try:
@@ -43,6 +40,6 @@ def getAllCategories(login,password):
 
 
 if __name__ == '__main__':
-    user = sys.argv[1]
-    passw = sys.argv[2]
-    getAllCategories(user,passw)
+    # user = sys.argv[1]
+    # passw = sys.argv[2]
+    getAllCategories("dworowytomasz@gmail.com","JudasPrist1970")

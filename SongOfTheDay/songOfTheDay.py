@@ -6,14 +6,15 @@ import sys
 import time
 from datetime import date
 
-from SkypeBot.skypeBot import skypeBot
+from selenium import webdriver
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.keys import Keys
+
+from SkypeBot.SkypeBot import SkypeBot
 from SongOfTheDay.Songs import updateSongs
 from Utils.decorators import logExeption
 from Utils.utils import log
 from chromedriverFolder.driverPath import getDriverPath
-from selenium import webdriver
-from selenium.webdriver import ActionChains
-from selenium.webdriver.common.keys import Keys
 
 
 class songOfTheDay():
@@ -62,7 +63,7 @@ class songOfTheDay():
         self.driver = webdriver.Chrome(chromeDriverPath)
         # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\phantomjs.exe')
         self.driver.implicitly_wait(2)
-        self.skypeBot = skypeBot(self.driver)
+        self.skypeBot = SkypeBot(self.driver)
 
 
     def tearDown(self):
@@ -76,21 +77,21 @@ def main(login, password):
         log("Get random song")
         songsList = f.read()
         songsList=songsList.split("\n")
-        autentycation = [login, password]
+        authentication = [login, password]
 
         ran= random.randrange(len(songsList))
         log(songsList[ran])
         url = song.findSong(songsList[ran].strip())
-        song.sentSong(autentycation, [url])
+        song.sentSong(authentication, [url])
         song.tearDown()
 
 @logExeption
 def rickAndRollSpam(login, password,count):
         song = songOfTheDay()
 
-        autentycation = [login, password]
+        authentication = [login, password]
         urlList = ["https://www.youtube.com/watch?v=dQw4w9WgXcQ" for x in range(count)]
-        song.sentSong(autentycation, urlList)
+        song.sentSong(authentication, urlList)
         song.tearDown()
 
 

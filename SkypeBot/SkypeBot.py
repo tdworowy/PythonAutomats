@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-class skypeBot():
+class SkypeBot():
     def initializeElements(self):
         self.loginFB = (By.ID, 'loginWithFacebook')
         self.loginEmail = (By.ID, 'email')
@@ -20,6 +20,10 @@ class skypeBot():
         self.loginSkypePassword = (By.NAME, 'passwd')
 
         self.group = (By.CLASS_NAME, 'list-selectable')
+
+        self.addPersonButton =(By.CSS_SELECTOR,"button[class=\"btn secondary circle stroke\"]")
+        self.addButton = (By.CSS_SELECTOR, "button[aria-label=\"Add\"]")
+        self.searchItem =(By.CLASS_NAME, "searchItem")
 
 
 
@@ -67,18 +71,18 @@ class skypeBot():
         loginButton.click()
         self.waitForInputField()
 
-    def login(self, autentycation):
+    def login(self, authentication):
         self.openSkype()
         loginField = self.driver.find_element(*self.loginSkype)
         loginField.click()
-        loginField.send_keys(autentycation[0])
+        loginField.send_keys(authentication[0])
 
         loginButton = self.driver.find_element(*self.loginSkypeButton)
         loginButton.click()
 
         passField = self.driver.find_element(*self.loginSkypePassword)
         passField.click()
-        passField.send_keys(autentycation[1])
+        passField.send_keys(authentication[1])
 
         self.sendEnter()
         self.waitForInputField()
@@ -93,3 +97,12 @@ class skypeBot():
         group = self.driver.find_element(*self.group)
         group.click()
         time.sleep(2)
+
+    def addPersonButtonClick(self):
+        self.driver.find_element(*self.addPersonButton).click()
+
+    def addButtonClick(self):
+            self.driver.find_element(*self.addButton).click()
+
+    def searchItemClick(self):
+        self.driver.find_element(*self.searchItem).click()

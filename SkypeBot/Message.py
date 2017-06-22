@@ -1,6 +1,6 @@
 import os
 
-from SkypeBot.skypeBot import skypeBot
+from SkypeBot.SkypeBot import SkypeBot
 from Utils.decorators import logExeption
 
 
@@ -8,7 +8,7 @@ from Utils.decorators import logExeption
 def main(login, password):
 
      autentycation = [login,password]
-     message = skypeBot()
+     message = SkypeBot()
      message.loginFacebook(autentycation)
      message.select("Echo")
      message.select("A smiechom i szopom nie było konca")
