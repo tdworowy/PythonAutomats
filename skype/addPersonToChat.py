@@ -1,3 +1,5 @@
+import sys
+
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 
@@ -39,7 +41,9 @@ class AddPersonToChat:
 
 if __name__ == '__main__':
 
+    user = sys.argv[1]
+    passw = sys.argv[2]
     ap = AddPersonToChat()
-    ap.login(["mrcripted","JudasPrist1970"])
+    ap.login([user,passw])
     while(1):
        ap.addPersonToChat("Adam Franica")
