@@ -3,6 +3,7 @@ import sys
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 
+from Utils.utils import log
 from chromedriverFolder.driverPath import getDriverPath
 from skype.SkypeBot.SkypeBot import SkypeBot
 
