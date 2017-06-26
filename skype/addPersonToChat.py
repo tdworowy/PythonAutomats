@@ -23,16 +23,17 @@ class AddPersonToChat:
     def login(self,authentication):
         self.skypeBot.login(authentication)
 
-    def addPersonToChat(self,name,chat="Szopy Reaktywacja!"):
-        log("Try add %s to chat %s" % (name,chat))
+    def addPersonToChat(self,names,chat="Szopy Reaktywacja!"):
+
         self.skypeBot.select("Echo")
         self.skypeBot.select(chat)
         self.skypeBot.addPersonButtonClick()
-
         actions = ActionChains(self.driver)
-        actions.send_keys(name)
-        actions.perform()
-        self.skypeBot.searchItemClick(name)
+        for name in names:
+            log("Try add %s to chat %s" % (name, chat))
+            actions.send_keys(name)
+            actions.perform()
+            self.skypeBot.searchItemClick(name)
 
 
     def tearDown(self):
@@ -46,4 +47,4 @@ if __name__ == '__main__':
     ap = AddPersonToChat()
     ap.login([user,passw])
     # while(1):
-    ap.addPersonToChat("Adam Franica")
+    ap.addPersonToChat(["Adam Franica"])
