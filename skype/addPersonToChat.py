@@ -22,7 +22,7 @@ class AddPersonToChat:
     def login(self,authentication):
         self.skypeBot.login(authentication)
 
-    def addPersonToChat(self,name,chat="A smiechom i szopom nie było konca"):
+    def addPersonToChat(self,name,chat="Szopy Reaktywacja!"):
         self.skypeBot.select("Echo")
         self.skypeBot.select(chat)
         self.skypeBot.addPersonButtonClick()
