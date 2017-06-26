@@ -43,5 +43,5 @@ if __name__ == '__main__':
     passw = sys.argv[2]
     ap = AddPersonToChat()
     ap.login([user,passw])
-    while(1):
-       ap.addPersonToChat("Adam Franica")
+    # while(1):
+    ap.addPersonToChat("Adam Franica")
