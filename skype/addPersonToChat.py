@@ -23,6 +23,7 @@ class AddPersonToChat:
         self.skypeBot.login(authentication)
 
     def addPersonToChat(self,name,chat="Szopy Reaktywacja!"):
+        log("Try add %s to chat %s" % (name,chat))
         self.skypeBot.select("Echo")
         self.skypeBot.select(chat)
         self.skypeBot.addPersonButtonClick()

@@ -113,6 +113,7 @@ class SkypeBot():
             self.driver.find_element(*self.searchItem).click()
             self.addButtonClick()
         except:
+            print(user," is alredy added")
             time.sleep(2)
 
     def checkContent(self,toCheck):#don't work as should
