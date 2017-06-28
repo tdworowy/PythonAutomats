@@ -1,40 +1,49 @@
-import logging
 import time
 
-from BlogTests.Pages.basePage import tearDown
-from BlogTests.features.steps.steps import takeScreenshot
-
-logging.basicConfig(level=logging.DEBUG, filename="Logs.log")
+from BlogTests.Pages.basePage import tearDown, setUp
+from BlogTests.features.steps.steps import getURL
+from BlogTests.screens.screenPath import getScreenPath
+from Utils.utils import log, createDir, takeScreenshot
 
 BEHAVE_DEBUG = True
 
-def before_all(context):
-    timeStump = time.strftime('%Y-%m-%d %H:%M:%S')
-    context.log = logging
-    logging.info(timeStump)
-
 def before_feature(context,feature):
-    logging.info("Feature name: "+feature.name)
+    context.logFeatureFile = getScreenPath() + "\\Log.txt"
+    log("Start Feature : " + feature.name, context.logFeatureFile)
+
 
 def before_scenario(context, scenario):
-    logging.info("Scenario started: " + scenario.name)
+    context.timeStump = str(time.strftime('%Y-%m-%d %H:%M:%S'))
+    context.screanDirName = getScreenPath()+"\\"+ scenario.name +"_"+ context.timeStump.replace(":","_")
+    createDir(context, context.screanDirName)
+
+    context.logFile = context.screanDirName+"\\Log.txt"
+
+    log("Scenario started: " + scenario.name,context.logFile)
+    setUp(context)
+    log("URL: "+getURL(context),context.logFile)
+
+
 
 def before_step(context, step):
-    logging.info("Step: " + step.name)
+    log("Step: " + step.name,context.logFile)
 
 def after_scenario(context, scenario):
-    logging.info("Test Finished")
+    log("Test Finished",context.logFile)
     tearDown(context)
 
 def after_step(context, step):
-    takeScreenshot(context,step.name)
+    takeScreenshot(context,context.screanDirName+"\\",step.name)
     if BEHAVE_DEBUG and step.status == "failed":
         import ipdb
-        logging.info(ipdb.post_mortem(step.exc_traceback))
+        log("TEST FAIL")
+        log(str(ipdb.post_mortem(step.exc_traceback)),context.logFile)
 
 def after_feature(context,feature):
-        logging.info("Feature name: "+feature.name)
-        logging.info("Skip reason: "+str(feature.skip_reason))
-        logging.info("Status: "+feature.status)
+
+    log("Feature Finished: "+feature.name,context.logFeatureFile)
+    log("Skip reason: "+str(feature.skip_reason),context.logFeatureFile)
+    log("Status: "+feature.status,context.logFeatureFile)
+
 
 

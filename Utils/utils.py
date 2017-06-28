@@ -11,11 +11,21 @@ def log (text,path =os.path.dirname(os.path.abspath(__file__))+"\\" "log.txt"):
         with open( path, "a+") as logFile:
             logFile.write(log)
     except Exception as ex:
-        print("ERROR while loging")
+        print("ERROR while logging")
         print(str(ex))
+        raise ex
 
 
 def logResult(TestName,Result):
         message = "Name: {x} Result {y}".format(x=TestName, y=Result)
         print(message)
         log(message,"TestsResultLog.txt")
+
+
+def createDir(context,name):
+    if not os.path.exists(name):
+        os.makedirs(name)
+
+def takeScreenshot(context,path,file):
+
+    context.driver.save_screenshot(path+file.replace(' ','_')+'.png')

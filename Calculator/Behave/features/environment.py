@@ -1,16 +1,13 @@
 import time
 
-from Calculator.Behave.features.steps.steps import setUp, tearDown, takeScreenshot, getURL, createDir
+from Calculator.Behave.features.steps.steps import setUp, tearDown, getURL
 # logging.basicConfig(level=logging.DEBUG, filename="Logs.log")
 from Calculator.Behave.screens.screenPath import getScreenPath
-from Utils.utils import log
+from Utils.utils import log, createDir, takeScreenshot
 
 BEHAVE_DEBUG = True
 
-# def before_all(context):
-#     # context.timeStump = time.strftime('%Y-%m-%d %H:%M:%S')
-#     # context.log = logging
-#     # logging.info( context.timeStump )
+
 
 def before_feature(context,feature):
     context.logFeatureFile = getScreenPath() + "\\Log.txt"

@@ -1,7 +1,6 @@
 from behave import *
 
 from BlogTests.Pages.basePage import setUp
-from BlogTests.screens.screenPath import getScreenPath
 
 loginPage = "http://localhost:8081/admin/login/"
 blogPage = "http://localhost:8081/blog/"
@@ -10,8 +9,6 @@ blogPage = "http://localhost:8081/blog/"
 adminLogin = "admin"
 adminPass = "AdminPass123"
 
-def takeScreenshot(context,file):
-    context.driver.save_screenshot(getScreenPath()+"//"+file.replace(' ','_')+'.png')
 
 def getURL(context):
     return context.driver.current_url

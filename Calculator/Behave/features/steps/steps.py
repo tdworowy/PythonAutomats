@@ -1,4 +1,3 @@
-import os
 import time
 
 from behave import *
@@ -40,16 +39,12 @@ def setUp(context):
 # def setDriver(context):
 #     context.driver = driver
 
-def takeScreenshot(context,path,file):
 
-    context.driver.save_screenshot(path+file.replace(' ','_')+'.png')
 
 def getURL(context):
     return context.driver.current_url
 
-def createDir(context,name):
-    if not os.path.exists(name):
-        os.makedirs(name)
+
 
 # def tearDown(context):
 #     context.driver.quit()
