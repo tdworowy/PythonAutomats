@@ -112,9 +112,10 @@ class SkypeBot():
             self.setSearchItem(user)
             self.driver.find_element(*self.searchItem).click()
             self.addButtonClick()
-        except:
+        except Exception as ex:
+            print(str(ex))
             print(user," is alredy added")
-            time.sleep(2)
+
 
     def checkContent(self,toCheck):#don't work as should
         try:

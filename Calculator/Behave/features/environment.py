@@ -1,11 +1,9 @@
-import logging
 import time
 
 from Calculator.Behave.features.steps.steps import setUp, tearDown, takeScreenshot, getURL, createDir
 # logging.basicConfig(level=logging.DEBUG, filename="Logs.log")
 from Calculator.Behave.screens.screenPath import getScreenPath
-
-# TODO loging for ewery scenario to separated file
+from Utils.utils import log
 
 BEHAVE_DEBUG = True
 
@@ -14,41 +12,42 @@ BEHAVE_DEBUG = True
 #     # context.log = logging
 #     # logging.info( context.timeStump )
 
-# def before_feature(context,feature):
-#     logging.info("Feature name: "+feature.name)
+def before_feature(context,feature):
+    context.logFeatureFile = getScreenPath() + "\\Log.txt"
+    log("Start Feature : " + feature.name, context.logFeatureFile)
+
 
 def before_scenario(context, scenario):
-    context.timeStump = time.strftime('%Y-%m-%d %H:%M:%S')
+    context.timeStump = str(time.strftime('%Y-%m-%d %H:%M:%S'))
     context.screanDirName = getScreenPath()+"\\"+ scenario.name +"_"+ context.timeStump.replace(":","_")
     createDir(context, context.screanDirName)
 
-    logFile = open(context.screanDirName+"\\Log.log",'a+')
-    logging.basicConfig(level=logging.DEBUG, filename= logFile.name,filemode='a+')#TODO don't work
-    context.log = logging
-    logging.info(context.timeStump)
+    context.logFile = context.screanDirName+"\\Log.txt"
 
-    logging.info("Scenario started: " + scenario.name)
+    log("Scenario started: " + scenario.name,context.logFile)
     setUp(context)
-    logging.info("URL: "+getURL(context))
+    log("URL: "+getURL(context),context.logFile)
 
 
 
 def before_step(context, step):
-    logging.info("Step: " + step.name)
+    log("Step: " + step.name,context.logFile)
 
 def after_scenario(context, scenario):
-    logging.info("Test Finished")
+    log("Test Finished",context.logFile)
     tearDown(context)
 
 def after_step(context, step):
     takeScreenshot(context,context.screanDirName+"\\",step.name)
     if BEHAVE_DEBUG and step.status == "failed":
         import ipdb
-        logging.info(ipdb.post_mortem(step.exc_traceback))
+        log("TEST FAIL")
+        log(str(ipdb.post_mortem(step.exc_traceback)),context.logFile)
 
 def after_feature(context,feature):
-        logging.info("Feature name: "+feature.name)
-        logging.info("Skip reason: "+str(feature.skip_reason))
-        logging.info("Status: "+feature.status)
+
+    log("Feature Finished: "+feature.name,context.logFeatureFile)
+    log("Skip reason: "+str(feature.skip_reason),context.logFeatureFile)
+    log("Status: "+feature.status,context.logFeatureFile)
 
 

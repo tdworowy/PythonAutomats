@@ -42,9 +42,16 @@ class AddPersonToChat:
 
 if __name__ == '__main__':
 
-    user = sys.argv[1]
-    passw = sys.argv[2]
     ap = AddPersonToChat()
-    ap.login([user,passw])
-    # while(1):
-    ap.addPersonToChat(["Adam Franica"])
+    try:
+        user = sys.argv[1]
+        passw = sys.argv[2]
+        ap = AddPersonToChat()
+        ap.login([user,passw])
+        # while(1):
+        ap.addPersonToChat(["Adam Franica"])
+    except Exception as ex:
+        log(str(ex))
+
+    finally:
+        ap.tearDown()

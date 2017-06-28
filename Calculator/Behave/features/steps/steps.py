@@ -6,6 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.remote.webdriver import WebDriver
 
 from Calculator.Elements.Calculator import CalculatorElements
+from Utils.utils import log
 from chromedriverFolder.driverPath import getDriverPath
 
 server = 'http://www.calculator.net/'
@@ -92,15 +93,15 @@ def checkifCalculatorIsDisplayed(context):
 @then('check result')
 def checkResult(context):
     actual = context.calculator.getCalcResult()
-    context.log.info("Check result: " + context.result)
-    context.log.info("Actual result: " + actual)
+    log("Check result: " + context.result,context.logFile)
+    log("Actual result: " + actual,context.logFile)
     assert context.result == context.calculator.getCalcResult()
 
 @then('check {result}')
 def checkResult2(context,result):
     actual = context.calculator.getCalcResult()
-    context.log.info("Check result: " + result)
-    context.log.info("Actual result: " + actual)
+    log("Check result: " + result,context.logFile)
+    log("Actual result: " + actual,context.logFile)
     assert result == context.calculator.getCalcResult()
 
 
