@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skype/SkypeBot/SkypeBot.py" afterPath="$PROJECT_DIR$/skype/SkypeBot/SkypeBot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skype/addPersonToChat.py" afterPath="$PROJECT_DIR$/skype/addPersonToChat.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skype/SkypeBot/Message.py" afterPath="$PROJECT_DIR$/skype/Message.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/utils.py" afterPath="$PROJECT_DIR$/Utils/utils.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SkypeBot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SkypeBot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skype/SkypeBot/SkypeBot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
@@ -115,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
-              <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+              <caret line="29" column="3" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="3" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -200,12 +198,12 @@
         <option value="$PROJECT_DIR$/gameOfLive/gameOflive.py" />
         <option value="$PROJECT_DIR$/Calculator/Behave/run.py" />
         <option value="$PROJECT_DIR$/Calculator/Behave/features/steps/steps.py" />
-        <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/BlogTests/features/steps/steps.py" />
         <option value="$PROJECT_DIR$/BlogTests/features/environment.py" />
         <option value="$PROJECT_DIR$/Calculator/Behave/features/environment.py" />
         <option value="$PROJECT_DIR$/skype/addPersonToChat.py" />
         <option value="$PROJECT_DIR$/skype/SkypeBot/SkypeBot.py" />
+        <option value="$PROJECT_DIR$/Utils/utils.py" />
       </list>
     </option>
   </component>
@@ -582,13 +580,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00099" summary="update">
-      <created>1494153680357</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1494153680358</updated>
-    </task>
     <task id="LOCAL-00100" summary="update">
       <created>1494167940963</created>
       <option name="number" value="00100" />
@@ -925,7 +916,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498663513491</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="fix + refactor">
+      <created>1498745696935</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1498745696936</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1022,7 +1020,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="refactor" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="fix + refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix + refactor" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1251,16 +1250,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlogTests/features/steps/steps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1309,14 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skype/addPersonToChat.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1330,6 +1311,24 @@
         <state relative-caret-position="595">
           <caret line="104" column="39" lean-forward="false" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="3" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

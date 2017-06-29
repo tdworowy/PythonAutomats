@@ -27,5 +27,4 @@ def createDir(context,name):
         os.makedirs(name)
 
 def takeScreenshot(context,path,file):
-
     context.driver.save_screenshot(path+file.replace(' ','_')+'.png')
