@@ -102,6 +102,7 @@ class SkypeBot():
         time.sleep(2)
 
     def addPersonButtonClick(self):
+        self.driver.implicitly_wait(5);
         self.driver.find_element(*self.addPersonButton).click()
 
     def addButtonClick(self):

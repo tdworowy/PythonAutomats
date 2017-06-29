@@ -17,6 +17,7 @@ class AddPersonToChat:
         self.driver.implicitly_wait(2)
         self.skypeBot = SkypeBot(self.driver)
 
+
     def __init__(self):
         self.setUp()
 
