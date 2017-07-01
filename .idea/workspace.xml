@@ -2,37 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Facebook/facebookBot.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Utils/Songs_/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtube/YoutubeBot.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Skype/SongOfTheDay/file.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebookBot/facebookBot.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skype/SongOfTheDay/Songs.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Utils/Songs_/file.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Skype/SongOfTheDay/aut.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/Pages/basePage.py" afterPath="$PROJECT_DIR$/BlogTests/Pages/basePage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator/Behave/features/steps/steps.py" afterPath="$PROJECT_DIR$/Calculator/Behave/features/steps/steps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator/Elements/TestBase.py" afterPath="$PROJECT_DIR$/Calculator/Elements/TestBase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Netflix/Netflix.py" afterPath="$PROJECT_DIR$/Netflix/Netflix.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/grid/startHub.py" afterPath="$PROJECT_DIR$/Utils/grid/startHub.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/grid/startHubLinuks.py" afterPath="$PROJECT_DIR$/Utils/grid/startHubLinuks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/grid/startNode.py" afterPath="$PROJECT_DIR$/Utils/grid/startNode.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/grid/startNodeLinuks.py" afterPath="$PROJECT_DIR$/Utils/grid/startNodeLinuks.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/chromedriverFolder/__init__.py" afterPath="$PROJECT_DIR$/ChromedriverFolder/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/chromedriverFolder/chromedriver.exe" afterPath="$PROJECT_DIR$/ChromedriverFolder/chromedriver.exe" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/chromedriverFolder/driverPath.py" afterPath="$PROJECT_DIR$/ChromedriverFolder/driverPath.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/facebookBot/__init__.py" afterPath="$PROJECT_DIR$/Facebook/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/phantomjs/phantomjs.exe" afterPath="$PROJECT_DIR$/Phantomjs/phantomjs.exe" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/phantomjs/phantomjsPath.py" afterPath="$PROJECT_DIR$/Phantomjs/phantomjsPath.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skype/Message.py" afterPath="$PROJECT_DIR$/Skype/Message.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skype/SkypeBot/SkypeBot.py" afterPath="$PROJECT_DIR$/Skype/SkypeBot/SkypeBot.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skype/SkypeBot/__init__.py" afterPath="$PROJECT_DIR$/Skype/SkypeBot/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skype/SongOfTheDay/Songs.py" afterPath="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skype/SongOfTheDay/__init__.py" afterPath="$PROJECT_DIR$/Skype/SongOfTheDay/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skype/SongOfTheDay/aut.txt" afterPath="$PROJECT_DIR$/Skype/SongOfTheDay/aut.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skype/SongOfTheDay/ghostdriver.log" afterPath="$PROJECT_DIR$/Skype/SongOfTheDay/ghostdriver.log" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skype/SongOfTheDay/songOfTheDay.py" afterPath="$PROJECT_DIR$/Skype/SongOfTheDay/songOfTheDay.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skype/__init__.py" afterPath="$PROJECT_DIR$/Skype/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skype/addPersonToChat.py" afterPath="$PROJECT_DIR$/Skype/addPersonToChat.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,16 +24,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SkypeBot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Skype/SkypeBot/SkypeBot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1666">
-              <caret line="104" column="39" lean-forward="false" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="songOfTheDay.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Skype/SongOfTheDay/songOfTheDay.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,12 +36,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="file.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/Songs_/file.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Songs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="544">
+              <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,10 +62,8 @@
         <entry file="file://$PROJECT_DIR$/Youtube/YoutubeBot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,21 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addPersonToChat.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Skype/addPersonToChat.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+            <state relative-caret-position="204">
+              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -231,12 +193,12 @@
         <option value="$PROJECT_DIR$/skype/SkypeBot/SkypeBot.py" />
         <option value="$PROJECT_DIR$/Calculator/Behave/features/calculator1.feature" />
         <option value="$PROJECT_DIR$/Calculator/Behave/features/calculator2.feature" />
-        <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/Utils/decorators.py" />
         <option value="$PROJECT_DIR$/skype/SongOfTheDay/songOfTheDay.py" />
         <option value="$PROJECT_DIR$/Youtube/YoutubeBot.py" />
         <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
         <option value="$PROJECT_DIR$/Skype/SongOfTheDay/songOfTheDay.py" />
+        <option value="$PROJECT_DIR$/Utils/utils.py" />
       </list>
     </option>
   </component>
@@ -645,20 +607,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00102" summary="test for django Blog">
-      <created>1494667599176</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1494667599177</updated>
-    </task>
-    <task id="LOCAL-00103" summary="test for django Blog">
-      <created>1494668163352</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1494668163352</updated>
-    </task>
     <task id="LOCAL-00104" summary="test for django Blog">
       <created>1494670083021</created>
       <option name="number" value="00104" />
@@ -988,7 +936,21 @@
       <option name="project" value="LOCAL" />
       <updated>1498929771271</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="Refactor">
+      <created>1498940938779</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1498940938780</updated>
+    </task>
+    <task id="LOCAL-00152" summary="Refactor">
+      <created>1498941114518</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1498941114518</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1075,7 +1037,6 @@
     <MESSAGE value="chrome driver update" />
     <MESSAGE value="upfate" />
     <MESSAGE value="update for selenium grid" />
-    <MESSAGE value="Refactor" />
     <MESSAGE value="behave added" />
     <MESSAGE value="behave update" />
     <MESSAGE value="Update" />
@@ -1086,7 +1047,8 @@
     <MESSAGE value="refactor" />
     <MESSAGE value="fix + refactor" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1128,24 +1090,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Python/Lib/site-packages/selenium/webdriver/phantomjs/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Phantomjs/phantomjsPath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Skype/SongOfTheDay/aut.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1358,30 +1306,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+    <entry file="file://$PROJECT_DIR$/Youtube/YoutubeBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        <state relative-caret-position="85">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Songs_/file.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Youtube/YoutubeBot.py">
+    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="204">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
+    <entry file="file://$PROJECT_DIR$/Skype/SongOfTheDay/aut.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="15" />
+        <state relative-caret-position="17">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding />
         </state>
       </provider>
