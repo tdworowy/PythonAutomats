@@ -1,7 +1,7 @@
 import os
 import time
 
-def log (text,path =os.path.dirname(os.path.abspath(__file__))+"\\" "log.txt"):
+def log (text,path = os.path.dirname(os.path.abspath(__file__))+"\\log.txt"):
     try:
         text = str(text)
         timeStump = time.strftime('%Y-%m-%d %H:%M:%S')
