@@ -28,3 +28,6 @@ def createDir(context,name):
 
 def takeScreenshot(context,path,file):
     context.driver.save_screenshot(path+file.replace(' ','_')+'.png')
+
+def takeScreenshot_(driver,path,file):
+    driver.save_screenshot(path+file.replace(' ','_')+'.png')
