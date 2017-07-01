@@ -2,7 +2,7 @@ from fbchat import Client
 from fbchat.models import *
 
 
-class FaceBookMessageBot():
+class FaceBookMessageBot:
     def logIn(self,email,password):
         self.client = Client(email, password)
 

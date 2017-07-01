@@ -49,6 +49,7 @@ class songOfTheDay():
 
 
     def tearDown(self):
+        self.faceBot.logout()
         self.driver.quit()
 
 @logExeption
