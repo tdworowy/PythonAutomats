@@ -3,18 +3,16 @@ import datetime
 import os
 import random
 import sys
-import time
 from datetime import date
 
 from selenium import webdriver
-from selenium.webdriver import ActionChains
-from selenium.webdriver.common.keys import Keys
 
+from ChromedriverFolder.driverPath import getDriverPath
+from Skype.SkypeBot.SkypeBot import SkypeBot
+from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import logExeption
 from Utils.utils import log
-from chromedriverFolder.driverPath import getDriverPath
-from skype.SkypeBot.SkypeBot import SkypeBot
-from skype.SongOfTheDay.Songs import updateSongs
+from Youtube.YoutubeBot import getYoutubeURL
 
 
 class songOfTheDay():
@@ -28,23 +26,6 @@ class songOfTheDay():
         return "Song for "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today()) + " [AUTO] "
 
 
-
-    def findSong(self, song):
-        self.driver.get('https://www.youtube.com')
-        actions = ActionChains(self.driver)
-
-        input = self.driver.find_element_by_id("masthead-search-term")
-        input.click()
-        input.send_keys(song)
-        actions.send_keys(Keys.ENTER)
-        actions.perform()
-        time.sleep(2)
-        firstResoult = self.driver.find_element_by_css_selector("h3 a")
-
-        firstResoult.click()
-        time.sleep(1)
-
-        return self.driver.current_url
 
     def sentSong(self, autentycation, songURLs):
         self.skypeBot.login(autentycation)
@@ -61,7 +42,7 @@ class songOfTheDay():
         updateSongs()
         chromeDriverPath =getDriverPath()+'\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
-        # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\phantomjs.exe')
+        # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\Phantomjs.exe')
         self.driver.implicitly_wait(2)
         self.skypeBot = SkypeBot(self.driver)
 
@@ -73,15 +54,15 @@ class songOfTheDay():
 @logExeption
 def main(login, password):
         song = songOfTheDay()
-        f = open(os.path.dirname(os.path.abspath(__file__))+'\\file.txt', 'r')
+        f = open(getFilePath(), 'r')
         log("Get random song")
         songsList = f.read()
-        songsList=songsList.split("\n")
+        songsList = songsList.split("\n")
         authentication = [login, password]
 
-        ran= random.randrange(len(songsList))
+        ran = random.randrange(len(songsList))
         log(songsList[ran])
-        url = song.findSong(songsList[ran].strip())
+        url = getYoutubeURL(song.driver,songsList[ran].strip())
         song.sentSong(authentication, [url])
         song.tearDown()
 

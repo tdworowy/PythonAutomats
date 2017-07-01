@@ -5,7 +5,7 @@ from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.remote.webdriver import WebDriver
 
 from Calculator.Elements.Calculator import CalculatorElements
-from chromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import getDriverPath
 
 server = 'http://www.calculator.net/'
 

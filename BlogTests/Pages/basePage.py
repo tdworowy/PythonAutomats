@@ -2,7 +2,7 @@ from selenium import webdriver
 
 from BlogTests.Pages.adminPage import AdminPage
 from BlogTests.Pages.loginPage import LoginPage
-from chromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import getDriverPath
 
 
 # server = "http://localhost:8081/admin/login/"

@@ -5,7 +5,7 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-from chromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import getDriverPath
 
 netflixUrl = "https://www.netflix.com/browse"
 generUrl = "https://www.netflix.com/browse/genre/"

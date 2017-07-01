@@ -3,8 +3,8 @@ import time
 
 from selenium import webdriver
 
+from ChromedriverFolder.driverPath import getDriverPath
 from Utils.utils import Enum
-from chromedriverFolder.driverPath import getDriverPath
 
 visibilityEnum= Enum(["friends",'public','me'])
 

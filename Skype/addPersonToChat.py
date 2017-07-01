@@ -3,9 +3,9 @@ import sys
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 
+from ChromedriverFolder.driverPath import getDriverPath
+from Skype.SkypeBot.SkypeBot import SkypeBot
 from Utils.utils import log
-from chromedriverFolder.driverPath import getDriverPath
-from skype.SkypeBot.SkypeBot import SkypeBot
 
 
 class AddPersonToChat:

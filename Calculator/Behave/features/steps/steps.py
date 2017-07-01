@@ -5,8 +5,8 @@ from selenium import webdriver
 from selenium.webdriver.remote.webdriver import WebDriver
 
 from Calculator.Elements.Calculator import CalculatorElements
+from ChromedriverFolder.driverPath import getDriverPath
 from Utils.utils import log
-from chromedriverFolder.driverPath import getDriverPath
 
 server = 'http://www.calculator.net/'
 chrome = {

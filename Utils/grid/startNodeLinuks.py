@@ -1,4 +1,4 @@
-from chromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import getDriverPath
 
 seleniumServerPath = "/home/thomas/selenium"
 driverPath =getDriverPath()+ '/chromedriver.exe'

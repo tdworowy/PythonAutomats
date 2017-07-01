@@ -7,6 +7,9 @@ from Utils.utils import log
 
 filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
 
+def getFilePath():
+    return filePath
+
 def getTitels(count,url):
     log("Get songs from last fm --- START")
     for i in range(count):

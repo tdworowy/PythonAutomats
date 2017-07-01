@@ -50,7 +50,7 @@ class SkypeBot():
 
 
     def openSkype(self):
-        self.driver.get('https://web.skype.com/pl/')
+        self.driver.get('https://web.Skype.com/pl/')
 
     def waitForInputField(self):
         WebDriverWait(self.driver, 40).until(EC.visibility_of_any_elements_located(self.inputField))

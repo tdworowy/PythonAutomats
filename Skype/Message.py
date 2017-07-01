@@ -1,7 +1,7 @@
 import os
 
+from Skype.SkypeBot.SkypeBot import SkypeBot
 from Utils.decorators import logExeption
-from skype.SkypeBot.SkypeBot import SkypeBot
 
 
 @logExeption
