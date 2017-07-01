@@ -16,9 +16,11 @@ def getTitels(count,url):
         response = requests.get(url + str(i)).text
         soup = BeautifulSoup(response,"html.parser")
         titles = soup.find_all("a", class_="link-block-target")
-        titles = str(titles).split(">")
+        titles = str(titles)
+        titles = titles.split(">")
+        clrTitels = [title.encode("utf-8").decode('ascii','ignore') for title in titles]
     log("Get songs from last fm --- DONE")
-    return titles
+    return clrTitels
 
 def clearTitels(titles):
     cleanTitels = []
@@ -44,7 +46,7 @@ def getSongs():
                 #print(titles)
             for text in titles:
                 try:
-                     print(text)
+                     log(text)
                      count +=1
                      print(text, file=f)
                 except Exception as ex:
