@@ -74,5 +74,5 @@ if __name__ == '__main__':
      passw = f.readline().strip()
    else:
        user = sys.argv[1]
-       passw = sys.argv[2]
+       passw = sys.argv[2]+" "+sys.argv[3]
    main(user, passw)
