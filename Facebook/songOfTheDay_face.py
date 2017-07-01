@@ -1,7 +1,9 @@
 
 import calendar
 import datetime
+import os
 import random
+import sys
 from datetime import date
 
 from selenium import webdriver
@@ -56,10 +58,21 @@ def main(login, password):
         log("Get random song")
         songsList = f.read()
         songsList = songsList.split("\n")
-        authentication = [login, password]
 
         ran = random.randrange(len(songsList))
         log(songsList[ran])
         url = getYoutubeURL(song.driver,songsList[ran].strip())
-        song.sentSong(authentication, [url])
+        song.sentSong(login,password, [url])
         song.tearDown()
+
+
+if __name__ == '__main__':
+
+   if len(sys.argv) <2:
+     f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
+     user = f.readline().strip()
+     passw = f.readline().strip()
+   else:
+       user = sys.argv[1]
+       passw = sys.argv[2]
+   main(user, passw)
