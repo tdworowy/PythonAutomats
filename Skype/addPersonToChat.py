@@ -5,7 +5,7 @@ from selenium.webdriver import ActionChains
 
 from ChromedriverFolder.driverPath import getDriverPath
 from Skype.SkypeBot.SkypeBot import SkypeBot
-from Utils.utils import log, takeScreenshot_
+from Utils.utils import log
 
 
 class AddPersonToChat:
@@ -35,7 +35,7 @@ class AddPersonToChat:
             actions.send_keys(name)
             actions.perform()
             self.skypeBot.searchItemClick(name)
-            takeScreenshot_(self.driver,"D:\\","Add_ADAM")
+            # takeScreenshot_(self.driver,"D:\\","Add_ADAM")
 
 
     def tearDown(self):
