@@ -13,7 +13,7 @@ def log (text,path =os.path.dirname(os.path.abspath(__file__))+"\\" "log.txt"):
     except Exception as ex:
         print("ERROR while logging")
         print(str(ex))
-        raise ex
+        raise RuntimeError
 
 
 def logResult(TestName,Result):
