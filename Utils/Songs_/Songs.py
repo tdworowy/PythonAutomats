@@ -8,6 +8,13 @@ from Utils.utils import log
 # filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
 filePath = "D:\Google_drive\Songs\songsList.txt"
 lastUpdated = "D:\Google_drive\Songs\LastUpdated.txt"
+#
+# LAST_7_DAYS
+# LAST_30_DAYS
+# LAST_90_DAYS
+# LAST_180_DAYS
+# LAST_365_DAYS
+# ALL
 
 def getFilePath():
     return filePath
@@ -44,7 +51,7 @@ def getSongs():
             log("Generate songs list")
             f = open(filePath, 'w')
             count = 0
-            titles =clearTitels(getTitels(659,'http://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
+            titles =clearTitels(getTitels(705,'http://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
                 #print(titles)
             for text in titles:
                 try:
@@ -88,5 +95,4 @@ def updateSongs():
 
 
 if __name__ == '__main__':
-    log("__main__")
-    updateSongs()
+     getSongs()
