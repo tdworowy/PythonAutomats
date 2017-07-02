@@ -20,7 +20,7 @@ class songOfTheDay():
 
 
 
-    def sentSong(self, login,passw, songURLs):
+    def sentSong(self, login,passw, songURLs,to):
 
         self.faceBot.logIn(login,passw)
         for songURL in songURLs:
@@ -29,10 +29,10 @@ class songOfTheDay():
             tm = TinderMessageBot()
             tm.logIn(100001295284655, token)
             matches = list(tm.getMatches())
-            print(matches[0])
-            if matches[0] == 'Ilona':
-                matches[0].message("Automatyczna piosenka dla Ilony :D")
-                matches[0].message(songURL)
+            for match in tm.getMatches():
+                if str(match) == to:
+                    match.message("Automatyczna piosenka dla Ilony :D")
+                    match.message(songURL)
 
     def setUp(self):
         updateSongs()
@@ -58,7 +58,7 @@ def main(login, password):
         ran = random.randrange(len(songsList))
         log(songsList[ran])
         url = getYoutubeURL(song.driver,songsList[ran].strip())
-        song.sentSong(login,password, [url])
+        song.sentSong(login,password, [url],'Ilona')
         song.tearDown()
 
 
