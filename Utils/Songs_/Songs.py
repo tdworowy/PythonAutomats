@@ -84,7 +84,7 @@ def updateSongs():
     f2.flush()
     f2.close()
     log("Song List updated correctly")
-    open(lastUpdated, 'w').write(dateToday)
+    open(lastUpdated, 'w').write(str(dateToday))
 
 
 if __name__ == '__main__':
