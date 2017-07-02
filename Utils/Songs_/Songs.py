@@ -63,7 +63,7 @@ def updateSongs():
     log("Update songs list")
     f1 = open(filePath)
     f2 = open(filePath, 'a')
-    with (open(lastUpdated, 'a')) as f3:
+    with (open(lastUpdated, 'r')) as f3:
         if f3.readline() == str(dateToday) :
             log("List already updated")
             return 0
