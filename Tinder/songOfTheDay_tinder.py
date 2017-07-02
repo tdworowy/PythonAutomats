@@ -30,7 +30,7 @@ class songOfTheDay():
             tm.logIn(100001295284655, token)
             for match in tm.getMatches():
                 print(match)#debug
-                if str(match) == to:
+                if match.user == to:
                     log("Send message to: %s " % str(match))
                     match.message("Automatyczna piosenka dla Ilony :D")
                     match.message(songURL)
