@@ -4,10 +4,11 @@ import time
 from selenium import webdriver
 
 from ChromedriverFolder.driverPath import getDriverPath
-from Utils.utils import Enum
+from Utils.enum_ import Enum
 
 visibilityEnum= Enum(["friends",'public','me'])
 
+#TODO
 class facebookBot():
     def __init__(self,webdriver):
         self.driver= webdriver
