@@ -79,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="32" column="62" lean-forward="false" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+              <caret line="32" column="64" lean-forward="false" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -100,8 +100,8 @@
       <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Python/Lib/site-packages/pynder/models/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="144" column="16" lean-forward="false" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="16" />
+            <state relative-caret-position="680">
+              <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -597,13 +597,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00128" summary="update">
-      <created>1497977227776</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1497977227776</updated>
-    </task>
     <task id="LOCAL-00129" summary="update">
       <created>1497977379943</created>
       <option name="number" value="00129" />
@@ -940,7 +933,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499011903334</updated>
     </task>
-    <option name="localTasksCounter" value="177" />
+    <task id="LOCAL-00177" summary="Update">
+      <created>1499012070268</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1499012070269</updated>
+    </task>
+    <option name="localTasksCounter" value="178" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1390,8 +1390,8 @@
     </entry>
     <entry file="file://D:/Python/Lib/site-packages/pynder/models/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="144" column="16" lean-forward="false" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="16" />
+        <state relative-caret-position="680">
+          <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1399,7 +1399,7 @@
     <entry file="file://$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="32" column="62" lean-forward="false" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+          <caret line="32" column="64" lean-forward="false" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
