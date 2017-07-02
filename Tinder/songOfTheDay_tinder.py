@@ -29,9 +29,8 @@ class songOfTheDay():
             tm = TinderMessageBot()
             tm.logIn(100001295284655, token)
             for match in tm.getMatches():
-                print(match)#debug
-                if match.user == to:
-                    log("Send message to: %s " % str(match))
+                if repr(match) == to:
+                    log("Send message to: %s " % repr(match))
                     match.message("Automatyczna piosenka dla Ilony :D")
                     match.message(songURL)
 
