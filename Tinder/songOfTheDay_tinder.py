@@ -21,8 +21,6 @@ class songOfTheDay():
 
 
     def sentSong(self, login,passw, songURLs,to):
-
-
         for songURL in songURLs:
             log(songURL)
             token = get_access_token(login,passw)
