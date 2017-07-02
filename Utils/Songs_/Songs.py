@@ -59,6 +59,7 @@ def getSongs():
                      count +=1
                      print(text, file=f)
                 except Exception as ex:
+                     log("Error while generating songs list")
                      log(str(ex))
                      continue
             log("Songs count: ",count)
@@ -85,7 +86,7 @@ def updateSongs():
                   f2.write(title)
                   f2.flush()
           except Exception as ex:
-                  log("Error while updating song list")
+                  log("Error while updating songs list")
                   log(str(ex))
                   continue
     f2.flush()
