@@ -1,11 +1,10 @@
-import os
-
 import requests
 from bs4 import BeautifulSoup
 
 from Utils.utils import log
 
-filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
+# filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
+filePath = "D:\Google_drive\Songs\songsList.txt"
 
 def getFilePath():
     return filePath
@@ -62,7 +61,8 @@ def updateSongs():
     f2 = open(filePath, 'a')
     log("Files opened Correctly")
     oldTitels = [line for line in f1.readlines()]
-    newTitles = clearTitels(getTitels(10,"http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_7_DAYS&page="))
+    # newTitles = clearTitels(getTitels(10,"http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_7_DAYS&page="))
+    newTitles = clearTitels( getTitels(60, "http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page="))
     log("New titles: "+str(newTitles))
     for title in newTitles:
           try:
