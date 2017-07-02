@@ -1,4 +1,5 @@
 from fbchat import Client
+from fbchat import Client
 from fbchat.models import *
 
 
@@ -17,7 +18,8 @@ class FaceBookMessageBot:
     def logout(self):
         self.client.logout()
 
+    def getAutToken(self,appid,app_secred):#not loged user token
+        return utils.get_application_access_token(appid, app_secred)
 
-
-# '1252344071467839'
-
+    def getUserID(self):
+        return self.client.client_id
