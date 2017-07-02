@@ -1,3 +1,5 @@
+from datetime import date
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -5,6 +7,7 @@ from Utils.utils import log
 
 # filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
 filePath = "D:\Google_drive\Songs\songsList.txt"
+lastUpdated = "D:\Google_drive\Songs\LastUpdated.txt"
 
 def getFilePath():
     return filePath
@@ -56,9 +59,14 @@ def getSongs():
 
 
 def updateSongs():
+    dateToday = date.today()
     log("Update songs list")
     f1 = open(filePath)
     f2 = open(filePath, 'a')
+    with (open(lastUpdated, 'a')) as f3:
+        if f3.readline() == str(dateToday) :
+            log("List already updated")
+            return 0
     log("Files opened Correctly")
     oldTitels = [line for line in f1.readlines()]
     # newTitles = clearTitels(getTitels(10,"http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_7_DAYS&page="))
@@ -76,6 +84,7 @@ def updateSongs():
     f2.flush()
     f2.close()
     log("Song List updated correctly")
+    open(lastUpdated, 'w').write(dateToday)
 
 
 if __name__ == '__main__':
