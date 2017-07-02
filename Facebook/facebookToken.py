@@ -9,7 +9,7 @@ FB_AUTH = "https://www.facebook.com/v2.6/dialog/oauth?redirect_uri=fb46489138685
 def get_access_token(email, password):
     s = robobrowser.RoboBrowser(user_agent=MOBILE_USER_AGENT, parser="html5lib")
     s.open(FB_AUTH)
-    ##submit login form##
+
     f = s.get_form()
     f["pass"] = password
     f["email"] = email
