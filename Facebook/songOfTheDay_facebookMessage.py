@@ -1,10 +1,6 @@
-
-import calendar
-import datetime
 import os
 import random
 import sys
-from datetime import date
 
 from selenium import webdriver
 
@@ -12,7 +8,7 @@ from ChromedriverFolder.driverPath import getDriverPath
 from Facebook.facebookAPI import FaceBookMessageBot
 from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import logExeption
-from Utils.utils import log
+from Utils.utils import log, mesageByTime
 from Youtube.YoutubeBot import getYoutubeURL
 
 THREADID = '1252344071467839'
@@ -21,21 +17,17 @@ class songOfTheDay():
     def __init__(self):
         self.setUp()
 
-    def mesageByTime(self):
-        now = datetime.datetime.now()
-        dateToday = date.today()
-        log("Today is: "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today()))
-        return "Song for "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today()) + " [AUTO] "
+
 
 
 
     def sentSong(self, login,passw, songURLs):
 
-        log(self.mesageByTime())
+        log(mesageByTime())
         self.faceBot.logIn(login,passw)
         for songURL in songURLs:
             log(songURL)
-            self.faceBot.sendMessage(self.mesageByTime(),THREADID)
+            self.faceBot.sendMessage(mesageByTime(),THREADID)
             self.faceBot.sendMessage(songURL,THREADID)
 
     def setUp(self):

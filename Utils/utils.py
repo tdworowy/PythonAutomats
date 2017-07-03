@@ -1,5 +1,9 @@
+import calendar
+import datetime
 import os
 import time
+from datetime import date
+
 
 def log (text,path = os.path.dirname(os.path.abspath(__file__))+"\\log.txt"):
     try:
@@ -31,3 +35,10 @@ def takeScreenshot(context,path,file):
 
 def takeScreenshot_(driver,path,file):
     driver.save_screenshot(path+file.replace(' ','_')+'.png')
+
+
+def mesageByTime():
+        now = datetime.datetime.now()
+        dateToday = date.today()
+        log("Today is: "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today()))
+        return "Song for "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today()) + " [AUTO] "
