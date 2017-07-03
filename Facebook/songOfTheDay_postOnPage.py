@@ -62,5 +62,3 @@ if __name__ == '__main__':
        app_secred = sys.argv[3]
 
        main(pageid, appid,app_secred)
-
-#TODO don't work yet
