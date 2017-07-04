@@ -3,7 +3,7 @@ import datetime
 import os
 import time
 from datetime import date
-
+historyPath = "D:\Google_drive\Songs\History"
 
 def log (text,path = os.path.dirname(os.path.abspath(__file__))+"\\log.txt"):
     try:
@@ -18,6 +18,10 @@ def log (text,path = os.path.dirname(os.path.abspath(__file__))+"\\log.txt"):
         print("ERROR while logging")
         print(str(ex))
         raise RuntimeError
+
+
+def saveHistory (text,file):
+    log(text,historyPath+file)
 
 
 def logResult(TestName,Result):

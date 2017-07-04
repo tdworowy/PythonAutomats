@@ -8,7 +8,7 @@ from ChromedriverFolder.driverPath import getDriverPath
 from Skype.SkypeBot.SkypeBot import SkypeBot
 from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import logExeption
-from Utils.utils import log, mesageByTime
+from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
 
 
@@ -28,6 +28,7 @@ class songOfTheDay():
             log(songURL)
             self.skypeBot.sendMessageToSelected(mesageByTime())
             self.skypeBot.sendMessageToSelected(songURL)
+            saveHistory(songURL,"Skype.txt")
 
     def setUp(self):
         updateSongs()

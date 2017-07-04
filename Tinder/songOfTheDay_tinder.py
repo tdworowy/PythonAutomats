@@ -10,7 +10,7 @@ from Facebook.facebookToken import get_access_token
 from Tinder.TinderApi import TinderMessageBot
 from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import logExeption
-from Utils.utils import log
+from Utils.utils import log, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
 
 
@@ -32,6 +32,7 @@ class songOfTheDay():
                     log("Send message to: %s " % match.user.name)
                     match.message("Automatyczna piosenka dla Ilony :D")
                     match.message(songURL)
+                    saveHistory(songURL,"Tinder.txt")
 
     def setUp(self):
         updateSongs()

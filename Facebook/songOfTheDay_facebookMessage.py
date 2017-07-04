@@ -8,7 +8,7 @@ from ChromedriverFolder.driverPath import getDriverPath
 from Facebook.facebookAPI import FaceBookMessageBot
 from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import logExeption
-from Utils.utils import log, mesageByTime
+from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
 
 THREADID = '1252344071467839'
@@ -29,6 +29,7 @@ class songOfTheDay():
             log(songURL)
             self.faceBot.sendMessage(mesageByTime(),THREADID)
             self.faceBot.sendMessage(songURL,THREADID)
+            saveHistory(songURL,"FacebookMessage.txt")
 
     def setUp(self):
         updateSongs()
