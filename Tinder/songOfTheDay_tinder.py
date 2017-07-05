@@ -21,6 +21,7 @@ class songOfTheDay():
 
 
     def sentSong(self, login,passw, songURLs,to):
+        self.driver.quit()
         for songURL in songURLs:
             log(songURL)
             token = get_access_token(login,passw)
@@ -39,10 +40,6 @@ class songOfTheDay():
         chromeDriverPath = getDriverPath()+'\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
         # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\Phantomjs.exe')
-
-
-    def tearDown(self):
-         self.driver.quit()
 
 @logExeption
 def main(login, password):
