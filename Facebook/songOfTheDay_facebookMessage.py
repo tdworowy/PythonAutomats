@@ -52,10 +52,11 @@ def main(login, password):
         log("Get random song")
         songsList = f.read()
         songsList = songsList.split("\n")
-
         ran = random.randrange(len(songsList))
-        log(songsList[ran])
-        url = getYoutubeURL(song.driver,songsList[ran].strip())
+        songTitle =songsList[ran]
+        saveHistory(songTitle, "FacebookMessage.txt")
+        log(songTitle)
+        url = getYoutubeURL(song.driver,songTitle.strip())
         song.sentSong(login,password, [url])
         song.tearDown()
 
