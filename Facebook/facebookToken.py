@@ -19,3 +19,6 @@ def get_access_token(email, password):
     access_token = re.search(r"access_token=([\w\d]+)", s.response.content.decode()).groups()[0]
 
     return access_token
+
+
+
