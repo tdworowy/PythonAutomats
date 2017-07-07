@@ -57,7 +57,7 @@ def main(login, password):
         log(songTitle)
         url = getYoutubeURL(song.driver,songTitle.strip())
         song.sentSong(login,password, [url],'Ilona')
-        song.tearDown()
+
 
 
 if __name__ == '__main__':
