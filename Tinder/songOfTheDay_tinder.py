@@ -21,12 +21,13 @@ class songOfTheDay():
 
 
     def sentSong(self, login,passw, songURLs,to):
-        self.driver.quit()
+
         for songURL in songURLs:
             log(songURL)
             token = get_access_token(login,passw)
             tm = TinderMessageBot()
             id = getFacebookID(self.driver,'tomasz.dworowy')
+            self.driver.quit()
             tm.logIn(id, token)
             for match in tm.getMatches():
                 if match.user.name == to:
