@@ -49,9 +49,9 @@ def main(login, password,names):
         songsList = songsList.split("\n")
 
         ran = random.randrange(len(songsList))
-        log(songsList[ran])
         songTitle = songsList[ran]
         log(songTitle)
+        saveHistory(songTitle, "Tinder.txt")
         song.logIN(login, password)
         for name in names:
             url = getYoutubeURL(song.driver,songTitle.strip())
