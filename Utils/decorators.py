@@ -1,3 +1,5 @@
+import sys
+
 from Utils.utils import logResult, log
 
 
@@ -19,7 +21,7 @@ def logExeption(f):
             f(*args)
         except Exception  as err:
             log(str(err))
+            log(sys.exc_info())
             raise RuntimeError
-        # finally:
-        #     quit()
+
     return func
