@@ -34,6 +34,7 @@ class songOfTheDay():
                     log("Send message to: %s " % match.user.name)
                     match.message("Automatyczna piosenka dla Ilony :D")
                     match.message(songURL)
+                    saveHistory("Song for %s" % match.user.name, "Tinder.txt")
                     saveHistory(songURL,"Tinder.txt")
 
     def setUp(self):
@@ -61,7 +62,6 @@ def main(login, password):
 
 
 if __name__ == '__main__':
-
    if len(sys.argv) <2:
      f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
      user = f.readline().strip()
