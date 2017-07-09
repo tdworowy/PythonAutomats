@@ -29,7 +29,7 @@ class songOfTheDay():
             for match in self.tm.getMatches():
                 if match.user.name == to:
                     log("Send message to: %s " % match.user.name)
-                    match.message("Song for: %s :D" % match.user.name)
+                    match.message("[ Auto song for: %s :D ]" % match.user.name)
                     match.message(songURL)
                     saveHistory("Song for %s" % match.user.name, "Tinder.txt")
                     saveHistory(songURL,"Tinder.txt")
