@@ -2,14 +2,13 @@ import os
 import random
 import sys
 
-from selenium import webdriver
-
 from ChromedriverFolder.driverPath import getDriverPath
 from Facebook.facebookAPI import FaceBookMessageBot
 from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import logExeption
 from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
+from selenium import webdriver
 
 THREADID = '1252344071467839'
 
@@ -54,7 +53,6 @@ def main(login, password):
         songsList = songsList.split("\n")
         ran = random.randrange(len(songsList))
         songTitle =songsList[ran]
-        saveHistory(songTitle, "FacebookMessage.txt")
         log(songTitle)
         url = getYoutubeURL(song.driver,songTitle.strip())
         song.sentSong(login,password, [url])

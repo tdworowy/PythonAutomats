@@ -2,8 +2,6 @@ import os
 import random
 import sys
 
-from selenium import webdriver
-
 from ChromedriverFolder.driverPath import getDriverPath
 from Facebook.facebookID import getFacebookID
 from Facebook.facebookToken import get_access_token
@@ -12,6 +10,7 @@ from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import logExeption
 from Utils.utils import log, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
+from selenium import webdriver
 
 
 class songOfTheDay():
@@ -42,7 +41,7 @@ class songOfTheDay():
 
 
 @logExeption
-def main(login, password):
+def main(login, password,names):
         song = songOfTheDay()
         f = open(getFilePath(), 'r')
         log("Get random song")
@@ -52,11 +51,11 @@ def main(login, password):
         ran = random.randrange(len(songsList))
         log(songsList[ran])
         songTitle = songsList[ran]
-        saveHistory(songTitle, "FacebookMessage.txt")
         log(songTitle)
-        url = getYoutubeURL(song.driver,songTitle.strip())
-        song.logIN(login,password)
-        song.sentSong( url,'Ilona')
+        song.logIN(login, password)
+        for name in names:
+            url = getYoutubeURL(song.driver,songTitle.strip())
+            song.sentSong(url,name)
 
 
 
@@ -68,4 +67,6 @@ if __name__ == '__main__':
    else:
        user = sys.argv[1]
        passw = sys.argv[2]+" "+sys.argv[3]
-   main(user, passw)
+
+   namesList = ['Ilona']
+   main(user, passw,namesList)
