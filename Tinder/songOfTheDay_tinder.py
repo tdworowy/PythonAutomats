@@ -19,20 +19,18 @@ class songOfTheDay():
         self.setUp()
 
 
+    def logIN(self,login,passw):
+        token = get_access_token(login, passw)
+        self.tm = TinderMessageBot()
+        id = getFacebookID(self.driver, 'tomasz.dworowy')
+        self.tm.logIn(id, token)
 
-    def sentSong(self, login,passw, songURLs,to):
-
-        for songURL in songURLs:
+    def sentSong(self,songURL,to):
             log(songURL)
-            token = get_access_token(login,passw)
-            tm = TinderMessageBot()
-            id = getFacebookID(self.driver,'tomasz.dworowy')
-            self.driver.quit()
-            tm.logIn(id, token)
-            for match in tm.getMatches():
+            for match in self.tm.getMatches():
                 if match.user.name == to:
                     log("Send message to: %s " % match.user.name)
-                    match.message("Automatyczna piosenka dla Ilony :D")
+                    match.message("Song for: %s :D" % match.user.name)
                     match.message(songURL)
                     saveHistory("Song for %s" % match.user.name, "Tinder.txt")
                     saveHistory(songURL,"Tinder.txt")
@@ -41,7 +39,7 @@ class songOfTheDay():
         updateSongs()
         chromeDriverPath = getDriverPath()+'\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
-        # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\Phantomjs.exe')
+
 
 @logExeption
 def main(login, password):
@@ -57,7 +55,8 @@ def main(login, password):
         saveHistory(songTitle, "FacebookMessage.txt")
         log(songTitle)
         url = getYoutubeURL(song.driver,songTitle.strip())
-        song.sentSong(login,password, [url],'Ilona')
+        song.logIN(login,password)
+        song.sentSong( url,'Ilona')
 
 
 
