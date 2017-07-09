@@ -1,4 +1,4 @@
-from fbchat import Client
+from facepy import utils
 from fbchat import Client
 from fbchat.models import *
 
@@ -14,6 +14,7 @@ class FaceBookMessageBot:
     def sendMessageMy(self, message):
         thread_type = ThreadType.USER
         self.client.sendMessage(message, thread_id=self.client.client_id, thread_type=thread_type)
+
 
     def logout(self):
         self.client.logout()
