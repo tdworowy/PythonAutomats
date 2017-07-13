@@ -49,4 +49,4 @@ def mesageByTime():
 
 
 def characters(frm,to):
-    return ','.join([chr(x) for x in range(frm,to)])
+    return ','.join([chr(x) for x in range(frm,to)]) #max 1114111
