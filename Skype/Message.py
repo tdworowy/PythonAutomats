@@ -1,23 +1,25 @@
-import os
-
+from ChromedriverFolder.driverPath import getDriverPath
 from Skype.SkypeBot.SkypeBot import SkypeBot
 from Utils.decorators import logExeption
+from Utils.utils import characters
+from selenium import webdriver
 
 
 @logExeption
 def main(login, password):
+     chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+     driver = webdriver.Chrome(chromeDriverPath)
+     driver.implicitly_wait(2)
+     skypeBot = SkypeBot(driver)
 
      autentycation = [login,password]
-     message = SkypeBot()
-     message.loginFacebook(autentycation)
-     message.select("Echo")
-     message.select("A smiechom i szopom nie było konca")
-     message.sendMessageToSelected("Szczęsliwego Nowego roku !! [Auto]")
+     skypeBot.login(autentycation)
+     skypeBot.select("Echo")
+     skypeBot.select("Szopy Reaktywacja!")
+     skypeBot.sendMessageToSelected(characters(10000,10500))
 
 
 
 if __name__ == '__main__':
+   main("mrcripted", "JudasPrist1970")
 
-   f= open(os.path.dirname(os.path.abspath(__file__))+'\\aut.txt')
-   main(f.readline().strip(), f.readline().strip())
-   main()

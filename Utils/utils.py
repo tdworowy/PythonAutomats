@@ -46,3 +46,7 @@ def mesageByTime():
         dateToday = date.today()
         log("Today is: "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today()))
         return "Song for "+str(calendar.day_name[dateToday.weekday()])+" "+str(date.today()) + " [AUTO] "
+
+
+def characters(frm,to):
+    return ','.join([chr(x) for x in range(frm,to)])
