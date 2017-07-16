@@ -60,6 +60,7 @@ def getSongs():
             f = open(filePath, 'a')
             count = 0
             titles =clearTitels(getTitels(PAGES,'https://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
+            print("Songs found: %s" % str(len(titles)))
                 #print(titles)
             for text in titles:
                 try:
@@ -70,7 +71,7 @@ def getSongs():
                      log("EXEPTION while generating songs list")
                      log(str(ex))
                      continue
-            log("Songs count: ",str(count))
+            log("Songs count: %s" % str(count))
             f.close()
 
 
