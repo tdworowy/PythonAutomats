@@ -57,22 +57,22 @@ def getSongs():
             log("Generate songs list")
             log("Clear existing or create new file")
             open(filePath, 'w').close()
-            f = open(filePath, 'a')
             count = 0
             titles =clearTitels(getTitels(PAGES,'https://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
             print("Songs found: %s" % str(len(titles)))
                 #print(titles)
-            for text in titles:
-                try:
-                     count +=1
-                     f.write(text)
-                     f.flush()
-                except Exception as ex:
-                     log("EXEPTION while generating songs list")
-                     log(str(ex))
-                     continue
-            log("Songs count: %s" % str(count))
-            f.close()
+            with open(filePath, 'a') as f:
+                for text in titles:
+                    try:
+                         count +=1
+                         f.write(text)
+                         f.flush()
+                    except Exception as ex:
+                         log("EXEPTION while generating songs list")
+                         log(str(ex))
+                         continue
+                log("Songs count: %s" % str(count))
+
 
 
 def updateSongs():
