@@ -56,7 +56,6 @@ def getSongs():
                 #print(titles)
             for text in titles:
                 try:
-                     log(text)
                      count +=1
                      f.write(text)
                      f.flush()
