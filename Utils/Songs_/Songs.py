@@ -23,7 +23,7 @@ def getFilePath():
 def getTitels(count,url):
     log("Get songs from last fm --- START")
     clrTitels = []
-    for i in range(count):
+    for i in range(1,count):
         log("Get songs from page %s" % i)
         response = requests.get(url + str(i)).text
         soup = BeautifulSoup(response,"html.parser")
@@ -31,7 +31,7 @@ def getTitels(count,url):
         titles = str(titles)
         titles = titles.split(">")
         newTitles = [title.encode("utf-8").decode('ascii','ignore') for title in titles]
-        print(newTitles)
+        # print(newTitles)
         clrTitels.extend(newTitles)
         log("Get songs from page %s --- DONE" % i)
     return clrTitels
@@ -56,7 +56,7 @@ def getSongs():
             log("Generate songs list")
             log("Clear existing or create new file")
             open(filePath, 'w').close()
-            f = open(filePath, 'a+')
+            f = open(filePath, 'a')
             count = 0
             titles =clearTitels(getTitels(PAGES,'https://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
                 #print(titles)
