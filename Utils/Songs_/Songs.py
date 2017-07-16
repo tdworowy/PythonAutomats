@@ -54,6 +54,8 @@ def clearTitels(titles):
 
 def getSongs():
             log("Generate songs list")
+            log("Clear existing or create new file")
+            open(filePath, 'w').close()
             f = open(filePath, 'a+')
             count = 0
             titles =clearTitels(getTitels(PAGES,'https://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
