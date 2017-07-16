@@ -22,13 +22,14 @@ def getFilePath():
 
 def getTitels(count,url):
     log("Get songs from last fm --- START")
+    clrTitels = []
     for i in range(count):
         response = requests.get(url + str(i)).text
         soup = BeautifulSoup(response,"html.parser")
         titles = soup.find_all("a", class_="link-block-target")
         titles = str(titles)
         titles = titles.split(">")
-        clrTitels = [title.encode("utf-8").decode('ascii','ignore') for title in titles]
+        clrTitels.extend([title.encode("utf-8").decode('ascii','ignore') for title in titles])
         print(clrTitels)
     log("Get songs from last fm --- DONE")
     return clrTitels
