@@ -85,7 +85,7 @@ def updateSongs():
     # newTitles = clearTitels(getTitels(10,"http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_7_DAYS&page="))
     for i in range(1,60):
         newTitles = getTitles("https://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page=%s" % str(i))
-        log("New titles: "+str(newTitles))
+        log("New titles: %s page %s" % (str(newTitles), str(i)))
         for title in newTitles:
               try:
                   if title not in oldTitels:
