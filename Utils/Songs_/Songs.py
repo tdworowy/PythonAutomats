@@ -9,7 +9,7 @@ from Utils.utils import log
 filePath = "D:\Google_drive\Songs\songsList.txt"
 lastUpdated = "D:\Google_drive\Songs\LastUpdated.txt"
 PAGES = 706
-#
+# PAGES = 2
 # LAST_7_DAYS
 # LAST_30_DAYS
 # LAST_90_DAYS
@@ -30,7 +30,7 @@ def getTitels(count,url):
         titles = soup.find_all("a", class_="link-block-target")
         titles = str(titles)
         titles = titles.split(">")
-        newTitles = [title.encode("utf-8").decode('ascii','ignore') for title in titles]
+        newTitles = [title.encode("utf-32").decode('utf-32','ignore') for title in titles] # ??
         # print(newTitles)
         clrTitels.extend(newTitles)
         log("Get songs from page %s --- DONE" % i)
