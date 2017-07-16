@@ -15,6 +15,7 @@ passwordField = (By.NAME, 'password')
 genreTitle = (By.CLASS_NAME, 'genreTitle')
 avatar = (By.CLASS_NAME, 'avatar-wrapper')
 
+PATH = "D:\Google_drive\\Netflix\cat.txt"
 
 def getAllCategories(login,password):
     chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
@@ -27,13 +28,13 @@ def getAllCategories(login,password):
     actions.send_keys(Keys.ENTER).perform()
 
     driver.find_element(*avatar).click()
-    f = open("cat.txt", 'a')
-    for i in range(11999,14000):
+    f = open(PATH, 'a')
+    for i in range(0,999999):
 
         driver.get(generUrl+str(i))
         try:
             category = driver.find_element(*genreTitle).text
-            print((category,i),file=f)
+            f.write((category,i))
             f.flush()
 
         except:
