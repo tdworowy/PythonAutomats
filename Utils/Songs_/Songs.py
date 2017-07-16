@@ -70,7 +70,7 @@ def getSongs():
                      log("EXEPTION while generating songs list")
                      log(str(ex))
                      continue
-            log("Songs count: ",count)
+            log("Songs count: ",str(count))
             f.close()
 
 
