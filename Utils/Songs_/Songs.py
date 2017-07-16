@@ -29,9 +29,10 @@ def getTitels(count,url):
         titles = soup.find_all("a", class_="link-block-target")
         titles = str(titles)
         titles = titles.split(">")
-        clrTitels.extend([title.encode("utf-8").decode('ascii','ignore') for title in titles])
-        print(clrTitels)
-    log("Get songs from last fm --- DONE")
+        newTitles = [title.encode("utf-8").decode('ascii','ignore') for title in titles]
+        print(newTitles)
+        clrTitels.extend(newTitles)
+        log("Get songs from last fm --- DONE")
     return clrTitels
 
 def clearTitels(titles):
