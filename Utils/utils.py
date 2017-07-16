@@ -17,7 +17,7 @@ def log (text,path = os.path.dirname(os.path.abspath(__file__))+"\\log.txt"):
     except Exception as ex:
         print("ERROR while logging")
         print(str(ex))
-        raise RuntimeError
+        # raise RuntimeError
 
 
 def saveHistory (text,file):
