@@ -27,8 +27,7 @@ def getTitles(url):
     titles = soup.find_all("a", class_="link-block-target")
     titles = str(titles)
     titles = titles.split(">")
-    newTitles = clearTitels([title.encode("utf-32").decode('utf-32','ignore') for title in titles])
-    return newTitles
+    return  clearTitels([title.encode("utf-32").decode('utf-32','ignore') for title in titles])
 
 def clearTitels(titles):
     cleanTitels = []
@@ -58,18 +57,17 @@ def getSongs():
 
 
 def toFile(titels):
-    count = 0
     with open(filePath, 'a') as f:
         for text in titels:
             try:
-                count += 1
+
                 f.write(text)
                 f.flush()
             except Exception as ex:
                 log("EXEPTION while generating songs list")
                 log(str(ex))
                 continue
-        log("Songs count: %s" % str(count))
+
 
 
 
