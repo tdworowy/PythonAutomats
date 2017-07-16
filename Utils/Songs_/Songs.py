@@ -29,6 +29,7 @@ def getTitels(count,url):
         titles = str(titles)
         titles = titles.split(">")
         clrTitels = [title.encode("utf-8").decode('ascii','ignore') for title in titles]
+        print(clrTitels)
     log("Get songs from last fm --- DONE")
     return clrTitels
 
@@ -52,7 +53,7 @@ def getSongs():
             log("Generate songs list")
             f = open(filePath, 'a+')
             count = 0
-            titles =clearTitels(getTitels(PAGES,'http://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
+            titles =clearTitels(getTitels(PAGES,'https://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
                 #print(titles)
             for text in titles:
                 try:
@@ -79,7 +80,7 @@ def updateSongs():
     log("Files opened Correctly")
     oldTitels = [line for line in f1.readlines()]
     # newTitles = clearTitels(getTitels(10,"http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_7_DAYS&page="))
-    newTitles = clearTitels( getTitels(60, "http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page="))
+    newTitles = clearTitels( getTitels(60, "https://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page="))
     log("New titles: "+str(newTitles))
     for title in newTitles:
           try:
