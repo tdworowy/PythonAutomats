@@ -24,6 +24,7 @@ def getTitels(count,url):
     log("Get songs from last fm --- START")
     clrTitels = []
     for i in range(count):
+        log("Get songs from page %s" % i)
         response = requests.get(url + str(i)).text
         soup = BeautifulSoup(response,"html.parser")
         titles = soup.find_all("a", class_="link-block-target")
@@ -32,7 +33,7 @@ def getTitels(count,url):
         newTitles = [title.encode("utf-8").decode('ascii','ignore') for title in titles]
         print(newTitles)
         clrTitels.extend(newTitles)
-        log("Get songs from last fm --- DONE")
+        log("Get songs from page %s --- DONE" % i)
     return clrTitels
 
 def clearTitels(titles):
