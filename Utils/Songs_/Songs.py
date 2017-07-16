@@ -86,7 +86,7 @@ def updateSongs():
     oldTitels = [line for line in f1.readlines()]
     # newTitles = clearTitels(getTitels(10,"http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_7_DAYS&page="))
     for i in range(1,60):
-        newTitles = getTitles("https://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page=%s" % i)
+        newTitles = getTitles("https://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page=%s" % str(i))
         log("New titles: "+str(newTitles))
         for title in newTitles:
               try:
