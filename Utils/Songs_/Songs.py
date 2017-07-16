@@ -47,6 +47,7 @@ def clearTitels(titles):
                 cleanTitels.append(temp+"\n")
 
         except Exception as ex:
+            log('EXEPTION in cleanTitels')
             log(ex)
             continue
     return cleanTitels
@@ -66,7 +67,7 @@ def getSongs():
                      f.write(text)
                      f.flush()
                 except Exception as ex:
-                     log("Error while generating songs list")
+                     log("EXEPTION while generating songs list")
                      log(str(ex))
                      continue
             log("Songs count: ",count)
