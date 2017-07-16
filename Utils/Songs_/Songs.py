@@ -27,7 +27,7 @@ def getTitles(url):
     titles = soup.find_all("a", class_="link-block-target")
     titles = str(titles)
     titles = titles.split(">")
-    return  clearTitels([title.encode("utf-32").decode('utf-32','ignore') for title in titles])
+    return  clearTitels(titles)
 
 def clearTitels(titles):
     cleanTitels = []
