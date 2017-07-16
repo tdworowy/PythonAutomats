@@ -40,7 +40,7 @@ def clearTitels(titles):
     cleanTitels = []
     for text in titles:
         try:
-            # print(text)
+            print(text)
             if "—" in text:
                 i = text.index("title=\"") + 7
                 temp = text[i:-1].replace("—", "-")
