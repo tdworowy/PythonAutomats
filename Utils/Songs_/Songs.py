@@ -8,6 +8,7 @@ from Utils.utils import log
 # filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
 filePath = "D:\Google_drive\Songs\songsList.txt"
 lastUpdated = "D:\Google_drive\Songs\LastUpdated.txt"
+PAGES = 706
 #
 # LAST_7_DAYS
 # LAST_30_DAYS
@@ -49,15 +50,16 @@ def clearTitels(titles):
 
 def getSongs():
             log("Generate songs list")
-            f = open(filePath, 'w')
+            f = open(filePath, 'a+')
             count = 0
-            titles =clearTitels(getTitels(705,'http://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
+            titles =clearTitels(getTitels(PAGES,'http://www.last.fm/pl/user/TotaledThomas/library/tracks?page='))
                 #print(titles)
             for text in titles:
                 try:
                      log(text)
                      count +=1
-                     print(text, file=f)
+                     f.write(text)
+                     f.flush()
                 except Exception as ex:
                      log("Error while generating songs list")
                      log(str(ex))
