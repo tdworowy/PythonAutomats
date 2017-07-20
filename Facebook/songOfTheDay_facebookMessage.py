@@ -29,7 +29,7 @@ class songOfTheDayFace():
             except Exception:
                 self.faceBot.sendMessage(message, THREADID,ThreadType.USER)
                 self.faceBot.sendMessage(songURL, THREADID,ThreadType.USER)
-                saveHistory(songURL,"FacebookMessage.txt")
+            saveHistory(songURL,"FacebookMessage.txt")
 
     def setUp(self):
         chromeDriverPath = getDriverPath()+'\\chromedriver.exe'
