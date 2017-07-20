@@ -16,16 +16,16 @@ def checkQuess(path):
      files = [f for f in listdir(path) if isfile(join(path, f))]
      ids = []
      for file in files:
-         checked = file + "_checked.txt"
+         fileName = os.path.splitext(os.path.abspath(file))[0]
+         checked = fileName + "_checked.txt"
          createFileIfNotExist(checked)
          f2 = open(checked,'r+')
          with open(path+"\\"+file,'r') as f :
              for line in f.read():
                  line_found = any(line in line2 for line2 in f2)
                  if not line_found:
-                     x = os.path.splitext(os.path.abspath(f.name))[0]
-                     print(x)
-                     ids.append(os.path.splitext(os.path.abspath(f.name))[0])
+                     print(fileName)
+                     ids.append(fileName)
                      f2.write(line+'\n')
      return ids
 
