@@ -1,0 +1,8 @@
+2017-06-28 17:23:26 Scenario started: Sum scenario -- @1.2 Numbers
+2017-06-28 17:23:33 URL: http://www.calculator.net/
+2017-06-28 17:23:33 Step: open scientific calculator
+2017-06-28 17:23:37 Step: sum 0,0
+2017-06-28 17:23:39 Step: check 0.
+2017-06-28 17:23:39 Check result: 0.
+2017-06-28 17:23:39 Actual result: 0.
+2017-06-28 17:23:39 Test Finished

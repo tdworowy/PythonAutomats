@@ -23,6 +23,8 @@ def checkQuess(path):
              for line in f.read():
                  line_found = any(line in line2 for line2 in f2)
                  if not line_found:
+                     x = os.path.splitext(os.path.abspath(f.name))[0]
+                     print(x)
                      ids.append(os.path.splitext(os.path.abspath(f.name))[0])
                      f2.write(line+'\n')
      return ids

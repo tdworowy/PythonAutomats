@@ -1,0 +1,8 @@
+2017-06-28 17:10:13 Start Feature : Scientific Calculator2
+2017-06-28 17:11:50 Feature Finished: Scientific Calculator2
+2017-06-28 17:11:50 Skip reason: None
+2017-06-28 17:11:50 Status: passed
+2017-06-28 17:23:07 Start Feature : Scientific Calculator2
+2017-06-28 17:24:48 Feature Finished: Scientific Calculator2
+2017-06-28 17:24:48 Skip reason: None
+2017-06-28 17:24:49 Status: passed
