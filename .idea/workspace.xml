@@ -4,6 +4,7 @@
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/facebookMonitor.py" afterPath="$PROJECT_DIR$/Facebook/facebookMonitor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/songOnDemand_face.py" afterPath="$PROJECT_DIR$/Facebook/songOnDemand_face.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/Facebook/facebookMonitor.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="719">
-              <caret line="47" column="36" lean-forward="false" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+              <caret line="47" column="72" lean-forward="false" selection-start-line="47" selection-start-column="72" selection-end-line="47" selection-end-column="72" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -90,8 +91,8 @@
       <file leaf-file-name="songOnDemand_face.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Facebook/songOnDemand_face.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="39" />
+            <state relative-caret-position="719">
+              <caret line="63" column="76" lean-forward="true" selection-start-line="63" selection-start-column="76" selection-end-line="63" selection-end-column="76" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -208,8 +209,8 @@
         <option value="$PROJECT_DIR$/Facebook/facebookAPI.py" />
         <option value="D:/Python/Lib/site-packages/fbchat/utils.py" />
         <option value="$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py" />
-        <option value="$PROJECT_DIR$/Facebook/songOnDemand_face.py" />
         <option value="$PROJECT_DIR$/Facebook/facebookMonitor.py" />
+        <option value="$PROJECT_DIR$/Facebook/songOnDemand_face.py" />
       </list>
     </option>
   </component>
@@ -602,13 +603,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00198" summary="update">
-      <created>1500200793240</created>
-      <option name="number" value="00198" />
-      <option name="presentableId" value="LOCAL-00198" />
-      <option name="project" value="LOCAL" />
-      <updated>1500200793240</updated>
-    </task>
     <task id="LOCAL-00199" summary="update">
       <created>1500201571743</created>
       <option name="number" value="00199" />
@@ -945,7 +939,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500575639945</updated>
     </task>
-    <option name="localTasksCounter" value="247" />
+    <task id="LOCAL-00247" summary="fix">
+      <created>1500575726639</created>
+      <option name="number" value="00247" />
+      <option name="presentableId" value="LOCAL-00247" />
+      <option name="project" value="LOCAL" />
+      <updated>1500575726639</updated>
+    </task>
+    <option name="localTasksCounter" value="248" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1442,7 +1443,7 @@
     <entry file="file://$PROJECT_DIR$/Facebook/facebookMonitor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="719">
-          <caret line="47" column="36" lean-forward="false" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+          <caret line="47" column="72" lean-forward="false" selection-start-line="47" selection-start-column="72" selection-end-line="47" selection-end-column="72" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -1451,8 +1452,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/songOnDemand_face.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="39" />
+        <state relative-caret-position="719">
+          <caret line="63" column="76" lean-forward="true" selection-start-line="63" selection-start-column="76" selection-end-line="63" selection-end-column="76" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

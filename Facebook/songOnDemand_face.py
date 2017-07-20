@@ -60,7 +60,7 @@ if __name__ == '__main__':
     passw = sys.argv[2] + " " + sys.argv[3]
 
     try:
-        _thread.start_new_thread(thread, ("[SONG]", path1,ThreadType.GROUP))
-        _thread.start_new_thread(thread, ("[SONG]", path2,ThreadType.USER))
+        _thread.start_new_thread(thread, ("[SONG]", path1,ThreadType.GROUP,))
+        _thread.start_new_thread(thread, ("[SONG]", path2,ThreadType.USER,))
     except:
         print("Error: unable to start thread")

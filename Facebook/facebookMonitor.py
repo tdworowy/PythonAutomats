@@ -44,7 +44,7 @@ if __name__ == '__main__':
     fm1 = faceThreadMonitor(user,passw,path1)
     fm2 = faceThreadMonitor(user, passw, path2)
     try:
-        _thread.start_new_thread(fm1.startMonitor, ("[SONG]",THREADIDs1))
-        _thread.start_new_thread(fm2.startMonitor, ("[SONG]",THREADIDs2))
+        _thread.start_new_thread(fm1.startMonitor, ("[SONG]",THREADIDs1,))
+        _thread.start_new_thread(fm2.startMonitor, ("[SONG]",THREADIDs2,))
     except:
         print("Error: unable to start thread")
