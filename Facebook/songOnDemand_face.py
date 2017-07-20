@@ -1,7 +1,8 @@
+import os
 import random
 import sys
 import time
-from os import listdir, os
+from os import listdir
 from os.path import isfile, join
 
 from Facebook.songOfTheDay_facebookMessage import songOfTheDayFace
