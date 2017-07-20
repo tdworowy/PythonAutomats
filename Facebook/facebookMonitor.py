@@ -19,7 +19,6 @@ class faceThreadMonitor:
               if str(massage.text) == phraze:
                    path = self.path + thread + ".txt"
                    createFileIfNotExist(path)
-
                    with open(path, 'r+') as f:
                         msg = str((massage.text,massage.timestamp))
                         line_found = any(msg in line for line in f)
@@ -33,7 +32,7 @@ class faceThreadMonitor:
             time.sleep(60)
 
 if __name__ == '__main__':
-    THREADIDs = ['1252344071467839','1252344071467839']
+    THREADIDs = ['1252344071467839']
 
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]

@@ -21,7 +21,7 @@ def checkQuess(path):
          createFileIfNotExist(checked)
          f2 = open(checked,'r+')
          with open(path+"\\"+file,'r') as f :
-             for line in f.read():
+             for line in f.readlines():
                  line_found = any(line in line2 for line2 in f2)
                  if not line_found:
                      print(fileName)
