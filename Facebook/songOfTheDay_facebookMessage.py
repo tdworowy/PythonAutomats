@@ -9,6 +9,7 @@ from Utils.decorators import logExeption
 from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
 from fbchat.models import *
+from selenium import webdriver
 
 
 class songOfTheDayFace():
@@ -31,7 +32,6 @@ class songOfTheDayFace():
                 saveHistory(songURL,"FacebookMessage.txt")
 
     def setUp(self):
-
         chromeDriverPath = getDriverPath()+'\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
         # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\Phantomjs.exe')

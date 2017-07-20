@@ -7,7 +7,6 @@ from os.path import isfile, join
 
 from Facebook.songOfTheDay_facebookMessage import songOfTheDayFace
 from Utils.Songs_.Songs import getFilePath
-from Utils.decorators import logExeption
 from Utils.utils import createFileIfNotExist, log, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
 
@@ -30,7 +29,6 @@ def checkQuess(path):
      return ids
 
 
-@logExeption
 def main(login, password,THREADID):
         song = songOfTheDayFace()
         f = open(getFilePath(), 'r')
