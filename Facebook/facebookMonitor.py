@@ -13,7 +13,6 @@ class faceThreadMonitor:
 
 
 
-
     def monitorThreads(self,phraze,threadIDs):
         for thread in threadIDs:
            for massage in self.faceBot.getMessages(thread):
@@ -24,7 +23,6 @@ class faceThreadMonitor:
                    with open(path, 'r+') as f:
                         msg = str((massage.text,massage.timestamp))
                         line_found = any(msg in line for line in f)
-                        print(line_found)
                         if not line_found:
                             f.write(msg+"\n")
                             f.flush()
