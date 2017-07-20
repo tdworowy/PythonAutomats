@@ -28,7 +28,7 @@ class songOfTheDayFace():
             saveHistory(songURL,"FacebookMessage.txt")
 
     def setUp(self):
-        updateSongs()
+
         chromeDriverPath = getDriverPath()+'\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
         # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\Phantomjs.exe')
@@ -43,6 +43,7 @@ class songOfTheDayFace():
 
 @logExeption
 def main(login, password,THREADID):
+        updateSongs()
         song = songOfTheDayFace()
         f = open(getFilePath(), 'r')
         log("Get random song")

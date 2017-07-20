@@ -53,6 +53,6 @@ def characters(frm,to):
 
 
 
-def checkIfFileExist(path):
+def createFileIfNotExist(path):
     if not os.path.isfile(path):
         open(path, 'w').close()

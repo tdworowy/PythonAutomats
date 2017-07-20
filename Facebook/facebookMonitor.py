@@ -1,7 +1,8 @@
+import sys
 import time
 
 from Facebook.facebookAPI import FaceBookMessageBot
-from Utils.utils import checkIfFileExist
+from Utils.utils import createFileIfNotExist
 
 
 class faceThreadMonitor:
@@ -18,7 +19,7 @@ class faceThreadMonitor:
            for massage in self.faceBot.getMessages(thread):
               if str(massage.text) == phraze:
                    path = self.path + thread + ".txt"
-                   checkIfFileExist(path)
+                   createFileIfNotExist(path)
 
                    with open(path, 'r+') as f:
                         msg = str((massage.text,massage.timestamp))
@@ -33,3 +34,11 @@ class faceThreadMonitor:
             self.monitorThreads(phraze, threadIDs)
             time.sleep(30)
 
+if __name__ == '__main__':
+    THREADIDs = ['1252344071467839','1252344071467839']
+
+    user = sys.argv[1]
+    passw = sys.argv[2] + " " + sys.argv[3]
+    path = 'D:\Google_drive\Quees\\'
+    fm = faceThreadMonitor(user,passw,path)
+    fm.startMonitor("[SONG]",THREADIDs)
