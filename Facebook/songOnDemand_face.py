@@ -1,3 +1,4 @@
+import _thread
 import os
 import random
 import sys
@@ -9,6 +10,7 @@ from Facebook.songOfTheDay_facebookMessage import songOfTheDayFace
 from Utils.Songs_.Songs import getFilePath
 from Utils.utils import createFileIfNotExist, log, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
+from fbchat import ThreadType
 
 
 def checkQuess(path):
@@ -29,7 +31,7 @@ def checkQuess(path):
      return ids
 
 
-def main(login, password,THREADID):
+def main(login, password,THREADID, threadType):
         song = songOfTheDayFace()
         f = open(getFilePath(), 'r')
         log("Get random song")
@@ -40,18 +42,25 @@ def main(login, password,THREADID):
         log(songTitle)
         saveHistory(songTitle, "FacebookMessage.txt")
         url = getYoutubeURL(song.driver,songTitle.strip())
-        song.sentSong(login,password, [url],THREADID,"SONG ON DEMAND")
+        song.sentSong(login,password, [url],THREADID,"SONG ON DEMAND",threadType)
         song.tearDown()
 
+def  thread(path,threadType):
+    while 1:
+        threads = checkQuess(path)
+        for thred in threads:
+                main(user,passw,thred,threadType)
+        time.sleep(60)
 
 if __name__ == '__main__':
-    path = 'D:\Google_drive\Quees\\'
+    path1 = 'D:\Google_drive\QueesGroup\\'
+    path2 = 'D:\Google_drive\QueesUser\\'
 
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]
 
-    while 1:
-        threads = checkQuess(path)
-        for thred in threads:
-                main(user,passw,thred)
-        time.sleep(60)
+    try:
+        _thread.start_new_thread(thread, ("[SONG]", path1,ThreadType.GROUP))
+        _thread.start_new_thread(thread, ("[SONG]", path2,ThreadType.USER))
+    except:
+        print("Error: unable to start thread")

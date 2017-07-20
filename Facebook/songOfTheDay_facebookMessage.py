@@ -17,18 +17,14 @@ class songOfTheDayFace():
         self.setUp()
 
 
-    def sentSong(self, login,passw, songURLs,THREADID,message= mesageByTime() ):
+    def sentSong(self, login,passw, songURLs,THREADID,message= mesageByTime(),ThreadType =ThreadType.GROUP ):
 
         log(mesageByTime())
         self.faceBot.logIn(login,passw)
         for songURL in songURLs:
             log(songURL)
-            try:
-                self.faceBot.sendMessage(message,THREADID)
-                self.faceBot.sendMessage(songURL,THREADID)
-            except Exception:
-                self.faceBot.sendMessage(message, THREADID,ThreadType.USER)
-                self.faceBot.sendMessage(songURL, THREADID,ThreadType.USER)
+            self.faceBot.sendMessage(message,THREADID,ThreadType)
+            self.faceBot.sendMessage(songURL,THREADID,ThreadType)
             saveHistory(songURL,"FacebookMessage.txt")
 
     def setUp(self):

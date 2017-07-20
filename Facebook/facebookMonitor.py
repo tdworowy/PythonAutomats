@@ -1,3 +1,4 @@
+import _thread
 import sys
 import time
 
@@ -33,10 +34,17 @@ class faceThreadMonitor:
 
 if __name__ == '__main__':
     # THREADIDs = ['1252344071467839','100000471818643']
-    THREADIDs = ['1252344071467839']
+    THREADIDs1 = ['1252344071467839'] #group
+    THREADIDs2 = ['100000471818643'] #user
 
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]
-    path = 'D:\Google_drive\Quees\\'
-    fm = faceThreadMonitor(user,passw,path)
-    fm.startMonitor("[SONG]",THREADIDs)
+    path1 = 'D:\Google_drive\QueesGroup\\'
+    path2 = 'D:\Google_drive\QueesUser\\'
+    fm = faceThreadMonitor(user,passw,path1)
+    fm = faceThreadMonitor(user, passw, path2)
+    try:
+        _thread.start_new_thread(  fm.startMonitor, ("[SONG]",THREADIDs1))
+        _thread.start_new_thread(  fm.startMonitor, ("[SONG]",THREADIDs2))
+    except:
+        print("Error: unable to start thread")
