@@ -17,7 +17,7 @@ def checkQuess(path):
          checked = file + "_checked.txt"
          createFileIfNotExist(checked)
          f2 = open(checked,'r+')
-         with open(file,'r') as f :
+         with open(path+"\\"+file,'r') as f :
              for line in f.read():
                  line_found = any(line in line2 for line2 in f2)
                  if not line_found:
