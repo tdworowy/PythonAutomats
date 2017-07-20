@@ -32,7 +32,8 @@ class faceThreadMonitor:
             time.sleep(60)
 
 if __name__ == '__main__':
-    THREADIDs = ['1252344071467839','100000471818643']
+    # THREADIDs = ['1252344071467839','100000471818643']
+    THREADIDs = ['1252344071467839']
 
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]
