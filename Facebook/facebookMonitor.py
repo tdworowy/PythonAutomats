@@ -41,7 +41,7 @@ if __name__ == '__main__':
     passw = sys.argv[2] + " " + sys.argv[3]
     path1 = 'D:\Google_drive\QueesGroup\\'
     path2 = 'D:\Google_drive\QueesUser\\'
-    fm1 = faceThreadMonitor(user,passw,path1)
+    fm1 = faceThreadMonitor(user,passw,path1) #TODO may be nee to create in separated threats
     fm2 = faceThreadMonitor(user, passw, path2)
     try:
         _thread.start_new_thread(fm1.startMonitor, ("[SONG]",THREADIDs1,))
