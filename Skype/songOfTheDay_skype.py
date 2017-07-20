@@ -2,13 +2,14 @@ import os
 import random
 import sys
 
+from selenium import webdriver
+
 from ChromedriverFolder.driverPath import getDriverPath
 from Skype.SkypeBot.SkypeBot import SkypeBot
 from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import logExeption
 from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
-from selenium import webdriver
 
 
 class songOfTheDay():
