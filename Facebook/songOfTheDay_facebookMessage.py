@@ -8,7 +8,7 @@ from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import logExeption
 from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
-from selenium import webdriver
+from fbchat.models import *
 
 
 class songOfTheDayFace():
@@ -22,9 +22,13 @@ class songOfTheDayFace():
         self.faceBot.logIn(login,passw)
         for songURL in songURLs:
             log(songURL)
-            self.faceBot.sendMessage(message,THREADID)
-            self.faceBot.sendMessage(songURL,THREADID)
-            saveHistory(songURL,"FacebookMessage.txt")
+            try:
+                self.faceBot.sendMessage(message,THREADID)
+                self.faceBot.sendMessage(songURL,THREADID)
+            except Exception:
+                self.faceBot.sendMessage(message, THREADID,ThreadType.USER)
+                self.faceBot.sendMessage(songURL, THREADID,ThreadType.USER)
+                saveHistory(songURL,"FacebookMessage.txt")
 
     def setUp(self):
 

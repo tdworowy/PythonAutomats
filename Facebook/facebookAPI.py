@@ -7,9 +7,8 @@ class FaceBookMessageBot:
     def logIn(self,email,password):
         self.client = Client(email, password)
 
-    def sendMessage(self,message,thread_id):
-        thread_type = ThreadType.GROUP
-        self.client.sendMessage(message, thread_id=thread_id, thread_type=thread_type)
+    def sendMessage(self,message,thread_id,thread_type = ThreadType.GROUP):
+            self.client.sendMessage(message, thread_id=thread_id, thread_type=thread_type)
 
     def sendMessageMy(self, message):
         thread_type = ThreadType.USER
