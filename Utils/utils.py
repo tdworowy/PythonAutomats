@@ -50,3 +50,9 @@ def mesageByTime():
 
 def characters(frm,to):
     return ','.join([chr(x) for x in range(frm,to)]) #max 1114111
+
+
+
+def checkIfFileExist(path):
+    if not os.path.isfile(path):
+        open(path, 'w').close()

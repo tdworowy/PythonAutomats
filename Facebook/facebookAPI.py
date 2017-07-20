@@ -15,6 +15,9 @@ class FaceBookMessageBot:
         thread_type = ThreadType.USER
         self.client.sendMessage(message, thread_id=self.client.client_id, thread_type=thread_type)
 
+    def getMessages(self,thread_id,limit = 30,before=None):
+        return self.client.fetchThreadMessages(thread_id,limit,before)
+
 
     def logout(self):
         self.client.logout()
@@ -24,3 +27,6 @@ class FaceBookMessageBot:
 
     def getUserID(self):
         return self.client.client_id
+
+
+
