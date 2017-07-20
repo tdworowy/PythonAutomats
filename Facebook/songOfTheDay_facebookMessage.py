@@ -2,14 +2,13 @@ import os
 import random
 import sys
 
-from selenium import webdriver
-
 from ChromedriverFolder.driverPath import getDriverPath
 from Facebook.facebookAPI import FaceBookMessageBot
 from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import logExeption
 from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
+from selenium import webdriver
 
 
 class songOfTheDayFace():
@@ -17,7 +16,7 @@ class songOfTheDayFace():
         self.setUp()
 
 
-    def sentSong(self, login,passw, songURLs,THREADID,message =mesageByTime() ):
+    def sentSong(self, login,passw, songURLs,THREADID,message= mesageByTime() ):
 
         log(mesageByTime())
         self.faceBot.logIn(login,passw)

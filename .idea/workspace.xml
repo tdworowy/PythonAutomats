@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
+    <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="Refactor">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py" afterPath="$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/songOnDemand_face.py" afterPath="$PROJECT_DIR$/Facebook/songOnDemand_face.py" />
     </list>
     <ignored path="Selenium.iws" />
@@ -89,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+              <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -98,9 +99,11 @@
       <file leaf-file-name="songOnDemand_face.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Facebook/songOnDemand_face.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="328">
+              <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,8 +205,8 @@
         <option value="$PROJECT_DIR$/SongOnDemand/SongOnDemand.py" />
         <option value="$PROJECT_DIR$/Facebook/facebookAPI.py" />
         <option value="$PROJECT_DIR$/Utils/utils.py" />
-        <option value="$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py" />
         <option value="$PROJECT_DIR$/Facebook/facebookMonitor.py" />
+        <option value="$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py" />
         <option value="$PROJECT_DIR$/Facebook/songOnDemand_face.py" />
       </list>
     </option>
@@ -597,13 +600,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00177" summary="Update">
-      <created>1499012070268</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1499012070269</updated>
-    </task>
     <task id="LOCAL-00178" summary="Update">
       <created>1499012122893</created>
       <option name="number" value="00178" />
@@ -940,7 +936,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500567832886</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="Refactor">
+      <created>1500568157794</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1500568157794</updated>
+    </task>
+    <option name="localTasksCounter" value="227" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1350,6 +1353,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="702" column="42" lean-forward="false" selection-start-line="702" selection-start-column="42" selection-end-line="702" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1418,14 +1422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/facebookMonitor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1434,11 +1430,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/songOnDemand_face.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="328">
+          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

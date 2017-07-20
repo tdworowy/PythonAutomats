@@ -1,6 +1,6 @@
 import random
 import sys
-from os import listdir
+from os import listdir, os
 from os.path import isfile, join
 
 from Facebook.songOfTheDay_facebookMessage import songOfTheDayFace
@@ -21,7 +21,7 @@ def checkQuess(path):
              for line in f.read():
                  line_found = any(line in line2 for line2 in f2)
                  if not line_found:
-                     ids.append(f.name)
+                     ids.append(os.path.splitext(os.path.abspath(f))[0])
                      f2.write(line+'\n')
      return ids
 
