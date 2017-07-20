@@ -17,7 +17,7 @@ def checkQuess(path):
      ids = []
      for file in files:
          fileName = os.path.splitext(file)[0]
-         checked = fileName + "_checked.txt"
+         checked = path+fileName + "_checked.txt"
          createFileIfNotExist(checked)
          f2 = open(checked,'r+')
          with open(path+"\\"+file,'r') as f :
