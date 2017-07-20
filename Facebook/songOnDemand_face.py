@@ -17,7 +17,7 @@ def checkQuess(path):
      ids = []
      for file in files:
          fileName = os.path.splitext(file)[0]
-         checked = path+fileName + "_checked.txt"
+         checked = path+"checked\\"+fileName + "_checked.txt"
          createFileIfNotExist(checked)
          f2 = open(checked,'r+')
          with open(path+"\\"+file,'r') as f :
@@ -54,7 +54,6 @@ if __name__ == '__main__':
 
     while 1:
         threads = checkQuess(path)
-        if threads:
-            for thred in threads:
+        for thred in threads:
                 main(user,passw,thred)
         time.sleep(60)
