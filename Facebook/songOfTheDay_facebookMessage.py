@@ -17,13 +17,13 @@ class songOfTheDayFace():
         self.setUp()
 
 
-    def sentSong(self, login,passw, songURLs,THREADID):
+    def sentSong(self, login,passw, songURLs,THREADID,message =mesageByTime() ):
 
         log(mesageByTime())
         self.faceBot.logIn(login,passw)
         for songURL in songURLs:
             log(songURL)
-            self.faceBot.sendMessage(mesageByTime(),THREADID)
+            self.faceBot.sendMessage(message,THREADID)
             self.faceBot.sendMessage(songURL,THREADID)
             saveHistory(songURL,"FacebookMessage.txt")
 

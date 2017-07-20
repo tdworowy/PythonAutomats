@@ -38,7 +38,7 @@ def main(login, password,THREADID):
         log(songTitle)
         saveHistory(songTitle, "FacebookMessage.txt")
         url = getYoutubeURL(song.driver,songTitle.strip())
-        song.sentSong(login,password, [url],THREADID)
+        song.sentSong(login,password, [url],THREADID,"SONG ON DEMAND")
         song.tearDown()
 
 
