@@ -1,5 +1,6 @@
 import random
 import sys
+import time
 from os import listdir, os
 from os.path import isfile, join
 
@@ -44,8 +45,12 @@ def main(login, password,THREADID):
 
 if __name__ == '__main__':
     path = 'D:\Google_drive\Quees\\'
-    threads = checkQuess(path)
+
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]
-    for thred in threads:
-        main(user,passw,thred)
+
+    while 1:
+        threads = checkQuess(path)
+        for thred in threads:
+            main(user,passw,thred)
+        time.sleep(60)

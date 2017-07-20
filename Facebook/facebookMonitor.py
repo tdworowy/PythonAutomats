@@ -30,7 +30,7 @@ class faceThreadMonitor:
     def startMonitor(self,phraze,threadIDs):
         while (1):
             self.monitorThreads(phraze, threadIDs)
-            time.sleep(30)
+            time.sleep(60)
 
 if __name__ == '__main__':
     THREADIDs = ['1252344071467839','1252344071467839']
