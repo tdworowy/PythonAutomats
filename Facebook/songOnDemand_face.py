@@ -54,6 +54,7 @@ if __name__ == '__main__':
 
     while 1:
         threads = checkQuess(path)
-        for thred in threads:
-            main(user,passw,thred)
+        if threads:
+            for thred in threads:
+                main(user,passw,thred)
         time.sleep(60)
