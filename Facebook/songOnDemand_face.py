@@ -31,8 +31,8 @@ def checkQuess(path):
      return ids
 
 
-def main(login, password,THREADID, threadType):
-        song = songOfTheDayFace()
+def main(song,THREADID, threadType):
+
         f = open(getFilePath(), 'r')
         log("Get random song")
         songsList = f.read()
@@ -41,14 +41,17 @@ def main(login, password,THREADID, threadType):
         songTitle =songsList[ran]
         log(songTitle)
         saveHistory(songTitle, "FacebookMessage.txt")
+        song.setUp()
         url = getYoutubeURL(song.driver,songTitle.strip())
-        song.sentSong(login,password, [url],THREADID,"SONG ON DEMAND",threadType)
+        song.sentSong([url],THREADID,"SONG ON DEMAND",threadType)
         song.tearDown()
 
 def  thread(path,threadType):
+        song = songOfTheDayFace()
+        song.loginFB(user,passw)
         threads = checkQuess(path)
         for thred in threads:
-                main(user,passw,thred,threadType)
+                main(song,thred,threadType)
 
 
 if __name__ == '__main__':
