@@ -12,7 +12,7 @@ from Utils.utils import log
 from Youtube.YoutubeBot import getYoutubeURL
 
 
-class songOfTheDay():
+class songOfTheDay:
     def __init__(self,pageID, appid, app_secred):
         self.setUp(pageID, appid, app_secred)
 

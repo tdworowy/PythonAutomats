@@ -13,7 +13,7 @@ from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
 
 
-class songOfTheDayFace():
+class songOfTheDayFace:
     def __init__(self):
         self.faceBot = FaceBookMessageBot()
 
