@@ -60,8 +60,8 @@ if __name__ == '__main__':
 
     song = songOfTheDayFace()
     song.loginFB(user, passw)
-    while 1:
 
+    while 1:
         thread(song,path1,ThreadType.GROUP)
         thread(song,path2, ThreadType.USER)
         time.sleep(60)
