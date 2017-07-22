@@ -2,6 +2,8 @@ import os
 import random
 import sys
 
+from selenium import webdriver
+
 from ChromedriverFolder.driverPath import getDriverPath
 from Facebook.facebookID import getFacebookID
 from Facebook.facebookToken import get_access_token
@@ -10,7 +12,6 @@ from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import logExeption
 from Utils.utils import log, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
-from selenium import webdriver
 
 
 class songOfTheDay():
@@ -68,5 +69,5 @@ if __name__ == '__main__':
        user = sys.argv[1]
        passw = sys.argv[2]+" "+sys.argv[3]
 
-   namesList = ['Ilona']
+   namesList = ['Ilona','Carol']
    main(user, passw,namesList)
