@@ -1,4 +1,3 @@
-import _thread
 import os
 import random
 import sys
@@ -6,11 +5,12 @@ import time
 from os import listdir
 from os.path import isfile, join
 
+from fbchat import ThreadType
+
 from Facebook.songOfTheDay_facebookMessage import songOfTheDayFace
 from Utils.Songs_.Songs import getFilePath
 from Utils.utils import createFileIfNotExist, log, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
-from fbchat import ThreadType
 
 
 def checkQuess(path):
@@ -46,11 +46,10 @@ def main(login, password,THREADID, threadType):
         song.tearDown()
 
 def  thread(path,threadType):
-    while 1:
         threads = checkQuess(path)
         for thred in threads:
                 main(user,passw,thred,threadType)
-        time.sleep(60)
+
 
 if __name__ == '__main__':
     path1 = 'D:\Google_drive\QueesGroup\\'
@@ -59,8 +58,7 @@ if __name__ == '__main__':
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]
 
-    try:
-        _thread.start_new_thread(thread, ("[SONG]", path1,ThreadType.GROUP,))
-        _thread.start_new_thread(thread, ("[SONG]", path2,ThreadType.USER,))
-    except:
-        print("Error: unable to start thread")
+    while 1:
+        thread(path1,ThreadType.GROUP)
+        thread(path2, ThreadType.USER)
+        time.sleep(60)
