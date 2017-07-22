@@ -1,4 +1,3 @@
-import _thread
 import sys
 import time
 
@@ -27,10 +26,16 @@ class faceThreadMonitor:
                             f.write(msg+"\n")
                             f.flush()
 
-    def startMonitor(self,phraze,threadIDs):
+    def setThreadIDes(self,threadIDs):
+        self.threadIDs = threadIDs
+
+
+
+def startMonitor(phraze,faceThreadMonitorList):
         while (1):
-            self.monitorThreads(phraze, threadIDs)
-            time.sleep(60)
+            for ftm in faceThreadMonitorList:
+                ftm.monitorThreads(phraze, ftm.threadIDs)
+                time.sleep(60)
 
 if __name__ == '__main__':
     # THREADIDs = ['1252344071467839','100000471818643']
@@ -41,10 +46,11 @@ if __name__ == '__main__':
     passw = sys.argv[2] + " " + sys.argv[3]
     path1 = 'D:\Google_drive\QueesGroup\\'
     path2 = 'D:\Google_drive\QueesUser\\'
-    fm1 = faceThreadMonitor(user,passw,path1) #TODO may be nee to create in separated threats
+
+    fm1 = faceThreadMonitor(user,passw,path1)
+    fm1.setThreadIDes(THREADIDs1)
+
     fm2 = faceThreadMonitor(user, passw, path2)
-    try:
-        _thread.start_new_thread(fm1.startMonitor, ("[SONG]",THREADIDs1,))
-        _thread.start_new_thread(fm2.startMonitor, ("[SONG]",THREADIDs2,))
-    except:
-        print("Error: unable to start thread")
+    fm2.setThreadIDes(THREADIDs2)
+
+    startMonitor("[SONG]",[fm1,fm2])
