@@ -69,5 +69,6 @@ if __name__ == '__main__':
        user = sys.argv[1]
        passw = sys.argv[2]+" "+sys.argv[3]
 
-   namesList = ['Ilona','Carol']
+   # namesList = ['Ilona','Carol']
+   namesList = ['Ilona']
    main(user, passw,namesList)
