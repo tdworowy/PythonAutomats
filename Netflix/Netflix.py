@@ -43,9 +43,9 @@ def getAllCategories(login,password):
         driver.get(generUrl+str(i))
         try:
             category = driver.find_element(*genreTitle).text
-            f.write("%s , %s\n" % (i,category))
+            f.write("%s,%s\n" % (i,category))
             f.flush()
-            f2.write(i)
+            f2.write(str(i))
             f2.flush()
         except Exception as ex:
             print(ex)
