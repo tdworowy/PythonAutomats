@@ -37,7 +37,7 @@ def getAllCategories(login,password):
         start = '0'
 
     f = open(PATH, 'a')
-    f2 = open(lastCount, 'w')
+
     for i in range(int(start),999999):
 
         driver.get(generUrl+str(i))
@@ -45,8 +45,9 @@ def getAllCategories(login,password):
             category = driver.find_element(*genreTitle).text
             f.write("%s,%s\n" % (i,category))
             f.flush()
-            f2.write(str(i))
-            f2.flush()
+            with open(lastCount, 'w') as f2 :
+                f2.write(str(i))
+                f2.flush()
         except Exception as ex:
             print(ex)
             continue
