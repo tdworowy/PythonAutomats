@@ -34,7 +34,7 @@ def getAllCategories(login,password):
         f2 = open(lastCount).readline()
         start = str(int(f2)+1)
     else:
-        f2 = open(lastCount,'a')
+        f2 = open(lastCount,'w')
         start = '0'
 
     f = open(PATH, 'a')
