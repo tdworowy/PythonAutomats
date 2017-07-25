@@ -33,7 +33,7 @@ def getAllCategories(login,password):
     f = open(PATH, 'a')
     if os.path.isfile(lastCount) :
         f2 = open(lastCount).readline()
-        start = f2
+        start = str(int(f2)+1)
     else:
         f2 = open(lastCount,'w')
         start = '0'
