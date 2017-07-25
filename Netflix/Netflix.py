@@ -46,7 +46,8 @@ def getAllCategories(login,password):
             f.flush()
             f2.write(i)
             f2.flush()
-        except:
+        except Exception as ex:
+            print(ex)
             continue
 
 
