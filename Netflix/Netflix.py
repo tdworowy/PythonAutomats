@@ -29,19 +29,21 @@ def getAllCategories(login,password):
     actions.send_keys(Keys.ENTER).perform()
 
     driver.find_element(*avatar).click()
-    f = open(PATH, 'a')
+
     if os.path.isfile(lastCount) :
         f2 = open(lastCount).readline()
         start = str(int(f2)+1)
     else:
-        f2 = open(lastCount,'w')
+        f2 = open(lastCount,'a')
         start = '0'
+
+    f = open(PATH, 'a')
     for i in range(int(start),999999):
 
         driver.get(generUrl+str(i))
         try:
             category = driver.find_element(*genreTitle).text
-            f.write("%s , %s" % (i,category))
+            f.write("%s , %s\n" % (i,category))
             f.flush()
             f2.write(i)
             f2.flush()
