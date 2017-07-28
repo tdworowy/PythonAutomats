@@ -19,10 +19,10 @@ class songOfTheDay():
         self.setUp()
 
 
-    def logIN(self,login,passw):
+    def logIN(self,login,passw,name):
         token = get_access_token(login, passw)
         self.tm = TinderMessageBot()
-        id = getFacebookID(self.driver, 'tomasz.dworowy')
+        id = getFacebookID(self.driver, name)
         self.tm.logIn(id, token)
 
     def sentSong(self,songURL,to):
@@ -53,7 +53,7 @@ def main(login, password,names):
         songTitle = songsList[ran]
         log(songTitle)
         saveHistory(songTitle, "Tinder.txt")
-        song.logIN(login, password)
+        song.logIN(login, password,'tomasz.dworowy')
         for name in names:
             url = getYoutubeURL(song.driver,songTitle.strip())
             song.sentSong(url,name)
