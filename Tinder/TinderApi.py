@@ -28,23 +28,46 @@ class TinderMessageBot:
 
 
 
-if __name__ == "__main__":
 
-    login = ''
-    passw = ''
+def logIn(login,passw,fbname):
+
     chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
     driver = webdriver.Chrome(chromeDriverPath)
     token = get_access_token(login, passw)
     tm = TinderMessageBot()
-    id = getFacebookID(driver, 'tomasz.dworowy')
+    id = getFacebookID(driver, fbname)
     driver.quit()
     tm.logIn(id, token)
-    # for friend in tm.getFBfriends():
-    #     print(friend)
+    return tm
 
-    for neer in tm.getNerby():
-        try:
-            print('%s, %s' % (neer.id,neer.distance_km))
-        except Exception as ex:
-            print(ex)
+
+def printFBFriends(tm):
+    for friend in tm.getFBfriends():
+        print(friend)
+        user = friend.get_tinder_information()
+        print(user.name)
+        print(user.bio)
+        print(user.photos_obj)
+
+def likeFB(tm,friendName):
+
+   for friend in tm.getFBfriends():
+     if  friend.get_tinder_information().name == friendName:
+         user = friend.get_tinder_information()
+         for near in tm.getNerby():
+             print('check %s %s' % near.name , near.id)
+             print('ID to find %s' % user.id)
+             if user.id == near.id:
+                print(near.name)
+                near.like()
+
+def getNearData(tm):
+    return ['Name: %s \nage: %s\ndistance: %s\nbio: %s\nphotos: %s' % (near.name,near.age,near.distance_km,near.bio,near.photos_obj) for near in tm.getNerby()]
+
+
+
+if __name__ == "__main__":
+
+    tm = logIn('','','')
+    likeFB(tm,"")
 
