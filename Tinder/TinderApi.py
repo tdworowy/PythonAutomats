@@ -17,7 +17,7 @@ class TinderMessageBot:
         return self.session.matches()
 
     def getNerby(self):
-        return self.session.nearby_users(100)
+        return self.session.nearby_users(200)
 
 
     def getFBfriends(self):
@@ -55,8 +55,8 @@ def likeFB(tm,friendName):
      if  friend.get_tinder_information().name == friendName:
          user = friend.get_tinder_information()
          for near in tm.getNerby():
-             print('check %s %s' % near.name , near.id)
-             print('ID to find %s' % user.id)
+             print('check %s %s' % (near.name, near.id))
+             print('fb friedn ID: %s' % user.id)
              if user.id == near.id:
                 print(near.name)
                 near.like()
@@ -69,5 +69,6 @@ def getNearData(tm):
 if __name__ == "__main__":
 
     tm = logIn('','','')
-    likeFB(tm,"")
+    # likeFB(tm,"")
+    printFBFriends(tm)
 
