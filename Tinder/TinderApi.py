@@ -27,6 +27,10 @@ class TinderMessageBot:
         self.session.update_location(latitude,longitude)
 
 
+def printMatches(tm):
+    for match in tm.getMatches():
+        print(match)
+
 
 
 def logIn(login,passw,fbname):
@@ -66,9 +70,11 @@ def getNearData(tm):
 
 
 
+
 if __name__ == "__main__":
 
     tm = logIn('','','')
     # likeFB(tm,"")
-    printFBFriends(tm)
+    # printFBFriends(tm)
+    printMatches(tm)
 
