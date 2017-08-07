@@ -1,11 +1,12 @@
 import os
 import sys
 
-from ChromedriverFolder.driverPath import getDriverPath
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+
+from ChromedriverFolder.driverPath import getDriverPath
 
 netflixUrl = "https://www.netflix.com/browse"
 generUrl = "https://www.netflix.com/browse/genre/"
@@ -38,7 +39,7 @@ def getAllCategories(login,password):
 
     f = open(PATH, 'a')
 
-    for i in range(int(start),999999):
+    for i in range(int(start),99999):
 
         driver.get(generUrl+str(i))
         try:
@@ -51,6 +52,9 @@ def getAllCategories(login,password):
         except Exception as ex:
             print(ex)
             continue
+        finally:
+            print("Count: %s" % str(i))
+
 
 
 
