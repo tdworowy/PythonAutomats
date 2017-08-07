@@ -46,14 +46,15 @@ def getAllCategories(login,password):
             category = driver.find_element(*genreTitle).text
             f.write("%s,%s\n" % (i,category))
             f.flush()
-            with open(lastCount, 'w') as f2 :
-                f2.write(str(i))
-                f2.flush()
+
         except Exception as ex:
             print(ex)
             continue
         finally:
             print("Count: %s" % str(i))
+            with open(lastCount, 'w') as f2:
+                f2.write(str(i))
+                f2.flush()
 
 
 
