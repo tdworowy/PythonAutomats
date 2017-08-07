@@ -31,7 +31,7 @@ def getAllCategories(login,password):
 
     driver.find_element(*avatar).click()
 
-    if os.path.isfile(lastCount) :
+    if os.path.isfile(lastCount):
         f2 = open(lastCount).readline()
         start = str(int(f2)+1)
     else:
