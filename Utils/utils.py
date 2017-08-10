@@ -57,11 +57,11 @@ def createFileIfNotExist(path):
     if not os.path.isfile(path):
         open(path, 'w').close()
 
-def writeToFileNoDuplicates(path,list):
+def writeToFileNoDuplicates(path,elements):
     with (open(path,'a')) as f1,(open(path,'r')) as f2:
-        for ele in list:
-            list = [line.strip() for line in f2.readlines()]
+        for ele in elements:
+            inFile = [line.strip() for line in f2.readlines()]
             # print("if %s not in %s " %(ele,list))
-            if ele not in list:
+            if ele not in inFile:
                 f1.write(ele + '\n')
             f2.seek(0)
