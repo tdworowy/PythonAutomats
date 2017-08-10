@@ -1,6 +1,9 @@
 import re
+import sys
 
 from skpy import Skype
+
+from Utils.utils import writeToFileNoDuplicates
 
 
 class skypeApi:
@@ -44,6 +47,8 @@ class skypeApi:
 
 
 if __name__ == '__main__':
-    sa = skypeApi("mrcripted","JudasPrist1970")
-    # print(sa.getMessages("Learning is an awesome journey"))
-    print(sa.getLinks("Learning is an awesome journey"))
+    user = sys.argv[1]
+    passw = sys.argv[2]
+    sa = skypeApi(user,passw)
+    links = sa.getLinks("Learning is an awesome journey")
+    writeToFileNoDuplicates("D:\Google_drive\links_from_skype\links.txt",links)
