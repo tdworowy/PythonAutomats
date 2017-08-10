@@ -3,16 +3,6 @@ import re
 from skpy import Skype
 
 
-def untilExeption(f):
-    def func(self,*args):
-     while 1:
-        try:
-          f(self,*args)
-        except Exception:
-            break
-    return func
-
-
 class skypeApi:
     def __init__(self,login,passw):
         self.skype = Skype(login, passw)
@@ -33,10 +23,15 @@ class skypeApi:
         self.__getAllMessages(chat,messages)
         return messages
 
-    @untilExeption
-    def __getAllMessages(self,chat,list):
-        list.extend(chat.getMsgs())
-        print(list)
+
+    def __getAllMessages(self,chat,list_):
+        lastLen =0
+        while 1:
+                list_.extend(chat.getMsgs())
+                if lastLen == len(list_) : break
+                else: lastLen =len(list_)
+
+
 
 
     def getLinks(self,name):
