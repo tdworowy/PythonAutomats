@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver import ActionChains
 
 from ChromedriverFolder.driverPath import getDriverPath
-from Skype.SkypeBot.SkypeBot import SkypeBot
+from Skype.SkypeBot import SkypeBot
 from Utils.utils import log
 
 

@@ -1,8 +1,9 @@
+from selenium import webdriver
+
 from ChromedriverFolder.driverPath import getDriverPath
-from Skype.SkypeBot.SkypeBot import SkypeBot
+from Skype.SkypeBot import SkypeBot
 from Utils.decorators import logExeption
 from Utils.utils import characters
-from selenium import webdriver
 
 
 @logExeption
