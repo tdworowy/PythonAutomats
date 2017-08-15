@@ -1,14 +1,18 @@
 import re
-import sys
 
 from skpy import Skype
-
-from Utils.utils import writeToFileNoDuplicates
 
 
 class skypeApi:
     def __init__(self,login,passw):
         self.skype = Skype(login, passw)
+
+
+    def getContactID(self,first,last):
+        for contact in self.skype.contacts.search(first + ' '+last):
+            if contact.name.first == first and contact.name.last == last:
+                 print("Name: %s ID: %s" %(contact.name,contact.id))
+                 return contact.id
 
 
     def getChats(self):
@@ -17,6 +21,7 @@ class skypeApi:
     def getChatIDByTopic(self,name):
         for chat in  self.skype.chats.recent().values():
             if hasattr(chat, 'topic') and chat.topic == name: return chat
+
 
 
 
@@ -35,6 +40,11 @@ class skypeApi:
                 else: lastLen =len(list_)
 
 
+    def addPerson(self,chatName,first,last): #don't work as should ,
+        chat = self.getChatIDByTopic(chatName)
+        id = self.getContactID(first,last) # will search contacts globally
+        chat.addMember(id)
+
 
 
     def getLinks(self,name):
@@ -47,8 +57,12 @@ class skypeApi:
 
 
 if __name__ == '__main__':
-    user = sys.argv[1]
-    passw = sys.argv[2]
+    # user = sys.argv[1]
+    # passw = sys.argv[2]
+    # sa = skypeApi(user,passw)
+    # links = sa.getLinks("Learning is an awesome journey")
+    # writeToFileNoDuplicates("D:\Google_drive\links_from_skype\links.txt",links)
+
+    user = "mrcripted"
+    passw = "JudasPrist1970"
     sa = skypeApi(user,passw)
-    links = sa.getLinks("Learning is an awesome journey")
-    writeToFileNoDuplicates("D:\Google_drive\links_from_skype\links.txt",links)

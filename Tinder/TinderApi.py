@@ -75,6 +75,6 @@ if __name__ == "__main__":
 
     tm = logIn('','','')
     # likeFB(tm,"")
-    # printFBFriends(tm)
-    printMatches(tm)
+    printFBFriends(tm)
+    #printMatches(tm)
 
