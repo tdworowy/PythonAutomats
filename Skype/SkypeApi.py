@@ -40,10 +40,9 @@ class skypeApi:
                 else: lastLen =len(list_)
 
 
-    def addPerson(self,chatName,first,last): #don't work as should ,
+    def addPerson(self,chatName,SkypeID):
         chat = self.getChatIDByTopic(chatName)
-        id = self.getContactID(first,last) # will search contacts globally
-        chat.addMember(id)
+        chat.addMember(SkypeID)
 
 
 
@@ -57,12 +56,10 @@ class skypeApi:
 
 
 if __name__ == '__main__':
+    pass
     # user = sys.argv[1]
     # passw = sys.argv[2]
     # sa = skypeApi(user,passw)
     # links = sa.getLinks("Learning is an awesome journey")
     # writeToFileNoDuplicates("D:\Google_drive\links_from_skype\links.txt",links)
 
-    user = "mrcripted"
-    passw = "JudasPrist1970"
-    sa = skypeApi(user,passw)
