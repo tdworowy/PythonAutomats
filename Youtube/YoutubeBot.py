@@ -22,3 +22,4 @@ def getYoutubeURL(driver, phraze):
     time.sleep(1)
 
     return driver.current_url
+
