@@ -8,7 +8,7 @@ def getYoutubeURL(driver, phraze):
     driver.get('https://www.youtube.com')
     actions = ActionChains(driver)
 
-    input = driver.find_element_by_id("masthead-search-term")
+    input = driver.find_element_by_id("search")
     input.click()
     input.send_keys(phraze)
     actions.send_keys(Keys.ENTER)

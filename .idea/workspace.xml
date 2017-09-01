@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Skype/SkypeApi_.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtube/YoutubeBot.py" afterPath="$PROJECT_DIR$/Youtube/YoutubeBot.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,9 +27,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,16 +82,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="songOfTheDay_tinder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TinderApi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tinder/TinderApi.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -104,11 +92,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="songOfTheDay_skype.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="songOfTheDay_skype.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Skype/songOfTheDay_skype.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
+            <state relative-caret-position="782">
               <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YoutubeBot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Youtube/YoutubeBot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -179,7 +177,6 @@
         <option value="$PROJECT_DIR$/Calculator/Behave/features/calculator1.feature" />
         <option value="$PROJECT_DIR$/Calculator/Behave/features/calculator2.feature" />
         <option value="$PROJECT_DIR$/skype/SongOfTheDay/songOfTheDay.py" />
-        <option value="$PROJECT_DIR$/Youtube/YoutubeBot.py" />
         <option value="D:/Python/Lib/site-packages/fbchat/client.py" />
         <option value="$PROJECT_DIR$/Facebook/songOfTheDay_facebook.py" />
         <option value="$PROJECT_DIR$/Skype/addPersonToChat.py" />
@@ -210,6 +207,7 @@
         <option value="$PROJECT_DIR$/Skype/SkypeApi.py" />
         <option value="$PROJECT_DIR$/Skype/SkypeApi_.py" />
         <option value="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" />
+        <option value="$PROJECT_DIR$/Youtube/YoutubeBot.py" />
       </list>
     </option>
   </component>
@@ -268,12 +266,7 @@
             <path>
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
-              <item name="Phantomjs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
-              <item name="Skype" type="462c0819:PsiDirectoryNode" />
+              <item name="Youtube" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -541,13 +534,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00235" summary="Update">
-      <created>1500570347481</created>
-      <option name="number" value="00235" />
-      <option name="presentableId" value="LOCAL-00235" />
-      <option name="project" value="LOCAL" />
-      <updated>1500570347482</updated>
     </task>
     <task id="LOCAL-00236" summary="Update">
       <created>1500570616901</created>
@@ -885,7 +871,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504283878990</updated>
     </task>
-    <option name="localTasksCounter" value="284" />
+    <task id="LOCAL-00284" summary="Use skype api in SongFoTheDay_skype">
+      <created>1504284034289</created>
+      <option name="number" value="00284" />
+      <option name="presentableId" value="LOCAL-00284" />
+      <option name="project" value="LOCAL" />
+      <updated>1504284034290</updated>
+    </task>
+    <option name="localTasksCounter" value="285" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -932,7 +925,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="3" width="1930" height="1044" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21069519" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21069519" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34561214" sideWeight="0.50692964" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1120,13 +1113,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Youtube/YoutubeBot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1402,9 +1388,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1418,8 +1402,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Skype/songOfTheDay_skype.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
+        <state relative-caret-position="782">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Youtube/YoutubeBot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
           <folding />
         </state>
       </provider>
