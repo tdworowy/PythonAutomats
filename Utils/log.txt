@@ -145,3 +145,53 @@
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64)
 
 2017-09-01 19:05:28 (<class 'selenium.common.exceptions.ElementNotVisibleException'>, ElementNotVisibleException('element not visible\n  (Session info: chrome=60.0.3112.113)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.15063 x86_64)', None, None), <traceback object at 0x03152080>)
+2017-09-01 22:24:05 Update songs list
+2017-09-01 22:24:05 List already updated
+2017-09-01 22:24:16 Get random song
+2017-09-01 22:24:16 Lucette - Bobby Reid
+2017-09-01 22:24:23 Message: element not visible
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.15063 x86_64)
+
+2017-09-01 22:24:23 (<class 'selenium.common.exceptions.ElementNotVisibleException'>, ElementNotVisibleException('element not visible\n  (Session info: chrome=60.0.3112.113)\n  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.15063 x86_64)', None, None), <traceback object at 0x0392AC60>)
+2017-09-01 22:28:18 Update songs list
+2017-09-01 22:28:18 List already updated
+2017-09-01 22:28:27 Get random song
+2017-09-01 22:28:27 Scissorfight - Blizzards, Buzzards, And Bastards
+2017-09-01 22:28:34 Message: invalid selector: Compound class names not permitted
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.15063 x86_64)
+
+2017-09-01 22:28:34 (<class 'selenium.common.exceptions.InvalidSelectorException'>, InvalidSelectorException('invalid selector: Compound class names not permitted\n  (Session info: chrome=60.0.3112.113)\n  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.15063 x86_64)', None, None), <traceback object at 0x03EBC1E8>)
+2017-09-01 22:31:15 Update songs list
+2017-09-01 22:31:15 List already updated
+2017-09-01 22:31:25 Get random song
+2017-09-01 22:31:25 Clutch - You Can't Stop Progress - Live
+2017-09-01 22:31:31 Message: invalid selector: Compound class names not permitted
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.15063 x86_64)
+
+2017-09-01 22:31:31 (<class 'selenium.common.exceptions.InvalidSelectorException'>, InvalidSelectorException('invalid selector: Compound class names not permitted\n  (Session info: chrome=60.0.3112.113)\n  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.15063 x86_64)', None, None), <traceback object at 0x0484C0D0>)
+2017-09-01 22:32:09 Update songs list
+2017-09-01 22:32:09 List already updated
+2017-09-01 22:32:18 Get random song
+2017-09-01 22:32:18 Led Zeppelin - Dazed And Confused - 1/4/71 Paris Theatre
+2017-09-01 22:32:27 list index out of range
+2017-09-01 22:32:27 (<class 'IndexError'>, IndexError('list index out of range',), <traceback object at 0x0371C1C0>)
+2017-09-01 22:32:49 Update songs list
+2017-09-01 22:32:49 List already updated
+2017-09-01 22:32:58 Get random song
+2017-09-01 22:32:58 Nick Cave &amp; The Bad Seeds - We Real Cool
+2017-09-01 22:33:06 Message: no such element: Unable to locate element: {"method":"class name","selector":"title-and-badge.style-scope.ytd-video-renderer"}
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.15063 x86_64)
+
+2017-09-01 22:33:06 (<class 'selenium.common.exceptions.NoSuchElementException'>, NoSuchElementException('no such element: Unable to locate element: {"method":"class name","selector":"title-and-badge.style-scope.ytd-video-renderer"}\n  (Session info: chrome=60.0.3112.113)\n  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.15063 x86_64)', None, None), <traceback object at 0x0316C210>)
+2017-09-01 22:38:39 Update songs list
+2017-09-01 22:38:39 List already updated
+2017-09-01 22:38:48 Get random song
+2017-09-01 22:38:48 Doyle W. Donehoo - Judgement
+2017-09-01 22:38:56 Today is: Friday 2017-09-01
+2017-09-01 22:38:56 Song for Friday 2017-09-01 [AUTO] 
+2017-09-01 22:38:56 https://www.youtube.com/watch?v=f8iBcm_W7lo
+2017-09-01 22:38:56 Today is: Friday 2017-09-01

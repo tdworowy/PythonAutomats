@@ -37,7 +37,7 @@ class songOfTheDay():
 
 
     def tearDown(self):
-        self.driver.quit()
+         self.driver.quit()
 
 
 @logExeption
