@@ -1,4 +1,4 @@
-Feature: Scientific Calculator1
+Feature: Login
     Scenario: Login as admin
     Given open login page
     Then login page is opened

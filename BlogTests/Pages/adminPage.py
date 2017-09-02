@@ -4,7 +4,7 @@ class AdminPage:
 
     def initializeElements(self):
         self.siteName = (By.LINK_TEXT, 'Django administration')
-        self.addPostButton = (By.CSS_SELECTOR, "tr[class='model-post']addlink")
+        self.addPostButton = (By.CSS_SELECTOR, "tr[class='model-post'] a[class='addlink']")
         self.titleImput = (By.NAME, 'title')
         self.bodyTextArea = (By.NAME, 'body')
         self.tagsImput = (By.NAME, 'tags')
@@ -28,9 +28,8 @@ class AdminPage:
         body.click()
         body.send_keys(POSTobj.body)
 
-        if POSTobj.tags != None:
-            tags.click()
-            tags.send_keys(POSTobj.tags)
+        tags.click()
+        tags.send_keys(POSTobj.tags)
 
     def chakIFPageOpened(self):
         assert self.driver.find_element(*self.siteName).is_displayed()

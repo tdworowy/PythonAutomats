@@ -1,5 +1,5 @@
-Feature: Scientific Calculator2
-    Scenario Outline: Sum scenario
+Feature: AddPost
+    Scenario Outline: Add post scenario
      Given open login page
      Then login page is opened
      When login admin

@@ -41,7 +41,7 @@ def sumP(context,title,body):
     import time
     ms = time.time() * 1000.0
 
-    post = POST(title+str(ms),body)
+    post = POST(title+str(ms),body,"TestTag","1") # 1 means admin
     context.adminPage.addPost(post)
 
 
