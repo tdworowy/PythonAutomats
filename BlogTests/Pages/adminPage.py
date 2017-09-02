@@ -1,4 +1,6 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
+
 
 class AdminPage:
 
@@ -10,6 +12,7 @@ class AdminPage:
         self.tagsImput = (By.NAME, 'tags')
         self.authorImput = (By.NAME, 'author')
         self.savePostButton = (By.NAME, '_save')
+        self.statusSelect = (By.ID,'id_status')
 
     def __init__(self,driverArg):
         self.initializeElements()
@@ -23,6 +26,7 @@ class AdminPage:
         body = self.driver.find_element(*self.bodyTextArea)
         tags = self.driver.find_element(*self.tagsImput)
         author = self.driver.find_element(*self.authorImput)
+        statusSelect = self.driver.find_element(*self.statusSelect)
 
         title.click()
         title.send_keys(POSTobj.title)
@@ -35,6 +39,9 @@ class AdminPage:
 
         tags.click()
         tags.send_keys(POSTobj.tags)
+        if POSTobj.publish:
+            select = Select(statusSelect)
+            select.select_by_value('published')
 
         self.driver.find_element(*self.savePostButton).click()
 

@@ -5,7 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/Pages/adminPage.py" afterPath="$PROJECT_DIR$/BlogTests/Pages/adminPage.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/dataModels/PostModel.py" afterPath="$PROJECT_DIR$/BlogTests/dataModels/PostModel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/features/environment.py" afterPath="$PROJECT_DIR$/BlogTests/features/environment.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/features/addPosts.feature" afterPath="$PROJECT_DIR$/BlogTests/features/addPosts.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/features/steps/steps.py" afterPath="$PROJECT_DIR$/BlogTests/features/steps/steps.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/log.txt" afterPath="$PROJECT_DIR$/Utils/log.txt" />
     </list>
@@ -29,8 +29,8 @@
       <file leaf-file-name="steps.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlogTests/features/steps/steps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="438">
+              <caret line="43" column="53" lean-forward="false" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -51,14 +51,24 @@
       <file leaf-file-name="addPosts.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlogTests/features/addPosts.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="39" lean-forward="false" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+            <state relative-caret-position="272">
+              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PostModel.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlogTests/dataModels/PostModel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlogTests/run.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -68,12 +78,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminPage.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="adminPage.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BlogTests/Pages/adminPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="38" column="62" lean-forward="false" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
-              <folding />
+            <state relative-caret-position="486">
+              <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,10 +94,8 @@
         <entry file="file://$PROJECT_DIR$/BlogTests/features/environment.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,10 +181,10 @@
         <option value="$PROJECT_DIR$/BlogTests/Pages/basePage.py" />
         <option value="$PROJECT_DIR$/BlogTests/run.py" />
         <option value="$PROJECT_DIR$/BlogTests/features/login.feature" />
+        <option value="$PROJECT_DIR$/BlogTests/features/environment.py" />
         <option value="$PROJECT_DIR$/BlogTests/features/addPosts.feature" />
         <option value="$PROJECT_DIR$/BlogTests/dataModels/PostModel.py" />
         <option value="$PROJECT_DIR$/BlogTests/features/steps/steps.py" />
-        <option value="$PROJECT_DIR$/BlogTests/features/environment.py" />
         <option value="$PROJECT_DIR$/BlogTests/Pages/adminPage.py" />
       </list>
     </option>
@@ -558,13 +568,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00243" summary="Update">
-      <created>1500574414268</created>
-      <option name="number" value="00243" />
-      <option name="presentableId" value="LOCAL-00243" />
-      <option name="project" value="LOCAL" />
-      <updated>1500574414268</updated>
-    </task>
     <task id="LOCAL-00244" summary="Update">
       <created>1500574878531</created>
       <option name="number" value="00244" />
@@ -901,7 +904,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504346537835</updated>
     </task>
-    <option name="localTasksCounter" value="292" />
+    <task id="LOCAL-00292" summary="update">
+      <created>1504348648396</created>
+      <option name="number" value="00292" />
+      <option name="presentableId" value="LOCAL-00292" />
+      <option name="project" value="LOCAL" />
+      <updated>1504348648396</updated>
+    </task>
+    <option name="localTasksCounter" value="293" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1335,14 +1345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogTests/dataModels/PostModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlogTests/Pages/basePage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1350,14 +1352,6 @@
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogTests/features/addPosts.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="39" lean-forward="false" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,23 +1363,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogTests/features/steps/steps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlogTests/features/environment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1414,11 +1396,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogTests/Pages/adminPage.py">
+    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 12_32_26/add_Post_test1_test_test.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogTests/features/steps/steps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="38" column="62" lean-forward="false" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="438">
+          <caret line="43" column="53" lean-forward="false" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1430,9 +1419,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 12_32_26/add_Post_test1_test_test.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/BlogTests/features/addPosts.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogTests/dataModels/PostModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogTests/Pages/adminPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
