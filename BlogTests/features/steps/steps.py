@@ -1,6 +1,6 @@
-from behave import *
-
 from BlogTests.Pages.basePage import setUp
+from BlogTests.dataModels.PostModel import POST
+from behave import *
 
 loginPage = "http://localhost:8081/admin/login/"
 blogPage = "http://localhost:8081/blog/"
@@ -34,6 +34,15 @@ def loginAdmin(context):
 @then('admin page is opened')
 def checkAdminPage(context):
     context.adminPage.chakIFPageOpened()
+
+
+@when('add Post {title} {body}')
+def sumP(context,title,body):
+    import time
+    ms = time.time() * 1000.0
+
+    post = POST(title+str(ms),body)
+    context.adminPage.addPost(post)
 
 
 
