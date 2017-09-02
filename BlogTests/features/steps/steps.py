@@ -41,7 +41,7 @@ def addPost(context,title,body):
     import time
     ms = time.time() * 1000.0
 
-    context.post = POST(title+str(ms),body,"TestTag","1",True) # 1 means admin
+    context.post = POST(title+"_"+str(ms),body,"TestTag","1",True) # 1 means admin
     context.adminPage.addPost(context.post)
 
 @when('open Last post')

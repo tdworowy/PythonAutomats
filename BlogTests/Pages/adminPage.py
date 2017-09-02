@@ -14,6 +14,8 @@ class AdminPage:
         self.savePostButton = (By.NAME, '_save')
         self.statusSelect = (By.ID,'id_status')
 
+        self.now = (By.LINK_TEXT,"Now")
+
     def __init__(self,driverArg):
         self.initializeElements()
         self.driver = driverArg
@@ -43,7 +45,10 @@ class AdminPage:
             select = Select(statusSelect)
             select.select_by_value('published')
 
+        self.driver.find_element(*self.now).click()
         self.driver.find_element(*self.savePostButton).click()
 
     def chakIFPageOpened(self):
         assert self.driver.find_element(*self.siteName).is_displayed()
+
+
