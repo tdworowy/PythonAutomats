@@ -37,12 +37,20 @@ def checkAdminPage(context):
 
 
 @when('add Post {title} {body}')
-def sumP(context,title,body):
+def addPost(context,title,body):
     import time
     ms = time.time() * 1000.0
 
-    post = POST(title+str(ms),body,"TestTag","1",True) # 1 means admin
-    context.adminPage.addPost(post)
+    context.post = POST(title+str(ms),body,"TestTag","1",True) # 1 means admin
+    context.adminPage.addPost(context.post)
+
+@when('open Last post')
+def openLastPost(context):
+    context.postPage = context.blogPage.openLatestPost()
+
+@then('check post')
+def checkPost(context):
+    context.postPage.checkPost(context.post)
 
 
 

@@ -5,7 +5,9 @@ Feature: AddPost
      When login admin
      Then admin page is opened
      When add Post <title> <body>
-
+     Given open blog page
+     When open Last post
+     Then check post
     Examples: posts
     | title          | body |
     | test1          | test test    |
