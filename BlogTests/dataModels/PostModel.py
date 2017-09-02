@@ -1,6 +1,6 @@
 class POST:
-    def __init__(self,title,body,tags,user):
+    def __init__(self,title,body,tags,author):
         self.title = title
         self.body = body
         self.tags = tags
-        self.user = user
+        self.author = author

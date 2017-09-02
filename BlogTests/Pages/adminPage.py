@@ -8,6 +8,7 @@ class AdminPage:
         self.titleImput = (By.NAME, 'title')
         self.bodyTextArea = (By.NAME, 'body')
         self.tagsImput = (By.NAME, 'tags')
+        self.authorImput = (By.NAME, 'author')
         self.savePostButton = (By.NAME, '_save')
 
     def __init__(self,driverArg):
@@ -20,7 +21,8 @@ class AdminPage:
 
         title = self.driver.find_element(*self.titleImput)
         body = self.driver.find_element(*self.bodyTextArea)
-        tags = self.driver.find_element(*self.tagsImput).click()
+        tags = self.driver.find_element(*self.tagsImput)
+        author = self.driver.find_element(*self.authorImput)
 
         title.click()
         title.send_keys(POSTobj.title)
@@ -28,8 +30,13 @@ class AdminPage:
         body.click()
         body.send_keys(POSTobj.body)
 
+        author.click()
+        author.send_keys(POSTobj.author)
+
         tags.click()
         tags.send_keys(POSTobj.tags)
+
+        self.driver.find_element(*self.savePostButton).click()
 
     def chakIFPageOpened(self):
         assert self.driver.find_element(*self.siteName).is_displayed()

@@ -20,7 +20,7 @@ def openLoginPage(context):
 
 @given("open blog page")
 def openLoginPage(context):
-    setUp(context,loginPage)
+    setUp(context,blogPage)
 
 
 @then('login page is opened')

@@ -1,7 +1,6 @@
 import time
 
-from BlogTests.Pages.basePage import tearDown, setUp
-from BlogTests.features.steps.steps import getURL
+from BlogTests.Pages.basePage import tearDown
 from BlogTests.screens.screenPath import getScreenPath
 from Utils.utils import log, createDir, takeScreenshot
 
@@ -16,12 +15,9 @@ def before_scenario(context, scenario):
     context.timeStump = str(time.strftime('%Y-%m-%d %H:%M:%S'))
     context.screanDirName = getScreenPath()+"\\"+ scenario.name +"_"+ context.timeStump.replace(":","_")
     createDir(context, context.screanDirName)
-
     context.logFile = context.screanDirName+"\\Log.txt"
-
     log("Scenario started: " + scenario.name,context.logFile)
-    setUp(context)
-    log("URL: "+getURL(context),context.logFile)
+
 
 
 
