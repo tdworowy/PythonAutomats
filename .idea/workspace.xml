@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BlogTests/Pages/blogPage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BlogTests/Pages/postPage.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/Pages/adminPage.py" afterPath="$PROJECT_DIR$/BlogTests/Pages/adminPage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/dataModels/PostModel.py" afterPath="$PROJECT_DIR$/BlogTests/dataModels/PostModel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/features/addPosts.feature" afterPath="$PROJECT_DIR$/BlogTests/features/addPosts.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/features/steps/steps.py" afterPath="$PROJECT_DIR$/BlogTests/features/steps/steps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/log.txt" afterPath="$PROJECT_DIR$/Utils/log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/Pages/basePage.py" afterPath="$PROJECT_DIR$/BlogTests/Pages/basePage.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,13 +76,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminPage.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminPage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlogTests/Pages/adminPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+            <state relative-caret-position="357">
+              <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="28" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blogPage.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BlogTests/Pages/blogPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postPage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlogTests/Pages/postPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basePage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlogTests/Pages/basePage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,8 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SongOfTheDay/songOfTheDay.py" />
-        <option value="$PROJECT_DIR$/SkypeBot/SkypeBot.py" />
         <option value="$PROJECT_DIR$/gameOfLive/gameOflive.py" />
         <option value="$PROJECT_DIR$/Calculator/Behave/run.py" />
         <option value="$PROJECT_DIR$/Calculator/Behave/features/steps/steps.py" />
@@ -178,7 +208,6 @@
         <option value="$PROJECT_DIR$/Youtube/YoutubeBot.py" />
         <option value="$PROJECT_DIR$/Utils/decorators.py" />
         <option value="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" />
-        <option value="$PROJECT_DIR$/BlogTests/Pages/basePage.py" />
         <option value="$PROJECT_DIR$/BlogTests/run.py" />
         <option value="$PROJECT_DIR$/BlogTests/features/login.feature" />
         <option value="$PROJECT_DIR$/BlogTests/features/environment.py" />
@@ -186,6 +215,9 @@
         <option value="$PROJECT_DIR$/BlogTests/dataModels/PostModel.py" />
         <option value="$PROJECT_DIR$/BlogTests/features/steps/steps.py" />
         <option value="$PROJECT_DIR$/BlogTests/Pages/adminPage.py" />
+        <option value="$PROJECT_DIR$/BlogTests/Pages/basePage.py" />
+        <option value="$PROJECT_DIR$/BlogTests/Pages/postPage.py" />
+        <option value="$PROJECT_DIR$/BlogTests/Pages/blogPage.py" />
       </list>
     </option>
   </component>
@@ -568,13 +600,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00244" summary="Update">
-      <created>1500574878531</created>
-      <option name="number" value="00244" />
-      <option name="presentableId" value="LOCAL-00244" />
-      <option name="project" value="LOCAL" />
-      <updated>1500574878531</updated>
-    </task>
     <task id="LOCAL-00245" summary="Update">
       <created>1500575578312</created>
       <option name="number" value="00245" />
@@ -911,7 +936,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504348648396</updated>
     </task>
-    <option name="localTasksCounter" value="293" />
+    <task id="LOCAL-00293" summary="update">
+      <created>1504349832639</created>
+      <option name="number" value="00293" />
+      <option name="presentableId" value="LOCAL-00293" />
+      <option name="project" value="LOCAL" />
+      <updated>1504349832640</updated>
+    </task>
+    <option name="localTasksCounter" value="294" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1071,20 +1103,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Facebook/facebookPost.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Facebook/songOfTheDay_postOnPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1345,16 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogTests/Pages/basePage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlogTests/features/login.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1437,10 +1445,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BlogTests/Pages/adminPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+        <state relative-caret-position="357">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="28" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogTests/Pages/postPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogTests/Pages/basePage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogTests/Pages/blogPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
