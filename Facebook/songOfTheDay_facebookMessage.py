@@ -60,8 +60,6 @@ def main(login, password,THREADID):
         songsList = songsList.split("\n")
         ran = random.randrange(len(songsList))
         songTitle =songsList[ran]
-        log(songTitle)
-        saveHistory(songTitle, "FacebookMessage.txt")
         url = getYoutubeURL(song.driver,songTitle.strip())
         song.loginFB(login,password)
         song.sentSong([url],THREADID)

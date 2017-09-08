@@ -18,13 +18,14 @@ class songOfTheDay():
 
 
 
-    def sentSong(self, songURLs):
+    def sentSong(self, songURL,gropus):
 
         log(mesageByTime())
-        for songURL in songURLs:
+        for group in gropus:
             log(songURL)
-            self.sa.snedMessage("Szopy Reaktywacja!",mesageByTime())
-            self.sa.snedMessage("Szopy Reaktywacja!",songURL)
+            self.sa.snedMessage(group,mesageByTime())
+            self.sa.snedMessage(group,songURL)
+            saveHistory(group, "Skype.txt")
             saveHistory(songURL,"Skype.txt")
 
     def setUp(self,autentycation):
@@ -52,9 +53,8 @@ def main(login, password):
         ran = random.randrange(len(songsList))
         songTitle = songsList[ran]
         log(songTitle)
-        saveHistory(songTitle, "Skype.txt")
         url = getYoutubeURL(song.driver,songTitle.strip())
-        song.sentSong([url])
+        song.sentSong(url,["Szopy Reaktywacja!","Shame"])
 
 
 
