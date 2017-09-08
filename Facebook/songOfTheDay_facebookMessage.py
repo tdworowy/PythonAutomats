@@ -24,7 +24,7 @@ class songOfTheDayFace:
         self.faceBot.logIn(login, passw)
 
 
-    def sentSong(self,  songURLs,THREADID,message= mesageByTime(),ThreadType =ThreadType.GROUP ):
+    def sentSong(self, songURLs,THREADID,message = mesageByTime(),ThreadType = ThreadType.GROUP ):
 
         log(mesageByTime())
 
