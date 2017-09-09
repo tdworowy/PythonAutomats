@@ -6,6 +6,7 @@ from skpy import Skype
 class SkypeApi:
     def __init__(self,login,passw):
         self.skype = Skype(login, passw)
+        self.chats = None
 
 
     def getContactID(self,first,last):
@@ -19,19 +20,22 @@ class SkypeApi:
         return self.skype.chats.recent()
 
     def getChatByTopic(self, names):
-        chats = []
+        self.chats = set()
         for chat in  self.skype.chats.recent().values():
             print(chat)
             if hasattr(chat, 'topic') and chat.topic in names:
                 print("Found: %s" % chat)
-                chats.append(chat)
-        return chats
+                self.chats.add(chat)
+
 
 
 
     def snedMessage(self,chatsNames,message):
-        for chat in self.getChatByTopic(chatsNames):
-            chat.sendMsg(message)
+        if self.chats == None:
+            self.getChatByTopic(chatsNames)
+        else:
+            for chat in self.chats:
+                chat.sendMsg(message)
 
 
     def getAllMessages(self,name):
