@@ -38,11 +38,11 @@ class SkypeApi:
                 chat.sendMsg(message)
 
 
-    def getAllMessages(self,name):
-        messages = []
-        chat = self.getChatByTopic(name)
-        self.__getAllMessages(chat,messages)
-        return messages
+    # def getAllMessages(self,name):
+    #     messages = []
+    #     chat = self.getChatByTopic(name)
+    #     self.__getAllMessages(chat,messages)
+    #     return messages
 
 
     def __getAllMessages(self,chat,list_):
