@@ -20,7 +20,10 @@ class SkypeApi:
 
     def getChatByTopic(self, name):
         for chat in  self.skype.chats.recent().values():
-            if hasattr(chat, 'topic') and chat.topic == name: return chat
+            print(chat)
+            if hasattr(chat, 'topic') and chat.topic == name:
+                print("Found: %s" % chat)
+                return chat
 
 
 
