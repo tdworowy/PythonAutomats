@@ -18,17 +18,20 @@ class SkypeApi:
     def getChats(self):
         return self.skype.chats.recent()
 
-    def getChatByTopic(self, name):
+    def getChatByTopic(self, names):
+        chats = []
         for chat in  self.skype.chats.recent().values():
             print(chat)
-            if hasattr(chat, 'topic') and chat.topic == name:
+            if hasattr(chat, 'topic') and chat.topic in names:
                 print("Found: %s" % chat)
-                return chat
+                chats.append(chat)
+        return chats
 
 
 
-    def snedMessage(self,chatName,message):
-        self.getChatByTopic(chatName).sendMsg(message)
+    def snedMessage(self,chatsNames,message):
+        for chat in self.getChatByTopic(chatsNames):
+            chat.sendMsg(message)
 
 
     def getAllMessages(self,name):

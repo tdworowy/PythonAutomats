@@ -21,10 +21,11 @@ class songOfTheDay():
     def sentSong(self, songURL,gropus):
 
         log(mesageByTime())
+        log(songURL)
+        self.sa.snedMessage(gropus,mesageByTime())
+        self.sa.snedMessage(gropus,songURL)
+
         for group in gropus:
-            log(songURL)
-            self.sa.snedMessage(group,mesageByTime())
-            self.sa.snedMessage(group,songURL)
             saveHistory(group, "Skype.txt")
             saveHistory(songURL,"Skype.txt")
 
