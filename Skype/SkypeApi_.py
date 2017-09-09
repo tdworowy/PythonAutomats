@@ -33,16 +33,15 @@ class SkypeApi:
     def snedMessage(self,chatsNames,message):
         if self.chats == None:
             self.getChatByTopic(chatsNames)
-        else:
-            for chat in self.chats:
+        for chat in self.chats:
                 chat.sendMsg(message)
 
 
-    # def getAllMessages(self,name):
-    #     messages = []
-    #     chat = self.getChatByTopic(name)
-    #     self.__getAllMessages(chat,messages)
-    #     return messages
+    def getAllMessages(self,name):
+        messages = []
+        chat = self.getChatByTopic(name)
+        self.__getAllMessages(chat[0],messages)
+        return messages
 
 
     def __getAllMessages(self,chat,list_):
