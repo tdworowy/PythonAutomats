@@ -4,9 +4,16 @@ from skpy import Skype
 
 
 class SkypeApi:
-    def __init__(self,login,passw):
-        self.skype = Skype(login, passw)
+    def clearChats(self):
+        self.skype = Skype(self.login, self.passw)
         self.chats = None
+
+
+    def __init__(self,login,passw):
+        self.login = login
+        self.passw = passw
+        self.clearChats()
+
 
 
     def getContactID(self,first,last):
@@ -28,11 +35,14 @@ class SkypeApi:
                 self.chats.add(chat)
 
 
-
-
-    def snedMessage(self,chatsNames,message):
+    def setChats(self,chatsNames):
         if self.chats == None:
             self.getChatByTopic(chatsNames)
+        print("Chats in cache: %s" % self.chats)
+
+
+
+    def snedMessage(self,message):
         for chat in self.chats:
                 chat.sendMsg(message)
 
