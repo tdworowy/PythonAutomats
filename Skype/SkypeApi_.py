@@ -4,6 +4,7 @@ from skpy import Skype
 
 
 class SkypeApi:
+    SKPY_DEBUG_HTTP = 1
     def clearChats(self):
         self.skype = Skype(self.login, self.passw)
         self.chats = None
