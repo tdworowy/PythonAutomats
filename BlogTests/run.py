@@ -7,7 +7,7 @@ def runBehave():
     path = os.path.dirname(os.path.abspath(__file__))
     screanPath = getScreenPath()
     partition = "D:"
-    commend ="%s && cd %s && behave -f allure_behave.formatter:AllureFormatter -o %s ./features" %(partition,path,screanPath)
+    commend ="%s && cd '%s' && behave -f allure_behave.formatter:AllureFormatter -o '%s' ./features" %(partition,path,screanPath)
     print(commend)
     os.system(commend)
 
