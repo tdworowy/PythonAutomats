@@ -65,3 +65,7 @@ def writeToFileNoDuplicates(path,elements):
             if ele not in inFile:
                 f1.write(ele + '\n')
             f2.seek(0)
+
+
+def getMilis():
+    return int(round(time.time() * 1000))
