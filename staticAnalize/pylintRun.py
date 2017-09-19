@@ -1,11 +1,12 @@
 import os
+import sys
 
 from Utils.utils import getMilis
 from projectPath import getProjectPath
 
 
-def runpylint():
-     os.system("cd %s && pylint --output-format=json PythonAutomats >> report%s.json" % (getProjectPath(),getMilis()))
+def runpylint(module):
+     os.system("cd %s && pylint --output-format=json %s >> report%s.json" % (getProjectPath(),getMilis(),module))
 
 if __name__ == '__main__':
-    runpylint()
+    runpylint(sys.argv[1])
