@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BuseTimeTable/timeTableToPDF.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticAnalize/pylintRun.py" afterPath="$PROJECT_DIR$/staticAnalize/pylintRun.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,109 +22,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SkypeApi_.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Skype/SkypeApi_.py">
+      <file leaf-file-name="Songs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="84" column="4" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+            <state relative-caret-position="231">
+              <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="23" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pylintRun.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/staticAnalize/pylintRun.py">
+      <file leaf-file-name="timeTableToPDF.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BuseTimeTable/timeTableToPDF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="299">
+              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SongOnDemand.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SongOnDemand/SongOnDemand.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="songOfTheDay_skype.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Skype/songOfTheDay_skype.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="69" column="25" lean-forward="false" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="report1505846915871.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/report1505846915871.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projectPath.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectPath.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OnlineCalculatorTests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/site-packages/pdfkit/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#202#228#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/site-packages/requests/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="69" column="14" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="14" />
+            <state relative-caret-position="774">
+              <caret line="609" column="13" lean-forward="false" selection-start-line="609" selection-start-column="13" selection-end-line="609" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BlogTests/run.py">
+      <file leaf-file-name="api.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/site-packages/requests/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="169">
+              <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculator/Behave/run.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/site-packages/requests/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/site-packages/pdfkit/api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-643338342/builtins.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="4716" column="8" lean-forward="false" selection-start-line="4716" selection-start-column="8" selection-end-line="4716" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="element.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/site-packages/bs4/element.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="1286" column="8" lean-forward="false" selection-start-line="1286" selection-start-column="8" selection-end-line="1286" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -165,7 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/skype/SkypeBot/SkypeBot.py" />
         <option value="$PROJECT_DIR$/Calculator/Behave/features/calculator1.feature" />
         <option value="$PROJECT_DIR$/Calculator/Behave/features/calculator2.feature" />
         <option value="$PROJECT_DIR$/skype/SongOfTheDay/songOfTheDay.py" />
@@ -190,7 +177,6 @@
         <option value="$PROJECT_DIR$/Facebook/facebookMonitor.py" />
         <option value="$PROJECT_DIR$/GoogleDocks/googleApi.py" />
         <option value="$PROJECT_DIR$/Netflix/Netflix.py" />
-        <option value="$PROJECT_DIR$/Tinder/TinderApi.py" />
         <option value="$PROJECT_DIR$/Skype/SkypeApi.py" />
         <option value="$PROJECT_DIR$/Skype/aut.txt" />
         <option value="$PROJECT_DIR$/Youtube/YoutubeBot.py" />
@@ -216,6 +202,8 @@
         <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/projectPath.py" />
         <option value="$PROJECT_DIR$/staticAnalize/pylintRun.py" />
+        <option value="$PROJECT_DIR$/Tinder/TinderApi.py" />
+        <option value="$PROJECT_DIR$/BuseTimeTable/timeTableToPDF.py" />
       </list>
     </option>
   </component>
@@ -272,24 +260,25 @@
             <path>
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
-              <item name="Skype" type="462c0819:PsiDirectoryNode" />
+              <item name="BuseTimeTable" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
-              <item name="SongOnDemand" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
-              <item name="staticAnalize" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Songs_" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -297,19 +286,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Python_\PythonAutomats" />
-      <recent name="D:\Python_\PythonAutomats\BlogTests\features" />
-      <recent name="D:\Google_drive\Python_\SeleniumPython\Facebook" />
-      <recent name="D:\Google_drive\Python_\SeleniumPython\Tinder" />
-      <recent name="D:\Google_drive\Python_\SeleniumPython\phantomjs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Google_drive\Python_\SeleniumPython\Skype" />
       <recent name="D:\Google_drive\Python_\SeleniumPython\Utils\Songs_" />
       <recent name="D:\Google_drive\Python_\SeleniumPython\Utils" />
       <recent name="D:\Google_drive\Python_\SeleniumPython\skype" />
       <recent name="D:\Google_drive\Python_\SeleniumPython\BlogTests\Pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python_\PythonAutomats" />
+      <recent name="D:\Python_\PythonAutomats\BlogTests\features" />
+      <recent name="D:\Google_drive\Python_\SeleniumPython\Facebook" />
+      <recent name="D:\Google_drive\Python_\SeleniumPython\Tinder" />
+      <recent name="D:\Google_drive\Python_\SeleniumPython\phantomjs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,7 +313,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pylintRun">
+  <component name="RunManager" selected="Python.timeTableToPDF">
+    <configuration name="TinderApi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tinder" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SeleniumPython" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tinder/TinderApi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -471,23 +477,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="run (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Calculator/Behave" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Calculator/Behave/run.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -505,37 +494,37 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="songOfTheDay_skype" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="timeTableToPDF" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Skype" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BuseTimeTable" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BuseTimeTable/timeTableToPDF.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.songOfTheDay_skype" />
-      <item index="1" class="java.lang.String" itemvalue="Python.run" />
-      <item index="2" class="java.lang.String" itemvalue="Python.run (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.allureReport" />
-      <item index="4" class="java.lang.String" itemvalue="Python.pylintRun" />
+      <item index="0" class="java.lang.String" itemvalue="Python.run" />
+      <item index="1" class="java.lang.String" itemvalue="Python.allureReport" />
+      <item index="2" class="java.lang.String" itemvalue="Python.pylintRun" />
+      <item index="3" class="java.lang.String" itemvalue="Python.TinderApi" />
+      <item index="4" class="java.lang.String" itemvalue="Python.timeTableToPDF" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.pylintRun" />
-        <item index="1" class="java.lang.String" itemvalue="Python.allureReport" />
-        <item index="2" class="java.lang.String" itemvalue="Python.run" />
-        <item index="3" class="java.lang.String" itemvalue="Python.run (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.songOfTheDay_skype" />
+        <item index="0" class="java.lang.String" itemvalue="Python.timeTableToPDF" />
+        <item index="1" class="java.lang.String" itemvalue="Python.TinderApi" />
+        <item index="2" class="java.lang.String" itemvalue="Python.pylintRun" />
+        <item index="3" class="java.lang.String" itemvalue="Python.allureReport" />
+        <item index="4" class="java.lang.String" itemvalue="Python.run" />
       </list>
     </recent_temporary>
   </component>
@@ -552,13 +541,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00268" summary="update">
-      <created>1501404440212</created>
-      <option name="number" value="00268" />
-      <option name="presentableId" value="LOCAL-00268" />
-      <option name="project" value="LOCAL" />
-      <updated>1501404440213</updated>
     </task>
     <task id="LOCAL-00269" summary="update">
       <created>1502033802359</created>
@@ -896,7 +878,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505850030641</updated>
     </task>
-    <option name="localTasksCounter" value="317" />
+    <task id="LOCAL-00317" summary="update">
+      <created>1505850055791</created>
+      <option name="number" value="00317" />
+      <option name="presentableId" value="LOCAL-00317" />
+      <option name="project" value="LOCAL" />
+      <updated>1505850055791</updated>
+    </task>
+    <option name="localTasksCounter" value="318" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -943,10 +932,10 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26012793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27985075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34561214" sideWeight="0.50692964" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41956523" sideWeight="0.49307036" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41956523" sideWeight="0.49307036" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973261" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1050,32 +1039,22 @@
           <line>16</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Tinder/TinderApi.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://D:/Python/Lib/site-packages/pdfkit/configuration.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="84" />
+      <option name="time" value="87" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 12_24_11/add_Post_test1_test_test.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.6 posts_2017-09-02 12_29_00/open_login_page.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.6 posts_2017-09-02 12_29_00/login_admin.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.6 posts_2017-09-02 12_29_00/admin_page_is_opened.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.5 posts_2017-09-02 12_28_43/add_Post_t_e_s_t_4_test.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 12_32_26/add_Post_test1_test_test.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/dataModels/PostModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 13_26_42/add_Post_test1_test_test.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 13_26_42/open_login_page.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 13_26_42/open_Last_post.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 13_26_42/check_post.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 13_42_25/open_Last_post.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 13_42_25/check_post.png" />
-    <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 13_49_16/admin_page_is_opened.png" />
     <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 13_49_16/check_post.png" />
     <entry file="file://$PROJECT_DIR$/BlogTests/screens/Add post scenario -- @1.1 posts_2017-09-02 13_54_36/check_post.png" />
     <entry file="file://$PROJECT_DIR$/Facebook/songOnDemand_face.py">
@@ -1249,7 +1228,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1257,7 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1265,18 +1242,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Skype/SkypeApi_.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
+        <state relative-caret-position="1428">
           <caret line="84" column="4" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1285,7 +1259,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
           <caret line="69" column="14" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1293,9 +1266,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1303,7 +1273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1311,29 +1280,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/report1505846915871.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="272">
           <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SongOnDemand/SongOnDemand.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Skype/songOfTheDay_skype.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
+        <state relative-caret-position="986">
           <caret line="69" column="25" lean-forward="false" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="25" />
           <folding />
         </state>
@@ -1341,10 +1308,130 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/staticAnalize/pylintRun.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="119">
           <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tinder/TinderApi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#1#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/pynder/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/pynder/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="100" column="8" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/pdfkit/configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="42" />
+          <folding>
+            <element signature="e#24#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-643338342/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="4716" column="8" lean-forward="false" selection-start-line="4716" selection-start-column="8" selection-end-line="4716" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BuseTimeTable/table1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/bs4/element.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="1286" column="8" lean-forward="false" selection-start-line="1286" selection-start-column="8" selection-end-line="1286" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/requests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/requests/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="609" column="13" lean-forward="false" selection-start-line="609" selection-start-column="13" selection-end-line="609" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/pdfkit/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#202#228#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/pdfkit/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BuseTimeTable/timeTableToPDF.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
