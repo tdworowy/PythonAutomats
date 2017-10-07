@@ -8,7 +8,7 @@ from selenium import webdriver
 from ChromedriverFolder.driverPath import getDriverPath
 from Facebook.facebookAPI import FaceBookMessageBot
 from Utils.Songs_.Songs import updateSongs, getFilePath
-from Utils.decorators import logExeption
+from Utils.decorators import log_exeption
 from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
 
@@ -49,7 +49,7 @@ class songOfTheDayFace:
     def logout(self):
         self.faceBot.logout()
 
-@logExeption
+@log_exeption
 def main(login, password,THREADID):
         updateSongs()
         song = songOfTheDayFace()

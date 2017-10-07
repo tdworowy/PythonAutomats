@@ -3,7 +3,7 @@ import sys
 from Utils.utils import logResult, log
 
 
-def catchAssertion(f):
+def catch_assertion(f):
     def func(self):
         try:
             f(self)
@@ -11,17 +11,18 @@ def catchAssertion(f):
         except AssertionError:
             logResult(f.__name__, "Fail")
             self.fail("fail")
-    return func
-
-
-
-def logExeption(f):
-    def func(*args):
-        try:
-            f(*args)
-        except Exception  as err:
-            log(str(err))
-            log(sys.exc_info())
-            raise RuntimeError
 
     return func
+
+
+def log_exeption(rize=False):
+    def _log_exeption(f):
+        def func(*args):
+            try:
+                f(*args)
+            except Exception  as err:
+                log(str(err))
+                log(sys.exc_info())
+                if rize: raise RuntimeError
+
+        return func

@@ -7,7 +7,7 @@ from selenium import webdriver
 from ChromedriverFolder.driverPath import getDriverPath
 from Facebook.facebookPost import FaceBookPost
 from Utils.Songs_.Songs import updateSongs, getFilePath
-from Utils.decorators import logExeption
+from Utils.decorators import log_exeption
 from Utils.utils import log
 from Youtube.YoutubeBot import getYoutubeURL
 
@@ -40,7 +40,7 @@ class songOfTheDay:
     def tearDown(self):
         self.driver.quit()
 
-@logExeption
+@log_exeption
 def main(pageID, appid, app_secred):
         song = songOfTheDay(pageID, appid, app_secred)
         f = open(getFilePath(), 'r')

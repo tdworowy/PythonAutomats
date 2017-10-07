@@ -2,11 +2,11 @@ from selenium import webdriver
 
 from ChromedriverFolder.driverPath import getDriverPath
 from Skype.SkypeBot import SkypeBot
-from Utils.decorators import logExeption
+from Utils.decorators import log_exeption
 from Utils.utils import characters
 
 
-@logExeption
+@log_exeption
 def main(login, password):
      chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
      driver = webdriver.Chrome(chromeDriverPath)

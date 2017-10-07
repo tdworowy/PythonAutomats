@@ -9,7 +9,7 @@ from Facebook.facebookID import getFacebookID
 from Facebook.facebookToken import get_access_token
 from Tinder.TinderApi import TinderMessageBot
 from Utils.Songs_.Songs import updateSongs, getFilePath
-from Utils.decorators import logExeption
+from Utils.decorators import log_exeption
 from Utils.utils import log, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
 
@@ -41,7 +41,7 @@ class songOfTheDay():
         self.driver = webdriver.Chrome(chromeDriverPath)
 
 
-@logExeption
+@log_exeption
 def main(login, password,names):
         song = songOfTheDay()
         f = open(getFilePath(), 'r')

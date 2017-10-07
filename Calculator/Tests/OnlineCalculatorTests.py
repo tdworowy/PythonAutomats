@@ -2,32 +2,32 @@ import time
 import unittest
 
 from Calculator.Elements.TestBase import CalculatorBase
-from Utils.decorators import catchAssertion
+from Utils.decorators import catch_assertion
 
 
 class CalculatorTests(CalculatorBase):
 
-    @catchAssertion
+    @catch_assertion
     def testOpenScientificCalculator(self):
         self.calculator.openCalculator()
         time.sleep(1)
         self.assertTrue(self.calculator.scientificCalculatorCheck())
 
-    @catchAssertion
+    @catch_assertion
     def testScientificCalculatorSum1(self):
          self.calculator.openCalculator()
          time.sleep(1)
          self.calculator.sum(2, 2)
          self.assertEqual(self.calculator.getCalcResult(),"4.")
 
-    @catchAssertion
+    @catch_assertion
     def testScientificCalculatorSum2(self):
          self.calculator.openCalculator()
          time.sleep(1)
          self.calculator.sum(-2, 2)
          self.assertEqual(self.calculator.getCalcResult(), "0.")
 
-    @catchAssertion
+    @catch_assertion
     def testScientificCalculatorSum3(self):
          self.calculator.openCalculator()
          time.sleep(1)
