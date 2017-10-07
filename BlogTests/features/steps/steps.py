@@ -1,6 +1,7 @@
+from behave import *
+
 from BlogTests.Pages.basePage import setUp
 from BlogTests.dataModels.PostModel import POST
-from behave import *
 
 loginPage = "http://localhost:8081/admin/login/"
 blogPage = "http://localhost:8081/blog/"
@@ -29,7 +30,7 @@ def checkLoginPage(context):
 
 @when('login admin')
 def loginAdmin(context):
-    context.loginPage.logIn(adminLogin,adminPass)
+    context.loginPage.login(adminLogin, adminPass)
 
 @then('admin page is opened')
 def checkAdminPage(context):

@@ -18,15 +18,15 @@ class SongOfTheDayFace:
         self.faceBot = FaceBookMessageBot()
 
     def login_FB(self, login, passw):
-        self.faceBot.logIn(login, passw)
+        self.faceBot.login(login, passw)
 
     def sentSong(self, songURLs, THREADID, message=mesageByTime(), ThreadType=ThreadType.GROUP):
         log(mesageByTime())
 
         for songURL in songURLs:
             log(songURL)
-            self.faceBot.sendMessage(message, THREADID, ThreadType)
-            self.faceBot.sendMessage(songURL, THREADID, ThreadType)
+            self.faceBot.send_message(message, THREADID, ThreadType)
+            self.faceBot.send_message(songURL, THREADID, ThreadType)
             saveHistory(songURL, "FacebookMessage.txt")
 
     def setUp(self):

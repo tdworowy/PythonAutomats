@@ -8,14 +8,14 @@ from Utils.utils import createFileIfNotExist
 class faceThreadMonitor:
     def __init__(self,email,passw,path):
          self.faceBot = FaceBookMessageBot()
-         self.faceBot.logIn(email,passw)
+         self.faceBot.login(email, passw)
          self.path = path
 
 
 
     def monitorThreads(self,phraze,threadIDs):
         for thread in threadIDs:
-           for massage in self.faceBot.getMessages(thread):
+           for massage in self.faceBot.get_messages(thread):
               if str(massage.text) == phraze:
                    path = self.path + thread + ".txt"
                    createFileIfNotExist(path)
