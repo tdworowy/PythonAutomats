@@ -4,7 +4,8 @@
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/songOnDemand_face.py" afterPath="$PROJECT_DIR$/Facebook/songOnDemand_face.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" afterPath="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tinder/TinderApi.py" afterPath="$PROJECT_DIR$/Tinder/TinderApi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py" afterPath="$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,25 +46,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="songOfTheDay_skype.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="songOfTheDay_skype.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Skype/songOfTheDay_skype.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="53" column="14" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TinderApi.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TinderApi.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tinder/TinderApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="600">
+              <caret line="62" column="11" lean-forward="false" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
               <folding>
-                <element signature="e#1#14#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,8 +71,8 @@
       <file leaf-file-name="songOfTheDay_tinder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+            <state relative-caret-position="770">
+              <caret line="69" column="7" lean-forward="false" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -83,8 +82,10 @@
         <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-              <folding />
+              <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -199,7 +200,6 @@
         <option value="$PROJECT_DIR$/BlogTests/features/addPosts.feature" />
         <option value="$PROJECT_DIR$/BlogTests/features/steps/steps.py" />
         <option value="$PROJECT_DIR$/BlogTests/Pages/basePage.py" />
-        <option value="$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py" />
         <option value="$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py" />
         <option value="$PROJECT_DIR$/BlogTests/Pages/blogPage.py" />
         <option value="$PROJECT_DIR$/Skype/Message.py" />
@@ -209,13 +209,14 @@
         <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/projectPath.py" />
         <option value="$PROJECT_DIR$/staticAnalize/pylintRun.py" />
-        <option value="$PROJECT_DIR$/Tinder/TinderApi.py" />
         <option value="$PROJECT_DIR$/BuseTimeTable/timeTableToPDF.py" />
         <option value="D:/Python/Lib/site-packages/fbchat/client.py" />
         <option value="$PROJECT_DIR$/Skype/SkypeApi_.py" />
         <option value="$PROJECT_DIR$/Utils/decorators.py" />
         <option value="$PROJECT_DIR$/Skype/SkypeBot.py" />
         <option value="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" />
+        <option value="$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py" />
+        <option value="$PROJECT_DIR$/Tinder/TinderApi.py" />
       </list>
     </option>
   </component>
@@ -273,7 +274,7 @@
             <path>
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
-              <item name="Skype" type="462c0819:PsiDirectoryNode" />
+              <item name="Tinder" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -542,13 +543,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00276" summary="update">
-      <created>1502381273242</created>
-      <option name="number" value="00276" />
-      <option name="presentableId" value="LOCAL-00276" />
-      <option name="project" value="LOCAL" />
-      <updated>1502381273242</updated>
     </task>
     <task id="LOCAL-00277" summary="update">
       <created>1502382323789</created>
@@ -886,7 +880,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507412122372</updated>
     </task>
-    <option name="localTasksCounter" value="325" />
+    <task id="LOCAL-00325" summary="refactor">
+      <created>1507412237093</created>
+      <option name="number" value="00325" />
+      <option name="presentableId" value="LOCAL-00325" />
+      <option name="project" value="LOCAL" />
+      <updated>1507412237093</updated>
+    </task>
+    <option name="localTasksCounter" value="326" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -978,7 +979,6 @@
     <MESSAGE value="test for django Blog" />
     <MESSAGE value="Phantomjs added" />
     <MESSAGE value="up" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="fix + refactor" />
     <MESSAGE value="Tinder" />
     <MESSAGE value="Refactor" />
@@ -987,7 +987,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="Refactor + fix" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1043,7 +1044,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Tinder/TinderApi.py</url>
-          <line>1</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1382,14 +1382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Skype/SkypeBot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -1420,30 +1412,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tinder/TinderApi.py">
+    <entry file="file://$PROJECT_DIR$/Skype/songOfTheDay_skype.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        <state relative-caret-position="289">
+          <caret line="53" column="14" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
           <folding>
-            <element signature="e#1#14#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+        <state relative-caret-position="770">
+          <caret line="69" column="7" lean-forward="false" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Skype/songOfTheDay_skype.py">
+    <entry file="file://$PROJECT_DIR$/Tinder/TinderApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="53" column="14" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="17" />
+        <state relative-caret-position="600">
+          <caret line="62" column="11" lean-forward="false" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

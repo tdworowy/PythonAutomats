@@ -1,4 +1,3 @@
-
 import pynder
 from selenium import webdriver
 
@@ -8,33 +7,28 @@ from Facebook.facebookToken import get_access_token
 
 
 class TinderMessageBot:
-
     def logIn(self, id, token):
         self.session = pynder.Session(facebook_id=id, facebook_token=token)
 
-
-    def getMatches(self):
+    def get_matches(self):
         return self.session.matches()
 
-    def getNerby(self):
+    def get_nerby(self):
         return self.session.nearby_users(200)
 
-
-    def getFBfriends(self):
+    def get_FB_friends(self):
         return self.session.get_fb_friends()
 
-    def updateLocation(self,latitude,longitude):
-        self.session.update_location(latitude,longitude)
+    def update_location(self, latitude, longitude):
+        self.session.update_location(latitude, longitude)
 
 
-def printMatches(tm):
-    for match in tm.getMatches():
+def print_matches(tm):
+    for match in tm.get_matches():
         print(match)
 
 
-
-def logIn(login,passw,fbname):
-
+def logIn(login, passw, fbname):
     chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
     driver = webdriver.Chrome(chromeDriverPath)
     token = get_access_token(login, passw)
@@ -45,36 +39,34 @@ def logIn(login,passw,fbname):
     return tm
 
 
-def printFBFriends(tm):
-    for friend in tm.getFBfriends():
+def print_FB_friends(tm):
+    for friend in tm.get_FB_friends():
         print(friend)
         user = friend.get_tinder_information()
         print(user.name)
         print(user.bio)
         print(user.photos_obj)
 
-def likeFB(tm,friendName):
 
-   for friend in tm.getFBfriends():
-     if  friend.get_tinder_information().name == friendName:
-         user = friend.get_tinder_information()
-         for near in tm.getNerby():
-             print('check %s %s' % (near.name, near.id))
-             print('fb friedn ID: %s' % user.id)
-             if user.id == near.id:
-                print(near.name)
-                near.like()
-
-def getNearData(tm):
-    return ['Name: %s \nage: %s\ndistance: %s\nbio: %s\nphotos: %s' % (near.name,near.age,near.distance_km,near.bio,near.photos_obj) for near in tm.getNerby()]
+def like_FB(tm, friendName):
+    for friend in tm.get_FB_friends():
+        if friend.get_tinder_information().name == friendName:
+            user = friend.get_tinder_information()
+            for near in tm.get_nerby():
+                print('check %s %s' % (near.name, near.id))
+                print('fb friedn ID: %s' % user.id)
+                if user.id == near.id:
+                    print(near.name)
+                    near.like()
 
 
+def get_near_data(tm):
+    return ['Name: %s \nage: %s\ndistance: %s\nbio: %s\nphotos: %s' % (
+    near.name, near.age, near.distance_km, near.bio, near.photos_obj) for near in tm.get_nerby()]
 
 
 if __name__ == "__main__":
-
-    tm = logIn('','','')
+    tm = logIn('', '', '')
     # likeFB(tm,"")
-    printFBFriends(tm)
-    #printMatches(tm)
-
+    print_FB_friends(tm)
+    # printMatches(tm)
