@@ -70,7 +70,8 @@ def main(login, password):
     url = getYoutubeURL(song.driver, songTitle.strip())
     try:
         song.sentSongAPI(url, ["Szopy Reaktywacja!", "Shame"])
-    except:
+    except Exception as e:
+        log("API error %s" % str(e) )
         song.sentSongUI(url, ["Szopy Reaktywacja!", "Shame"])
 
 
