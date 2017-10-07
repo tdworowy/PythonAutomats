@@ -9,7 +9,7 @@ from Skype.SkypeApi_ import SkypeApi
 from Skype.SkypeBot import SkypeBot
 from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exeption
-from Utils.utils import log, mesageByTime, saveHistory
+from Utils.utils import log, mesage_by_time, save_history
 from Youtube.YoutubeBot import getYoutubeURL
 
 
@@ -23,18 +23,18 @@ class SongOfTheDay():
 
     def sent_song_API(self, songURL, gropus):
         sa = SkypeApi(self.authentication[0], self.authentication[1])
-        log(mesageByTime())
+        log(mesage_by_time())
         log(songURL)
         sa.set_chats(gropus)
-        sa.sned_message(mesageByTime())
+        sa.sned_message(mesage_by_time())
         sa.sned_message(songURL)
 
         for group in gropus:
-            saveHistory(group, "Skype.txt")
-            saveHistory(songURL, "Skype.txt")
+            save_history(group, "Skype.txt")
+            save_history(songURL, "Skype.txt")
 
     def sent_song_UI(self, songURL, gropus):
-        log(mesageByTime())
+        log(mesage_by_time())
         log(songURL)
         sb = SkypeBot(self.driver)
         sb.login(self.authentication)
@@ -43,8 +43,9 @@ class SongOfTheDay():
             sb.select("echo")
             sb.select(group)
             sb.send_message_to_selected(songURL)
-            saveHistory(group, "Skype.txt")
-            saveHistory(songURL, "Skype.txt")
+            sb.send_message_to_selected(mesage_by_time())
+            save_history(group, "Skype.txt")
+            save_history(songURL, "Skype.txt")
 
     def tear_down(self):
         self.driver.quit()

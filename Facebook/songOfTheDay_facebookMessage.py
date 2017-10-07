@@ -9,7 +9,7 @@ from ChromedriverFolder.driverPath import get_driver_path
 from Facebook.facebookAPI import FaceBookMessageBot
 from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exeption
-from Utils.utils import log, mesageByTime, saveHistory
+from Utils.utils import log, mesage_by_time, save_history
 from Youtube.YoutubeBot import getYoutubeURL
 
 
@@ -20,14 +20,14 @@ class SongOfTheDayFace:
     def login_FB(self, login, passw):
         self.faceBot.login(login, passw)
 
-    def sentSong(self, songURLs, THREADID, message=mesageByTime(), ThreadType=ThreadType.GROUP):
-        log(mesageByTime())
+    def sentSong(self, songURLs, THREADID, message=mesage_by_time(), ThreadType=ThreadType.GROUP):
+        log(mesage_by_time())
 
         for songURL in songURLs:
             log(songURL)
             self.faceBot.send_message(message, THREADID, ThreadType)
             self.faceBot.send_message(songURL, THREADID, ThreadType)
-            saveHistory(songURL, "FacebookMessage.txt")
+            save_history(songURL, "FacebookMessage.txt")
 
     def setUp(self):
         chromeDriverPath = get_driver_path() + '\\chromedriver.exe'

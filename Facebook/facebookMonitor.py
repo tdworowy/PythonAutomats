@@ -2,7 +2,7 @@ import sys
 import time
 
 from Facebook.facebookAPI import FaceBookMessageBot
-from Utils.utils import createFileIfNotExist
+from Utils.utils import create_file_if_not_exist
 
 
 class faceThreadMonitor:
@@ -18,7 +18,7 @@ class faceThreadMonitor:
            for massage in self.faceBot.get_messages(thread):
               if str(massage.text) == phraze:
                    path = self.path + thread + ".txt"
-                   createFileIfNotExist(path)
+                   create_file_if_not_exist(path)
                    with open(path, 'r+') as f:
                         msg = str((massage.text,massage.timestamp))
                         line_found = any(msg in line for line in f)

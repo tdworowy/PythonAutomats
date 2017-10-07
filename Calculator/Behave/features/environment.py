@@ -3,7 +3,7 @@ import time
 from Calculator.Behave.features.steps.steps import setUp, tearDown, getURL
 # logging.basicConfig(level=logging.DEBUG, filename="Logs.log")
 from Calculator.Behave.screens.screenPath import getScreenPath
-from Utils.utils import log, createDir, takeScreenshot
+from Utils.utils import log, create_dir, take_screenshot
 
 BEHAVE_DEBUG = True
 
@@ -17,7 +17,7 @@ def before_feature(context,feature):
 def before_scenario(context, scenario):
     context.timeStump = str(time.strftime('%Y-%m-%d %H:%M:%S'))
     context.screanDirName = getScreenPath()+"\\"+ scenario.name +"_"+ context.timeStump.replace(":","_")
-    createDir(context, context.screanDirName)
+    create_dir(context, context.screanDirName)
 
     context.logFile = context.screanDirName+"\\Log.txt"
 
@@ -35,7 +35,7 @@ def after_scenario(context, scenario):
     tearDown(context)
 
 def after_step(context, step):
-    takeScreenshot(context,context.screanDirName+"\\",step.name)
+    take_screenshot(context, context.screanDirName + "\\", step.name)
     if BEHAVE_DEBUG and step.status == "failed":
         import ipdb
         log("TEST FAIL")

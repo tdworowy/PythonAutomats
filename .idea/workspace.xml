@@ -3,10 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/features/steps/steps.py" afterPath="$PROJECT_DIR$/BlogTests/features/steps/steps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/facebookAPI.py" afterPath="$PROJECT_DIR$/Facebook/facebookAPI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogTests/features/environment.py" afterPath="$PROJECT_DIR$/BlogTests/features/environment.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator/Behave/features/environment.py" afterPath="$PROJECT_DIR$/Calculator/Behave/features/environment.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/facebookMonitor.py" afterPath="$PROJECT_DIR$/Facebook/facebookMonitor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py" afterPath="$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/songOnDemand_face.py" afterPath="$PROJECT_DIR$/Facebook/songOnDemand_face.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" afterPath="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py" afterPath="$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/decorators.py" afterPath="$PROJECT_DIR$/Utils/decorators.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/utils.py" afterPath="$PROJECT_DIR$/Utils/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticAnalize/pylintRun.py" afterPath="$PROJECT_DIR$/staticAnalize/pylintRun.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,14 +34,26 @@
       <file leaf-file-name="songOfTheDay_skype.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Skype/songOfTheDay_skype.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="459">
+              <caret line="45" column="47" lean-forward="true" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facebookAPI.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="facebookAPI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Facebook/facebookAPI.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="94">
@@ -62,16 +80,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="songOnDemand_face.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Facebook/songOnDemand_face.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -199,7 +207,6 @@
         <option value="$PROJECT_DIR$/BlogTests/allureReport.py" />
         <option value="$PROJECT_DIR$/BlogTests/run.py" />
         <option value="$PROJECT_DIR$/Calculator/Behave/run.py" />
-        <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/projectPath.py" />
         <option value="$PROJECT_DIR$/staticAnalize/pylintRun.py" />
         <option value="$PROJECT_DIR$/BuseTimeTable/timeTableToPDF.py" />
@@ -212,9 +219,10 @@
         <option value="$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py" />
         <option value="$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py" />
         <option value="$PROJECT_DIR$/ChromedriverFolder/driverPath.py" />
-        <option value="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" />
         <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
         <option value="$PROJECT_DIR$/Facebook/facebookAPI.py" />
+        <option value="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" />
+        <option value="$PROJECT_DIR$/Utils/utils.py" />
       </list>
     </option>
   </component>
@@ -277,7 +285,7 @@
             <path>
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
-              <item name="Facebook" type="462c0819:PsiDirectoryNode" />
+              <item name="Skype" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -546,13 +554,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00280" summary="update">
-      <created>1502665665902</created>
-      <option name="number" value="00280" />
-      <option name="presentableId" value="LOCAL-00280" />
-      <option name="project" value="LOCAL" />
-      <updated>1502665665903</updated>
     </task>
     <task id="LOCAL-00281" summary="update">
       <created>1502815359171</created>
@@ -890,7 +891,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507413183799</updated>
     </task>
-    <option name="localTasksCounter" value="329" />
+    <task id="LOCAL-00329" summary="refactor">
+      <created>1507413331249</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1507413331249</updated>
+    </task>
+    <option name="localTasksCounter" value="330" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -990,9 +998,9 @@
     <MESSAGE value="update" />
     <MESSAGE value="Refactor + fix" />
     <MESSAGE value="fix" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="refactor + fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor + fix" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1327,14 +1335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Skype/SkypeBot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -1423,14 +1423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Skype/songOfTheDay_skype.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
@@ -1454,6 +1446,24 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Skype/songOfTheDay_skype.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="45" column="47" lean-forward="true" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

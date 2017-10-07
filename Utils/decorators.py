@@ -1,15 +1,15 @@
 import sys
 
-from Utils.utils import logResult, log
+from Utils.utils import log_result, log
 
 
 def catch_assertion(f):
     def func(self):
         try:
             f(self)
-            logResult(f.__name__, "Pass")
+            log_result(f.__name__, "Pass")
         except AssertionError:
-            logResult(f.__name__, "Fail")
+            log_result(f.__name__, "Fail")
             self.fail("fail")
 
     return func

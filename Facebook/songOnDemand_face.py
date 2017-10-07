@@ -9,7 +9,7 @@ from fbchat import ThreadType
 
 from Facebook.songOfTheDay_facebookMessage import SongOfTheDayFace
 from Utils.Songs_.Songs import get_file_path
-from Utils.utils import createFileIfNotExist, log, saveHistory
+from Utils.utils import create_file_if_not_exist, log, save_history
 from Youtube.YoutubeBot import getYoutubeURL
 
 
@@ -19,7 +19,7 @@ def checkQuess(path):
     for file in files:
         fileName = os.path.splitext(file)[0]
         checked = path + "checked\\" + fileName + "_checked.txt"
-        createFileIfNotExist(checked)
+        create_file_if_not_exist(checked)
         f2 = open(checked, 'r+')
         with open(path + "\\" + file, 'r') as f:
             for line in f.readlines():
@@ -39,7 +39,7 @@ def main(song, THREADID, threadType):
     ran = random.randrange(len(songsList))
     songTitle = songsList[ran]
     log(songTitle)
-    saveHistory(songTitle, "FacebookMessage.txt")
+    save_history(songTitle, "FacebookMessage.txt")
     song.set_up()
     url = getYoutubeURL(song.driver, songTitle.strip())
     song.sent_song([url], THREADID, "SONG ON DEMAND", threadType)
