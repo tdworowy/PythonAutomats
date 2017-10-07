@@ -67,7 +67,7 @@ def main(login, password):
     try:
         song.sent_song_API(url, ["Szopy Reaktywacja!", "Shame"])
     except Exception as e:
-        log("API error %s" % str(e) )
+        log("API error: %s" % str(e) )
         song.sent_song_UI(url, ["Szopy Reaktywacja!", "Shame"])
 
 
