@@ -15,7 +15,7 @@ def catch_assertion(f):
     return func
 
 
-def log_exeption(rize=False):
+def log_exeption(rize=True):
     def _log_exeption(f):
         def func(*args):
             try:
