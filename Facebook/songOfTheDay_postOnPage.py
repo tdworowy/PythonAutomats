@@ -6,7 +6,7 @@ from selenium import webdriver
 
 from ChromedriverFolder.driverPath import get_driver_path
 from Facebook.facebookPost import FaceBookPost
-from Utils.Songs_.Songs import updateSongs, getFilePath
+from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exeption
 from Utils.utils import log
 from Youtube.YoutubeBot import getYoutubeURL
@@ -29,7 +29,7 @@ class songOfTheDay:
 
 
     def setUp(self,pageID, appid, app_secred):
-        updateSongs()
+        update_songs()
         chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
         self.driver.implicitly_wait(2)
@@ -43,7 +43,7 @@ class songOfTheDay:
 @log_exeption
 def main(pageID, appid, app_secred):
         song = songOfTheDay(pageID, appid, app_secred)
-        f = open(getFilePath(), 'r')
+        f = open(get_file_path(), 'r')
         log("Get random song")
         songsList = f.read()
         songsList = songsList.split("\n")

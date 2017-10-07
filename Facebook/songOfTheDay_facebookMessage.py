@@ -7,7 +7,7 @@ from selenium import webdriver
 
 from ChromedriverFolder.driverPath import get_driver_path
 from Facebook.facebookAPI import FaceBookMessageBot
-from Utils.Songs_.Songs import updateSongs, getFilePath
+from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exeption
 from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
@@ -44,10 +44,10 @@ class SongOfTheDayFace:
 
 @log_exeption()
 def main(login, password, threadid):
-    updateSongs()
+    update_songs()
     song = SongOfTheDayFace()
     song.setUp()
-    f = open(getFilePath(), 'r')
+    f = open(get_file_path(), 'r')
     log("Get random song")
     songsList = f.read()
     songsList = songsList.split("\n")

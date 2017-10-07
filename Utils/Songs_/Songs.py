@@ -9,6 +9,8 @@ from Utils.utils import log
 filePath = "D:\Google_drive\Songs\songsList.txt"
 lastUpdated = "D:\Google_drive\Songs\LastUpdated.txt"
 PAGES = 706
+
+
 # PAGES = 2
 # LAST_7_DAYS
 # LAST_30_DAYS
@@ -17,19 +19,21 @@ PAGES = 706
 # LAST_365_DAYS
 # ALL
 
-def getFilePath():
+def get_file_path():
     return filePath
 
-def getTitles(url):
-    log("Get songs from %s" % url )
+
+def get_titles(url):
+    log("Get songs from %s" % url)
     response = requests.get(url).text
-    soup = BeautifulSoup(response,"html.parser")
+    soup = BeautifulSoup(response, "html.parser")
     titles = soup.find_all("a", class_="link-block-target")
     titles = str(titles)
     titles = titles.split(">")
-    return  clearTitels(titles)
+    return clear_titles(titles)
 
-def clearTitels(titles):
+
+def clear_titles(titles):
     cleanTitels = []
     for text in titles:
         try:
@@ -37,7 +41,7 @@ def clearTitels(titles):
             if "—" in text:
                 i = text.index("title=\"") + 7
                 temp = text[i:-1].replace("—", "-")
-                cleanTitels.append(temp+"\n")
+                cleanTitels.append(temp + "\n")
 
         except Exception as ex:
             log('EXEPTION in cleanTitels')
@@ -46,17 +50,16 @@ def clearTitels(titles):
     return cleanTitels
 
 
-def getSongs():
-            log("Generate songs list")
-            log("Clear existing or create new file")
-            open(filePath, 'w').close()
-            for i in range(1,PAGES):
-                titles =getTitles('https://www.last.fm/pl/user/TotaledThomas/library/tracks?page= %s' % str(i))
-                toFile(titles)
+def get_songs():
+    log("Generate songs list")
+    log("Clear existing or create new file")
+    open(filePath, 'w').close()
+    for i in range(1, PAGES):
+        titles = get_titles('https://www.last.fm/pl/user/TotaledThomas/library/tracks?page= %s' % str(i))
+        to_file(titles)
 
 
-
-def toFile(titels):
+def to_file(titels):
     with open(filePath, 'a') as f:
         for text in titels:
             try:
@@ -69,32 +72,31 @@ def toFile(titels):
                 continue
 
 
-
-
-def updateSongs():
+def update_songs():
     dateToday = date.today()
     log("Update songs list")
     f1 = open(filePath)
     f2 = open(filePath, 'a')
     with (open(lastUpdated, 'r')) as f3:
-        if f3.readline() == str(dateToday) :
+        if f3.readline() == str(dateToday):
             log("List already updated")
             return 0
     log("Files opened Correctly")
     oldTitels = [line for line in f1.readlines()]
     # newTitles = clearTitels(getTitels(10,"http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_7_DAYS&page="))
-    for i in range(1,60):
-        newTitles = getTitles("https://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page=%s" % str(i))
+    for i in range(1, 60):
+        newTitles = get_titles(
+            "https://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page=%s" % str(i))
         log("New titles: %s page %s" % (str(newTitles), str(i)))
         for title in newTitles:
-              try:
-                  if title not in oldTitels:
-                      f2.write(title)
-                      f2.flush()
-              except Exception as ex:
-                      log("Error while updating songs list")
-                      log(str(ex))
-                      continue
+            try:
+                if title not in oldTitels:
+                    f2.write(title)
+                    f2.flush()
+            except Exception as ex:
+                log("Error while updating songs list")
+                log(str(ex))
+                continue
     f2.flush()
     f2.close()
     log("Song List updated correctly")
@@ -102,4 +104,4 @@ def updateSongs():
 
 
 if __name__ == '__main__':
-     getSongs()
+    get_songs()

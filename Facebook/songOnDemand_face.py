@@ -8,7 +8,7 @@ from os.path import isfile, join
 from fbchat import ThreadType
 
 from Facebook.songOfTheDay_facebookMessage import SongOfTheDayFace
-from Utils.Songs_.Songs import getFilePath
+from Utils.Songs_.Songs import get_file_path
 from Utils.utils import createFileIfNotExist, log, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
 
@@ -32,7 +32,7 @@ def checkQuess(path):
 
 
 def main(song, THREADID, threadType):
-    f = open(getFilePath(), 'r')
+    f = open(get_file_path(), 'r')
     log("Get random song")
     songsList = f.read()
     songsList = songsList.split("\n")

@@ -7,7 +7,7 @@ from selenium import webdriver
 from ChromedriverFolder.driverPath import get_driver_path
 from Skype.SkypeApi_ import SkypeApi
 from Skype.SkypeBot import SkypeBot
-from Utils.Songs_.Songs import updateSongs, getFilePath
+from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exeption
 from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
@@ -15,15 +15,19 @@ from Youtube.YoutubeBot import getYoutubeURL
 
 class SongOfTheDay():
     def __init__(self, authentication):
-        self.set_up(authentication)
+        update_songs()
+        chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
+        self.driver = webdriver.Chrome(chromeDriverPath)
+        self.driver.implicitly_wait(2)
+        self.authentication = authentication
 
     def sent_song_API(self, songURL, gropus):
-
+        sa = SkypeApi(self.authentication[0], self.authentication[1])
         log(mesageByTime())
         log(songURL)
-        self.sa.set_chats(gropus)
-        self.sa.sned_message(mesageByTime())
-        self.sa.sned_message(songURL)
+        sa.set_chats(gropus)
+        sa.sned_message(mesageByTime())
+        sa.sned_message(songURL)
 
         for group in gropus:
             saveHistory(group, "Skype.txt")
@@ -32,24 +36,15 @@ class SongOfTheDay():
     def sent_song_UI(self, songURL, gropus):
         log(mesageByTime())
         log(songURL)
-        self.sb.login(self.authentication)
+        sb = SkypeBot(self.driver)
+        sb.login(self.authentication)
 
         for group in gropus:
-            self.sb.select("echo")
-            self.sb.select(group)
-            self.sb.send_message_to_selected(songURL)
+            sb.select("echo")
+            sb.select(group)
+            sb.send_message_to_selected(songURL)
             saveHistory(group, "Skype.txt")
             saveHistory(songURL, "Skype.txt")
-
-    def set_up(self, authentication):
-        updateSongs()
-        chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
-        self.driver = webdriver.Chrome(chromeDriverPath)
-        # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\Phantomjs.exe')
-        self.driver.implicitly_wait(2)
-        self.authentication = authentication
-        self.sa = SkypeApi(self.authentication[0], self.authentication[1])
-        self.sb = SkypeBot(self.driver)
 
     def tear_down(self):
         self.driver.quit()
@@ -59,7 +54,7 @@ class SongOfTheDay():
 def main(login, password):
     authentication = [login, password]
     song = SongOfTheDay(authentication)
-    f = open(getFilePath(), 'r')
+    f = open(get_file_path(), 'r')
     log("Get random song")
     songsList = f.read()
     songsList = songsList.split("\n")
