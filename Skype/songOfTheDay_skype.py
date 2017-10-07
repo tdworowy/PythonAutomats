@@ -13,11 +13,11 @@ from Utils.utils import log, mesageByTime, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
 
 
-class songOfTheDay():
+class SongOfTheDay():
     def __init__(self, authentication):
-        self.setUp(authentication)
+        self.set_up(authentication)
 
-    def sentSongAPI(self, songURL, gropus):
+    def sent_song_API(self, songURL, gropus):
 
         log(mesageByTime())
         log(songURL)
@@ -29,7 +29,7 @@ class songOfTheDay():
             saveHistory(group, "Skype.txt")
             saveHistory(songURL, "Skype.txt")
 
-    def sentSongUI(self, songURL, gropus):
+    def sent_song_UI(self, songURL, gropus):
         log(mesageByTime())
         log(songURL)
         self.sb.login(self.authentication)
@@ -41,7 +41,7 @@ class songOfTheDay():
             saveHistory(group, "Skype.txt")
             saveHistory(songURL, "Skype.txt")
 
-    def setUp(self, authentication):
+    def set_up(self, authentication):
         updateSongs()
         chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
@@ -51,14 +51,14 @@ class songOfTheDay():
         self.sa = SkypeApi(self.authentication[0], self.authentication[1])
         self.sb = SkypeBot(self.driver)
 
-    def tearDown(self):
+    def tear_down(self):
         self.driver.quit()
 
 
 @log_exeption(False)
 def main(login, password):
     authentication = [login, password]
-    song = songOfTheDay(authentication)
+    song = SongOfTheDay(authentication)
     f = open(getFilePath(), 'r')
     log("Get random song")
     songsList = f.read()
@@ -69,10 +69,10 @@ def main(login, password):
     log(songTitle)
     url = getYoutubeURL(song.driver, songTitle.strip())
     try:
-        song.sentSongAPI(url, ["Szopy Reaktywacja!", "Shame"])
+        song.sent_song_API(url, ["Szopy Reaktywacja!", "Shame"])
     except Exception as e:
         log("API error %s" % str(e) )
-        song.sentSongUI(url, ["Szopy Reaktywacja!", "Shame"])
+        song.sent_song_UI(url, ["Szopy Reaktywacja!", "Shame"])
 
 
 if __name__ == '__main__':

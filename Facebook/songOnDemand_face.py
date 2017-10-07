@@ -5,11 +5,12 @@ import time
 from os import listdir
 from os.path import isfile, join
 
+from fbchat import ThreadType
+
 from Facebook.songOfTheDay_facebookMessage import songOfTheDayFace
 from Utils.Songs_.Songs import getFilePath
 from Utils.utils import createFileIfNotExist, log, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
-from fbchat import ThreadType
 
 
 def checkQuess(path):
@@ -40,10 +41,10 @@ def main(song,THREADID, threadType):
         songTitle =songsList[ran]
         log(songTitle)
         saveHistory(songTitle, "FacebookMessage.txt")
-        song.setUp()
+        song.set_up()
         url = getYoutubeURL(song.driver,songTitle.strip())
         song.sentSong([url],THREADID,"SONG ON DEMAND",threadType)
-        song.tearDown()
+        song.tear_down()
 
 def  thread(song,path,threadType):
         threads = checkQuess(path)
