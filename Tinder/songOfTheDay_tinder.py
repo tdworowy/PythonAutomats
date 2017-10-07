@@ -4,7 +4,7 @@ import sys
 
 from selenium import webdriver
 
-from ChromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import get_driver_path
 from Facebook.facebookID import getFacebookID
 from Facebook.facebookToken import get_access_token
 from Tinder.TinderApi import TinderMessageBot
@@ -14,7 +14,7 @@ from Utils.utils import log, saveHistory
 from Youtube.YoutubeBot import getYoutubeURL
 
 
-class songOfTheDay():
+class SongOfTheDay():
     def __init__(self):
         self.set_up()
 
@@ -36,13 +36,13 @@ class songOfTheDay():
 
     def set_up(self):
         updateSongs()
-        chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+        chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
 
 
 @log_exeption()
 def main(login, password, names):
-    song = songOfTheDay()
+    song = SongOfTheDay()
     f = open(getFilePath(), 'r')
     log("Get random song")
     songsList = f.read()

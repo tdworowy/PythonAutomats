@@ -6,7 +6,7 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-from ChromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import get_driver_path
 
 netflixUrl = "https://www.netflix.com/browse"
 generUrl = "https://www.netflix.com/browse/genre/"
@@ -20,7 +20,7 @@ PATH = "D:\Google_drive\\Netflix\cat.txt"
 lastCount = "D:\Google_drive\\Netflix\count.txt"
 
 def getAllCategories(login,password):
-    chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+    chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
     driver = webdriver.Chrome(chromeDriverPath)
     driver.get(netflixUrl)
     driver.find_element(*emailField).send_keys(login)

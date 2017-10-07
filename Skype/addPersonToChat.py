@@ -3,7 +3,7 @@ import sys
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 
-from ChromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import get_driver_path
 from Skype.SkypeBot import SkypeBot
 from Utils.utils import log
 
@@ -12,7 +12,7 @@ class AddPersonToChat:
 
 
     def setUp(self):
-        chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+        chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
         self.driver.implicitly_wait(2)
         self.skypeBot = SkypeBot(self.driver)

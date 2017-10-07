@@ -3,7 +3,7 @@ import time
 
 from selenium import webdriver
 
-from ChromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import get_driver_path
 from Utils.enum_ import Enum
 
 visibilityEnum= Enum(["friends",'public','me'])
@@ -61,7 +61,7 @@ class facebookBot():
 
 if __name__ == '__main__':
 
-    chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+    chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
     driver = webdriver.Chrome(chromeDriverPath)
     driver.maximize_window()
     driver.implicitly_wait(2)

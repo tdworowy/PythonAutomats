@@ -1,5 +1,5 @@
 import os
 
 
-def getDriverPath():
-  return  os.path.dirname(os.path.abspath(__file__))
+def get_driver_path():
+    return os.path.dirname(os.path.abspath(__file__))

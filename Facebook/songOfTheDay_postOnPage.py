@@ -4,7 +4,7 @@ import sys
 
 from selenium import webdriver
 
-from ChromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import get_driver_path
 from Facebook.facebookPost import FaceBookPost
 from Utils.Songs_.Songs import updateSongs, getFilePath
 from Utils.decorators import log_exeption
@@ -30,7 +30,7 @@ class songOfTheDay:
 
     def setUp(self,pageID, appid, app_secred):
         updateSongs()
-        chromeDriverPath = getDriverPath()+'\\chromedriver.exe'
+        chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
         self.driver.implicitly_wait(2)
         self.faceBot = FaceBookPost(pageID, appid, app_secred)

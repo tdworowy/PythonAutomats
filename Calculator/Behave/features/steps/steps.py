@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.remote.webdriver import WebDriver
 
 from Calculator.Elements.Calculator import CalculatorElements
-from ChromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import get_driver_path
 from Utils.utils import log
 
 server = 'http://www.calculator.net/'
@@ -29,7 +29,7 @@ def setUp(context):
                 #     desired_capabilities={'browserName': 'chrome', 'javascriptEnabled': True})
                 # don't work becouse grid bug
             else:
-                chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+                chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
                 context.driver = webdriver.Chrome(chromeDriverPath)
             context.driver.get(server)
             context.calculator = CalculatorElements(context.driver)

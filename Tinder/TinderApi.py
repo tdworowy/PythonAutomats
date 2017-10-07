@@ -1,7 +1,7 @@
 import pynder
 from selenium import webdriver
 
-from ChromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import get_driver_path
 from Facebook.facebookID import getFacebookID
 from Facebook.facebookToken import get_access_token
 
@@ -29,7 +29,7 @@ def print_matches(tm):
 
 
 def logIn(login, passw, fbname):
-    chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+    chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
     driver = webdriver.Chrome(chromeDriverPath)
     token = get_access_token(login, passw)
     tm = TinderMessageBot()

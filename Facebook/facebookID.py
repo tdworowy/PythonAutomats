@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
-from ChromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import get_driver_path
 
 
 def getFacebookID(driver, fullname):
@@ -24,6 +24,6 @@ def getFacebookID(driver, fullname):
 
 
 if __name__=='__main__':
-    chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+    chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
     driver = webdriver.Chrome(chromeDriverPath)
     print(getFacebookID(driver,'tomasz.dworowy'))

@@ -1,12 +1,13 @@
+from selenium import webdriver
+
 from BlogTests.Pages.adminPage import AdminPage
 from BlogTests.Pages.blogPage import BlogPage
 from BlogTests.Pages.loginPage import LoginPage
-from ChromedriverFolder.driverPath import getDriverPath
-from selenium import webdriver
+from ChromedriverFolder.driverPath import get_driver_path
 
 
 def setUp(context,server):
-    chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+    chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
     context.driver = webdriver.Chrome(chromeDriverPath)
     context.driver.get(server)
     context.driver.implicitly_wait(1)

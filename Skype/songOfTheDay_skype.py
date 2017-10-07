@@ -4,7 +4,7 @@ import sys
 
 from selenium import webdriver
 
-from ChromedriverFolder.driverPath import getDriverPath
+from ChromedriverFolder.driverPath import get_driver_path
 from Skype.SkypeApi_ import SkypeApi
 from Skype.SkypeBot import SkypeBot
 from Utils.Songs_.Songs import updateSongs, getFilePath
@@ -43,7 +43,7 @@ class SongOfTheDay():
 
     def set_up(self, authentication):
         updateSongs()
-        chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
+        chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
         # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\Phantomjs.exe')
         self.driver.implicitly_wait(2)
