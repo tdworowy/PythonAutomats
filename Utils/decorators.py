@@ -26,3 +26,4 @@ def log_exeption(rize=False):
                 if rize: raise RuntimeError
 
         return func
+    return _log_exeption

@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" afterPath="$PROJECT_DIR$/Calculator/Tests/OnlineCalculatorTests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py" afterPath="$PROJECT_DIR$/Facebook/songOfTheDay_facebookMessage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/songOfTheDay_postOnPage.py" afterPath="$PROJECT_DIR$/Facebook/songOfTheDay_postOnPage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Skype/Message.py" afterPath="$PROJECT_DIR$/Skype/Message.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Skype/SkypeApi_.py" afterPath="$PROJECT_DIR$/Skype/SkypeApi_.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" afterPath="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py" afterPath="$PROJECT_DIR$/Tinder/songOfTheDay_tinder.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/decorators.py" afterPath="$PROJECT_DIR$/Utils/decorators.py" />
     </list>
     <ignored path="Selenium.iws" />
@@ -73,12 +66,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="decorators.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="decorators.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="476">
+              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SkypeApi_.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SkypeApi_.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Skype/SkypeApi_.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="498">
@@ -218,9 +213,9 @@
         <option value="$PROJECT_DIR$/Tinder/TinderApi.py" />
         <option value="$PROJECT_DIR$/BuseTimeTable/timeTableToPDF.py" />
         <option value="D:/Python/Lib/site-packages/fbchat/client.py" />
-        <option value="$PROJECT_DIR$/Utils/decorators.py" />
         <option value="$PROJECT_DIR$/Skype/songOfTheDay_skype.py" />
         <option value="$PROJECT_DIR$/Skype/SkypeApi_.py" />
+        <option value="$PROJECT_DIR$/Utils/decorators.py" />
       </list>
     </option>
   </component>
@@ -279,6 +274,11 @@
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
               <item name="Skype" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -547,13 +547,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00271" summary="update">
-      <created>1502121679314</created>
-      <option name="number" value="00271" />
-      <option name="presentableId" value="LOCAL-00271" />
-      <option name="project" value="LOCAL" />
-      <updated>1502121679314</updated>
     </task>
     <task id="LOCAL-00272" summary="fix">
       <created>1502122035292</created>
@@ -891,7 +884,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507375716205</updated>
     </task>
-    <option name="localTasksCounter" value="320" />
+    <task id="LOCAL-00320" summary="Refactor + fix">
+      <created>1507411195990</created>
+      <option name="number" value="00320" />
+      <option name="presentableId" value="LOCAL-00320" />
+      <option name="project" value="LOCAL" />
+      <updated>1507411195990</updated>
+    </task>
+    <option name="localTasksCounter" value="321" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -991,7 +991,8 @@
     <MESSAGE value="Use skype api in SongFoTheDay_skype" />
     <MESSAGE value="fix" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Refactor + fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor + fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1423,14 +1424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Skype/songOfTheDay_skype.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1444,6 +1437,16 @@
         <state relative-caret-position="498">
           <caret line="60" column="14" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
