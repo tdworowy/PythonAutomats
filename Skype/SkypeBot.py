@@ -8,7 +8,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 class SkypeBot():
-    def initializeElements(self):
+    def initialize_elements(self):
         self.loginFB = (By.ID, 'loginWithFacebook')
         self.loginEmail = (By.ID, 'email')
         self.loginPassword = (By.ID, 'pass')
@@ -21,61 +21,57 @@ class SkypeBot():
 
         self.group = (By.CLASS_NAME, 'list-selectable')
 
-        self.addPersonButton =(By.CSS_SELECTOR,"button[class=\"btn secondary circle stroke\"]")
+        self.addPersonButton = (By.CSS_SELECTOR, "button[class=\"btn secondary circle stroke\"]")
         self.addButton = (By.CSS_SELECTOR, "button[aria-label=\"Add\"]")
 
+        self.content = (By.CSS_SELECTOR, "div[class=\"content\"] p")
 
-        self.content = (By.CSS_SELECTOR, "div[class=\"content\"] p" )
-
-    def setSearchItem(self,user):
+    def set_search_item(self, user):
         self.searchItem = (By.CSS_SELECTOR, "li[title=\"" + user + "\"")
 
-    def __init__(self,webdriver):
-        self.driver= webdriver
-        self.initializeElements()
+    def __init__(self, webdriver):
+        self.driver = webdriver
+        self.initialize_elements()
 
-
-
-    def sendMessageToSelected(self, message):
+    def send_message_to_selected(self, message):
         actions = ActionChains(self.driver)
         actions.send_keys(message)
         actions.send_keys(Keys.ENTER)
         actions.perform()
         time.sleep(1)
 
-    def sendEnter(self):
+    def send_enter(self):
         actions = ActionChains(self.driver)
         actions.send_keys(Keys.ENTER)
         actions.perform()
 
-
-    def openSkype(self):
+    def open_skype(self):
         self.driver.get('https://web.Skype.com/pl/')
 
-    def waitForInputField(self):
+    def wait_for_input_field(self):
         WebDriverWait(self.driver, 40).until(EC.visibility_of_any_elements_located(self.inputField))
         time.sleep(1)
 
-    def loginFacebook(self, autentycation):
-        self.openSkype()
+    def login_facebook(self, authentication):
+        self.open_skype()
 
         loginFB = self.driver.find_element(*self.loginFB)
         loginFB.click()
 
         loginField = self.driver.find_element(*self.loginEmail)
         loginField.click()
-        loginField.send_keys(autentycation[0])
+        loginField.send_keys(authentication[0])
 
         passField = self.driver.find_element(*self.loginPassword)
         passField.click()
-        passField.send_keys(autentycation[1])
+        passField.send_keys(authentication[1])
 
         loginButton = self.driver.find_element(*self.loginButton)
         loginButton.click()
-        self.waitForInputField()
+        self.wait_for_input_field()
 
     def login(self, authentication):
-        self.openSkype()
+        self.open_skype()
         loginField = self.driver.find_element(*self.loginSkype)
         loginField.click()
         loginField.send_keys(authentication[0])
@@ -87,8 +83,8 @@ class SkypeBot():
         passField.click()
         passField.send_keys(authentication[1])
 
-        self.sendEnter()
-        self.waitForInputField()
+        self.send_enter()
+        self.wait_for_input_field()
 
     def select(self, name):
         searchSkype = self.driver.find_element(*self.inputField)
@@ -101,27 +97,28 @@ class SkypeBot():
         group.click()
         time.sleep(2)
 
-    def addPersonButtonClick(self):
+    def add_person_button_click(self):
         self.driver.implicitly_wait(5);
         self.driver.find_element(*self.addPersonButton).click()
 
-    def addButtonClick(self):
-            self.driver.find_element(*self.addButton).click()
+    def add_button_click(self):
+        self.driver.find_element(*self.addButton).click()
 
-    def searchItemClick(self,user):
+    def search_item_click(self, user):
         try:
-            self.setSearchItem(user)
+            self.set_search_item(user)
             self.driver.find_element(*self.searchItem).click()
-            self.addButtonClick()
+            self.add_button_click()
         except Exception as ex:
             print(str(ex))
-            print(user," is alredy added")
+            print(user, " is alredy added")
 
-
-    def checkContent(self,toCheck):#don't work as should
+    def check_content(self, toCheck):  # don't work as should
         try:
             print(self.driver.find_element(*self.content).text)
-            if   self.driver.find_element(*self.content).text == toCheck:  return True
-            else: return False
-        except:
+            if self.driver.find_element(*self.content).text == toCheck:
+                return True
+            else:
+                return False
+        except Exception:
             return False

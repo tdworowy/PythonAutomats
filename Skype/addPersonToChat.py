@@ -28,13 +28,13 @@ class AddPersonToChat:
 
         self.skypeBot.select("Echo")
         self.skypeBot.select(chat)
-        self.skypeBot.addPersonButtonClick()
+        self.skypeBot.add_person_button_click()
         actions = ActionChains(self.driver)
         for name in names:
             log("Try add %s to chat %s" % (name, chat))
             actions.send_keys(name)
             actions.perform()
-            self.skypeBot.searchItemClick(name)
+            self.skypeBot.search_item_click(name)
             # takeScreenshot_(self.driver,"D:\\","Add_ADAM")
 
 

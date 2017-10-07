@@ -17,7 +17,7 @@ def main(login, password):
      skypeBot.login(autentycation)
      skypeBot.select("Echo")
      skypeBot.select("Szopy Reaktywacja!")
-     skypeBot.sendMessageToSelected(characters(10000,10500))
+     skypeBot.send_message_to_selected(characters(10000, 10500))
 
 
 

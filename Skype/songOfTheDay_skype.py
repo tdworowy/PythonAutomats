@@ -30,25 +30,25 @@ class songOfTheDay():
             saveHistory(songURL, "Skype.txt")
 
     def sentSongUI(self, songURL, gropus):
-
         log(mesageByTime())
         log(songURL)
-        self.sb.login(self.autentycation)
+        self.sb.login(self.authentication)
 
         for group in gropus:
+            self.sb.select("echo")
             self.sb.select(group)
-            self.sb.sendMessageToSelected(songURL)
+            self.sb.send_message_to_selected(songURL)
             saveHistory(group, "Skype.txt")
             saveHistory(songURL, "Skype.txt")
 
-    def setUp(self, autentycation):
+    def setUp(self, authentication):
         updateSongs()
         chromeDriverPath = getDriverPath() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chromeDriverPath)
         # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\Phantomjs.exe')
         self.driver.implicitly_wait(2)
-        self.autentycation = autentycation
-        self.sa = SkypeApi(self.autentycation[0], self.autentycation[1])
+        self.authentication = authentication
+        self.sa = SkypeApi(self.authentication[0], self.authentication[1])
         self.sb = SkypeBot(self.driver)
 
     def tearDown(self):
