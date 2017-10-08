@@ -4,7 +4,7 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
 
-def actionSend(driver,txt):
+def action_send(driver, txt):
     actions = ActionChains(driver)
     actions.send_keys(txt)
     actions.send_keys(Keys.ENTER)
@@ -12,12 +12,12 @@ def actionSend(driver,txt):
     time.sleep(1)
 
 
-def getYoutubeURL(driver, phraze):
+def get_youtube_URL(driver, phrase):
     driver.get('https://www.youtube.com')
-    actionSend(driver,phraze)
+    action_send(driver, phrase)
     time.sleep(2)
-    firstResoult = driver.find_element_by_css_selector("div[id='title-wrapper'] h3")
-    firstResoult.click()
+    firstResult = driver.find_element_by_css_selector("div[id='title-wrapper'] h3")
+    firstResult.click()
     time.sleep(1)
 
     return driver.current_url

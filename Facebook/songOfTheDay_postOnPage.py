@@ -9,7 +9,7 @@ from Facebook.facebookPost import FaceBookPost
 from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exeption
 from Utils.utils import log
-from Youtube.YoutubeBot import getYoutubeURL
+from Youtube.YoutubeBot import get_youtube_URL
 
 
 class songOfTheDay:
@@ -50,7 +50,7 @@ def main(pageID, appid, app_secred):
 
         ran = random.randrange(len(songsList))
         log(songsList[ran])
-        url = getYoutubeURL(song.driver,songsList[ran].strip())
+        url = get_youtube_URL(song.driver, songsList[ran].strip())
         song.sentSong([url])
         song.tearDown()
 

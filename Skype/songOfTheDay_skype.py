@@ -10,7 +10,7 @@ from Skype.SkypeBot import SkypeBot
 from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exeption
 from Utils.utils import log, mesage_by_time, save_history
-from Youtube.YoutubeBot import getYoutubeURL
+from Youtube.YoutubeBot import get_youtube_URL
 
 
 class SongOfTheDay():
@@ -42,8 +42,8 @@ class SongOfTheDay():
         for group in gropus:
             sb.select("echo")
             sb.select(group)
-            sb.send_message_to_selected(songURL)
             sb.send_message_to_selected(mesage_by_time())
+            sb.send_message_to_selected(songURL)
             save_history(group, "Skype.txt")
             save_history(songURL, "Skype.txt")
 
@@ -63,7 +63,7 @@ def main(login, password):
     ran = random.randrange(len(songsList))
     songTitle = songsList[ran]
     log(songTitle)
-    url = getYoutubeURL(song.driver, songTitle.strip())
+    url = get_youtube_URL(song.driver, songTitle.strip())
     try:
         song.sent_song_API(url, ["Szopy Reaktywacja!", "Shame"])
     except Exception as e:

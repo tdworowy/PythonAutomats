@@ -10,7 +10,7 @@ from fbchat import ThreadType
 from Facebook.songOfTheDay_facebookMessage import SongOfTheDayFace
 from Utils.Songs_.Songs import get_file_path
 from Utils.utils import create_file_if_not_exist, log, save_history
-from Youtube.YoutubeBot import getYoutubeURL
+from Youtube.YoutubeBot import get_youtube_URL
 
 
 def checkQuess(path):
@@ -41,7 +41,7 @@ def main(song, THREADID, threadType):
     log(songTitle)
     save_history(songTitle, "FacebookMessage.txt")
     song.set_up()
-    url = getYoutubeURL(song.driver, songTitle.strip())
+    url = get_youtube_URL(song.driver, songTitle.strip())
     song.sent_song([url], THREADID, "SONG ON DEMAND", threadType)
     song.tear_down()
 
