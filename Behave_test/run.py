@@ -1,6 +1,7 @@
 import os
 
-def runBehave():
+
+def run_behave():
     path = os.path.dirname(os.path.abspath(__file__))
     partition = "D:"
     commend = partition + " && cd " + path + " && behave"
@@ -9,4 +10,4 @@ def runBehave():
 
 
 if __name__ == '__main__':
-    runBehave()
+    run_behave()

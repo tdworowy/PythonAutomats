@@ -6,6 +6,7 @@ _cards = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
 def _next_card():
     return random.choice(_cards)
 
+
 def _hand_total(hand):
     values = [None, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 10]
     value_map = {k: v for k, v in zip(_cards, values)}
@@ -32,4 +33,3 @@ class Dealer():
 
     def get_hand_total(self):
         return _hand_total(self.hand)
-
