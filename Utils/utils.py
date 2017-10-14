@@ -44,7 +44,7 @@ def take_screenshot_(driver, path, file):
     driver.save_screenshot(path + file.replace(' ', '_') + '.png')
 
 
-def mesage_by_time():
+def message_by_time():
     date_today = date.today()
     log("Today is: " + str(calendar.day_name[date_today.weekday()]) + " " + str(date.today()))
     return "Song for " + str(calendar.day_name[date_today.weekday()]) + " " + str(date.today()) + " [AUTO] "

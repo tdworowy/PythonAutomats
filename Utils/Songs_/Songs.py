@@ -1,13 +1,12 @@
 from datetime import date
 
 import requests
+from Utils.utils import log
 from bs4 import BeautifulSoup
 
-from Utils.utils import log
-
 # filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
-filePath = "D:\Google_drive\Songs\songsList.txt"
-lastUpdated = "D:\Google_drive\Songs\LastUpdated.txt"
+FILE_PATH = "D:\Google_drive\Songs\songsList.txt"
+LAST_UPDATED = "D:\Google_drive\Songs\LastUpdated.txt"
 PAGES = 706
 
 
@@ -20,7 +19,7 @@ PAGES = 706
 # ALL
 
 def get_file_path():
-    return filePath
+    return FILE_PATH
 
 
 def get_titles(url):
@@ -34,63 +33,62 @@ def get_titles(url):
 
 
 def clear_titles(titles):
-    cleanTitels = []
+    clean_titles = []
     for text in titles:
         try:
             # print(text)
             if "—" in text:
                 i = text.index("title=\"") + 7
                 temp = text[i:-1].replace("—", "-")
-                cleanTitels.append(temp + "\n")
+                clean_titles.append(temp + "\n")
 
         except Exception as ex:
-            log('EXEPTION in cleanTitels')
+            log('EXCEPTION in clean_titles')
             log(ex)
             continue
-    return cleanTitels
+    return clean_titles
 
 
 def get_songs():
     log("Generate songs list")
     log("Clear existing or create new file")
-    open(filePath, 'w').close()
+    open(FILE_PATH, 'w').close()
     for i in range(1, PAGES):
         titles = get_titles('https://www.last.fm/pl/user/TotaledThomas/library/tracks?page= %s' % str(i))
         to_file(titles)
 
 
-def to_file(titels):
-    with open(filePath, 'a') as f:
-        for text in titels:
+def to_file(titles):
+    with open(FILE_PATH, 'a') as f:
+        for text in titles:
             try:
 
                 f.write(text)
                 f.flush()
             except Exception as ex:
-                log("EXEPTION while generating songs list")
+                log("EXCEPTION while generating songs list")
                 log(str(ex))
                 continue
 
 
 def update_songs():
-    dateToday = date.today()
+    date_today = date.today()
     log("Update songs list")
-    f1 = open(filePath)
-    f2 = open(filePath, 'a')
-    with (open(lastUpdated, 'r')) as f3:
-        if f3.readline() == str(dateToday):
+    f1 = open(FILE_PATH)
+    f2 = open(FILE_PATH, 'a')
+    with (open(LAST_UPDATED, 'r')) as f3:
+        if f3.readline() == str(date_today):
             log("List already updated")
             return 0
     log("Files opened Correctly")
-    oldTitels = [line for line in f1.readlines()]
-    # newTitles = clearTitels(getTitels(10,"http://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_7_DAYS&page="))
+    old_titles = [line for line in f1.readlines()]
     for i in range(1, 60):
         newTitles = get_titles(
             "https://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page=%s" % str(i))
         log("New titles: %s page %s" % (str(newTitles), str(i)))
         for title in newTitles:
             try:
-                if title not in oldTitels:
+                if title not in old_titles:
                     f2.write(title)
                     f2.flush()
             except Exception as ex:
@@ -100,7 +98,7 @@ def update_songs():
     f2.flush()
     f2.close()
     log("Song List updated correctly")
-    open(lastUpdated, 'w').write(str(dateToday))
+    open(LAST_UPDATED, 'w').write(str(date_today))
 
 
 if __name__ == '__main__':

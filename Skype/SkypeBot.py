@@ -9,25 +9,25 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class SkypeBot():
     def initialize_elements(self):
-        self.loginFB = (By.ID, 'loginWithFacebook')
-        self.loginEmail = (By.ID, 'email')
-        self.loginPassword = (By.ID, 'pass')
-        self.loginButton = (By.ID, 'pass')
-        self.inputField = (By.CSS_SELECTOR, "div.input input.inputField.fontSize-h4")
+        self.login_FB = (By.ID, 'loginWithFacebook')
+        self.login_email = (By.ID, 'email')
+        self.login_password = (By.ID, 'pass')
+        self.login_button = (By.ID, 'pass')
+        self.input_field = (By.CSS_SELECTOR, "div.input input.inputField.fontSize-h4")
 
-        self.loginSkype = (By.ID, 'username')
-        self.loginSkypeButton = (By.ID, 'signIn')
-        self.loginSkypePassword = (By.NAME, 'passwd')
+        self.login_skype = (By.ID, 'username')
+        self.login_skype_button = (By.ID, 'signIn')
+        self.login_skype_password = (By.NAME, 'passwd')
 
         self.group = (By.CLASS_NAME, 'list-selectable')
 
-        self.addPersonButton = (By.CSS_SELECTOR, "button[class=\"btn secondary circle stroke\"]")
-        self.addButton = (By.CSS_SELECTOR, "button[aria-label=\"Add\"]")
+        self.add_person_button = (By.CSS_SELECTOR, "button[class=\"btn secondary circle stroke\"]")
+        self.add_button = (By.CSS_SELECTOR, "button[aria-label=\"Add\"]")
 
         self.content = (By.CSS_SELECTOR, "div[class=\"content\"] p")
 
     def set_search_item(self, user):
-        self.searchItem = (By.CSS_SELECTOR, "li[title=\"" + user + "\"")
+        self.search_item = (By.CSS_SELECTOR, "li[title=\"" + user + "\"")
 
     def __init__(self, webdriver):
         self.driver = webdriver
@@ -49,49 +49,49 @@ class SkypeBot():
         self.driver.get('https://web.Skype.com/pl/')
 
     def wait_for_input_field(self):
-        WebDriverWait(self.driver, 40).until(EC.visibility_of_any_elements_located(self.inputField))
+        WebDriverWait(self.driver, 40).until(EC.visibility_of_any_elements_located(self.input_field))
         time.sleep(1)
 
     def login_facebook(self, authentication):
         self.open_skype()
 
-        loginFB = self.driver.find_element(*self.loginFB)
-        loginFB.click()
+        login_FB = self.driver.find_element(*self.login_FB)
+        login_FB.click()
 
-        loginField = self.driver.find_element(*self.loginEmail)
-        loginField.click()
-        loginField.send_keys(authentication[0])
+        login_field = self.driver.find_element(*self.login_email)
+        login_field.click()
+        login_field.send_keys(authentication[0])
 
-        passField = self.driver.find_element(*self.loginPassword)
-        passField.click()
-        passField.send_keys(authentication[1])
+        pass_field = self.driver.find_element(*self.login_password)
+        pass_field.click()
+        pass_field.send_keys(authentication[1])
 
-        loginButton = self.driver.find_element(*self.loginButton)
-        loginButton.click()
+        login_button = self.driver.find_element(*self.login_button)
+        login_button.click()
         self.wait_for_input_field()
 
     def login(self, authentication):
         self.open_skype()
-        loginField = self.driver.find_element(*self.loginSkype)
-        loginField.click()
-        loginField.send_keys(authentication[0])
+        login_field = self.driver.find_element(*self.login_skype)
+        login_field.click()
+        login_field.send_keys(authentication[0])
 
-        loginButton = self.driver.find_element(*self.loginSkypeButton)
-        loginButton.click()
+        login_button = self.driver.find_element(*self.login_skype_button)
+        login_button.click()
 
-        passField = self.driver.find_element(*self.loginSkypePassword)
-        passField.click()
-        passField.send_keys(authentication[1])
+        pass_field = self.driver.find_element(*self.login_skype_password)
+        pass_field.click()
+        pass_field.send_keys(authentication[1])
 
         self.send_enter()
         self.wait_for_input_field()
 
     def select(self, name):
-        searchSkype = self.driver.find_element(*self.inputField)
-        searchSkype.click()
+        search_skype = self.driver.find_element(*self.input_field)
+        search_skype.click()
         time.sleep(1)
 
-        searchSkype.send_keys(name)
+        search_skype.send_keys(name)
         time.sleep(1)
         group = self.driver.find_element(*self.group)
         group.click()
@@ -99,24 +99,24 @@ class SkypeBot():
 
     def add_person_button_click(self):
         self.driver.implicitly_wait(5);
-        self.driver.find_element(*self.addPersonButton).click()
+        self.driver.find_element(*self.add_person_button).click()
 
     def add_button_click(self):
-        self.driver.find_element(*self.addButton).click()
+        self.driver.find_element(*self.add_button).click()
 
     def search_item_click(self, user):
         try:
             self.set_search_item(user)
-            self.driver.find_element(*self.searchItem).click()
+            self.driver.find_element(*self.search_item).click()
             self.add_button_click()
         except Exception as ex:
             print(str(ex))
             print(user, " is alredy added")
 
-    def check_content(self, toCheck):  # don't work as should
+    def check_content(self, to_check):  # don't work as should
         try:
             print(self.driver.find_element(*self.content).text)
-            if self.driver.find_element(*self.content).text == toCheck:
+            if self.driver.find_element(*self.content).text == to_check:
                 return True
             else:
                 return False

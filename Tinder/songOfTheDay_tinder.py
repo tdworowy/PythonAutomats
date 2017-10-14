@@ -3,13 +3,13 @@ import random
 import sys
 
 from ChromedriverFolder.driverPath import get_driver_path
-from Facebook.facebookID import getFacebookID
+from Facebook.facebookID import get_facebook_ID
 from Facebook.facebookToken import get_access_token
 from Tinder.TinderApi import TinderMessageBot
 from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exception
 from Utils.utils import log, save_history
-from Youtube.YoutubeBot import get_youtube_URL
+from Youtube.Youtube_Bot import get_youtube_URL
 from selenium import webdriver
 
 
@@ -20,23 +20,23 @@ class SongOfTheDay():
     def log_in(self, login, passw, name):
         token = get_access_token(login, passw)
         self.tm = TinderMessageBot()
-        id = getFacebookID(self.driver, name)
+        id = get_facebook_ID(self.driver, name)
         self.tm.logIn(id, token)
 
-    def sent_song(self, songURL, to):
-        log(songURL)
+    def sent_song(self, song_URL, to):
+        log(song_URL)
         for match in self.tm.get_matches():
             if match.user.name == to:
                 log("Send message to: %s " % match.user.name)
                 match.message("[ Auto song for: %s :D ]" % match.user.name)
-                match.message(songURL)
+                match.message(song_URL)
                 save_history("Song for %s" % match.user.name, "Tinder.txt")
-                save_history(songURL, "Tinder.txt")
+                save_history(song_URL, "Tinder.txt")
 
     def set_up(self):
         update_songs()
-        chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
-        self.driver = webdriver.Chrome(chromeDriverPath)
+        chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+        self.driver = webdriver.Chrome(chrome_driver_path)
 
 
 @log_exception()
@@ -44,14 +44,14 @@ def main(login, password, names):
     song = SongOfTheDay()
     f = open(get_file_path(), 'r')
     log("Get random song")
-    songsList = f.read()
-    songsList = songsList.split("\n")
+    songs_list = f.read()
+    songs_list = songs_list.split("\n")
 
-    ran = random.randrange(len(songsList))
-    songTitle = songsList[ran]
+    ran = random.randrange(len(songs_list))
+    song_title = songs_list[ran]
     song.log_in(login, password, 'tomasz.dworowy')
     for name in names:
-        url = get_youtube_URL(song.driver, songTitle.strip())
+        url = get_youtube_URL(song.driver, song_title.strip())
         song.sent_song(url, name)
 
 
@@ -65,5 +65,5 @@ if __name__ == '__main__':
         passw = sys.argv[2] + " " + sys.argv[3]
 
     # namesList = ['Ilona','Carol']
-    namesList = ['Ilona']
-    main(user, passw, namesList)
+    names = ['Ilona']
+    main(user, passw, names)

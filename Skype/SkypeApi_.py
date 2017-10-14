@@ -22,7 +22,7 @@ class SkypeApi:
     def get_chats(self):
         return self.skype.chats.recent()
 
-    def get_chat_by_topic(self, names):
+    def add_chat_by_topic(self, names):
         self.chats = set()
         for chat in self.skype.chats.recent().values():
             print(chat)
@@ -32,7 +32,7 @@ class SkypeApi:
 
     def set_chats(self, chatsNames):
         if self.chats == None:
-            self.get_chat_by_topic(chatsNames)
+            self.add_chat_by_topic(chatsNames)
         print("Chats in cache: %s" % self.chats)
 
     def sned_message(self, message):
@@ -41,22 +41,22 @@ class SkypeApi:
 
     def get_all_messages(self, name):
         messages = []
-        chat = self.get_chat_by_topic(name)
-        self.__get_all_messages(chat[0], messages)
+        self.add_chat_by_topic(name)
+        self.__get_all_messages(list(self.chats)[0], messages)
         return messages
 
     def __get_all_messages(self, chat, list_):
-        lastLen = 0
+        last_len = 0
         while 1:
             list_.extend(chat.getMsgs())
-            if lastLen == len(list_):
+            if last_len == len(list_):
                 break
             else:
-                lastLen = len(list_)
+                last_len = len(list_)
 
     def add_person(self, chatName, SkypeID):
-        chat = self.get_chat_by_topic(chatName)
-        chat.addMember(SkypeID)
+        self.add_chat_by_topic(chatName)
+        list(self.chats)[0].addMember(SkypeID)
 
     def get_links(self, name):
         links = []

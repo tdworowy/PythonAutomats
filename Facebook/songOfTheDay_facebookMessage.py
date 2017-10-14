@@ -6,8 +6,8 @@ from ChromedriverFolder.driverPath import get_driver_path
 from Facebook.facebookAPI import FaceBookMessageBot
 from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exception
-from Utils.utils import log, mesage_by_time, save_history
-from Youtube.YoutubeBot import get_youtube_URL
+from Utils.utils import log, message_by_time, save_history
+from Youtube.Youtube_Bot import get_youtube_URL
 from fbchat.models import *
 from selenium import webdriver
 
@@ -19,8 +19,8 @@ class SongOfTheDayFace:
     def login_FB(self, login, passw):
         self.faceBot.login(login, passw)
 
-    def sentSong(self, songURLs, THREADID, message=mesage_by_time(), ThreadType=ThreadType.GROUP):
-        log(mesage_by_time())
+    def sentSong(self, songURLs, THREADID, message=message_by_time(), ThreadType=ThreadType.GROUP):
+        log(message_by_time())
 
         for songURL in songURLs:
             log(songURL)

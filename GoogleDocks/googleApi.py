@@ -36,28 +36,28 @@ def get_credentials():
         print('Storing credentials to ' + credential_path)
     return credentials
 
-def readDocument():
+def read_document():
     credentials = get_credentials()
     http = credentials.authorize(httplib2.Http())
-    discoveryUrl = ('https://sheets.googleapis.com/$discovery/rest?'
+    discovery_url = ('https://sheets.googleapis.com/$discovery/rest?'
                     'version=v4')
     service = discovery.build('sheets', 'v4', http=http,
-                              discoveryServiceUrl=discoveryUrl)
+                              discoveryServiceUrl=discovery_url)
 
     spreadsheetId = '1XPWKt_ZjtytJQ48yzIeH5WjAPfrQ4Yuw6T0x8FG62Jw'
     # result = service.spreadsheets().values().get(
     #     spreadsheetId=spreadsheetId, range=rangeName).execute()
-    result = service.
-    values = result.get('values', [])
+    # result = service.
+    # values = result.get('values', [])
+    #
+    # if not values:
+    #     print('No data found.')
+    # else:
+    #     print('Name, Major:')
+    #     for row in values:
+    #         # Print columns A and E, which correspond to indices 0 and 4.
+    #         print('%s, %s' % (row[0], row[4]))
 
-    if not values:
-        print('No data found.')
-    else:
-        print('Name, Major:')
-        for row in values:
-            # Print columns A and E, which correspond to indices 0 and 4.
-            print('%s, %s' % (row[0], row[4]))
 
-
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()

@@ -7,19 +7,17 @@ from selenium import webdriver
 
 @log_exception
 def main(login, password):
-     chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
-     driver = webdriver.Chrome(chromeDriverPath)
-     driver.implicitly_wait(2)
-     skypeBot = SkypeBot(driver)
+    chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+    driver = webdriver.Chrome(chrome_driver_path)
+    driver.implicitly_wait(2)
+    skype_bot = SkypeBot(driver)
 
-     autentycation = [login,password]
-     skypeBot.login(autentycation)
-     skypeBot.select("Echo")
-     skypeBot.select("Szopy Reaktywacja!")
-     skypeBot.send_message_to_selected(characters(10000, 10500))
-
+    authentication = [login, password]
+    skype_bot.login(authentication)
+    skype_bot.select("Echo")
+    skype_bot.select("Szopy Reaktywacja!")
+    skype_bot.send_message_to_selected(characters(10000, 10500))
 
 
 if __name__ == '__main__':
-   main("", "")
-
+    main("", "")

@@ -1,44 +1,37 @@
 import sys
 
-from selenium import webdriver
-from selenium.webdriver import ActionChains
-
 from ChromedriverFolder.driverPath import get_driver_path
 from Skype.SkypeBot import SkypeBot
 from Utils.utils import log
+from selenium import webdriver
+from selenium.webdriver import ActionChains
 
 
 class AddPersonToChat:
-
-
-    def setUp(self):
-        chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
-        self.driver = webdriver.Chrome(chromeDriverPath)
+    def set_up(self):
+        chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+        self.driver = webdriver.Chrome(chrome_driver_path)
         self.driver.implicitly_wait(2)
-        self.skypeBot = SkypeBot(self.driver)
-
+        self.skype_bot = SkypeBot(self.driver)
 
     def __init__(self):
-        self.setUp()
+        self.set_up()
 
-    def login(self,authentication):
-        self.skypeBot.login(authentication)
+    def login(self, authentication):
+        self.skype_bot.login(authentication)
 
-    def addPersonToChat(self,names,chat="Szopy Reaktywacja!"):
-
-        self.skypeBot.select("Echo")
-        self.skypeBot.select(chat)
-        self.skypeBot.add_person_button_click()
+    def add_person_to_chat(self, names, chat="Szopy Reaktywacja!"):
+        self.skype_bot.select("Echo")
+        self.skype_bot.select(chat)
+        self.skype_bot.add_person_button_click()
         actions = ActionChains(self.driver)
         for name in names:
             log("Try add %s to chat %s" % (name, chat))
             actions.send_keys(name)
             actions.perform()
-            self.skypeBot.search_item_click(name)
-            # takeScreenshot_(self.driver,"D:\\","Add_ADAM")
+            self.skype_bot.search_item_click(name)
 
-
-    def tearDown(self):
+    def tear_down(self):
         self.driver.quit()
 
 
@@ -49,11 +42,11 @@ if __name__ == '__main__':
         user = sys.argv[1]
         passw = sys.argv[2]
         ap = AddPersonToChat()
-        ap.login([user,passw])
+        ap.login([user, passw])
         # while(1):
-        ap.addPersonToChat(["Adam Franica"])
+        ap.add_person_to_chat(["Adam Franica"])
     except Exception as ex:
         log(str(ex))
 
     finally:
-        ap.tearDown()
+        ap.tear_down()
