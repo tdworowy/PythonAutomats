@@ -2,65 +2,59 @@ from selenium.webdriver.common.by import By
 
 
 class CalculatorElements:
-
-    def initializeElements(self):
-        self.ScientificCalculatorLink = (By.LINK_TEXT,'Scientific Calculator')
-        self.ScientificCalculator = (By.ID,"sciout")
-        self.CalculatorResult = (By.ID,"sciOutPut")
-        self.PlusButton = (By.CSS_SELECTOR, "span[onclick=\"r('+')\"]")
-        self.ChangeButton = (By.CSS_SELECTOR, "span[onclick=\"r('+/-')\"]")
-        self.EqualButton = (By.CSS_SELECTOR, "span[onclick=\"r('=')\"]")
-        self.NumberButtons = [(By.CSS_SELECTOR, "span[onclick=\"r(%s)\"]" % number) for number in range(0, 10)]
-
-
+    def initialize_elements(self):
+        self.scientific_calculator_link = (By.LINK_TEXT, 'Scientific Calculator')
+        self.scientific_calculator = (By.ID, "sciout")
+        self.calculator_result = (By.ID, "sciOutPut")
+        self.plus_button = (By.CSS_SELECTOR, "span[onclick=\"r('+')\"]")
+        self.change_button = (By.CSS_SELECTOR, "span[onclick=\"r('+/-')\"]")
+        self.equal_button = (By.CSS_SELECTOR, "span[onclick=\"r('=')\"]")
+        self.number_buttons = [(By.CSS_SELECTOR, "span[onclick=\"r(%s)\"]" % number) for number in range(0, 10)]
 
     def __init__(self, driverArg):
         self.driver = driverArg
-        self.initializeElements()
+        self.initialize_elements()
 
-    def openCalculator(self):
-         self.driver.find_element(*self.ScientificCalculatorLink).click()
+    def open_calculator(self):
+        self.driver.find_element(*self.scientific_calculator_link).click()
 
-    def scientificCalculatorCheck(self):
-        return self.driver.find_element(*self.ScientificCalculator).is_displayed()
+    def scientific_calculator_check(self):
+        return self.driver.find_element(*self.scientific_calculator).is_displayed()
 
-    def getCalcResult(self):
-        return self.driver.find_element(*self.CalculatorResult).text
+    def get_calc_result(self):
+        return self.driver.find_element(*self.calculator_result).text
 
-    def numberButtonClick(self, number):
-        self.driver.find_element(*self.NumberButtons[number]).click()
+    def number_button_click(self, number):
+        self.driver.find_element(*self.number_buttons[number]).click()
 
-    def plusButtonClick(self):
-        self.driver.find_element(*self.PlusButton).click()
+    def plus_button_click(self):
+        self.driver.find_element(*self.plus_button).click()
 
-    def changeButtonClick(self):
-        self.driver.find_element(*self.ChangeButton).click()
+    def change_button_click(self):
+        self.driver.find_element(*self.change_button).click()
 
-    def equalButtonClick(self):
-        self.driver.find_element(*self.EqualButton).click()
+    def equal_button_click(self):
+        self.driver.find_element(*self.equal_button).click()
 
     def sum(self, num1, num2):
-        self.numberButtonClick(abs(num1))
-        if num1 < 0: self.changeButtonClick()
+        self.number_button_click(abs(num1))
+        if num1 < 0: self.change_button_click()
 
-        self.plusButtonClick()
+        self.plus_button_click()
 
-        self.numberButtonClick(abs(num2))
-        if num2 < 0: self.changeButtonClick()
-        self.equalButtonClick()
+        self.number_button_click(abs(num2))
+        if num2 < 0: self.change_button_click()
+        self.equal_button_click()
 
+    def big_sum(self, num1, num2):
+        num1_list = list(str(num1))
+        num2_list = list(str(num2))
+        self.click_numbers(num1_list)
+        self.plus_button_click()
+        self.click_numbers(num2_list)
 
-    def bigSum(self, num1, num2):
-        num1List = list(str(num1))
-        num2List = list(str(num2))
-        self.clickNumbers(num1List)
-        self.plusButtonClick()
-        self.clickNumbers(num2List)
+        self.equal_button_click()
 
-        self.equalButtonClick()
-
-    def clickNumbers(self,numList):
-        for n in numList:
-            self.numberButtonClick(int(n))
-
-
+    def click_numbers(self, num_list):
+        for n in num_list:
+            self.number_button_click(int(n))

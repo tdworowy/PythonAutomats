@@ -3,7 +3,7 @@ import os
 from BlogTests.screens.screenPath import getScreenPath
 
 
-def runBehave():
+def run_behave():
     path = os.path.dirname(os.path.abspath(__file__))
     screanPath = getScreenPath()
     partition = "D:"
@@ -13,4 +13,4 @@ def runBehave():
 
 
 if __name__ == '__main__':
-    runBehave()
+    run_behave()
