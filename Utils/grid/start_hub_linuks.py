@@ -4,14 +4,14 @@ seleniumServerPath = "/home/thomas/selenium"
 driverPath = get_driver_path() + '/chromedriver.exe'
 hub = "java -jar selenium-server-standalone-3.3.1.jar -host http://localhost -port 4444 -role hub"
 
-
-hubExecution = "cd "+ seleniumServerPath+ " &&"+hub
+hubExecution = "cd " + seleniumServerPath + " &&" + hub
 
 print(hubExecution)
 
 
-def run(comand):
+def run(command):
     import os
-    os.system(comand)
+    os.system(command)
+
 
 run(hubExecution)

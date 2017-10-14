@@ -83,10 +83,10 @@ def update_songs():
     log("Files opened Correctly")
     old_titles = [line for line in f1.readlines()]
     for i in range(1, 60):
-        newTitles = get_titles(
+        new_titles = get_titles(
             "https://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page=%s" % str(i))
-        log("New titles: %s page %s" % (str(newTitles), str(i)))
-        for title in newTitles:
+        log("New titles: %s page %s" % (str(new_titles), str(i)))
+        for title in new_titles:
             try:
                 if title not in old_titles:
                     f2.write(title)
