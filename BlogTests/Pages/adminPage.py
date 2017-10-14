@@ -3,52 +3,48 @@ from selenium.webdriver.support.select import Select
 
 
 class AdminPage:
+    def initialize_elements(self):
+        self.site_name = (By.LINK_TEXT, 'Django administration')
+        self.add_post_button = (By.CSS_SELECTOR, "tr[class='model-post'] a[class='addlink']")
+        self.title_imput = (By.NAME, 'title')
+        self.body_text_area = (By.NAME, 'body')
+        self.tags_imput = (By.NAME, 'tags')
+        self.author_imput = (By.NAME, 'author')
+        self.save_post_button = (By.NAME, '_save')
+        self.status_select = (By.ID, 'id_status')
 
-    def initializeElements(self):
-        self.siteName = (By.LINK_TEXT, 'Django administration')
-        self.addPostButton = (By.CSS_SELECTOR, "tr[class='model-post'] a[class='addlink']")
-        self.titleImput = (By.NAME, 'title')
-        self.bodyTextArea = (By.NAME, 'body')
-        self.tagsImput = (By.NAME, 'tags')
-        self.authorImput = (By.NAME, 'author')
-        self.savePostButton = (By.NAME, '_save')
-        self.statusSelect = (By.ID,'id_status')
+        self.now = (By.LINK_TEXT, "Now")
 
-        self.now = (By.LINK_TEXT,"Now")
+    def __init__(self, driver_arg):
+        self.initialize_elements()
+        self.driver = driver_arg
 
-    def __init__(self,driverArg):
-        self.initializeElements()
-        self.driver = driverArg
+    def add_post(self, POST_obj):
+        self.driver.find_element(*self.add_post_button).click()
 
-
-    def addPost(self,POSTobj):
-        self.driver.find_element(*self.addPostButton).click()
-
-        title = self.driver.find_element(*self.titleImput)
-        body = self.driver.find_element(*self.bodyTextArea)
-        tags = self.driver.find_element(*self.tagsImput)
-        author = self.driver.find_element(*self.authorImput)
-        statusSelect = self.driver.find_element(*self.statusSelect)
+        title = self.driver.find_element(*self.title_imput)
+        body = self.driver.find_element(*self.body_text_area)
+        tags = self.driver.find_element(*self.tags_imput)
+        author = self.driver.find_element(*self.author_imput)
+        status_select = self.driver.find_element(*self.status_select)
 
         title.click()
-        title.send_keys(POSTobj.title)
+        title.send_keys(POST_obj.title)
 
         body.click()
-        body.send_keys(POSTobj.body)
+        body.send_keys(POST_obj.body)
 
         author.click()
-        author.send_keys(POSTobj.author)
+        author.send_keys(POST_obj.author)
 
         tags.click()
-        tags.send_keys(POSTobj.tags)
-        if POSTobj.publish:
-            select = Select(statusSelect)
+        tags.send_keys(POST_obj.tags)
+        if POST_obj.publish:
+            select = Select(status_select)
             select.select_by_value('published')
 
         self.driver.find_element(*self.now).click()
-        self.driver.find_element(*self.savePostButton).click()
+        self.driver.find_element(*self.save_post_button).click()
 
-    def chakIFPageOpened(self):
-        assert self.driver.find_element(*self.siteName).is_displayed()
-
-
+    def check_if_page_opened(self):
+        assert self.driver.find_element(*self.site_name).is_displayed()

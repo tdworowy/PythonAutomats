@@ -1,19 +1,19 @@
 import time
 
-from BlogTests.Pages.basePage import tearDown
-from BlogTests.screens.screenPath import getScreenPath
+from BlogTests.Pages.basePage import tear_down
+from BlogTests.screens.screenPath import get_screen_path
 from Utils.utils import log, create_dir, take_screenshot
 
 BEHAVE_DEBUG = True
 
 def before_feature(context,feature):
-    context.logFeatureFile = getScreenPath() + "\\Log.txt"
+    context.logFeatureFile = get_screen_path() + "\\Log.txt"
     log("Start Feature : " + feature.name, context.logFeatureFile)
 
 
 def before_scenario(context, scenario):
     context.timeStump = str(time.strftime('%Y-%m-%d %H:%M:%S'))
-    context.screanDirName = getScreenPath()+"\\"+ scenario.name +"_"+ context.timeStump.replace(":","_")
+    context.screanDirName = get_screen_path() + "\\" + scenario.name + "_" + context.timeStump.replace(":", "_")
     create_dir(context, context.screanDirName)
     context.logFile = context.screanDirName+"\\Log.txt"
     log("Scenario started: " + scenario.name,context.logFile)
@@ -26,7 +26,7 @@ def before_step(context, step):
 
 def after_scenario(context, scenario):
     log("Test Finished",context.logFile)
-    tearDown(context)
+    tear_down(context)
 
 def after_step(context, step):
     take_screenshot(context, context.screanDirName + "\\", step.name)

@@ -1,13 +1,14 @@
-from Python_Staff.Modules.importStaff import os
+import os
 
-from BlogTests.screens.screenPath import getScreenPath
+from BlogTests.screens.screenPath import get_screen_path
 
 
-def generateReport():
-    screanPath = getScreenPath()
-    commend = "allure serve %s "% (screanPath)
+def generate_report():
+    screen_path = get_screen_path()
+    commend = "allure serve %s " % screen_path
     print(commend)
     os.system(commend)
 
+
 if __name__ == '__main__':
-    generateReport()
+    generate_report()
