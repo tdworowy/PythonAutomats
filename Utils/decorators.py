@@ -6,8 +6,9 @@ from Utils.utils import log_result, log
 def catch_assertion(f):
     def func(self):
         try:
-            f(self)
+            res = f(self)
             log_result(f.__name__, "Pass")
+            return res
         except AssertionError:
             log_result(f.__name__, "Fail")
             self.fail("fail")
