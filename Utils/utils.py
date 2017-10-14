@@ -3,14 +3,14 @@ import os
 import time
 from datetime import date
 
-historyPath = "D:\Google_drive\Songs\History"
+history_path = "D:\Google_drive\Songs\History"
 
 
 def log(text, path=os.path.dirname(os.path.abspath(__file__)) + "\\log.txt"):
     try:
         text = str(text)
-        timeStump = time.strftime('%Y-%m-%d %H:%M:%S')
-        log = timeStump + " " + text + "\n"
+        time_stump = time.strftime('%Y-%m-%d %H:%M:%S')
+        log = time_stump + " " + text + "\n"
         print(log)
         print(path)
         with open(path, "a") as logFile:
@@ -22,11 +22,11 @@ def log(text, path=os.path.dirname(os.path.abspath(__file__)) + "\\log.txt"):
 
 
 def save_history(text, file):
-    log(text, historyPath + file)
+    log(text, history_path + file)
 
 
-def log_result(TestName, Result):
-    message = "Name: {x} Result {y}".format(x=TestName, y=Result)
+def log_result(test_name, result):
+    message = "Name: {x} Result {y}".format(x=test_name, y=result)
     print(message)
     log(message, "TestsResultLog.txt")
 
@@ -45,9 +45,9 @@ def take_screenshot_(driver, path, file):
 
 
 def mesage_by_time():
-    dateToday = date.today()
-    log("Today is: " + str(calendar.day_name[dateToday.weekday()]) + " " + str(date.today()))
-    return "Song for " + str(calendar.day_name[dateToday.weekday()]) + " " + str(date.today()) + " [AUTO] "
+    date_today = date.today()
+    log("Today is: " + str(calendar.day_name[date_today.weekday()]) + " " + str(date.today()))
+    return "Song for " + str(calendar.day_name[date_today.weekday()]) + " " + str(date.today()) + " [AUTO] "
 
 
 def characters(frm, to):
@@ -62,9 +62,9 @@ def create_file_if_not_exist(path):
 def write_to_file_no_duplicates(path, elements):
     with (open(path, 'a')) as f1, (open(path, 'r')) as f2:
         for ele in elements:
-            inFile = [line.strip() for line in f2.readlines()]
+            in_file = [line.strip() for line in f2.readlines()]
             # print("if %s not in %s " %(ele,list))
-            if ele not in inFile:
+            if ele not in in_file:
                 f1.write(ele + '\n')
             f2.seek(0)
 
