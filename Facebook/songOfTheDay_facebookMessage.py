@@ -2,15 +2,14 @@ import os
 import random
 import sys
 
-from fbchat.models import *
-from selenium import webdriver
-
 from ChromedriverFolder.driverPath import get_driver_path
 from Facebook.facebookAPI import FaceBookMessageBot
 from Utils.Songs_.Songs import update_songs, get_file_path
-from Utils.decorators import log_exeption
+from Utils.decorators import log_exception
 from Utils.utils import log, mesage_by_time, save_history
 from Youtube.YoutubeBot import get_youtube_URL
+from fbchat.models import *
+from selenium import webdriver
 
 
 class SongOfTheDayFace:
@@ -42,7 +41,7 @@ class SongOfTheDayFace:
         self.faceBot.logout()
 
 
-@log_exeption()
+@log_exception()
 def main(login, password, threadid):
     update_songs()
     song = SongOfTheDayFace()

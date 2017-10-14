@@ -2,14 +2,13 @@
 import random
 import sys
 
-from selenium import webdriver
-
 from ChromedriverFolder.driverPath import get_driver_path
 from Facebook.facebookPost import FaceBookPost
 from Utils.Songs_.Songs import update_songs, get_file_path
-from Utils.decorators import log_exeption
+from Utils.decorators import log_exception
 from Utils.utils import log
 from Youtube.YoutubeBot import get_youtube_URL
+from selenium import webdriver
 
 
 class songOfTheDay:
@@ -40,7 +39,7 @@ class songOfTheDay:
     def tearDown(self):
         self.driver.quit()
 
-@log_exeption
+@log_exception
 def main(pageID, appid, app_secred):
         song = songOfTheDay(pageID, appid, app_secred)
         f = open(get_file_path(), 'r')

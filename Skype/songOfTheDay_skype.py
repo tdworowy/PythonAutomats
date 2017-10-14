@@ -2,15 +2,14 @@ import os
 import random
 import sys
 
-from selenium import webdriver
-
 from ChromedriverFolder.driverPath import get_driver_path
 from Skype.SkypeApi_ import SkypeApi
 from Skype.SkypeBot import SkypeBot
 from Utils.Songs_.Songs import update_songs, get_file_path
-from Utils.decorators import log_exeption
+from Utils.decorators import log_exception
 from Utils.utils import log, mesage_by_time, save_history
 from Youtube.YoutubeBot import get_youtube_URL
+from selenium import webdriver
 
 
 class SongOfTheDay():
@@ -51,7 +50,7 @@ class SongOfTheDay():
         self.driver.quit()
 
 
-@log_exeption(False)
+@log_exception(False)
 def main(login, password):
     authentication = [login, password]
     song = SongOfTheDay(authentication)

@@ -15,15 +15,16 @@ def catch_assertion(f):
     return func
 
 
-def log_exeption(rize=True):
-    def _log_exeption(f):
+def log_exception(rize=True):
+    def _log_exception(f):
         def func(*args):
             try:
-                f(*args)
+                return f(*args)
             except Exception  as err:
                 log(str(err))
                 log(sys.exc_info())
                 if rize: raise RuntimeError
 
         return func
-    return _log_exeption
+
+    return _log_exception
