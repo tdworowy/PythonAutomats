@@ -12,48 +12,48 @@ from Youtube.Youtube_Bot import get_youtube_URL
 from fbchat import ThreadType
 
 
-def checkQuess(path):
+def check_queue(path):
     files = [f for f in listdir(path) if isfile(join(path, f))]
     ids = []
     for file in files:
-        fileName = os.path.splitext(file)[0]
-        checked = path + "checked\\" + fileName + "_checked.txt"
+        file_name = os.path.splitext(file)[0]
+        checked = path + "checked\\" + file_name + "_checked.txt"
         create_file_if_not_exist(checked)
         f2 = open(checked, 'r+')
         with open(path + "\\" + file, 'r') as f:
             for line in f.readlines():
                 line_found = any(line in line2 for line2 in f2)
                 if not line_found:
-                    print(fileName)
-                    ids.append(fileName)
+                    print(file_name)
+                    ids.append(file_name)
                     f2.write(line + '\n')
     return ids
 
 
-def main(song, THREADID, threadType):
+def main(song_, thread_id, thread_type):
     f = open(get_file_path(), 'r')
     log("Get random song")
-    songsList = f.read()
-    songsList = songsList.split("\n")
-    ran = random.randrange(len(songsList))
-    songTitle = songsList[ran]
-    log(songTitle)
-    save_history(songTitle, "FacebookMessage.txt")
-    song.set_up()
-    url = get_youtube_URL(song.driver, songTitle.strip())
-    song.sent_song([url], THREADID, "SONG ON DEMAND", threadType)
-    song.tear_down()
+    songs = f.read()
+    songs = songs.split("\n")
+    ran = random.randrange(len(songs))
+    song_title = songs[ran]
+    log(song_title)
+    save_history(song_title, "FacebookMessage.txt")
+    song_.set_up()
+    url = get_youtube_URL(song_.driver, song_title.strip())
+    song_.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
+    song_.tear_down()
 
 
-def thread(song, path, threadType):
-    threads = checkQuess(path)
+def thread(song_, path, thread_type):
+    threads = check_queue(path)
     for thred in threads:
-        main(song, thred, threadType)
+        main(song_, thred, thread_type)
 
 
 if __name__ == '__main__':
-    path1 = 'D:\Google_drive\QueesGroup\\'
-    path2 = 'D:\Google_drive\QueesUser\\'
+    path1 = 'D:\Google_drive\QueueGroup\\'
+    path2 = 'D:\Google_drive\QueueUser\\'
 
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]

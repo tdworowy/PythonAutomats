@@ -21,8 +21,8 @@ class FaceBookMessageBot:
         self.client.logout()
 
     @staticmethod
-    def get_aut_token(appid, app_secred):  # not log user token
-        return utils.get_application_access_token(appid, app_secred)
+    def get_aut_token(app_id, app_secred):  # not log user token
+        return utils.get_application_access_token(app_id, app_secred)
 
-    def get_userID(self):
+    def get_user_id(self):
         return self.client.client_id

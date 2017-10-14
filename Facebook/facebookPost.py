@@ -1,21 +1,20 @@
 import facebook
-from facepy import utils
-
 from Utils.utils import log
+from facepy import utils
 
 
 class FaceBookPost:
-    def getAutToken(self,appid, app_secred):
-        return utils.get_application_access_token(appid, app_secred)
+    @staticmethod
+    def get_aut_token(app_id, app_secred):
+        return utils.get_application_access_token(app_id, app_secred)
 
-
-    def __init__(self,pageID, appid, app_secred):
+    def __init__(self, page_id, app_id, app_secred):
         self.cfg = {
-            "page_id": pageID,
-            "access_token":"TODO"
+            "page_id": page_id,
+            "access_token": "TODO"
         }
 
-    def facebookPost(self,message):
+    def facebook_post(self, message):
         api = self.get_api()
         log("Post message %s" % message)
         status = api.put_wall_post(message)

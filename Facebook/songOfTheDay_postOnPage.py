@@ -1,4 +1,3 @@
-
 import random
 import sys
 
@@ -11,53 +10,44 @@ from Youtube.Youtube_Bot import get_youtube_URL
 from selenium import webdriver
 
 
-class songOfTheDay:
-    def __init__(self,pageID, appid, app_secred):
-        self.setUp(pageID, appid, app_secred)
+class SongOfTheDay:
+    def __init__(self, page_id, app_id, app_secred):
+        self.set_up(page_id, app_id, app_secred)
 
-
-
-
-    def sentSong(self,songURLs):
-
-        # log(mesageByTime())
-
-        for songURL in songURLs:
+    def sent_song(self, songs_urls):
+        for songURL in songs_urls:
             log(songURL)
-            self.faceBot.facebookPost(songURL)
+            self.face_bot.facebook_post(songURL)
 
-
-    def setUp(self,pageID, appid, app_secred):
+    def set_up(self, page_id, app_id, app_secred):
         update_songs()
-        chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
-        self.driver = webdriver.Chrome(chromeDriverPath)
+        chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+        self.driver = webdriver.Chrome(chrome_driver_path)
         self.driver.implicitly_wait(2)
-        self.faceBot = FaceBookPost(pageID, appid, app_secred)
+        self.face_bot = FaceBookPost(page_id, app_id, app_secred)
 
-
-
-    def tearDown(self):
+    def tear_down(self):
         self.driver.quit()
 
-@log_exception
-def main(pageID, appid, app_secred):
-        song = songOfTheDay(pageID, appid, app_secred)
-        f = open(get_file_path(), 'r')
-        log("Get random song")
-        songsList = f.read()
-        songsList = songsList.split("\n")
 
-        ran = random.randrange(len(songsList))
-        log(songsList[ran])
-        url = get_youtube_URL(song.driver, songsList[ran].strip())
-        song.sentSong([url])
-        song.tearDown()
+@log_exception
+def main(page_id, app_id, app_secred):
+    song = SongOfTheDay(page_id, app_id, app_secred)
+    f = open(get_file_path(), 'r')
+    log("Get random song")
+    songs = f.read()
+    songs = songs.split("\n")
+
+    ran = random.randrange(len(songs))
+    log(songs[ran])
+    url = get_youtube_URL(song.driver, songs[ran].strip())
+    song.sent_song([url])
+    song.tear_down()
 
 
 if __name__ == '__main__':
+    page_id = sys.argv[1]
+    app_id = sys.argv[2]
+    app_secred = sys.argv[3]
 
-       pageid = sys.argv[1]
-       appid = sys.argv[2]
-       app_secred = sys.argv[3]
-
-       main(pageid, appid,app_secred)
+    main(page_id, app_id, app_secred)

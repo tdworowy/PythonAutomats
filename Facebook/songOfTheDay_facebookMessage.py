@@ -14,47 +14,46 @@ from selenium import webdriver
 
 class SongOfTheDayFace:
     def __init__(self):
-        self.faceBot = FaceBookMessageBot()
+        self.face_bot = FaceBookMessageBot()
 
     def login_FB(self, login, passw):
-        self.faceBot.login(login, passw)
+        self.face_bot.login(login, passw)
 
-    def sentSong(self, songURLs, THREADID, message=message_by_time(), ThreadType=ThreadType.GROUP):
+    def sent_song(self, songs_urls, thread_id, message=message_by_time(), thread_type=ThreadType.GROUP):
         log(message_by_time())
 
-        for songURL in songURLs:
+        for songURL in songs_urls:
             log(songURL)
-            self.faceBot.send_message(message, THREADID, ThreadType)
-            self.faceBot.send_message(songURL, THREADID, ThreadType)
+            self.face_bot.send_message(message, thread_id, thread_type)
+            self.face_bot.send_message(songURL, thread_id, thread_type)
             save_history(songURL, "FacebookMessage.txt")
 
-    def setUp(self):
-        chromeDriverPath = get_driver_path() + '\\chromedriver.exe'
-        self.driver = webdriver.Chrome(chromeDriverPath)
-        # self.driver = webdriver.PhantomJS(getPhantomPath()+'\\Phantomjs.exe')
+    def set_up(self):
+        chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+        self.driver = webdriver.Chrome(chrome_driver_path)
         self.driver.implicitly_wait(2)
 
     def tear_down(self):
         self.driver.quit()
 
     def logout(self):
-        self.faceBot.logout()
+        self.face_bot.logout()
 
 
 @log_exception()
-def main(login, password, threadid):
+def main(login, password, thread_id):
     update_songs()
     song = SongOfTheDayFace()
-    song.setUp()
+    song.set_up()
     f = open(get_file_path(), 'r')
     log("Get random song")
-    songsList = f.read()
-    songsList = songsList.split("\n")
-    ran = random.randrange(len(songsList))
-    songTitle = songsList[ran]
-    url = get_youtube_URL(song.driver, songTitle.strip())
+    songs = f.read()
+    songs = songs.split("\n")
+    ran = random.randrange(len(songs))
+    song_title = songs[ran]
+    url = get_youtube_URL(song.driver, song_title.strip())
     song.login_FB(login, password)
-    song.sentSong([url], threadid)
+    song.sent_song([url], thread_id)
     song.tear_down()
     song.logout()
 
