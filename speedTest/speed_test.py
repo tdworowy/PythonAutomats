@@ -21,4 +21,4 @@ def test_speed(log_=True):
 if __name__ == "__main__":
     with open("D:\Google_drive\statistics\speed.csv",'a') as f:
         time_stump = time.strftime('%Y-%m-%d %H:%M:%S')
-        f.write("%s, %s\n" % (time_stump, test_speed()))
+        f.write("%s, %s\n" % (time_stump, str(test_speed())))
