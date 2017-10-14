@@ -10,9 +10,9 @@ def set_up(context, server):
     context.driver = webdriver.Chrome(chrome_driver_path)
     context.driver.get(server)
     context.driver.implicitly_wait(1)
-    context.loginPage = LoginPage(context.driver)
-    context.adminPage = AdminPage(context.driver)
-    context.blogPage = BlogPage(context.driver)
+    context.login_page = LoginPage(context.driver)
+    context.admin_page = AdminPage(context.driver)
+    context.blog_page = BlogPage(context.driver)
 
 
 def tear_down(context):
