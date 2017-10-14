@@ -1,7 +1,7 @@
 import os
 import sys
 
-from ChromedriverFolder.driverPath import get_driver_path
+from Chrome_Driver_Folder.driver_path import get_driver_path
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By

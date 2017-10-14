@@ -1,7 +1,7 @@
 import sys
 
-from ChromedriverFolder.driverPath import get_driver_path
-from Skype.SkypeBot import SkypeBot
+from Chrome_Driver_Folder.driver_path import get_driver_path
+from Skype.skype_bot import SkypeBot
 from Utils.utils import log
 from selenium import webdriver
 from selenium.webdriver import ActionChains

@@ -1,7 +1,7 @@
 import sys
 import time
 
-from Facebook.facebookAPI import FaceBookMessageBot
+from Facebook.facebook_apiI import FaceBookMessageBot
 from Utils.utils import create_file_if_not_exist
 
 

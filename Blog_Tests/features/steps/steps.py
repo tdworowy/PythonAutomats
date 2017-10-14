@@ -1,5 +1,5 @@
-from BlogTests.Pages.basePage import set_up
-from BlogTests.dataModels.PostModel import POST
+from Blog_Tests.Pages.base_page import set_up
+from Blog_Tests.dataModels.postmodel import POST
 from behave import *
 
 loginPage = "http://localhost:8081/admin/login/"

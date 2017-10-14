@@ -1,7 +1,7 @@
-from BlogTests.Pages.adminPage import AdminPage
-from BlogTests.Pages.blogPage import BlogPage
-from BlogTests.Pages.loginPage import LoginPage
-from ChromedriverFolder.driverPath import get_driver_path
+from Blog_Tests.Pages.admin_page import AdminPage
+from Blog_Tests.Pages.blog_page import BlogPage
+from Blog_Tests.Pages.login_page import LoginPage
+from Chrome_Driver_Folder.driver_path import get_driver_path
 from selenium import webdriver
 
 

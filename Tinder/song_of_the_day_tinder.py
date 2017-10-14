@@ -2,10 +2,10 @@ import os
 import random
 import sys
 
-from ChromedriverFolder.driverPath import get_driver_path
-from Facebook.facebookID import get_facebook_ID
-from Facebook.facebookToken import get_access_token
-from Tinder.TinderApi import TinderMessageBot
+from Chrome_Driver_Folder.driver_path import get_driver_path
+from Facebook.facebook_id import get_facebook_ID
+from Facebook.facebook_token import get_access_token
+from Tinder.tinder_Api import TinderMessageBot
 from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exception
 from Utils.utils import log, save_history

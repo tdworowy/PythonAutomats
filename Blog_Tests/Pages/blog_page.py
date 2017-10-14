@@ -1,4 +1,4 @@
-from BlogTests.Pages.postPage import POSTPage
+from Blog_Tests.Pages.post_page import POSTPage
 from selenium.webdriver.common.by import By
 
 

@@ -1,7 +1,7 @@
 import os
 import time
 
-from ChromedriverFolder.driverPath import get_driver_path
+from Chrome_Driver_Folder.driver_path import get_driver_path
 from Utils.enum_ import Enum
 from selenium import webdriver
 

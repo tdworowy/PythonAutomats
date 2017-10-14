@@ -1,6 +1,6 @@
 import _thread
 
-from ChromedriverFolder.driverPath import get_driver_path
+from Chrome_Driver_Folder.driver_path import get_driver_path
 
 seleniumServerPath = "D:\selenium"
 driverPath = get_driver_path() + '\\chromedriver.exe'

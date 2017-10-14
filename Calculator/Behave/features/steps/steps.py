@@ -1,7 +1,7 @@
 import time
 
 from Calculator.Elements.Calculator import CalculatorElements
-from ChromedriverFolder.driverPath import get_driver_path
+from Chrome_Driver_Folder.driver_path import get_driver_path
 from Utils.utils import log
 from behave import *
 from selenium import webdriver

@@ -1,7 +1,7 @@
 import unittest
 
 from Calculator.Elements.Calculator import CalculatorElements
-from ChromedriverFolder.driverPath import get_driver_path
+from Chrome_Driver_Folder.driver_path import get_driver_path
 from selenium import webdriver
 from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.remote.webdriver import WebDriver

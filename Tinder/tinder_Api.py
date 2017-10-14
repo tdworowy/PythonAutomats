@@ -1,7 +1,7 @@
 import pynder
-from ChromedriverFolder.driverPath import get_driver_path
-from Facebook.facebookID import get_facebook_ID
-from Facebook.facebookToken import get_access_token
+from Chrome_Driver_Folder.driver_path import get_driver_path
+from Facebook.facebook_id import get_facebook_ID
+from Facebook.facebook_token import get_access_token
 from selenium import webdriver
 
 

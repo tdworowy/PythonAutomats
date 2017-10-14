@@ -2,7 +2,7 @@ import os
 import sys
 
 from Utils.utils import get_milis
-from projectPath import get_project_path
+from project_path import get_project_path
 
 
 def runpy_lint(module):

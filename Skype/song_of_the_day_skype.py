@@ -2,9 +2,9 @@ import os
 import random
 import sys
 
-from ChromedriverFolder.driverPath import get_driver_path
-from Skype.SkypeApi_ import SkypeApi
-from Skype.SkypeBot import SkypeBot
+from Chrome_Driver_Folder.driver_path import get_driver_path
+from Skype.skype_api_ import SkypeApi
+from Skype.skype_bot import SkypeBot
 from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exception
 from Utils.utils import log, message_by_time, save_history
