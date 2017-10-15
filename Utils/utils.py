@@ -13,8 +13,9 @@ def log(text, path=os.path.dirname(os.path.abspath(__file__)) + "\\log.txt"):
         log = time_stump + " " + text + "\n"
         print(log)
         print(path)
-        with open(path, "a") as logFile:
-            logFile.write(log)
+        create_file_if_not_exist(path)
+        with open(path, "a") as log_file:
+            log_file.write(log)
     except Exception as ex:
         print("ERROR while logging")
         print(str(ex))

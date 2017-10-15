@@ -14,7 +14,7 @@ def before_feature(context, feature):
 
 def before_scenario(context, scenario):
     context.time_stump = str(time.strftime('%Y-%m-%d %H:%M:%S'))
-    context.screen_dir_name = get_screen_path() + "\\" + scenario.name + "_" + context.time_stump.replace(":", "_")
+    context.screen_dir_name = get_screen_path() + "\\" + scenario.name.replace(" ","_") + "_" + context.time_stump.replace(":", "_")
     create_dir(context, context.screen_dir_name)
     context.log_file = context.screen_dir_name + "\\%s_Log_%s.txt" % (scenario.name.replace(" ","_"), context.time_stump)
     log("Scenario started: " + scenario.name, context.log_file)
