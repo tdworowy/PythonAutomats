@@ -8,36 +8,36 @@ BEHAVE_DEBUG = True
 
 
 def before_feature(context, feature):
-    context.logFeatureFile = get_screen_path() + "\\Log.txt"
-    log("Start Feature : " + feature.name, context.logFeatureFile)
+    context.log_feature_file = get_screen_path() + "\\{s}_Log.txt" % feature.name
+    log("Start Feature : " + feature.name, context.log_feature_file)
 
 
 def before_scenario(context, scenario):
     context.time_stump = str(time.strftime('%Y-%m-%d %H:%M:%S'))
     context.screen_dir_name = get_screen_path() + "\\" + scenario.name + "_" + context.time_stump.replace(":", "_")
     create_dir(context, context.screen_dir_name)
-    context.log_file = context.screen_dir_name + "\\{%s}Log{%s}.txt" % (scenario.name,context.time_stump)
+    context.log_file = context.screen_dir_name + "\\{%s}_Log_{%s}.txt" % (scenario.name, context.time_stump)
     log("Scenario started: " + scenario.name, context.log_file)
 
 
 def before_step(context, step):
-    log("Step: " + step.name, context.logFile)
+    log("Step: " + step.name, context.log_file)
 
 
 def after_scenario(context, scenario):
-    log("Test Finished", context.logFile)
+    log("Test Finished", context.log_file)
     tear_down(context)
 
 
 def after_step(context, step):
-    take_screenshot(context, context.screanDirName + "\\", step.name)
+    take_screenshot(context, context.screen_dir_name + "\\", step.name)
     if BEHAVE_DEBUG and step.status == "failed":
         import ipdb
         log("TEST FAIL")
-        log(str(ipdb.post_mortem(step.exc_traceback)), context.logFile)
+        log(str(ipdb.post_mortem(step.exc_traceback)), context.log_file)
 
 
 def after_feature(context, feature):
-    log("Feature Finished: " + feature.name, context.logFeatureFile)
-    log("Skip reason: " + str(feature.skip_reason), context.logFeatureFile)
-    log("Status: " + feature.status, context.logFeatureFile)
+    log("Feature Finished: " + feature.name, context.log_feature_file)
+    log("Skip reason: " + str(feature.skip_reason), context.log_feature_file)
+    log("Status: " + feature.status, context.log_feature_file)

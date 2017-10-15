@@ -3,11 +3,11 @@ from behave import *
 from Blog_Tests.Pages.base_page import set_up
 from Blog_Tests.dataModels.postmodel import POST
 
-loginPage = "http://localhost:8082/admin/login/"
-blogPage = "http://localhost:8082/blog/"
+LOGIN_PAGE_URL = "http://localhost:8082/admin/login/"
+BLOG_PAGE_URL = "http://localhost:8082/blog/"
 
-adminLogin = "admin"
-adminPass = "AdminPass123"
+ADMIN_LOGIN = "admin"
+ADMIN_PASSWORD = "AdminPass123"
 
 
 def get_url(context):
@@ -16,12 +16,12 @@ def get_url(context):
 
 @given("open login page")
 def open_login_page(context):
-    set_up(context, loginPage)
+    set_up(context, LOGIN_PAGE_URL)
 
 
 @given("open blog page")
 def open_blog_page(context):
-    set_up(context, blogPage)
+    set_up(context, BLOG_PAGE_URL)
 
 
 @then('login page is opened')
@@ -31,7 +31,7 @@ def check_login_page(context):
 
 @when('login admin')
 def login_admin(context):
-    context.login_page.login(adminLogin, adminPass)
+    context.login_page.login(ADMIN_LOGIN, ADMIN_PASSWORD)
 
 
 @then('admin page is opened')
