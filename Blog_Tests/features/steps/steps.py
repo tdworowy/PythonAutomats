@@ -1,6 +1,7 @@
+from behave import *
+
 from Blog_Tests.Pages.base_page import set_up
 from Blog_Tests.dataModels.postmodel import POST
-from behave import *
 
 loginPage = "http://localhost:8081/admin/login/"
 blogPage = "http://localhost:8081/blog/"
@@ -25,17 +26,17 @@ def open_blog_page(context):
 
 @then('login page is opened')
 def check_login_page(context):
-    context.loginPage.check_if_login_page_is_open()
+    context.login_page.check_if_login_page_is_open()
 
 
 @when('login admin')
 def login_admin(context):
-    context.loginPage.login(adminLogin, adminPass)
+    context.login_page.login(adminLogin, adminPass)
 
 
 @then('admin page is opened')
 def check_admin_page(context):
-    context.adminPage.check_if_page_opened()
+    context.admin_page.check_if_page_opened()
 
 
 @when('add Post {title} {body}')
@@ -44,14 +45,14 @@ def add_post(context, title, body):
     ms = time.time() * 1000.0
 
     context.post = POST(title + "_" + str(ms), body, "TestTag", "1", True)  # 1 means admin
-    context.adminPage.add_post(context.post)
+    context.admin_page.add_post(context.post)
 
 
 @when('open Last post')
 def open_last_post(context):
-    context.postPage = context.blogPage.open_latest_post()
+    context.post_page = context.blog_page.open_latest_post()
 
 
 @then('check post')
 def check_post(context):
-    context.postPage.check_post(context.post)
+    context.post_page.check_post(context.post)
