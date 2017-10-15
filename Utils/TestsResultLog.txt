@@ -1,8 +1,0 @@
-2017-05-07 16:35:36 Name: testOpenScientificCalculator Result Pass
-2017-05-07 16:35:55 Name: testScientificCalculatorSum1 Result Pass
-2017-05-07 16:36:09 Name: testScientificCalculatorSum2 Result Pass
-2017-05-07 16:36:23 Name: testScientificCalculatorSum3 Result Pass
-2017-05-07 16:39:52 Name: testOpenScientificCalculator Result Pass
-2017-05-07 16:40:10 Name: testScientificCalculatorSum1 Result Pass
-2017-05-07 16:40:24 Name: testScientificCalculatorSum2 Result Pass
-2017-05-07 16:40:39 Name: testScientificCalculatorSum3 Result Pass
