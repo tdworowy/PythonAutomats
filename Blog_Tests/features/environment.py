@@ -13,11 +13,11 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
+    context.scenario_name = scenario.name.replace(" ", "_")
     context.time_stump = str(time.strftime('%Y-%m-%d_%H_%M_%S'))
-    # context.time_stump = str(time.strftime('%Y-%m-%d %H:%M:%S')).replace(":", "_").replace(" ", "_")
-    context.screen_dir_name = get_screen_path() + "\\" + scenario.name.replace(" ","_") + "_" + context.time_stump
+    context.screen_dir_name = get_screen_path() + "\\" + context.scenario_name + "_" + context.time_stump
     create_dir(context, context.screen_dir_name)
-    context.log_file = context.screen_dir_name + "\\%s_Log_%s.txt" % (scenario.name.replace(" ","_"), context.time_stump)
+    context.log_file = context.screen_dir_name + "\\%s_Log_%s.txt" % (context.scenario_name, context.time_stump)
     log("Scenario started: " + scenario.name, context.log_file)
 
 
@@ -31,7 +31,7 @@ def after_scenario(context, scenario):
 
 
 def after_step(context, step):
-    take_screenshot(context, context.screen_dir_name + "\\", step.name)
+    take_screenshot(context, context.screen_dir_name + "\\", "%s_%s" % (context.scenario_name, step.name))
     if BEHAVE_DEBUG and step.status == "failed":
         import ipdb
         log("TEST FAIL")
