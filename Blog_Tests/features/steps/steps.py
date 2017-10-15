@@ -3,8 +3,8 @@ from behave import *
 from Blog_Tests.Pages.base_page import set_up
 from Blog_Tests.dataModels.postmodel import POST
 
-loginPage = "http://localhost:8081/admin/login/"
-blogPage = "http://localhost:8081/blog/"
+loginPage = "http://localhost:8082/admin/login/"
+blogPage = "http://localhost:8082/blog/"
 
 adminLogin = "admin"
 adminPass = "AdminPass123"
