@@ -1,8 +1,9 @@
 from datetime import date
 
 import requests
-from Utils.utils import log
 from bs4 import BeautifulSoup
+
+from Utils.utils import log
 
 # filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
 FILE_PATH = "D:\Google_drive\Songs\songsList.txt"
@@ -59,12 +60,14 @@ def get_songs():
 
 
 def to_file(titles):
-    with open(FILE_PATH, 'a') as f:
+    with open(FILE_PATH, 'a') as f, open('songs.txt', 'a') as f2:
         for text in titles:
             try:
 
                 f.write(text)
                 f.flush()
+                f2.write(text)
+                f2.flush()
             except Exception as ex:
                 log("EXCEPTION while generating songs list")
                 log(str(ex))
