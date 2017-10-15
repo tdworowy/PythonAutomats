@@ -8,7 +8,7 @@ BEHAVE_DEBUG = True
 
 
 def before_feature(context, feature):
-    context.log_feature_file = get_screen_path() + "\\{s}_Log.txt" % feature.name
+    context.log_feature_file = get_screen_path() + "\\{%s}_Log.txt" % feature.name
     log("Start Feature : " + feature.name, context.log_feature_file)
 
 
