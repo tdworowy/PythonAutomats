@@ -29,7 +29,7 @@ class PortScanner:
             results = map(self.scan_host, [port for port in range(min, max + 1)])
             opened_ports = [x[0] for x in list(results) if x[1] == 0]
             print("Scan Done...")
-            f1.write(opened_ports)
+            f1.write(str(opened_ports).replace("[", "").replace("]", ""))
 
 
 if __name__ == '__main__':
@@ -42,4 +42,4 @@ if __name__ == '__main__':
     while _thread._count() > 0:
         time.sleep(60)
 
-    # open_ports = ps.scan_ports(0, 65534)
+        # open_ports = ps.scan_ports(0, 65534)
