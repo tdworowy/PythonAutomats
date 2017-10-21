@@ -1,6 +1,7 @@
 import _thread
 import os
 import sys
+import time;
 from socket import socket, AF_INET, SOCK_STREAM, gethostbyname
 
 from Utils.decorators import log_exception
@@ -39,5 +40,6 @@ if __name__ == '__main__':
     _thread.start_new_thread(ps.scan_ports, (49150, 55534))
     _thread.start_new_thread(ps.scan_ports, (55534, 65534))
     while _thread._count() > 0:
-        pass
+        time.sleep(60)
+
     # open_ports = ps.scan_ports(0, 65534)
