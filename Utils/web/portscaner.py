@@ -21,7 +21,7 @@ class PortScanner:
     @log_exception()
     def scan_ports(self, min, max):
         path = os.path.dirname(__file__)
-        with open("%s\\results\Ports_%s.txt" %(path,max),"w") as f1:
+        with open("%s\\results\Ports_%s.txt" % (path, max), "w") as f1:
             host_ip = gethostbyname(self.host)
             print("Host: %s IP: %s" % (self.host, host_ip))
             print("Scan in progress...")
@@ -31,7 +31,6 @@ class PortScanner:
             f1.write(opened_ports)
 
 
-
 if __name__ == '__main__':
     host_ = sys.argv[1]
     ps = PortScanner(host_)
@@ -39,5 +38,6 @@ if __name__ == '__main__':
     _thread.start_new_thread(ps.scan_ports, (16384, 49150))
     _thread.start_new_thread(ps.scan_ports, (49150, 55534))
     _thread.start_new_thread(ps.scan_ports, (55534, 65534))
+    while _thread._count() > 0:
+        pass
     # open_ports = ps.scan_ports(0, 65534)
-
