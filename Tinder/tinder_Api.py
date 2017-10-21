@@ -61,7 +61,7 @@ def like_FB(tm, friendName):
 
 def get_near_data(tm):
     return ['Name: %s \nage: %s\ndistance: %s\nbio: %s\nphotos: %s' % (
-    near.name, near.age, near.distance_km, near.bio, near.photos_obj) for near in tm.get_nerby()]
+        near.name, near.age, near.distance_km, near.bio, near.photos_obj) for near in tm.get_nerby()]
 
 
 if __name__ == "__main__":
