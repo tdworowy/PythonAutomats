@@ -1,5 +1,5 @@
 import sys
-from socket import *
+from socket import socket, AF_INET, SOCK_STREAM, gethostbyname
 
 from Utils.decorators import log_exception
 from Utils.utils import log
@@ -27,6 +27,7 @@ class PortScanner:
 
 
 if __name__ == '__main__':
-    ps = PortScanner(sys.argv[1])
+    host_ = sys.argv[1]
+    ps = PortScanner(host_)
     open_ports = ps.scan_ports(0, 65535)
     log(open_ports)
