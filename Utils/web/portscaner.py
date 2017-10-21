@@ -1,4 +1,5 @@
 import _thread
+import os
 import sys
 from socket import socket, AF_INET, SOCK_STREAM, gethostbyname
 
@@ -19,7 +20,8 @@ class PortScanner:
 
     @log_exception()
     def scan_ports(self, min, max):
-        with open("Ports_%s.txt" %max,"w") as f1:
+        path = os.path.dirname(__file__)
+        with open("%s\\results\Ports_%s.txt" %(path,max),"w") as f1:
             host_ip = gethostbyname(self.host)
             print("Host: %s IP: %s" % (self.host, host_ip))
             print("Scan in progress...")
