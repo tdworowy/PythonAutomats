@@ -1,10 +1,11 @@
+import sys
 from socket import *
 
 from Utils.decorators import log_exception
 from Utils.utils import log
 
 
-def scan_host(host, port,debug=False):
+def scan_host(host, port, debug=False):
     s = socket(AF_INET, SOCK_STREAM)
     code = s.connect_ex((host, port))
     s.close()
