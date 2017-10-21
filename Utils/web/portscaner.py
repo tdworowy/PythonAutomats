@@ -1,8 +1,8 @@
+import _thread
 import sys
 from socket import socket, AF_INET, SOCK_STREAM, gethostbyname
 
 from Utils.decorators import log_exception
-from Utils.utils import log
 
 
 class PortScanner:
@@ -19,17 +19,23 @@ class PortScanner:
 
     @log_exception()
     def scan_ports(self, min, max):
-        host_ip = gethostbyname(self.host)
-        print("Host: %s IP: %s" % (self.host, host_ip))
-        print("Scan in progress...")
-        results = map(self.scan_host, [port for port in range(min, max + 1)])
-        opened_ports = [x[0] for x in list(results) if x[1] == 0]
-        print("Scan Done...")
-        return opened_ports
+        with open("Ports_%s.txt" %max,"w") as f1:
+            host_ip = gethostbyname(self.host)
+            print("Host: %s IP: %s" % (self.host, host_ip))
+            print("Scan in progress...")
+            results = map(self.scan_host, [port for port in range(min, max + 1)])
+            opened_ports = [x[0] for x in list(results) if x[1] == 0]
+            print("Scan Done...")
+            f1.write(opened_ports)
+
 
 
 if __name__ == '__main__':
     host_ = sys.argv[1]
     ps = PortScanner(host_)
-    open_ports = ps.scan_ports(0, 65534)
-    log(str(open_ports))
+    _thread.start_new_thread(ps.scan_ports, (0, 16384))
+    _thread.start_new_thread(ps.scan_ports, (16384, 49150))
+    _thread.start_new_thread(ps.scan_ports, (49150, 55534))
+    _thread.start_new_thread(ps.scan_ports, (55534, 65534))
+    # open_ports = ps.scan_ports(0, 65534)
+
