@@ -7,12 +7,12 @@ from Utils.utils import log
 
 class PortScanner:
     def __init__(self, host):
-        self.soc = socket(AF_INET, SOCK_STREAM)
         self.host = host
 
     def scan_host(self, port, debug=False):
-        code = self.soc.connect_ex((self.host, port))
-        self.soc.close()
+        soc = socket(AF_INET, SOCK_STREAM)
+        code = soc.connect_ex((self.host, port))
+        soc.close()
         if debug: print("Port checked: %s response %s" % (port, code))
         return port, code
 
@@ -29,5 +29,5 @@ class PortScanner:
 if __name__ == '__main__':
     host_ = sys.argv[1]
     ps = PortScanner(host_)
-    open_ports = ps.scan_ports(0, 65535)
+    open_ports = ps.scan_ports(0, 65534)
     log(str(open_ports))
