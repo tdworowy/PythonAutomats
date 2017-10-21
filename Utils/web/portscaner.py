@@ -23,11 +23,11 @@ class PortScanner:
         print("Scan in progress...")
         results = map(self.scan_host, [port for port in range(min, max + 1)])
         print("Scan Done...")
-        return [x[0] for x in results if x[1] == 0]
+        return [x[0] for x in list(results) if x[1] == 0]
 
 
 if __name__ == '__main__':
     host_ = sys.argv[1]
     ps = PortScanner(host_)
     open_ports = ps.scan_ports(0, 65535)
-    log(open_ports)
+    log(str(open_ports))
