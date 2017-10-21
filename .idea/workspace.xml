@@ -59,10 +59,10 @@
       <file leaf-file-name="portscaner.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Utils/web/portscaner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="527">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -560,13 +560,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00314" summary="update">
-      <created>1505849351784</created>
-      <option name="number" value="00314" />
-      <option name="presentableId" value="LOCAL-00314" />
-      <option name="project" value="LOCAL" />
-      <updated>1505849351784</updated>
-    </task>
     <task id="LOCAL-00315" summary="update">
       <created>1505849746575</created>
       <option name="number" value="00315" />
@@ -903,7 +896,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508590942625</updated>
     </task>
-    <option name="localTasksCounter" value="363" />
+    <task id="LOCAL-00363" summary="update">
+      <created>1508591061322</created>
+      <option name="number" value="00363" />
+      <option name="presentableId" value="LOCAL-00363" />
+      <option name="project" value="LOCAL" />
+      <updated>1508591061322</updated>
+    </task>
+    <option name="localTasksCounter" value="364" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1416,10 +1416,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils/web/portscaner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="527">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
