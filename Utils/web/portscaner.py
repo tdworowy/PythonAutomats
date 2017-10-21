@@ -1,4 +1,3 @@
-import sys
 from socket import *
 
 from Utils.decorators import log_exception
@@ -29,4 +28,4 @@ class PortScanner:
 if __name__ == '__main__':
     ps = PortScanner(sys.argv[1])
     open_ports = ps.scan_ports(0, 65535)
-    log("Open Ports:", open_ports)
+    log(open_ports)
