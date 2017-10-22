@@ -1,8 +1,8 @@
 import _thread
 import os
 import sys
-import time;
-from socket import socket, AF_INET, SOCK_STREAM, gethostbyname
+import time
+from socket import socket, AF_INET, SOCK_STREAM, gethostbyname, SOL_SOCKET, SO_REUSEADDR
 
 from Utils.decorators import log_exception
 from Utils.utils import log
@@ -15,6 +15,8 @@ class PortScanner:
 
     def scan_host(self, port, debug=False):
         soc = socket(AF_INET, SOCK_STREAM)
+        soc.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+        soc.settimeout(0.3)
         code = soc.connect_ex((self.host, port))
         soc.close()
         if debug: print("Port checked: %s response %s" % (port, code))
