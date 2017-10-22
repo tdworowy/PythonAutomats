@@ -43,6 +43,7 @@ def distribution(ps, min_, max_, parts):
         min = max
 
 
+@log_exception()
 def main(host="127.0.0.1", min=0, max=65534, parts=4):
     ps = PortScanner(host)
     distribution(ps, min, max, parts)
@@ -56,6 +57,6 @@ if __name__ == '__main__':
         host_ = sys.argv[1]
         min = sys.argv[2]
         max = sys.argv[3]
-        main(host=host_, min=min, max=max)
+        main(host=host_, min=int(min), max=int(max))
     else:
         main()
