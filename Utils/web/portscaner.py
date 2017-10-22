@@ -12,7 +12,7 @@ class PortScanner:
         self.host = host
         self.path = os.path.dirname(os.path.abspath(__file__))
 
-    def scan_host(self, port, debug=False):
+    def scan_host(self, port, debug=True):
         code = self.soc.connect_ex((self.host, port))
         if debug: print("Port checked: %s response %s" % (port, code))
         if code == 0: print("Port %s is open" % port)
@@ -35,7 +35,7 @@ class PortScanner:
 def distribution(ps, min_, max_, parts):
     rest = max_ % parts
     min = min_
-    max = int(max_ // parts)
+    max = max_ // parts
     for i in range(1, parts):
         if i == parts: max = max + rest
         max = i * max
