@@ -16,7 +16,7 @@ class PortScanner:
     def scan_host(self, port, debug=False):
         soc = socket(AF_INET, SOCK_STREAM)
         soc.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
-        soc.settimeout(0.3)
+        soc.settimeout(0.1)
         code = soc.connect_ex((self.host, port))
         soc.close()
         if debug: print("Port checked: %s response %s" % (port, code))
@@ -49,7 +49,7 @@ def distribution(ps, min_, max_, parts):
 
 
 @log_exception()
-def main(host="127.0.0.1", min=0, max=65534, parts=4):
+def main(host="127.0.0.1", min=0, max=65534, parts=10):
     ps = PortScanner(host)
     distribution(ps, min, max, parts)
     time.sleep(120)
