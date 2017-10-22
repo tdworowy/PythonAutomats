@@ -5,6 +5,7 @@ import time;
 from socket import socket, AF_INET, SOCK_STREAM, gethostbyname
 
 from Utils.decorators import log_exception
+from Utils.utils import log
 
 
 class PortScanner:
@@ -13,20 +14,21 @@ class PortScanner:
         self.path = os.path.dirname(os.path.abspath(__file__))
 
     def scan_host(self, port, debug=True):
-        code = self.soc.connect_ex((self.host, port))
-        if debug: print("Port checked: %s response %s" % (port, code))
+        soc = socket(AF_INET, SOCK_STREAM)
+        code = soc.connect_ex((self.host, port))
+        soc.close()
+        # if debug: print("Port checked: %s response %s" % (port, code))
         if code == 0: print("Port %s is open" % port)
         return port, code
 
     @log_exception()
     def scan_ports(self, min, max):
-        self.soc = socket(AF_INET, SOCK_STREAM)
+        log("Ports range: %s to %s" % (min, max))
         with open("%s\\results\Ports_%s.txt" % (self.path, max), "w") as f1:
             host_ip = gethostbyname(self.host)
             print("Host: %s IP: %s" % (self.host, host_ip))
             print("Scan in progress...")
             results = map(self.scan_host, [port for port in range(min, max + 1)])
-            self.soc.close()
             opened_ports = [x[0] for x in list(results) if x[1] == 0]
             print("Scan Done...")
             f1.write(str(opened_ports).replace("[", "").replace("]", ""))
@@ -36,7 +38,7 @@ def distribution(ps, min_, max_, parts):
     rest = max_ % parts
     min = min_
     max = max_ // parts
-    for i in range(1, parts):
+    for i in range(1, parts+1):
         if i == parts: max = max + rest
         max = i * max
         _thread.start_new_thread(ps.scan_ports, (min, max))
