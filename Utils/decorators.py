@@ -18,9 +18,9 @@ def catch_assertion(f):
 
 def log_exception(rize=True):
     def _log_exception(f):
-        def func(*args):
+        def func(*args, **kwargs):
             try:
-                return f(*args)
+                return f(*args, **kwargs)
             except Exception  as err:
                 log(str(err))
                 log(sys.exc_info())
