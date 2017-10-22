@@ -13,11 +13,11 @@ class PortScanner:
         self.host = host
         self.path = os.path.dirname(os.path.abspath(__file__))
 
-    def scan_host(self, port, debug=True):
+    def scan_host(self, port, debug=False):
         soc = socket(AF_INET, SOCK_STREAM)
         code = soc.connect_ex((self.host, port))
         soc.close()
-        # if debug: print("Port checked: %s response %s" % (port, code))
+        if debug: print("Port checked: %s response %s" % (port, code))
         if code == 0: print("Port %s is open" % port)
         return port, code
 
