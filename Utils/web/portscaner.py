@@ -33,10 +33,10 @@ class PortScanner:
 
 
 @log_exception()
-def distribution(ps, number, parts):
-    rest = number % parts
-    min = 0
-    max = number / parts
+def distribution(ps, min_, max_, parts):
+    rest = max_ % parts
+    min = min_
+    max = max_ / parts
     for i in range(1, parts):
         if i == parts: max = max + rest
         max = i * max
@@ -44,9 +44,9 @@ def distribution(ps, number, parts):
         min = max
 
 
-def main(host="127.0.0.1", min=0, max=65534):
+def main(host="127.0.0.1", min=0, max=65534, parts=4):
     ps = PortScanner(host)
-    distribution(ps, min, max)
+    distribution(ps, min, max, parts)
     time.sleep(120)
     while _thread._count() > 0:
         time.sleep(120)
