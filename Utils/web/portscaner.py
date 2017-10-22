@@ -32,7 +32,6 @@ class PortScanner:
             f1.write(str(opened_ports).replace("[", "").replace("]", ""))
 
 
-@log_exception()
 def distribution(ps, min_, max_, parts):
     rest = max_ % parts
     min = min_
