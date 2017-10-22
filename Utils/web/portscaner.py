@@ -26,7 +26,7 @@ class PortScanner:
     @log_exception()
     def scan_ports(self, min, max):
         log("Ports range: %s to %s" % (min, max))
-        with open("%s\\results\Ports_%s.txt" % (self.path, max), "w") as f1:
+        with open("%s\\results\Ports_%s_%s_%s.txt" % (self.path, self.host, min, max), "w") as f1:
             host_ip = gethostbyname(self.host)
             log("Host: %s IP: %s" % (self.host, host_ip))
             log("Scan in progress...")
@@ -39,9 +39,9 @@ class PortScanner:
 def distribution(ps, min_, max_, parts):
     rest = max_ % parts
     min = min_
-    inc = (max_-min_) // parts
-    max =min_+ inc
-    for i in range(1, parts+1):
+    inc = (max_ - min_) // parts
+    max = min_ + inc
+    for i in range(1, parts + 1):
         if i == parts: max = max + rest
         _thread.start_new_thread(ps.scan_ports, (min, max))
         max = max + inc
