@@ -35,7 +35,7 @@ class PortScanner:
 def distribution(ps, min_, max_, parts):
     rest = max_ % parts
     min = min_
-    max = max_ // parts
+    max = int(max_ // parts)
     for i in range(1, parts):
         if i == parts: max = max + rest
         max = i * max
