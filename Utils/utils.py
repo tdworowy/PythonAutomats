@@ -11,14 +11,14 @@ def log(text, path=os.path.dirname(os.path.abspath(__file__)) + "\\log.txt"):
         text = str(text)
         time_stump = time.strftime('%Y-%m-%d %H:%M:%S')
         log = time_stump + " " + text + "\n"
-        print(log)
-        print(path)
+        print(log, flush=True)
+        print(path, flush=True)
         create_file_if_not_exist(path)
         with open(path, "a") as log_file:
             log_file.write(log)
     except Exception as ex:
-        print("ERROR while logging")
-        print(str(ex))
+        print("ERROR while logging", flush=True)
+        print(str(ex), flush=True)
         # raise RuntimeError
 
 

@@ -18,7 +18,7 @@ class PortScanner:
         code = soc.connect_ex((self.host, port))
         soc.close()
         if debug: print("Port checked: %s response %s" % (port, code))
-        if code == 0: print("Port %s is open" % port)
+        if code == 0: log("Port %s is open" % port)
         return port, code
 
     @log_exception()
@@ -26,11 +26,11 @@ class PortScanner:
         log("Ports range: %s to %s" % (min, max))
         with open("%s\\results\Ports_%s.txt" % (self.path, max), "w") as f1:
             host_ip = gethostbyname(self.host)
-            print("Host: %s IP: %s" % (self.host, host_ip))
-            print("Scan in progress...")
+            log("Host: %s IP: %s" % (self.host, host_ip))
+            log("Scan in progress...")
             results = map(self.scan_host, [port for port in range(min, max + 1)])
             opened_ports = [x[0] for x in list(results) if x[1] == 0]
-            print("Scan Done...")
+            log("Scan Done...")
             f1.write(str(opened_ports).replace("[", "").replace("]", ""))
 
 

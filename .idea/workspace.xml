@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/utils.py" afterPath="$PROJECT_DIR$/Utils/utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/web/portscaner.py" afterPath="$PROJECT_DIR$/Utils/web/portscaner.py" />
     </list>
     <ignored path="Selenium.iws" />
@@ -37,8 +38,8 @@
       <file leaf-file-name="portscaner.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Utils/web/portscaner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state relative-caret-position="5">
+              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="23" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -79,8 +80,18 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="289">
+              <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-643338342/builtins.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="484" column="9" lean-forward="false" selection-start-line="484" selection-start-column="4" selection-end-line="484" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -182,12 +193,12 @@
         <option value="$PROJECT_DIR$/Utils/grid/start_hub_linuks.py" />
         <option value="$PROJECT_DIR$/Utils/grid/start_node.py" />
         <option value="$PROJECT_DIR$/Blog_Tests/features/steps/steps.py" />
-        <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/Blog_Tests/features/environment.py" />
         <option value="$PROJECT_DIR$/Static_Analize/pylint_Run_.py" />
         <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
         <option value="$PROJECT_DIR$/Tinder/tinder_Api.py" />
         <option value="$PROJECT_DIR$/Utils/decorators.py" />
+        <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/Utils/web/portscaner.py" />
       </list>
     </option>
@@ -521,13 +532,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00338" summary="refactor">
-      <created>1507978567398</created>
-      <option name="number" value="00338" />
-      <option name="presentableId" value="LOCAL-00338" />
-      <option name="project" value="LOCAL" />
-      <updated>1507978567398</updated>
     </task>
     <task id="LOCAL-00339" summary="refactor">
       <created>1507979755542</created>
@@ -865,7 +869,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508660421685</updated>
     </task>
-    <option name="localTasksCounter" value="387" />
+    <task id="LOCAL-00387" summary="update">
+      <created>1508660476854</created>
+      <option name="number" value="00387" />
+      <option name="presentableId" value="LOCAL-00387" />
+      <option name="project" value="LOCAL" />
+      <updated>1508660476854</updated>
+    </task>
+    <option name="localTasksCounter" value="388" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1047,13 +1058,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Calculator/Behave/screens/Sum scenario -- @1.2 Numbers_2017-09-02 11_42_51/Log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/Behave/screens/Sum scenario -- @1.2 Numbers_2017-09-02 11_42_51/open_scientific_calculator.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1301,14 +1305,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
@@ -1357,10 +1353,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-643338342/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="484" column="9" lean-forward="false" selection-start-line="484" selection-start-column="4" selection-end-line="484" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/web/portscaner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        <state relative-caret-position="5">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="23" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
