@@ -37,12 +37,13 @@ class PortScanner:
 def distribution(ps, min_, max_, parts):
     rest = max_ % parts
     min = min_
-    max = max_ // parts
+    inc = (max_-min_) // parts
+    max =min_+ inc
     for i in range(1, parts+1):
         if i == parts: max = max + rest
-        max = i * max
         _thread.start_new_thread(ps.scan_ports, (min, max))
-        min = max
+        max = max + inc
+        min = min + inc
 
 
 @log_exception()
