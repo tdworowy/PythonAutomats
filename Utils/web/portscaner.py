@@ -53,7 +53,7 @@ def main(host="127.0.0.1", min=0, max=65534):
 
 
 if __name__ == '__main__':
-    if sys.argv > 0:
+    if len(sys.argv) > 0:
         host_ = sys.argv[1]
         min = sys.argv[2]
         max = sys.argv[3]
