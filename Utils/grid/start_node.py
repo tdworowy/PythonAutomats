@@ -1,12 +1,16 @@
 from Chrome_Driver_Folder.driver_path import get_driver_path
 
-seleniumServerPath = "D:\selenium"
-driverPath = get_driver_path() + '/chromedriver.exe'
-node = "java -jar -Dwebdriver.chrome.driver=" + driverPath + " selenium-server-standalone-3.3.1.jar -host localhost -role webdriver -hub http://192.168.0.102:4444/grid/register  -port 5555 -browser browserName=chrome,maxInstances=5,platform=WINDOWS"
+selenium_server_path = "D:\selenium"
+driver_path = get_driver_path() + '/chromedriver.exe'
+node = "java -jar -Dwebdriver.chrome.driver=" + driver_path + "selenium-server-standalone-3.3.1.jar -host localhost " \
+                                                             "-role webdriver -hub " \
+                                                             "http://192.168.0.102:4444/grid/register  -port 5555 " \
+                                                             "-browser browserName=chrome,maxInstances=5," \
+                                                             "platform=WINDOWS "
 
-nodeExecution = "cd " + seleniumServerPath + "&& D: &&" + node
+node_execution = "cd " + selenium_server_path + "&& D: &&" + node
 
-print(nodeExecution)
+print(node_execution)
 
 
 def run(command):
@@ -14,4 +18,4 @@ def run(command):
     os.system(command)
 
 
-run(nodeExecution)
+run(node_execution)
