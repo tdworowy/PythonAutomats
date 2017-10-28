@@ -47,8 +47,8 @@ def main(song_, thread_id, thread_type):
 
 def thread(song_, path, thread_type):
     threads = check_queue(path)
-    for thred in threads:
-        main(song_, thred, thread_type)
+    for thread in threads:
+        main(song_, thread, thread_type)
 
 
 if __name__ == '__main__':
