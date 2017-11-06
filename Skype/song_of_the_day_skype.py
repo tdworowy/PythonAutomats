@@ -53,16 +53,15 @@ class SongOfTheDay():
 
 @log_exception()
 def main(login, password):
-    authentication = [login, password]
-    song = SongOfTheDay(authentication)
-    f = open(get_file_path(), 'r')
     log("Get random song")
-    songs = f.read()
+    with open(get_file_path(), 'r') as f:
+        songs = f.read()
     songs = songs.split("\n")
 
     ran = random.randrange(len(songs))
     song_title = songs[ran]
     log(song_title)
+    song = SongOfTheDay([login, password])
     url = get_youtube_URL(song.driver, song_title.strip())
     try:
         song.sent_song_API(url, ["Szopy Reaktywacja!", "Shame"])
@@ -74,9 +73,9 @@ def main(login, password):
 if __name__ == '__main__':
 
     if len(sys.argv) < 2:
-        f = open(os.path.dirname(os.path.abspath(__file__)) + '\\aut.txt')
-        user = f.readline().strip()
-        passw = f.readline().strip()
+        with  open(os.path.dirname(os.path.abspath(__file__)) + '\\aut.txt') as f:
+            user = f.readline().strip()
+            passw = f.readline().strip()
     else:
         user = sys.argv[1]
         passw = sys.argv[2]

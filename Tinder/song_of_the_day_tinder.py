@@ -2,6 +2,8 @@ import os
 import random
 import sys
 
+from selenium import webdriver
+
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Facebook.facebook_id import get_facebook_ID
 from Facebook.facebook_token import get_access_token
@@ -10,7 +12,6 @@ from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exception
 from Utils.utils import log, save_history
 from Youtube.Youtube_Bot import get_youtube_URL
-from selenium import webdriver
 
 
 class SongOfTheDay():
@@ -41,14 +42,14 @@ class SongOfTheDay():
 
 @log_exception()
 def main(login, password, names):
-    song = SongOfTheDay()
-    f = open(get_file_path(), 'r')
     log("Get random song")
-    songs_list = f.read()
+    with open(get_file_path(), 'r') as f:
+        songs_list = f.read()
     songs_list = songs_list.split("\n")
 
     ran = random.randrange(len(songs_list))
     song_title = songs_list[ran]
+    song = SongOfTheDay()
     song.log_in(login, password, 'tomasz.dworowy')
     for name in names:
         url = get_youtube_URL(song.driver, song_title.strip())
@@ -57,9 +58,9 @@ def main(login, password, names):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        f = open(os.path.dirname(os.path.abspath(__file__)) + '\\aut.txt')
-        user = f.readline().strip()
-        passw = f.readline().strip()
+        with open(os.path.dirname(os.path.abspath(__file__)) + '\\aut.txt') as f:
+            user = f.readline().strip()
+            passw = f.readline().strip()
     else:
         user = sys.argv[1]
         passw = sys.argv[2] + " " + sys.argv[3]

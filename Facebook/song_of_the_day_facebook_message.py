@@ -2,14 +2,15 @@ import os
 import random
 import sys
 
+from fbchat.models import *
+from selenium import webdriver
+
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Facebook.facebook_apiI import FaceBookMessageBot
 from Utils.Songs_.Songs import update_songs, get_file_path
 from Utils.decorators import log_exception
 from Utils.utils import log, message_by_time, save_history
 from Youtube.Youtube_Bot import get_youtube_URL
-from fbchat.models import *
-from selenium import webdriver
 
 
 class SongOfTheDayFace:
@@ -43,14 +44,15 @@ class SongOfTheDayFace:
 @log_exception()
 def main(login, password, thread_id):
     update_songs()
-    song = SongOfTheDayFace()
-    song.set_up()
-    f = open(get_file_path(), 'r')
     log("Get random song")
-    songs = f.read()
+    with open(get_file_path(), 'r') as f:
+        songs = f.read()
     songs = songs.split("\n")
     ran = random.randrange(len(songs))
     song_title = songs[ran]
+
+    song = SongOfTheDayFace()
+    song.set_up()
     url = get_youtube_URL(song.driver, song_title.strip())
     song.login_FB(login, password)
     song.sent_song([url], thread_id)
@@ -62,9 +64,9 @@ if __name__ == '__main__':
 
     THREADID = '1252344071467839'
     if len(sys.argv) < 2:
-        f = open(os.path.dirname(os.path.abspath(__file__)) + '\\aut.txt')
-        user = f.readline().strip()
-        passw = f.readline().strip()
+        with open(os.path.dirname(os.path.abspath(__file__)) + '\\aut.txt') as f:
+            user = f.readline().strip()
+            passw = f.readline().strip()
     else:
         user = sys.argv[1]
         passw = sys.argv[2] + " " + sys.argv[3]

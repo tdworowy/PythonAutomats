@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" afterPath="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" afterPath="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" afterPath="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,8 +80,8 @@
       <file leaf-file-name="song_of_the_day_skype.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="52" column="15" lean-forward="false" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+            <state relative-caret-position="668">
+              <caret line="76" column="6" lean-forward="false" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -100,8 +102,8 @@
       <file leaf-file-name="song_of_the_day_facebook_message.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="629">
+              <caret line="63" column="7" lean-forward="false" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -110,8 +112,8 @@
       <file leaf-file-name="song_of_the_day_tinder.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="63" column="15" lean-forward="false" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="26" />
+            <state relative-caret-position="583">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -167,8 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Phantomjs/phantomjsPath.py" />
-        <option value="$PROJECT_DIR$/Netflix/Netflix.py" />
         <option value="$PROJECT_DIR$/GoogleDocks/googleApi.py" />
         <option value="$PROJECT_DIR$/Facebook/songOnDemand_face.py" />
         <option value="$PROJECT_DIR$/Facebook/songOfTheDay_postOnPage.py" />
@@ -216,8 +216,10 @@
         <option value="$PROJECT_DIR$/Utils/grid/start_hub_linuks.py" />
         <option value="$PROJECT_DIR$/Utils/grid/start_node.py" />
         <option value="$PROJECT_DIR$/Utils/grid/start_node_Linuks.py" />
-        <option value="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" />
         <option value="$PROJECT_DIR$/Facebook/song_on_demand_face.py" />
+        <option value="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" />
+        <option value="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" />
+        <option value="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" />
       </list>
     </option>
   </component>
@@ -555,13 +557,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00346" summary="fix">
-      <created>1508072394063</created>
-      <option name="number" value="00346" />
-      <option name="presentableId" value="LOCAL-00346" />
-      <option name="project" value="LOCAL" />
-      <updated>1508072394064</updated>
-    </task>
     <task id="LOCAL-00347" summary="fix">
       <created>1508072679406</created>
       <option name="number" value="00347" />
@@ -898,7 +893,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509223806636</updated>
     </task>
-    <option name="localTasksCounter" value="395" />
+    <task id="LOCAL-00395" summary="fix">
+      <created>1509992773197</created>
+      <option name="number" value="00395" />
+      <option name="presentableId" value="LOCAL-00395" />
+      <option name="project" value="LOCAL" />
+      <updated>1509992773198</updated>
+    </task>
+    <option name="localTasksCounter" value="396" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -997,10 +999,10 @@
     <MESSAGE value="Refactor + fix" />
     <MESSAGE value="refactor + fix" />
     <MESSAGE value="up" />
-    <MESSAGE value="fix" />
     <MESSAGE value="update" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1385,16 +1387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="52" column="15" lean-forward="false" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/song_on_demand_face.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1403,18 +1395,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="76" column="6" lean-forward="false" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="629">
+          <caret line="63" column="7" lean-forward="false" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="63" column="15" lean-forward="false" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="26" />
+        <state relative-caret-position="583">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
