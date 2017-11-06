@@ -77,14 +77,14 @@ def to_file(titles):
 def update_songs():
     date_today = date.today()
     log("Update songs list")
-    f1 = open(FILE_PATH)
     f2 = open(FILE_PATH, 'a')
     with (open(LAST_UPDATED, 'r')) as f3:
         if f3.readline() == str(date_today):
             log("List already updated")
             return 0
     log("Files opened Correctly")
-    old_titles = [line for line in f1.readlines()]
+    with open(FILE_PATH) as f1:
+        old_titles = [line for line in f1.readlines()]
     for i in range(1, 60):
         new_titles = get_titles(
             "https://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page=%s" % str(i))

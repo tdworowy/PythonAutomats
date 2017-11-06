@@ -15,7 +15,6 @@ from Youtube.Youtube_Bot import get_youtube_URL
 
 class SongOfTheDay():
     def __init__(self, authentication):
-        update_songs()
         chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chrome_driver_path)
         self.driver.implicitly_wait(2)
@@ -53,6 +52,7 @@ class SongOfTheDay():
 
 @log_exception()
 def main(login, password):
+    update_songs()
     log("Get random song")
     with open(get_file_path(), 'r') as f:
         songs = f.read()
@@ -66,7 +66,7 @@ def main(login, password):
     try:
         song.sent_song_API(url, ["Szopy Reaktywacja!", "Shame"])
     except Exception as e:
-        log("API error: %s" % str(e) )
+        log("API error: %s" % str(e))
         song.sent_song_UI(url, ["Szopy Reaktywacja!", "Shame"])
 
 

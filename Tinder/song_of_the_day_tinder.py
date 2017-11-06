@@ -35,13 +35,13 @@ class SongOfTheDay():
                 save_history(song_URL, "Tinder.txt")
 
     def set_up(self):
-        update_songs()
         chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chrome_driver_path)
 
 
 @log_exception()
 def main(login, password, names):
+    update_songs()
     log("Get random song")
     with open(get_file_path(), 'r') as f:
         songs_list = f.read()
