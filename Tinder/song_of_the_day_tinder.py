@@ -1,4 +1,3 @@
-import os
 import random
 import sys
 
@@ -57,14 +56,9 @@ def main(login, password, names):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        with open(os.path.dirname(os.path.abspath(__file__)) + '\\aut.txt') as f:
-            user = f.readline().strip()
-            passw = f.readline().strip()
-    else:
-        user = sys.argv[1]
-        passw = sys.argv[2] + " " + sys.argv[3]
-
+    user = sys.argv[1]
+    passw = sys.argv[2] + " " + sys.argv[3]
+    nams = sys.argv[4]
     # namesList = ['Ilona','Carol']
-    names = ['Ilona']
+    names = [nams]
     main(user, passw, names)
