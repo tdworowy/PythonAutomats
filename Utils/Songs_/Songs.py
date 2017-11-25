@@ -5,10 +5,8 @@ from bs4 import BeautifulSoup
 
 from Utils.utils import log
 
-# filePath = os.path.dirname(os.path.abspath(__file__))+'\\file.txt'
 FILE_PATH = "D:\Google_drive\Songs\songsList.txt"
 LAST_UPDATED = "D:\Google_drive\Songs\LastUpdated.txt"
-PAGES = 706
 
 
 # PAGES = 2
@@ -19,8 +17,12 @@ PAGES = 706
 # LAST_365_DAYS
 # ALL
 
-def get_file_path():
-    return FILE_PATH
+def get_pages_count(url):
+    response = requests.get(url).text
+    soup = BeautifulSoup(response, "html.parser")
+    pagination_list = soup.find('ul', class_="pagination-list")
+    pages = pagination_list.find_all('a')
+    return max([page.text for page in pages[:-1]])
 
 
 def get_titles(url):
@@ -50,20 +52,20 @@ def clear_titles(titles):
     return clean_titles
 
 
-def get_songs():
+def get_songs(user='TotaledThomas'):
     log("Generate songs list")
     log("Clear existing or create new file")
     open(FILE_PATH, 'w').close()
-    for i in range(1, PAGES):
-        titles = get_titles('https://www.last.fm/pl/user/TotaledThomas/library/tracks?page= %s' % str(i))
-        to_file(titles)
+    url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
+    pages_count = get_pages_count(url)
+    titles = map(get_titles,[url+'?page= %s' % str(i) for i in range(1, pages_count+1)])
+    to_file(titles)
 
 
 def to_file(titles):
     with open(FILE_PATH, 'a') as f, open('songs.txt', 'a') as f2:
         for text in titles:
             try:
-
                 f.write(text)
                 f.flush()
                 f2.write(text)
@@ -74,7 +76,7 @@ def to_file(titles):
                 continue
 
 
-def update_songs():
+def update_songs(user='TotaledThomas', pages_to_check=60):
     date_today = date.today()
     log("Update songs list")
     f2 = open(FILE_PATH, 'a')
@@ -85,15 +87,13 @@ def update_songs():
     log("Files opened Correctly")
     with open(FILE_PATH) as f1:
         old_titles = [line for line in f1.readlines()]
-    for i in range(1, 60):
-        new_titles = get_titles(
-            "https://www.last.fm/pl/user/TotaledThomas/library?date_preset=LAST_30_DAYSS&page=%s" % str(i))
-        log("New titles: %s page %s" % (str(new_titles), str(i)))
-        for title in new_titles:
+    url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYSS" % user
+    new_titles = map(get_titles,[url+"&page=%s" % str(i) for i in range(1, pages_to_check+1)])
+    titles_to_update = [title for title in new_titles if title not in old_titles]
+    for title in titles_to_update:
             try:
-                if title not in old_titles:
-                    f2.write(title)
-                    f2.flush()
+                f2.write(title)
+                f2.flush()
             except Exception as ex:
                 log("Error while updating songs list")
                 log(str(ex))
@@ -105,4 +105,5 @@ def update_songs():
 
 
 if __name__ == '__main__':
-    get_songs()
+   get_songs()
+
