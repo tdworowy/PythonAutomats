@@ -25,8 +25,8 @@ class SongOfTheDay():
         log(message_by_time())
         log(songURL)
         sa.set_chats(gropus)
-        sa.sned_message(message_by_time())
-        sa.sned_message(songURL)
+        sa.send_message(message_by_time())
+        sa.send_message(songURL)
 
         for group in gropus:
             save_history(group, "Skype.txt")

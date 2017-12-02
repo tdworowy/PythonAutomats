@@ -1,4 +1,5 @@
 import re
+import sys
 
 from skpy import Skype
 
@@ -13,7 +14,7 @@ class SkypeApi:
         self.passw = passw
         self.clear_chats()
 
-    def get_contact_ID(self, first, last):
+    def get_contact_id(self, first, last):
         for contact in self.skype.contacts.search(first + ' ' + last):
             if contact.name.first == first and contact.name.last == last:
                 print("Name: %s ID: %s" % (contact.name, contact.id))
@@ -30,12 +31,12 @@ class SkypeApi:
                 print("Found: %s" % chat)
                 self.chats.add(chat)
 
-    def set_chats(self, chatsNames):
-        if self.chats == None:
-            self.add_chat_by_topic(chatsNames)
+    def set_chats(self, chats_names):
+        if self.chats is None:
+            self.add_chat_by_topic(chats_names)
         print("Chats in cache: %s" % self.chats)
 
-    def sned_message(self, message):
+    def send_message(self, message):
         for chat in self.chats:
             chat.sendMsg(message)
 
@@ -54,9 +55,9 @@ class SkypeApi:
             else:
                 last_len = len(list_)
 
-    def add_person(self, chatName, SkypeID):
-        self.add_chat_by_topic(chatName)
-        list(self.chats)[0].addMember(SkypeID)
+    def add_person(self, chat_name, skype_id):
+        self.add_chat_by_topic(chat_name)
+        list(self.chats)[0].addMember(skype_id)
 
     def get_links(self, name):
         links = []
@@ -68,9 +69,9 @@ class SkypeApi:
 
 
 if __name__ == '__main__':
-    pass
-    # user = sys.argv[1]
-    # passw = sys.argv[2]
-    # sa = skypeApi(user,passw)
+    user = sys.argv[1]
+    passw = sys.argv[2]
+    sa = SkypeApi(user, passw)
+    print(sa.skype.conn.connected)
     # links = sa.getLinks("Learning is an awesome journey")
     # writeToFileNoDuplicates("D:\Google_drive\links_from_skype\links.txt",links)
