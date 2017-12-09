@@ -70,5 +70,5 @@ def write_to_file_no_duplicates(path, elements):
             f2.seek(0)
 
 
-def get_milis():
+def get_millis():
     return int(round(time.time() * 1000))

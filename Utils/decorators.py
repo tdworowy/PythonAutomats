@@ -21,7 +21,7 @@ def log_exception(rize=True):
         def func(*args, **kwargs):
             try:
                 return f(*args, **kwargs)
-            except Exception  as err:
+            except Exception as err:
                 log(str(err))
                 log(sys.exc_info())
                 if rize: raise RuntimeError
