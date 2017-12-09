@@ -5,11 +5,12 @@ import time
 from os import listdir
 from os.path import isfile, join
 
+from fbchat import ThreadType
+
 from Facebook.song_of_the_day_facebook_message import SongOfTheDayFace
-from Utils.Songs_.Songs import get_file_path
+from Utils.Songs_.Songs import FILE_PATH
 from Utils.utils import create_file_if_not_exist, log, save_history
 from Youtube.Youtube_Bot import get_youtube_URL
-from fbchat import ThreadType
 
 
 def check_queue(path):
@@ -31,7 +32,7 @@ def check_queue(path):
 
 
 def main(song_, thread_id, thread_type):
-    f = open(get_file_path(), 'r')
+    f = open(FILE_PATH, 'r')
     log("Get random song")
     songs = f.read()
     songs = songs.split("\n")
