@@ -107,18 +107,18 @@ def distribution(parts, min_=0, user_='TotaledThomas'):
     min = min_
     inc = (max - min_) // parts
     max = min_ + inc
-    proceses = []
+    processes = []
     for i in range(1, parts + 1):
         if i == parts: max = max + rest
         process = Process(target=get_songs, args=(min, max, user_, FOLDER_PATH + "songsList%s.txt" % str(i)))
         max = max + inc
         min = min + inc
-        proceses.append(process)
+        processes.append(process)
 
-    for process in proceses:
+    for process in processes:
         process.start()
 
-    for process in proceses:
+    for process in processes:
         process.join()
 
 
