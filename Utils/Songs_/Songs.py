@@ -124,7 +124,7 @@ def distribution(parts, min_=1, max=0, user_='TotaledThomas', target=get_songs):
 
 
 def update_songs_distribution():
-    distribution(parts=4, max=60, target=_update_songs)
+    distribution(parts=6, max=60, target=_update_songs)
 
 
 def combine_files(count, file_path=FILE_PATH):

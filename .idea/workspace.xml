@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" afterPath="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" />
-      <change beforePath="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" afterPath="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" />
-      <change beforePath="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" afterPath="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" />
       <change beforePath="$PROJECT_DIR$/Utils/Songs_/Songs.py" afterPath="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
     </list>
     <ignored path="Selenium.iws" />
@@ -25,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Songs.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Songs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="125" column="29" lean-forward="false" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="29" />
+            <state relative-caret-position="622">
+              <caret line="126" column="24" lean-forward="false" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -40,8 +37,8 @@
       <file leaf-file-name="song_of_the_day_tinder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="song_of_the_day_facebook_message.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="song_of_the_day_facebook_message.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -112,9 +109,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
               <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -216,10 +211,10 @@
         <option value="$PROJECT_DIR$/Facebook/song_on_demand_face.py" />
         <option value="$PROJECT_DIR$/Youtube/Youtube_Bot.py" />
         <option value="$PROJECT_DIR$/Utils/web/portscaner.py" />
-        <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
         <option value="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" />
         <option value="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" />
         <option value="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" />
+        <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
       </list>
     </option>
   </component>
@@ -287,6 +282,17 @@
             <path>
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Songs_" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
               <item name="Youtube" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -301,19 +307,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests\features" />
-      <recent name="D:\Python_\PythonAutomats" />
-      <recent name="D:\Python_\PythonAutomats\BlogTests\features" />
-      <recent name="D:\Google_drive\Python_\SeleniumPython\Facebook" />
-      <recent name="D:\Google_drive\Python_\SeleniumPython\Tinder" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests\Behave" />
       <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests\Behave\features" />
       <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests" />
       <recent name="D:\Google_drive\Python_\SeleniumPython\Skype" />
       <recent name="D:\Google_drive\Python_\SeleniumPython\Utils\Songs_" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests\features" />
+      <recent name="D:\Python_\PythonAutomats" />
+      <recent name="D:\Python_\PythonAutomats\BlogTests\features" />
+      <recent name="D:\Google_drive\Python_\SeleniumPython\Facebook" />
+      <recent name="D:\Google_drive\Python_\SeleniumPython\Tinder" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -559,13 +565,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00374" summary="update">
-      <created>1508606825987</created>
-      <option name="number" value="00374" />
-      <option name="presentableId" value="LOCAL-00374" />
-      <option name="project" value="LOCAL" />
-      <updated>1508606825987</updated>
     </task>
     <task id="LOCAL-00375" summary="update">
       <created>1508608986368</created>
@@ -903,7 +902,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512912013652</updated>
     </task>
-    <option name="localTasksCounter" value="423" />
+    <task id="LOCAL-00423" summary="update">
+      <created>1512912910310</created>
+      <option name="number" value="00423" />
+      <option name="presentableId" value="LOCAL-00423" />
+      <option name="project" value="LOCAL" />
+      <updated>1512912910310</updated>
+    </task>
+    <option name="localTasksCounter" value="424" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1001,11 +1007,11 @@
     <MESSAGE value="Refactor + fix" />
     <MESSAGE value="refactor + fix" />
     <MESSAGE value="up" />
-    <MESSAGE value="update" />
     <MESSAGE value="refactor" />
     <MESSAGE value="Update" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1083,11 +1089,6 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Utils/web/portscaner.py</url>
           <option name="timeStamp" value="108" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="109" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -1438,20 +1439,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="125" column="29" lean-forward="false" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1460,17 +1451,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="126" column="24" lean-forward="false" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
