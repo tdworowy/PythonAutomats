@@ -4,13 +4,9 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
 
-# TODO fix it
 def action_send(driver, txt):
-    search = driver.find_element_by_id("search")
     actions = ActionChains(driver)
-    # actions.send_keys(txt)
-    actions.click(on_element=search)
-    actions.send_keys_to_element(search, txt)
+    actions.send_keys(txt)
     actions.send_keys(Keys.ENTER)
     actions.perform()
     time.sleep(1)
