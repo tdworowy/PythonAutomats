@@ -56,16 +56,15 @@ def clear_titles(titles):
 
 
 def get_songs(min, max, user='TotaledThomas', file_path=FILE_PATH):
-    log("Generate songs list")
     open(file_path, 'w').close()
     url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
     titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(min, max + 1)])
     for tiles_list in titles_map:
-        to_file(tiles_list)
+        to_file(tiles_list, 'w')
 
 
-def to_file(titles):
-    with open(FILE_PATH, 'a') as f:
+def to_file(titles, mode):
+    with open(FILE_PATH, mode) as f:
         for text in titles:
             try:
                 f.write(text)
@@ -79,7 +78,6 @@ def check_last_updated():
     date_today = date.today()
     with (open(LAST_UPDATED, 'r')) as f3:
         if f3.readline() == str(date_today):
-            log("List already updated")
             return True
         else:
             f3.write(str(date_today))
@@ -96,13 +94,11 @@ def get_new_titles(new_titles_map):
 
 
 def update_songs(user='TotaledThomas', pages_to_check=60):
-    log("Update songs list")
     if check_last_updated(): return 0
     url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYSS" % user
     new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(1, pages_to_check + 1)])
     titles_to_update = get_new_titles(new_titles_map)
-    to_file(titles_to_update)
-    log("Song List updated correctly")
+    to_file(titles_to_update, 'a')
 
 
 def distribution(parts, min_=0, user_='TotaledThomas'):
@@ -128,7 +124,7 @@ def distribution(parts, min_=0, user_='TotaledThomas'):
 
 
 def combine_files(count, file_path=FILE_PATH):
-    file_names = [FOLDER_PATH + "songsList%s.txt" % str(i) for i in count]
+    file_names = [FOLDER_PATH + "songsList%s.txt" % str(i) for i in range(1, count + 1)]
     with open(file_path, 'w') as outfile:
         for fname in file_names:
             with open(fname) as infile:
