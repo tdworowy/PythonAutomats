@@ -1,6 +1,7 @@
 import time
 
 import speedtest
+
 from Utils.decorators import log_exception
 from Utils.utils import log
 
@@ -19,7 +20,7 @@ def test_speed(log_=True):
 
 
 if __name__ == "__main__":
-    with open("D:\Google_drive\statistics\speed.csv", 'a') as f:
+    with open("E:\Google_drive\statistics\speed.csv", 'a') as f:
         time_stump = time.strftime('%Y-%m-%d %H:%M:%S')
         res = str(test_speed())
         f.write("%s, %s\n" % (time_stump, res))
