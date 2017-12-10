@@ -3,7 +3,7 @@ import os
 import time
 from datetime import date
 
-history_path = "D:\Google_drive\Songs\History"
+history_path = "E:\Google_drive\Songs\History"
 
 
 def log(text, path=os.path.dirname(os.path.abspath(__file__)) + "\\log.txt"):

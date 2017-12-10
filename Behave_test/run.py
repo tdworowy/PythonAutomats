@@ -3,7 +3,7 @@ import os
 
 def run_behave():
     path = os.path.dirname(os.path.abspath(__file__))
-    partition = "D:"
+    partition = "E:"
     commend = partition + " && cd " + path + " && behave"
     print(commend)
     os.system(commend)

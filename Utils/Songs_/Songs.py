@@ -7,9 +7,9 @@ from bs4 import BeautifulSoup
 
 from Utils.utils import log
 
-FOLDER_PATH = "D:\Google_drive\Songs\\"
-FILE_PATH = "D:\Google_drive\Songs\songsList.txt"
-LAST_UPDATED = "D:\Google_drive\Songs\LastUpdated.txt"
+FOLDER_PATH = "E:\Google_drive\Songs\\"
+FILE_PATH = "E:\Google_drive\Songs\songsList.txt"
+LAST_UPDATED = "E:\Google_drive\Songs\LastUpdated.txt"
 
 
 # PAGES = 2
