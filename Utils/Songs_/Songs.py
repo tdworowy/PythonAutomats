@@ -132,7 +132,7 @@ def combine_files(count, file_path=FILE_PATH):
 
 if __name__ == '__main__':
 
-    pool_count = 4
+    pool_count = 10
 
     distribution(pool_count)
 
