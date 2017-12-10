@@ -116,7 +116,7 @@ def distribution(parts, min_=0, user_='TotaledThomas'):
     max = min_ + inc
     for i in range(1, parts + 1):
         if i == parts: max = max + rest
-        Process(get_songs, (min, max, user_, FOLDER_PATH + "songsList%s.txt" % str(i))).start()
+        Process(target=get_songs, args=(min, max, user_, FOLDER_PATH + "songsList%s.txt" % str(i))).start()
         max = max + inc
         min = min + inc
 
