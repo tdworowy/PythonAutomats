@@ -88,8 +88,10 @@ def update_songs(user='TotaledThomas', pages_to_check=60):
     with open(FILE_PATH, 'r') as f1:
         old_titles = [line for line in f1.readlines()]
     url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYSS" % user
-    new_titles = map(get_titles, [url + "&page=%s" % str(i) for i in range(1, pages_to_check + 1)])
-    titles_to_update = [title for title in new_titles if title not in old_titles]
+    new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(1, pages_to_check + 1)])
+    titles_to_update = []
+    for new_titles_list in new_titles_map:
+        titles_to_update.extend([title for title in new_titles_list if title not in old_titles])
     with open(FILE_PATH, 'a') as f2:
         for title in titles_to_update:
             try:
