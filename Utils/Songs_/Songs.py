@@ -83,21 +83,17 @@ def check_last_updated():
             return False
 
 
-def get_new_titles(new_titles_map):
-    with open(FILE_PATH, 'r') as f1:
-        old_titles = [line for line in f1.readlines()]
-    titles_to_update = []
-    for new_titles_list in new_titles_map:
-        titles_to_update.extend([title for title in new_titles_list if title not in old_titles])
-    return titles_to_update
+def remove_duplicates():
+    uniq_lines = set(open(FILE_PATH).readlines())
+    open(FILE_PATH, 'w').writelines(set(uniq_lines))
 
 
 def _update_songs(min=1, max=60, user='TotaledThomas', file_path=FILE_PATH):
     if check_last_updated(): return 0
     url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYSS" % user
     new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(min, max + 1)])
-    titles_to_update = get_new_titles(new_titles_map)
-    to_file(titles_to_update, file_path)
+    for tiles_list in new_titles_map:
+        to_file(tiles_list, file_path)
 
 
 def distribution(parts, min_=1, max=0, user_='TotaledThomas', target=get_songs):
@@ -125,6 +121,7 @@ def distribution(parts, min_=1, max=0, user_='TotaledThomas', target=get_songs):
 
 def update_songs_distribution():
     distribution(parts=6, max=60, target=_update_songs)
+    remove_duplicates()
 
 
 def combine_files(count, file_path=FILE_PATH):
@@ -142,4 +139,5 @@ if __name__ == '__main__':
     distribution(pool_count)
 
     combine_files(pool_count)
+    remove_duplicates()
     copyfile(FILE_PATH, "songs.txt")
