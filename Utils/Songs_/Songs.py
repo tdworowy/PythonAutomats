@@ -1,10 +1,14 @@
+import multiprocessing
+import time
 from datetime import date
+from multiprocessing import Process
 
 import requests
 from bs4 import BeautifulSoup
 
 from Utils.utils import log
 
+FOLDER_PATH = "D:\Google_drive\Songs\\"
 FILE_PATH = "D:\Google_drive\Songs\songsList.txt"
 LAST_UPDATED = "D:\Google_drive\Songs\LastUpdated.txt"
 
@@ -52,13 +56,11 @@ def clear_titles(titles):
     return clean_titles
 
 
-def get_songs(user='TotaledThomas'):
+def get_songs(min, max, user='TotaledThomas', file_path=FILE_PATH):
     log("Generate songs list")
-    log("Clear existing or create new file")
-    open(FILE_PATH, 'w').close()
+    open(file_path, 'w').close()
     url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
-    pages_count = get_pages_count(url)
-    titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(1, pages_count + 1)])
+    titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(min, max + 1)])
     for tiles_list in titles_map:
         to_file(tiles_list)
 
@@ -119,5 +121,37 @@ def update_songs(user='TotaledThomas', pages_to_check=60):
     log("Song List updated correctly")
 
 
+def distribution(parts, min_=0, user_='TotaledThomas'):
+    url = 'https://www.last.fm/pl/user/%s/library/tracks' % user_
+    max = get_pages_count(url)
+    rest = max % parts
+    min = min_
+    inc = (max - min_) // parts
+    max = min_ + inc
+    for i in range(1, parts + 1):
+        if i == parts: max = max + rest
+        Process(get_songs, (min, max, user_, FOLDER_PATH + "songsList%s.txt" % str(i))).start()
+        max = max + inc
+        min = min + inc
+
+
+def combine_files(count):
+    file_names = [FOLDER_PATH + "songsList%s.txt" % str(i) for i in count]
+    with open('FILE_PATH', 'w') as outfile:
+        for fname in file_names:
+            with open(fname) as infile:
+                for line in infile:
+                    outfile.write(line)
+
+
 if __name__ == '__main__':
-    get_songs()
+
+    pool_count = 4
+
+    distribution(pool_count)
+
+    pool = multiprocessing.Pool()
+    while pool._processes > 0:
+        time.sleep(120)
+
+    combine_files(pool_count)
