@@ -1,5 +1,3 @@
-import multiprocessing
-import time
 from datetime import date
 from multiprocessing import Process
 from shutil import copyfile
@@ -114,11 +112,19 @@ def distribution(parts, min_=0, user_='TotaledThomas'):
     min = min_
     inc = (max - min_) // parts
     max = min_ + inc
+    proceses = []
     for i in range(1, parts + 1):
         if i == parts: max = max + rest
-        Process(target=get_songs, args=(min, max, user_, FOLDER_PATH + "songsList%s.txt" % str(i))).start()
+        process = Process(target=get_songs, args=(min, max, user_, FOLDER_PATH + "songsList%s.txt" % str(i)))
         max = max + inc
         min = min + inc
+        proceses.append(process)
+
+    for process in proceses:
+        process.start()
+
+    for process in proceses:
+        process.join()
 
 
 def combine_files(count, file_path=FILE_PATH):
@@ -131,14 +137,9 @@ def combine_files(count, file_path=FILE_PATH):
 
 
 if __name__ == '__main__':
-
     pool_count = 10
 
     distribution(pool_count)
-
-    pool = multiprocessing.Pool()
-    while pool._processes > 0:
-        time.sleep(120)
 
     combine_files(pool_count)
     copyfile(FILE_PATH, "songs.txt")
