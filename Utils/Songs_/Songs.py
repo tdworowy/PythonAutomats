@@ -2,6 +2,7 @@ import multiprocessing
 import time
 from datetime import date
 from multiprocessing import Process
+from shutil import copyfile
 
 import requests
 from bs4 import BeautifulSoup
@@ -66,27 +67,12 @@ def get_songs(min, max, user='TotaledThomas', file_path=FILE_PATH):
 
 
 def to_file(titles):
-    with open(FILE_PATH, 'a') as f, open('songs.txt', 'a') as f2:
+    with open(FILE_PATH, 'a') as f:
         for text in titles:
             try:
                 f.write(text)
                 f.flush()
-                f2.write(text)
-                f2.flush()
             except Exception as ex:
-                log("EXCEPTION while generating songs list")
-                log(str(ex))
-                continue
-
-
-def update_file(titles_to_update):
-    with open(FILE_PATH, 'a') as f2:
-        for title in titles_to_update:
-            try:
-                f2.write(title)
-                f2.flush()
-            except Exception as ex:
-                log("Error while updating songs list")
                 log(str(ex))
                 continue
 
@@ -117,7 +103,7 @@ def update_songs(user='TotaledThomas', pages_to_check=60):
     url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYSS" % user
     new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(1, pages_to_check + 1)])
     titles_to_update = get_new_titles(new_titles_map)
-    update_file(titles_to_update)
+    to_file(titles_to_update)
     log("Song List updated correctly")
 
 
@@ -135,9 +121,9 @@ def distribution(parts, min_=0, user_='TotaledThomas'):
         min = min + inc
 
 
-def combine_files(count):
+def combine_files(count, file_path=FILE_PATH):
     file_names = [FOLDER_PATH + "songsList%s.txt" % str(i) for i in count]
-    with open('FILE_PATH', 'w') as outfile:
+    with open(file_path, 'w') as outfile:
         for fname in file_names:
             with open(fname) as infile:
                 for line in infile:
@@ -155,3 +141,4 @@ if __name__ == '__main__':
         time.sleep(120)
 
     combine_files(pool_count)
+    copyfile(FILE_PATH, "songs.txt")
