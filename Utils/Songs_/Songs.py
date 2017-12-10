@@ -77,21 +77,7 @@ def to_file(titles):
                 continue
 
 
-def update_songs(user='TotaledThomas', pages_to_check=60):
-    date_today = date.today()
-    log("Update songs list")
-    with (open(LAST_UPDATED, 'r')) as f3:
-        if f3.readline() == str(date_today):
-            log("List already updated")
-            return 0
-    log("Files opened Correctly")
-    with open(FILE_PATH, 'r') as f1:
-        old_titles = [line for line in f1.readlines()]
-    url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYSS" % user
-    new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(1, pages_to_check + 1)])
-    titles_to_update = []
-    for new_titles_list in new_titles_map:
-        titles_to_update.extend([title for title in new_titles_list if title not in old_titles])
+def update_file(titles_to_update):
     with open(FILE_PATH, 'a') as f2:
         for title in titles_to_update:
             try:
@@ -101,8 +87,36 @@ def update_songs(user='TotaledThomas', pages_to_check=60):
                 log("Error while updating songs list")
                 log(str(ex))
                 continue
+
+
+def check_last_updated():
+    date_today = date.today()
+    with (open(LAST_UPDATED, 'r')) as f3:
+        if f3.readline() == str(date_today):
+            log("List already updated")
+            return True
+        else:
+            f3.write(str(date_today))
+            return False
+
+
+def get_new_titles(new_titles_map):
+    with open(FILE_PATH, 'r') as f1:
+        old_titles = [line for line in f1.readlines()]
+    titles_to_update = []
+    for new_titles_list in new_titles_map:
+        titles_to_update.extend([title for title in new_titles_list if title not in old_titles])
+    return titles_to_update
+
+
+def update_songs(user='TotaledThomas', pages_to_check=60):
+    log("Update songs list")
+    if check_last_updated(): return 0
+    url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYSS" % user
+    new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(1, pages_to_check + 1)])
+    titles_to_update = get_new_titles(new_titles_map)
+    update_file(titles_to_update)
     log("Song List updated correctly")
-    open(LAST_UPDATED, 'w').write(str(date_today))
 
 
 if __name__ == '__main__':
