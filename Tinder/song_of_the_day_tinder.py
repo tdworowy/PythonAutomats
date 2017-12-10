@@ -7,7 +7,7 @@ from Chrome_Driver_Folder.driver_path import get_driver_path
 from Facebook.facebook_id import get_facebook_ID
 from Facebook.facebook_token import get_access_token
 from Tinder.tinder_Api import TinderMessageBot
-from Utils.Songs_.Songs import update_songs, FILE_PATH
+from Utils.Songs_.Songs import FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Utils.utils import log, save_history
 from Youtube.Youtube_Bot import get_youtube_URL
@@ -40,7 +40,7 @@ class SongOfTheDay():
 
 @log_exception()
 def main(login, password, names):
-    update_songs()
+    update_songs_distribution()
     log("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs_list = f.read()

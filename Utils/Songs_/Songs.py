@@ -92,17 +92,18 @@ def get_new_titles(new_titles_map):
     return titles_to_update
 
 
-def update_songs(user='TotaledThomas', pages_to_check=60):
+def _update_songs(min=1, max=60, user='TotaledThomas', file_path=FILE_PATH):
     if check_last_updated(): return 0
     url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYSS" % user
-    new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(1, pages_to_check + 1)])
+    new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(min, max + 1)])
     titles_to_update = get_new_titles(new_titles_map)
-    to_file(titles_to_update, FILE_PATH)
+    to_file(titles_to_update, file_path)
 
 
-def distribution(parts, min_=0, user_='TotaledThomas'):
-    url = 'https://www.last.fm/pl/user/%s/library/tracks' % user_
-    max = get_pages_count(url)
+def distribution(parts, min_=1, max=0, user_='TotaledThomas', target=get_songs):
+    if max == 0:
+        url = 'https://www.last.fm/pl/user/%s/library/tracks' % user_
+        max = get_pages_count(url)
     rest = max % parts
     min = min_
     inc = (max - min_) // parts
@@ -110,7 +111,7 @@ def distribution(parts, min_=0, user_='TotaledThomas'):
     processes = []
     for i in range(1, parts + 1):
         if i == parts: max = max + rest
-        process = Process(target=get_songs, args=(min, max, user_, FOLDER_PATH + "songsList%s.txt" % str(i)))
+        process = Process(target=target, args=(min, max, user_, FOLDER_PATH + "songsList%s.txt" % str(i)))
         max = max + inc
         min = min + inc
         processes.append(process)
@@ -120,6 +121,10 @@ def distribution(parts, min_=0, user_='TotaledThomas'):
 
     for process in processes:
         process.join()
+
+
+def update_songs_distribution():
+    distribution(parts=4, max=60, target=_update_songs)
 
 
 def combine_files(count, file_path=FILE_PATH):
