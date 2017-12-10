@@ -58,8 +58,9 @@ def get_songs(user='TotaledThomas'):
     open(FILE_PATH, 'w').close()
     url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
     pages_count = get_pages_count(url)
-    titles = map(get_titles, [url + '?page= %s' % str(i) for i in range(1, pages_count + 1)])
-    to_file(list(titles))
+    titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(1, pages_count + 1)])
+    for tiles_list in titles_map:
+        to_file(tiles_list)
 
 
 def to_file(titles):
