@@ -60,11 +60,11 @@ def get_songs(min, max, user='TotaledThomas', file_path=FILE_PATH):
     url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
     titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(min, max + 1)])
     for tiles_list in titles_map:
-        to_file(tiles_list, 'w')
+        to_file(tiles_list, 'w',file_path)
 
 
-def to_file(titles, mode):
-    with open(FILE_PATH, mode) as f:
+def to_file(titles, mode,file_path):
+    with open(file_path, mode) as f:
         for text in titles:
             try:
                 f.write(text)
@@ -98,7 +98,7 @@ def update_songs(user='TotaledThomas', pages_to_check=60):
     url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYSS" % user
     new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(1, pages_to_check + 1)])
     titles_to_update = get_new_titles(new_titles_map)
-    to_file(titles_to_update, 'a')
+    to_file(titles_to_update, 'a',FILE_PATH)
 
 
 def distribution(parts, min_=0, user_='TotaledThomas'):
