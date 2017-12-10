@@ -29,7 +29,6 @@ def get_pages_count(url):
 
 
 def get_titles(url):
-    log("Get songs from %s" % url)
     response = requests.get(url).text
     soup = BeautifulSoup(response, "html.parser")
     titles = soup.find_all("a", class_="link-block-target")
