@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Utils/file_utils.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py" afterPath="$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py" />
-      <change beforePath="$PROJECT_DIR$/Facebook/song_on_demand_face.py" afterPath="$PROJECT_DIR$/Facebook/song_on_demand_face.py" />
-      <change beforePath="$PROJECT_DIR$/Utils/Songs_/Songs.py" afterPath="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
-      <change beforePath="$PROJECT_DIR$/Utils/utils.py" afterPath="$PROJECT_DIR$/Utils/utils.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,9 +27,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="741">
               <caret line="106" column="29" lean-forward="false" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,9 +37,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,24 +67,22 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="265">
               <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="song_of_the_day_post_on_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="song_of_the_day_facebook_message.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="song_of_the_day_post_on_page.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="song_of_the_day_facebook_message.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -595,13 +585,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00379" summary="fix">
-      <created>1508658909035</created>
-      <option name="number" value="00379" />
-      <option name="presentableId" value="LOCAL-00379" />
-      <option name="project" value="LOCAL" />
-      <updated>1508658909035</updated>
-    </task>
     <task id="LOCAL-00380" summary="fix">
       <created>1508659229829</created>
       <option name="number" value="00380" />
@@ -938,7 +921,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512914140981</updated>
     </task>
-    <option name="localTasksCounter" value="428" />
+    <task id="LOCAL-00428" summary="Refactor">
+      <created>1513194892012</created>
+      <option name="number" value="00428" />
+      <option name="presentableId" value="LOCAL-00428" />
+      <option name="project" value="LOCAL" />
+      <updated>1513194892013</updated>
+    </task>
+    <option name="localTasksCounter" value="429" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1031,7 +1021,6 @@
     <MESSAGE value="Phantomjs added" />
     <MESSAGE value="fix + refactor" />
     <MESSAGE value="Tinder" />
-    <MESSAGE value="Refactor" />
     <MESSAGE value="Use skype api in SongFoTheDay_skype" />
     <MESSAGE value="Refactor + fix" />
     <MESSAGE value="refactor + fix" />
@@ -1040,7 +1029,8 @@
     <MESSAGE value="Update" />
     <MESSAGE value="update" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1113,10 +1103,6 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Utils/web/portscaner.py</url>
           <option name="timeStamp" value="108" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Facebook/song_on_demand_face.py</url>
-          <option name="timeStamp" value="110" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -1444,9 +1430,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1462,9 +1446,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
           <caret line="106" column="29" lean-forward="false" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1472,16 +1454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1490,6 +1462,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
           <folding />
         </state>
       </provider>

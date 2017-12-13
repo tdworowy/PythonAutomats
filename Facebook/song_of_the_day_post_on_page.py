@@ -5,7 +5,7 @@ from selenium import webdriver
 
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Facebook.facebook_post import FaceBookPost
-from Utils.Songs_.Songs import, FILE_PATH, update_songs_distribution
+from Utils.Songs_.Songs import FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Utils.utils import log
 from Youtube.Youtube_Bot import get_youtube_URL
