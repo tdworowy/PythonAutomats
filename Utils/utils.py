@@ -55,20 +55,5 @@ def characters(frm, to):
     return ','.join([chr(x) for x in range(frm, to)])  # max 1114111
 
 
-def create_file_if_not_exist(path):
-    if not os.path.isfile(path):
-        open(path, 'w').close()
-
-
-def write_to_file_no_duplicates(path, elements):
-    with (open(path, 'a')) as f1, (open(path, 'r')) as f2:
-        for ele in elements:
-            in_file = [line.strip() for line in f2.readlines()]
-            # print("if %s not in %s " %(ele,list))
-            if ele not in in_file:
-                f1.write(ele + '\n')
-            f2.seek(0)
-
-
 def get_millis():
     return int(round(time.time() * 1000))

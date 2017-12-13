@@ -9,7 +9,8 @@ from fbchat import ThreadType
 
 from Facebook.song_of_the_day_facebook_message import SongOfTheDayFace
 from Utils.Songs_.Songs import FILE_PATH
-from Utils.utils import create_file_if_not_exist, log, save_history
+from Utils.file_utils import create_file_if_not_exist
+from Utils.utils import log, save_history
 from Youtube.Youtube_Bot import get_youtube_URL
 
 

@@ -1,13 +1,14 @@
 import random
 import sys
 
+from selenium import webdriver
+
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Facebook.facebook_post import FaceBookPost
-from Utils.Songs_.Songs import update_songs, get_file_path
+from Utils.Songs_.Songs import, FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Utils.utils import log
 from Youtube.Youtube_Bot import get_youtube_URL
-from selenium import webdriver
 
 
 class SongOfTheDay:
@@ -20,7 +21,7 @@ class SongOfTheDay:
             self.face_bot.facebook_post(songURL)
 
     def set_up(self, page_id, app_id, app_secred):
-        update_songs()
+        update_songs_distribution()
         chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chrome_driver_path)
         self.driver.implicitly_wait(2)
@@ -33,7 +34,7 @@ class SongOfTheDay:
 @log_exception
 def main(page_id, app_id, app_secred):
     song = SongOfTheDay(page_id, app_id, app_secred)
-    f = open(get_file_path(), 'r')
+    f = open(FILE_PATH, 'r')
     log("Get random song")
     songs = f.read()
     songs = songs.split("\n")

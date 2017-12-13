@@ -5,6 +5,7 @@ from shutil import copyfile
 import requests
 from bs4 import BeautifulSoup
 
+from Utils.file_utils import to_file, remove_duplicates
 from Utils.utils import log
 
 FOLDER_PATH = "E:\Google_drive\Songs\\"
@@ -62,17 +63,6 @@ def get_songs(min, max, user='TotaledThomas', file_path=FILE_PATH):
         to_file(tiles_list, file_path)
 
 
-def to_file(titles, file_path):
-    with open(file_path, 'a') as f:
-        for text in titles:
-            try:
-                f.write(text)
-                f.flush()
-            except Exception as ex:
-                log(str(ex))
-                continue
-
-
 def check_last_updated():
     date_today = date.today()
     with (open(LAST_UPDATED, 'r')) as f3:
@@ -81,11 +71,6 @@ def check_last_updated():
         else:
             f3.write(str(date_today))
             return False
-
-
-def remove_duplicates():
-    uniq_lines = set(open(FILE_PATH).readlines())
-    open(FILE_PATH, 'w').writelines(set(uniq_lines))
 
 
 def _update_songs(min=1, max=60, user='TotaledThomas', file_path=FILE_PATH):
@@ -121,7 +106,7 @@ def distribution(parts, min_=1, max=0, user_='TotaledThomas', target=get_songs):
 
 def update_songs_distribution():
     distribution(parts=6, max=60, target=_update_songs)
-    remove_duplicates()
+    remove_duplicates(FILE_PATH)
 
 
 def combine_files(count, file_path=FILE_PATH):
