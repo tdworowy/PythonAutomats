@@ -1,7 +1,5 @@
 import os
 
-from Utils.utils import log
-
 
 def to_file(titles, file_path):
     with open(file_path, 'a') as f:
@@ -10,7 +8,7 @@ def to_file(titles, file_path):
                 f.write(text)
                 f.flush()
             except Exception as ex:
-                log(str(ex))
+                print(ex)
                 continue
 
 
