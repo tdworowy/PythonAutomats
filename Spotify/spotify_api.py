@@ -102,7 +102,7 @@ def songs_ides_distributed(sa, start):
         distribution(pool_count, sa.save_tracks_ides_to_file, songs, min_=ides, max=songs_count)
         ides = songs_count
         songs_count = songs_count + 200
-        time.sleep(5)
+        time.sleep(2)
 
     combine_files(pool_count, FILE_PATH, FOLDER_PATH, "song_ides")
     remove_duplicates(FILE_PATH)
