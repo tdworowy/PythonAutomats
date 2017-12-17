@@ -122,16 +122,27 @@ if __name__ == "__main__":
     if not os.path.isfile(FILE_PATH):
         songs_ides_distributed(sa, START)
 
-    play_list_id = sa.create_playlist("My_all")['id']
     with open(FILE_PATH) as ides_list:
         ides = ides_list.readlines()
         ides_list.seek(0)
         count = sum(1 for line in ides_list)
         # print(sa.get_song_uri(ides[1].strip()))
+
+    LIMIT = 10989
+
     start = 0
     stop = 99
+    offset = 99
+    playlist_count = 1
+    play_list_id = sa.create_playlist("My_all%s" % str(playlist_count))['id']
+
     while stop <= count:
         ides_striped = [i.strip() for i in ides[start:stop]]
         sa.add_tracks(play_list_id, ides_striped)
         start = stop
         stop = stop + 99
+        offset = offset + 99
+        if offset >= LIMIT:
+            playlist_count += 1
+            play_list_id = sa.create_playlist("My_all%s" % str(playlist_count))['id']
+            offset = 99
