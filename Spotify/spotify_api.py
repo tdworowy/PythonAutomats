@@ -5,7 +5,7 @@ from multiprocessing import Process
 import spotipy
 from spotipy import util
 
-from Utils.file_utils import combine_files, create_file_if_not_exist
+from Utils.file_utils import combine_files, create_file_if_not_exist, remove_duplicates
 from Utils.utils import log
 
 SONGS_PATH = "E:\Google_drive\Songs\songsList.txt"
@@ -15,7 +15,8 @@ FILE_PATH = "E:\Google_drive\Songs\songsIDs.txt"
 
 class SpotifyApi:
 
-    def get_token(self, user_name, client_id, client_secret, redirect_uri):
+    @staticmethod
+    def get_token(user_name, client_id, client_secret, redirect_uri):
         """https://developer.spotify.com/web-api/using-scopes/"""
         scope = 'playlist-modify-public'
         token = util.prompt_for_user_token(username=user_name, scope=scope, client_id=client_id,
@@ -80,13 +81,13 @@ def distribution(parts, target, tracks_list, min_=1, max=1, ):
         process.join()
 
 
-def songs_ides_distributed(sa):
+def songs_ides_distributed(sa, start):
     with open(SONGS_PATH) as songs_file:
         count = sum(1 for line in songs_file)
         songs_file.seek(0)
         songs = songs_file.readlines()
 
-    ides = 1496
+    ides = start
     songs_count = ides + 200
     while ides < count:
         distribution(pool_count, sa.save_tracks_ides_to_file, songs, min_=ides, max=songs_count)
@@ -95,9 +96,11 @@ def songs_ides_distributed(sa):
         time.sleep(5)
 
     combine_files(pool_count, FILE_PATH, FOLDER_PATH, "song_ides")
+    remove_duplicates(FILE_PATH)
 
 
 if __name__ == "__main__":
+    START = 1700
     with open('auth.txt') as aut:
         user_name = aut.readline().strip()
         client_id = aut.readline().strip()
@@ -107,6 +110,8 @@ if __name__ == "__main__":
     pool_count = 10
     sa = SpotifyApi(user_name, client_id, client_secret, redirect_uri)
     if not os.path.isfile(FILE_PATH):
-        songs_ides_distributed(sa)
+        songs_ides_distributed(sa, START)
 
-    # play_list_id = sa.create_playlist("My_all")
+    play_list_id = sa.create_playlist("My_all")
+    with open(FILE_PATH) as ides_list:
+        sa.add_tracks(play_list_id, ides_list.readlines())
