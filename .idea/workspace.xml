@@ -35,8 +35,8 @@
       <file leaf-file-name="spotify_api.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Spotify/spotify_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1088">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="344">
+              <caret line="134" column="49" lean-forward="true" selection-start-line="134" selection-start-column="49" selection-end-line="134" selection-end-column="49" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -118,7 +118,7 @@
         <entry file="file://D:/Python/Lib/site-packages/spotipy/client.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="443" column="8" lean-forward="false" selection-start-line="443" selection-start-column="8" selection-end-line="443" selection-end-column="8" />
+              <caret line="214" column="8" lean-forward="false" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -561,13 +561,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00384" summary="fix">
-      <created>1508659912699</created>
-      <option name="number" value="00384" />
-      <option name="presentableId" value="LOCAL-00384" />
-      <option name="project" value="LOCAL" />
-      <updated>1508659912700</updated>
-    </task>
     <task id="LOCAL-00385" summary="update">
       <created>1508660014548</created>
       <option name="number" value="00385" />
@@ -904,7 +897,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513514976391</updated>
     </task>
-    <option name="localTasksCounter" value="433" />
+    <task id="LOCAL-00433" summary="update">
+      <created>1513517154414</created>
+      <option name="number" value="00433" />
+      <option name="presentableId" value="LOCAL-00433" />
+      <option name="project" value="LOCAL" />
+      <updated>1513517154414</updated>
+    </task>
+    <option name="localTasksCounter" value="434" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1463,6 +1463,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Python/Lib/site-packages/spotipy/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="214" column="8" lean-forward="false" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://D:/Python/Lib/site-packages/spotipy/oauth2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="694">
@@ -1471,18 +1479,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python/Lib/site-packages/spotipy/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="443" column="8" lean-forward="false" selection-start-line="443" selection-start-column="8" selection-end-line="443" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Spotify/spotify_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1088">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="344">
+          <caret line="134" column="49" lean-forward="true" selection-start-line="134" selection-start-column="49" selection-end-line="134" selection-end-column="49" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

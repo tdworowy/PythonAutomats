@@ -54,13 +54,22 @@ class SpotifyApi:
                 f1.flush()
 
     def create_playlist(self, name, public=True, ):
-        return self.sp.user_playlist_create(user_name, name, public)
+        user_id = sa.sp.current_user()['id']
+        return self.sp.user_playlist_create(user_id, name, public)
 
     def add_tracks(self, play_list_id, tracks_ides):
-        self.sp.user_playlist_add_tracks(user=self.user_name, playlist_id=play_list_id, tracks=tracks_ides)
+        user_id = sa.sp.current_user()['id']
+        try:
+            self.sp.user_playlist_add_tracks(user=user_id, playlist_id=play_list_id, tracks=tracks_ides)
+        except Exception as  ex:
+            print(ex)
+            pass
+
+    def get_song_uri(self, song_id):
+        return self.sp.track(song_id).strip()
 
 
-def distribution(parts, target, tracks_list, min_=1, max=1, ):
+def distribution(parts, target, tracks_list, min_=1, max=1):
     rest = max % parts
     min = min_
     inc = (max - min_) // parts
@@ -100,7 +109,7 @@ def songs_ides_distributed(sa, start):
 
 
 if __name__ == "__main__":
-    START = 1700
+    START = 0
     with open('auth.txt') as aut:
         user_name = aut.readline().strip()
         client_id = aut.readline().strip()
@@ -109,9 +118,20 @@ if __name__ == "__main__":
 
     pool_count = 10
     sa = SpotifyApi(user_name, client_id, client_secret, redirect_uri)
+
     if not os.path.isfile(FILE_PATH):
         songs_ides_distributed(sa, START)
 
-    play_list_id = sa.create_playlist("My_all")
+    play_list_id = sa.create_playlist("My_all")['id']
     with open(FILE_PATH) as ides_list:
-        sa.add_tracks(play_list_id, ides_list.readlines())
+        ides = ides_list.readlines()
+        ides_list.seek(0)
+        count = sum(1 for line in ides_list)
+        # print(sa.get_song_uri(ides[1].strip()))
+    start = 0
+    stop = 99
+    while stop <= count:
+        ides_striped = [i.strip() for i in ides[start:stop]]
+        sa.add_tracks(play_list_id, ides_striped)
+        start = stop
+        stop = stop + 99
