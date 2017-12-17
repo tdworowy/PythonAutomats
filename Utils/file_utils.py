@@ -30,3 +30,12 @@ def write_to_file_no_duplicates(path, elements):
             if ele not in in_file:
                 f1.write(ele + '\n')
             f2.seek(0)
+
+
+def combine_files(count, file_path, folder_path, prefix):
+    file_names = [folder_path + "%s%s.txt" % (prefix, str(i)) for i in range(1, count + 1)]
+    with open(file_path, 'w') as outfile:
+        for fname in file_names:
+            with open(fname) as infile:
+                for line in infile:
+                    outfile.write(line)

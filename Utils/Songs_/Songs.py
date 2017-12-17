@@ -5,7 +5,7 @@ from shutil import copyfile
 import requests
 from bs4 import BeautifulSoup
 
-from Utils.file_utils import to_file, remove_duplicates
+from Utils.file_utils import to_file, remove_duplicates, combine_files
 from Utils.utils import log
 
 FOLDER_PATH = "E:\Google_drive\Songs\\"
@@ -109,20 +109,11 @@ def update_songs_distribution():
     remove_duplicates(FILE_PATH)
 
 
-def combine_files(count, file_path=FILE_PATH):
-    file_names = [FOLDER_PATH + "songsList%s.txt" % str(i) for i in range(1, count + 1)]
-    with open(file_path, 'w') as outfile:
-        for fname in file_names:
-            with open(fname) as infile:
-                for line in infile:
-                    outfile.write(line)
-
-
 if __name__ == '__main__':
     pool_count = 10
 
     distribution(pool_count)
 
-    combine_files(pool_count)
+    combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList")
     remove_duplicates()
     copyfile(FILE_PATH, "songs.txt")
