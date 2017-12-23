@@ -116,5 +116,5 @@ if __name__ == '__main__':
     distribution(pool_count)
 
     combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList")
-    remove_duplicates()
+    remove_duplicates(FILE_PATH)
     copyfile(FILE_PATH, "songs.txt")
