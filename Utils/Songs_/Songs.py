@@ -69,6 +69,7 @@ def check_last_updated():
         if f3.readline() == str(date_today):
             return True
         else:
+            f3 = open(LAST_UPDATED, 'w')
             f3.write(str(date_today))
             return False
 

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Spotify/spotify_api.py" afterPath="$PROJECT_DIR$/Spotify/spotify_api.py" />
+      <change beforePath="$PROJECT_DIR$/Utils/Songs_/Songs.py" afterPath="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +32,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spotify_api.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="decorators.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="song_of_the_day_skype.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spotify_api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Spotify/spotify_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="104" column="20" lean-forward="false" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
+            <state relative-caret-position="1275">
+              <caret line="83" column="32" lean-forward="false" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -52,52 +82,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="process.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Python/Lib/multiprocessing/process.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4148">
-              <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Songs.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Songs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1887">
-              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+            <state relative-caret-position="367">
+              <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-643338342/builtins.py">
+      <file leaf-file-name="netflix.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Netflix/netflix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85867">
-              <caret line="5051" column="8" lean-forward="false" selection-start-line="5051" selection-start-column="8" selection-end-line="5051" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Spotify/auth.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="32" lean-forward="false" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="util.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Python/Lib/site-packages/spotipy/util.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BlogTests/screens/screenPath.py" />
         <option value="$PROJECT_DIR$/BlogTests/run.py" />
         <option value="$PROJECT_DIR$/BlogTests/allureReport.py" />
         <option value="$PROJECT_DIR$/BlogTests/Pages/adminPage.py" />
@@ -210,9 +211,10 @@
         <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/Speed_Test/speed_test.py" />
         <option value="$PROJECT_DIR$/Spotify/auth.txt" />
-        <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
         <option value="$PROJECT_DIR$/Utils/file_utils.py" />
         <option value="$PROJECT_DIR$/Spotify/spotify_api.py" />
+        <option value="$PROJECT_DIR$/Utils/processes_utils.py" />
+        <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
       </list>
     </option>
   </component>
@@ -270,7 +272,7 @@
             <path>
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
-              <item name="Spotify" type="462c0819:PsiDirectoryNode" />
+              <item name="Skype" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
@@ -558,13 +560,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00387" summary="update">
-      <created>1508660476854</created>
-      <option name="number" value="00387" />
-      <option name="presentableId" value="LOCAL-00387" />
-      <option name="project" value="LOCAL" />
-      <updated>1508660476854</updated>
     </task>
     <task id="LOCAL-00388" summary="update">
       <created>1508660903176</created>
@@ -902,7 +897,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513522225720</updated>
     </task>
-    <option name="localTasksCounter" value="436" />
+    <task id="LOCAL-00436" summary="update">
+      <created>1513525472392</created>
+      <option name="number" value="00436" />
+      <option name="presentableId" value="LOCAL-00436" />
+      <option name="project" value="LOCAL" />
+      <updated>1513525472413</updated>
+    </task>
+    <option name="localTasksCounter" value="437" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1095,13 +1097,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Behave_test/features/dealer.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Behave_test/features/steps/steps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1261,13 +1256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project_path.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1347,34 +1335,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Speed_Test/speed_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Netflix/netflix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1389,7 +1353,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="32" lean-forward="false" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1425,22 +1388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/file_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Lib/site-packages/spotipy/client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3570">
@@ -1457,10 +1404,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/processes_utils.py" />
     <entry file="file://$PROJECT_DIR$/Spotify/spotify_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="104" column="20" lean-forward="false" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
+        <state relative-caret-position="1275">
+          <caret line="83" column="32" lean-forward="false" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Netflix/netflix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/file_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
           <folding />
         </state>
       </provider>
