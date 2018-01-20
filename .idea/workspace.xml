@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Utils/pip_utils.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Utils/req.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/update_all/update_app_packages.py" afterPath="$PROJECT_DIR$/update_all/update_app_packages.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,14 +45,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_app_packages.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update_app_packages.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/update_all/update_app_packages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pip_utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/pip_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="req.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Utils/req.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2540">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,16 +105,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spotify_api.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Spotify/spotify_api.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="83" column="32" lean-forward="false" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Songs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -114,16 +123,6 @@
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="oauth2.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Python/Lib/site-packages/spotipy/oauth2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3672">
-              <caret line="222" column="8" lean-forward="false" selection-start-line="222" selection-start-column="8" selection-end-line="222" selection-end-column="8" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -168,7 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BlogTests/allureReport.py" />
         <option value="$PROJECT_DIR$/BlogTests/Pages/adminPage.py" />
         <option value="$PROJECT_DIR$/BlogTests/Pages/blogPage.py" />
         <option value="$PROJECT_DIR$/BlogTests/Pages/loginPage.py" />
@@ -219,6 +217,7 @@
         <option value="$PROJECT_DIR$/Utils/processes_utils.py" />
         <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
         <option value="$PROJECT_DIR$/update_all/update_app_packages.py" />
+        <option value="$PROJECT_DIR$/Utils/pip_utils.py" />
       </list>
     </option>
   </component>
@@ -265,6 +264,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,12 +277,16 @@
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
               <item name="update_all" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,7 +321,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.update_app_packages">
+  <component name="RunManager" selected="Python.pip_utils">
     <configuration name="Songs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -354,19 +358,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="song_of_the_day_facebook_message" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pip_utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Facebook" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Utils" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SeleniumPython" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Utils/pip_utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -519,19 +523,19 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.song_of_the_day_facebook_message" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Songs" />
-      <item index="2" class="java.lang.String" itemvalue="Python.speed_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.spotify_api" />
-      <item index="4" class="java.lang.String" itemvalue="Python.update_app_packages" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Songs" />
+      <item index="1" class="java.lang.String" itemvalue="Python.speed_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.spotify_api" />
+      <item index="3" class="java.lang.String" itemvalue="Python.update_app_packages" />
+      <item index="4" class="java.lang.String" itemvalue="Python.pip_utils" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.update_app_packages" />
-        <item index="1" class="java.lang.String" itemvalue="Python.spotify_api" />
-        <item index="2" class="java.lang.String" itemvalue="Python.speed_test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Songs" />
-        <item index="4" class="java.lang.String" itemvalue="Python.song_of_the_day_facebook_message" />
+        <item index="0" class="java.lang.String" itemvalue="Python.pip_utils" />
+        <item index="1" class="java.lang.String" itemvalue="Python.update_app_packages" />
+        <item index="2" class="java.lang.String" itemvalue="Python.spotify_api" />
+        <item index="3" class="java.lang.String" itemvalue="Python.speed_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Songs" />
       </list>
     </recent_temporary>
   </component>
@@ -548,13 +552,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00391" summary="update">
-      <created>1508662919698</created>
-      <option name="number" value="00391" />
-      <option name="presentableId" value="LOCAL-00391" />
-      <option name="project" value="LOCAL" />
-      <updated>1508662919698</updated>
     </task>
     <task id="LOCAL-00392" summary="update">
       <created>1508670708168</created>
@@ -892,7 +889,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516453951375</updated>
     </task>
-    <option name="localTasksCounter" value="440" />
+    <task id="LOCAL-00440" summary="update">
+      <created>1516454001780</created>
+      <option name="number" value="00440" />
+      <option name="presentableId" value="LOCAL-00440" />
+      <option name="project" value="LOCAL" />
+      <updated>1516454001780</updated>
+    </task>
+    <option name="localTasksCounter" value="441" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1089,20 +1093,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Behave_test/features/environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Skype/Skype_api_tests/Behave/features/steps/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/Behave/features/environment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1366,7 +1356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3570">
           <caret line="214" column="8" lean-forward="false" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1449,11 +1438,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/update_all/update_app_packages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/pip_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/req.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2540">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
