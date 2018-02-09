@@ -1,11 +1,12 @@
 import os
 import sys
 
-from Chrome_Driver_Folder.driver_path import get_driver_path
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+
+from Chrome_Driver_Folder.driver_path import get_driver_path
 
 NETFLIX_URLl = "https://www.netflix.com/browse"
 GENRE_URL = "https://www.netflix.com/browse/genre/"
@@ -40,7 +41,6 @@ def get_all_categories(login, password):
     f = open(PATH, 'a')
 
     for i in range(int(start), 99999):
-
         driver.get(GENRE_URL + str(i))
         try:
             category = driver.find_element(*GENRE_NAME).text

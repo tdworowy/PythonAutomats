@@ -1,4 +1,3 @@
-
 import os
 
 import httplib2
@@ -9,11 +8,12 @@ from oauth2client.file import Storage
 
 try:
     import argparse
+
     flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
 except ImportError:
     flags = None
 
-#TODO
+# TODO
 SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
 CLIENT_SECRET_FILE = 'D:\Google_drive\client_secret_332972022991-tvog4ehs3basgujc43hnqdlkg9ph1gqd.apps.googleusercontent.com.json'
 APPLICATION_NAME = 'Google Sheets API'
@@ -36,11 +36,12 @@ def get_credentials():
         print('Storing credentials to ' + credential_path)
     return credentials
 
+
 def read_document():
     credentials = get_credentials()
     http = credentials.authorize(httplib2.Http())
     discovery_url = ('https://sheets.googleapis.com/$discovery/rest?'
-                    'version=v4')
+                     'version=v4')
     service = discovery.build('sheets', 'v4', http=http,
                               discoveryServiceUrl=discovery_url)
 
@@ -57,7 +58,6 @@ def read_document():
     #     for row in values:
     #         # Print columns A and E, which correspond to indices 0 and 4.
     #         print('%s, %s' % (row[0], row[4]))
-
 
 # if __name__ == '__main__':
 #     main()
