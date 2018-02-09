@@ -38,7 +38,7 @@ def check_queue(path):
     partial_get_ides = partial(get_ides, path)
     thread_ides = list(map(partial_get_ides, files, checked_list))
     print("Thread ID's %s" % thread_ides)
-    return thread_ides
+    return thread_ides[0]
 
 
 def send_song(song_, thread_id, thread_type):
