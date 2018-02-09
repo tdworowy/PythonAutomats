@@ -88,8 +88,8 @@ if __name__ == '__main__':
     song.login_FB(user, passw)
 
     process1 = Process(target=start_monitor, args=(PHASE, [fm1, fm2]))
-    process2 = Process(target=send_songs_threads, args=(path1, ThreadType.GROUP))
-    process3 = Process(target=send_songs_threads, args=(path2, ThreadType.USER))
+    process2 = Process(target=send_songs_threads, args=(song, path1, ThreadType.GROUP))
+    process3 = Process(target=send_songs_threads, args=(song, path2, ThreadType.USER))
 
     for process in [process1, process2, process3]:
         process.start()
