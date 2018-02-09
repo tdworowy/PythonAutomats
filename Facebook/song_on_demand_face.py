@@ -72,6 +72,7 @@ def send_songs_threads(song_, path, thread_type):
 
 
 if __name__ == '__main__':
+    PHASE = "[SONG]"
     path1 = 'D:\Google_drive\QueueGroup\\'
     path2 = 'D:\Google_drive\QueueUser\\'
     THREADID1 = '1252344071467839'  # group
@@ -86,7 +87,7 @@ if __name__ == '__main__':
     song = SongOfTheDayFace()
     song.login_FB(user, passw)
 
-    process1 = Process(target=start_monitor, args=("[SONG]", [fm1, fm2]))
+    process1 = Process(target=start_monitor, args=(PHASE, [fm1, fm2]))
     process2 = Process(target=send_songs_threads, args=(path1, ThreadType.GROUP))
     process3 = Process(target=send_songs_threads, args=(path2, ThreadType.USER))
 
