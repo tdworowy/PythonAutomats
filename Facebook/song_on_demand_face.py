@@ -73,8 +73,8 @@ def send_songs_threads(song_, path, thread_type):
 
 if __name__ == '__main__':
     PHASE = "[SONG]"
-    path1 = 'D:\Google_drive\QueueGroup\\'
-    path2 = 'D:\Google_drive\QueueUser\\'
+    path1 = 'E:\Google_drive\QueueGroup\\'
+    path2 = 'E:\Google_drive\QueueUser\\'
     THREADID1 = '1252344071467839'  # group
     THREADID2 = '100000471818643'  # user
 
