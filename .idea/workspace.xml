@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Facebook/song_on_demand_face.py" afterPath="$PROJECT_DIR$/Facebook/song_on_demand_face.py" />
+      <change beforePath="$PROJECT_DIR$/Youtube/Youtube_Bot.py" afterPath="$PROJECT_DIR$/Youtube/Youtube_Bot.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,14 +62,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="song_on_demand_face.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="song_on_demand_face.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Facebook/song_on_demand_face.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="354">
+              <caret line="51" column="20" lean-forward="false" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Youtube_Bot.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Youtube_Bot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Youtube/Youtube_Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            <state relative-caret-position="408">
+              <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -212,11 +210,11 @@
         <option value="$PROJECT_DIR$/Utils/pip_utils.py" />
         <option value="$PROJECT_DIR$/Utils/run_artifactory.py" />
         <option value="$PROJECT_DIR$/Utils/file_utils.py" />
-        <option value="$PROJECT_DIR$/Youtube/Youtube_Bot.py" />
         <option value="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" />
         <option value="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" />
         <option value="$PROJECT_DIR$/Facebook/facebook_monitor.py" />
         <option value="$PROJECT_DIR$/Facebook/song_on_demand_face.py" />
+        <option value="$PROJECT_DIR$/Youtube/Youtube_Bot.py" />
       </list>
     </option>
   </component>
@@ -546,13 +544,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00405" summary="update">
-      <created>1512856814765</created>
-      <option name="number" value="00405" />
-      <option name="presentableId" value="LOCAL-00405" />
-      <option name="project" value="LOCAL" />
-      <updated>1512856814766</updated>
     </task>
     <task id="LOCAL-00406" summary="update">
       <created>1512858667802</created>
@@ -890,7 +881,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518182998340</updated>
     </task>
-    <option name="localTasksCounter" value="454" />
+    <task id="LOCAL-00454" summary="fix">
+      <created>1518183217187</created>
+      <option name="number" value="00454" />
+      <option name="presentableId" value="LOCAL-00454" />
+      <option name="project" value="LOCAL" />
+      <updated>1518183217187</updated>
+    </task>
+    <option name="localTasksCounter" value="455" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1085,6 +1083,11 @@
           <line>51</line>
           <option name="timeStamp" value="123" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Youtube/Youtube_Bot.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -1093,7 +1096,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="124" />
+      <option name="time" value="125" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1409,14 +1412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Youtube/Youtube_Bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -1429,14 +1424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Facebook/facebook_apiI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1465,13 +1452,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Facebook/facebook_apiI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/song_on_demand_face.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="354">
+          <caret line="51" column="20" lean-forward="false" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Youtube/Youtube_Bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
