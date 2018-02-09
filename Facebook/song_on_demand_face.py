@@ -36,7 +36,9 @@ def check_queue(path):
     checked_list = [path + "checked\\" + os.path.splitext(file)[0] + "_checked.txt" for file in files]
     map(create_file_if_not_exist, checked_list)
     partial_get_ides = partial(get_ides, path)
-    return list(map(partial_get_ides, files, list(checked_list)))
+    thread_ides = list(map(partial_get_ides, files, list(checked_list)))
+    print("Thread ID's %s" % thread_ides)
+    return thread_ides
 
 
 def send_song(song_, thread_id, thread_type):
