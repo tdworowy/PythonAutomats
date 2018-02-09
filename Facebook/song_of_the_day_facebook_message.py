@@ -35,7 +35,10 @@ class SongOfTheDayFace:
         self.driver.implicitly_wait(2)
 
     def tear_down(self):
-        self.driver.quit()
+        try:
+            self.driver.quit()
+        except Exception as ex:
+            print(ex)
 
     def logout(self):
         self.face_bot.logout()

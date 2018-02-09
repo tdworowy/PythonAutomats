@@ -47,7 +47,10 @@ class SongOfTheDay():
             save_history(songURL, "Skype.txt")
 
     def tear_down(self):
-        self.driver.quit()
+        try:
+            self.driver.quit()
+        except Exception as ex:
+            print(ex)
 
 
 @log_exception()

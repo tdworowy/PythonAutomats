@@ -19,5 +19,6 @@ def get_youtube_URL(driver, phrase):
     first_result = driver.find_element_by_css_selector("div[id='title-wrapper'] h3 a")
     first_result.click()
     time.sleep(1)
+    driver.quit()
 
     return driver.current_url
