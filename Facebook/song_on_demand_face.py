@@ -1,6 +1,5 @@
 import os
 import random
-import sys
 import time
 from functools import partial
 from multiprocessing import Process
@@ -54,23 +53,26 @@ def send_song(song_, thread_id, thread_type):
     url = get_youtube_URL(song_.driver, song_title.strip())
     song_.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
     song_.tear_down()
-    time.sleep(60)
 
 
 def send_songs_threads(song_, path, thread_type):
-    threads_ids = check_queue(path)
-    threads = []
-    for thread_id in threads_ids:
-        try:
-            thread = Thread(target=send_song, args=(song_, thread_id, thread_type))
-            threads.append(thread)
-            thread.start()
-        except Exception:
-            import traceback
-            traceback.print_exc()
+    while 1:
+        threads_ids = check_queue(path)
+        threads = []
+        if threads_ids:
+            for thread_id in threads_ids:
+                try:
+                    thread = Thread(target=send_song, args=(song_, thread_id, thread_type))
+                    threads.append(thread)
+                    thread.start()
+                except Exception:
+                    import traceback
+                    traceback.print_exc()
 
-    for thread in threads:
-        thread.join()
+            for thread in threads:
+                thread.join()
+        else:
+            time.sleep(60)
 
 
 if __name__ == '__main__':
@@ -80,8 +82,10 @@ if __name__ == '__main__':
     THREADID1 = '1252344071467839'  # group
     THREADID2 = '100000471818643'  # user
 
-    user = sys.argv[1]
-    passw = sys.argv[2] + " " + sys.argv[3]
+    # user = sys.argv[1]
+    # passw = sys.argv[2] + " " + sys.argv[3]
+    user = "dworowytomasz@gmail.com"
+    passw = "Jefferson Airplane1966!"
     song = SongOfTheDayFace()
     song.login_FB(user, passw)
 
