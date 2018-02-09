@@ -12,9 +12,9 @@ class FaceThreadMonitor:
         self.path = path
         self.thread_ID = thread_ID
 
-    def monitor_thread(self, phrase):
+    def monitor_thread(self, phrases):
         for massage in self.face_bot.get_messages(self.thread_ID):
-            if str(massage.text) == phrase:
+            if str(massage.text) in phrases:
                 path = self.path + self.thread_ID + ".txt"
                 create_file_if_not_exist(path)
                 with open(path, 'r+') as f:
