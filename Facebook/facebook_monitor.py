@@ -1,14 +1,12 @@
 import time
 from threading import Thread
 
-from Facebook.facebook_apiI import FaceBookMessageBot
 from Utils.utils import create_file_if_not_exist
 
 
 class FaceThreadMonitor:
-    def __init__(self, email, passw, path, thread_ID):
-        self.face_bot = FaceBookMessageBot()
-        self.face_bot.login(email, passw)
+    def __init__(self, face_bot, path, thread_ID):
+        self.face_bot = face_bot
         self.path = path
         self.thread_ID = thread_ID
 

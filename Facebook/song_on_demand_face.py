@@ -39,9 +39,7 @@ def check_queue(path):
     return list(map(partial_get_ides, files, list(checked_list)))
 
 
-def send_song(thread_id, thread_type,user, passw):
-    song = SongOfTheDayFace()
-    song.login_FB(user, passw)
+def send_song(song_, thread_id, thread_type):
     f = open(FILE_PATH, 'r')
     log("Get random song")
     songs = f.read()
@@ -50,19 +48,19 @@ def send_song(thread_id, thread_type,user, passw):
     song_title = songs[ran]
     log(song_title)
     save_history(song_title, "FacebookMessage.txt")
-    song.set_up()
+    song_.set_up()
     url = get_youtube_URL(song.driver, song_title.strip())
-    song.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
-    song.tear_down()
+    song_.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
+    song_.tear_down()
     time.sleep(60)
 
 
-def send_songs_threads(path, thread_type,user, passw):
+def send_songs_threads(song_, path, thread_type):
     threads_ids = check_queue(path)
     threads = []
     for thread_id in threads_ids:
         try:
-            thread = Thread(target=send_song, args=(thread_id, thread_type,user, passw,))
+            thread = Thread(target=send_song, args=(song_, thread_id, thread_type))
             threads.append(thread)
             thread.start()
         except Exception:
@@ -74,7 +72,7 @@ def send_songs_threads(path, thread_type,user, passw):
 
 
 if __name__ == '__main__':
-    PHASE = ["[SONG]","[song]"]
+    PHASE = ["[SONG]", "[song]"]
     path1 = 'E:\Google_drive\QueueGroup\\'
     path2 = 'E:\Google_drive\QueueUser\\'
     THREADID1 = '1252344071467839'  # group
@@ -82,13 +80,15 @@ if __name__ == '__main__':
 
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]
+    song = SongOfTheDayFace()
+    song.login_FB(user, passw)
 
-    fm1 = FaceThreadMonitor(user, passw, path1, THREADID1)
-    fm2 = FaceThreadMonitor(user, passw, path2, THREADID2)
+    fm1 = FaceThreadMonitor(song.face_bot, path1, THREADID1)
+    fm2 = FaceThreadMonitor(song.face_bot, path2, THREADID2)
 
     process1 = Process(target=start_monitor, args=(PHASE, [fm1, fm2]))
-    process2 = Process(target=send_songs_threads, args=(path1, ThreadType.GROUP,user, passw))
-    process3 = Process(target=send_songs_threads, args=(path2, ThreadType.USER,user, passw))
+    process2 = Process(target=send_songs_threads, args=(song,path1, ThreadType.GROUP))
+    process3 = Process(target=send_songs_threads, args=(song,path2, ThreadType.USER))
 
     for process in [process1, process2, process3]:
         process.start()
