@@ -49,7 +49,7 @@ def send_song(song_, thread_id, thread_type):
     log(song_title)
     save_history(song_title, "FacebookMessage.txt")
     song_.set_up()
-    url = get_youtube_URL(song.driver, song_title.strip())
+    url = get_youtube_URL(song_.driver, song_title.strip())
     song_.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
     song_.tear_down()
     time.sleep(60)

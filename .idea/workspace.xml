@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Facebook/facebook_monitor.py" afterPath="$PROJECT_DIR$/Facebook/facebook_monitor.py" />
       <change beforePath="$PROJECT_DIR$/Facebook/song_on_demand_face.py" afterPath="$PROJECT_DIR$/Facebook/song_on_demand_face.py" />
     </list>
     <ignored path="Selenium.iws" />
@@ -36,11 +35,9 @@
       <file leaf-file-name="facebook_monitor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Facebook/facebook_monitor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,8 +65,8 @@
       <file leaf-file-name="song_on_demand_face.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Facebook/song_on_demand_face.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="90" column="83" lean-forward="false" selection-start-line="90" selection-start-column="83" selection-end-line="90" selection-end-column="83" />
+            <state relative-caret-position="456">
+              <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -550,13 +547,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00404" summary="fix">
-      <created>1512235939939</created>
-      <option name="number" value="00404" />
-      <option name="presentableId" value="LOCAL-00404" />
-      <option name="project" value="LOCAL" />
-      <updated>1512235939939</updated>
-    </task>
     <task id="LOCAL-00405" summary="update">
       <created>1512856814765</created>
       <option name="number" value="00405" />
@@ -893,7 +883,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518182615572</updated>
     </task>
-    <option name="localTasksCounter" value="453" />
+    <task id="LOCAL-00453" summary="fix">
+      <created>1518182998328</created>
+      <option name="number" value="00453" />
+      <option name="presentableId" value="LOCAL-00453" />
+      <option name="project" value="LOCAL" />
+      <updated>1518182998340</updated>
+    </task>
+    <option name="localTasksCounter" value="454" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -994,9 +991,9 @@
     <MESSAGE value="Update" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="update song on demand face" />
-    <MESSAGE value="fix" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1080,8 +1077,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Facebook/facebook_monitor.py</url>
-          <line>23</line>
+          <line>22</line>
           <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Facebook/song_on_demand_face.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="123" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -1091,7 +1093,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="123" />
+      <option name="time" value="124" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1378,6 +1380,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="100" column="4" lean-forward="false" selection-start-line="100" selection-start-column="4" selection-end-line="104" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1448,11 +1451,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/facebook_monitor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1466,8 +1467,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/song_on_demand_face.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="90" column="83" lean-forward="false" selection-start-line="90" selection-start-column="83" selection-end-line="90" selection-end-column="83" />
+        <state relative-caret-position="456">
+          <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
