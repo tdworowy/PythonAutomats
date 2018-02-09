@@ -49,6 +49,6 @@ def main(page_id, app_id, app_secred):
 if __name__ == '__main__':
     page_id = sys.argv[1]
     app_id = sys.argv[2]
-    app_secred = sys.argv[3]
+    app_secret = sys.argv[3]
 
-    main(page_id, app_id, app_secred)
+    main(page_id, app_id, app_secret)

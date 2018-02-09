@@ -14,7 +14,7 @@ from Facebook.facebook_monitor import FaceThreadMonitor, start_monitor
 from Facebook.song_of_the_day_facebook_message import SongOfTheDayFace
 from Utils.Songs_.Songs import FILE_PATH
 from Utils.file_utils import create_file_if_not_exist
-from Utils.utils import log, save_history
+from Utils.utils import log
 from Youtube.Youtube_Bot import get_youtube_URL
 
 
@@ -25,7 +25,6 @@ def get_ides(path, file, checked):
     with open(path + "\\" + file, 'r') as f:
         for line in f.readlines():
             if not any(line in line2 for line2 in f2):
-                print("File name: %s" % file_name)
                 ids.append(file_name)
                 f2.write(line + '\n')
     return ids
@@ -37,7 +36,6 @@ def check_queue(path):
     map(create_file_if_not_exist, checked_list)
     partial_get_ides = partial(get_ides, path)
     thread_ides = list(map(partial_get_ides, files, checked_list))
-    print("Thread ID's %s" % thread_ides)
     return thread_ides[0]
 
 
@@ -48,8 +46,6 @@ def send_song(song_, thread_id, thread_type):
     songs = songs.split("\n")
     ran = random.randrange(len(songs))
     song_title = songs[ran]
-    log(song_title)
-    save_history(song_title, "FacebookMessage.txt")
     song_.set_up()
     url = get_youtube_URL(song_.driver, song_title.strip())
     song_.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
