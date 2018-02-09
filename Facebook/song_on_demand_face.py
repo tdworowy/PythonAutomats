@@ -36,7 +36,7 @@ def check_queue(path):
     checked_list = [path + "checked\\" + os.path.splitext(file)[0] + "_checked.txt" for file in files]
     map(create_file_if_not_exist, checked_list)
     partial_get_ides = partial(get_ides, path)
-    thread_ides = map(partial_get_ides, files, checked_list)
+    thread_ides = list(map(partial_get_ides, files, checked_list))
     print("Thread ID's %s" % thread_ides)
     return thread_ides
 
@@ -89,8 +89,8 @@ if __name__ == '__main__':
     fm2 = FaceThreadMonitor(song.face_bot, path2, THREADID2)
 
     process1 = Process(target=start_monitor, args=(PHASE, [fm1, fm2]))
-    process2 = Process(target=send_songs_threads, args=(song,path1, ThreadType.GROUP))
-    process3 = Process(target=send_songs_threads, args=(song,path2, ThreadType.USER))
+    process2 = Process(target=send_songs_threads, args=(song, path1, ThreadType.GROUP))
+    process3 = Process(target=send_songs_threads, args=(song, path2, ThreadType.USER))
 
     for process in [process1, process2, process3]:
         process.start()
