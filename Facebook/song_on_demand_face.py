@@ -25,7 +25,7 @@ def get_ides(path, file, checked):
     with open(path + "\\" + file, 'r') as f:
         for line in f.readlines():
             if not any(line in line2 for line2 in f2):
-                print(file_name)
+                print("File name: %s" % file_name)
                 ids.append(file_name)
                 f2.write(line + '\n')
     return ids
@@ -36,7 +36,7 @@ def check_queue(path):
     checked_list = [path + "checked\\" + os.path.splitext(file)[0] + "_checked.txt" for file in files]
     map(create_file_if_not_exist, checked_list)
     partial_get_ides = partial(get_ides, path)
-    thread_ides = list(map(partial_get_ides, files, list(checked_list)))
+    thread_ides = map(partial_get_ides, files, checked_list)
     print("Thread ID's %s" % thread_ides)
     return thread_ides
 
