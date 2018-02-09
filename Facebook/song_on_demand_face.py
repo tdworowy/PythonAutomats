@@ -14,7 +14,6 @@ from Facebook.facebook_monitor import FaceThreadMonitor, start_monitor
 from Facebook.song_of_the_day_facebook_message import SongOfTheDayFace
 from Utils.Songs_.Songs import FILE_PATH
 from Utils.file_utils import create_file_if_not_exist
-from Utils.utils import log
 from Youtube.Youtube_Bot import get_youtube_URL
 
 
@@ -40,9 +39,8 @@ def check_queue(path):
 
 
 def send_song(song_, thread_id, thread_type):
-    f = open(FILE_PATH, 'r')
-    log("Get random song")
-    songs = f.read()
+    with open(FILE_PATH, 'r') as f:
+        songs = f.read()
     songs = songs.split("\n")
     ran = random.randrange(len(songs))
     song_title = songs[ran]
