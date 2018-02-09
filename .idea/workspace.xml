@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Facebook/facebook_apiI.py" afterPath="$PROJECT_DIR$/Facebook/facebook_api.py" />
-      <change beforePath="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" afterPath="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" />
+      <change beforePath="$PROJECT_DIR$/Facebook/facebook_api.py" afterPath="$PROJECT_DIR$/Facebook/facebook_api.py" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/Facebook/facebook_api.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+              <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -546,13 +545,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00407" summary="fix">
-      <created>1512899469999</created>
-      <option name="number" value="00407" />
-      <option name="presentableId" value="LOCAL-00407" />
-      <option name="project" value="LOCAL" />
-      <updated>1512899469999</updated>
-    </task>
     <task id="LOCAL-00408" summary="fix">
       <created>1512899642137</created>
       <option name="number" value="00408" />
@@ -889,7 +881,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518183649381</updated>
     </task>
-    <option name="localTasksCounter" value="456" />
+    <task id="LOCAL-00456" summary="fix">
+      <created>1518184086868</created>
+      <option name="number" value="00456" />
+      <option name="presentableId" value="LOCAL-00456" />
+      <option name="project" value="LOCAL" />
+      <updated>1518184086868</updated>
+    </task>
+    <option name="localTasksCounter" value="457" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1475,7 +1474,7 @@
     <entry file="file://$PROJECT_DIR$/Facebook/facebook_api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
           <folding />
         </state>
       </provider>

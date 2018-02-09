@@ -9,7 +9,7 @@ class FaceBookMessageBot:
 
     def send_message(self, message, thread_id, thread_type=ThreadType.GROUP):
         # self.client.sendMessage(message, thread_id=thread_id, thread_type=thread_type)
-        self.client.send(Message(tex=message), thread_id=thread_id, thread_type=thread_type)
+        self.client.send(Message(text=message), thread_id=thread_id, thread_type=thread_type)
 
     def send_message_my(self, message):
         thread_type = ThreadType.USER
