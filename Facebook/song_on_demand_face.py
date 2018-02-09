@@ -39,7 +39,9 @@ def check_queue(path):
     return list(map(partial_get_ides, files, list(checked_list)))
 
 
-def send_song(song_, thread_id, thread_type):
+def send_song(thread_id, thread_type,user, passw):
+    song = SongOfTheDayFace()
+    song.login_FB(user, passw)
     f = open(FILE_PATH, 'r')
     log("Get random song")
     songs = f.read()
@@ -48,19 +50,19 @@ def send_song(song_, thread_id, thread_type):
     song_title = songs[ran]
     log(song_title)
     save_history(song_title, "FacebookMessage.txt")
-    song_.set_up()
-    url = get_youtube_URL(song_.driver, song_title.strip())
-    song_.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
-    song_.tear_down()
-    time.sleep(20)
+    song.set_up()
+    url = get_youtube_URL(song.driver, song_title.strip())
+    song.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
+    song.tear_down()
+    time.sleep(60)
 
 
-def send_songs_threads(song_, path, thread_type):
+def send_songs_threads(path, thread_type,user, passw):
     threads_ids = check_queue(path)
     threads = []
     for thread_id in threads_ids:
         try:
-            thread = Thread(target=send_song, args=(song_, thread_id, thread_type,))
+            thread = Thread(target=send_song, args=(thread_id, thread_type,user, passw,))
             threads.append(thread)
             thread.start()
         except Exception:
@@ -84,12 +86,9 @@ if __name__ == '__main__':
     fm1 = FaceThreadMonitor(user, passw, path1, THREADID1)
     fm2 = FaceThreadMonitor(user, passw, path2, THREADID2)
 
-    song = SongOfTheDayFace()
-    song.login_FB(user, passw)
-
     process1 = Process(target=start_monitor, args=(PHASE, [fm1, fm2]))
-    process2 = Process(target=send_songs_threads, args=(song, path1, ThreadType.GROUP))
-    process3 = Process(target=send_songs_threads, args=(song, path2, ThreadType.USER))
+    process2 = Process(target=send_songs_threads, args=(path1, ThreadType.GROUP,user, passw))
+    process3 = Process(target=send_songs_threads, args=(path2, ThreadType.USER,user, passw))
 
     for process in [process1, process2, process3]:
         process.start()
