@@ -24,3 +24,4 @@ if __name__ == "__main__":
         time_stump = time.strftime('%Y-%m-%d %H:%M:%S')
         res = str(test_speed())
         f.write("%s, %s\n" % (time_stump, res))
+        log(res)
