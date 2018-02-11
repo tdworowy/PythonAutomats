@@ -1,3 +1,4 @@
+import os
 import time
 
 import speedtest
@@ -24,4 +25,4 @@ if __name__ == "__main__":
         time_stump = time.strftime('%Y-%m-%d %H:%M:%S')
         res = str(test_speed())
         f.write("%s, %s\n" % (time_stump, res))
-        log(res)
+        log(res, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Utils')) + "\\log.txt")
