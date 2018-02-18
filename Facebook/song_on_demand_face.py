@@ -67,7 +67,7 @@ def send_songs_threads(song_, path, thread_type):
             for thread in threads:
                 thread.join()
         else:
-            time.sleep(60)
+            time.sleep(300)
 
 
 if __name__ == '__main__':

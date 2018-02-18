@@ -25,7 +25,7 @@ class FaceThreadMonitor:
     def monitor(self, phrase):
         while 1:
             self.monitor_thread(phrase)
-            time.sleep(60)
+            time.sleep(300)
 
 
 def start_monitor(phraze, face_thread_monitor_list):
