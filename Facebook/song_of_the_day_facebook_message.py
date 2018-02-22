@@ -21,7 +21,6 @@ class SongOfTheDayFace:
         self.face_bot.login(login, passw)
 
     def sent_song(self, songs_urls, thread_id, message=message_by_time(), thread_type=ThreadType.GROUP):
-        log(message_by_time())
 
         for songURL in songs_urls:
             log(songURL)

@@ -22,7 +22,6 @@ class SongOfTheDay():
 
     def sent_song_API(self, songURL, gropus):
         sa = SkypeApi(self.authentication[0], self.authentication[1])
-        log(message_by_time())
         log(songURL)
         sa.set_chats(gropus)
         sa.send_message(message_by_time())
@@ -33,7 +32,6 @@ class SongOfTheDay():
             save_history(songURL, "Skype.txt")
 
     def sent_song_UI(self, songURL, gropus):
-        log(message_by_time())
         log(songURL)
         sb = SkypeBot(self.driver)
         sb.login(self.authentication)
