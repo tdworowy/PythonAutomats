@@ -1,10 +1,10 @@
-from behave import *
-
 from Blog_Tests.Pages.base_page import set_up
 from Blog_Tests.dataModels.postmodel import POST
+from behave import *
 
-LOGIN_PAGE_URL = "http://localhost:8082/admin/login/"
-BLOG_PAGE_URL = "http://localhost:8082/blog/"
+PORT = 8083
+LOGIN_PAGE_URL = "http://localhost:%s/admin/login/" % str(PORT)
+BLOG_PAGE_URL = "http://localhost:%s/blog/" % str(PORT)
 
 ADMIN_LOGIN = "admin"
 ADMIN_PASSWORD = "AdminPass123"
