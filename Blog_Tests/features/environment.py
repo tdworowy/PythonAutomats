@@ -41,4 +41,4 @@ def after_step(context, step):
 def after_feature(context, feature):
     log("Feature Finished: " + feature.name, context.log_feature_file)
     log("Skip reason: " + str(feature.skip_reason), context.log_feature_file)
-    log("Status: " + feature.status, context.log_feature_file)
+    log("Status: " + str(feature.status), context.log_feature_file)
