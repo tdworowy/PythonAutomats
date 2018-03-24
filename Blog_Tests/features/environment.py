@@ -34,7 +34,7 @@ def after_scenario(context, scenario):
 def after_step(context, step):
     take_screenshot(context, context.screen_dir_name + "\\", "%s_%s" % (context.scenario_name, step.name))
     log("Step status: " + str(step.status), context.log_file)
-    if BEHAVE_DEBUG and str(step.status) == "failed":
+    if BEHAVE_DEBUG and str(step.status) == "Status.failed":
         import ipdb
         log("TEST FAIL", context.log_file)
         log(str(ipdb.post_mortem(step.exc_traceback)), context.log_file)
