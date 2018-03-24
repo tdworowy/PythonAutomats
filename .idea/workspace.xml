@@ -4,7 +4,6 @@
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Blog_Tests/features/environment.py" afterPath="$PROJECT_DIR$/Blog_Tests/features/environment.py" />
-      <change beforePath="$PROJECT_DIR$/Chrome_Driver_Folder/chromedriver.exe" afterPath="$PROJECT_DIR$/Chrome_Driver_Folder/chromedriver.exe" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,61 +25,77 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Blog_Tests/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="255">
               <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddPost_Log.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blog_Tests/screens/AddPost_Log.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login_Log.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blog_Tests/screens/Login_Log.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login_as_admin_Log_2018-03-24_12_09_42.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blog_Tests/screens/Login_as_admin_2018-03-24_12_09_42/Login_as_admin_Log_2018-03-24_12_09_42.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Add_post_scenario_--_@1.7_posts_Log_2018-03-24_12_09_22.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blog_Tests/screens/Add_post_scenario_--_@1.7_posts_2018-03-24_12_09_22/Add_post_scenario_--_@1.7_posts_Log_2018-03-24_12_09_22.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="environment.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Blog_Tests/features/environment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/admin_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/login_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="595">
+              <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addPosts.feature" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog_Tests/features/addPosts.feature">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="steps.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="steps.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="527">
               <caret line="33" column="57" lean-forward="false" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
@@ -105,28 +120,6 @@
             <state relative-caret-position="51">
               <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="skype_bot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Skype/skype_bot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="72" column="8" lean-forward="false" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Songs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -302,14 +295,20 @@
             <path>
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
+              <item name="Blog_Tests" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
               <item name="Chrome_Driver_Folder" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,19 +316,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests\Behave" />
-      <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests\Behave\features" />
-      <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests" />
-      <recent name="D:\Google_drive\Python_\SeleniumPython\Skype" />
-      <recent name="D:\Google_drive\Python_\SeleniumPython\Utils\Songs_" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests\features" />
       <recent name="D:\Python_\PythonAutomats" />
       <recent name="D:\Python_\PythonAutomats\BlogTests\features" />
       <recent name="D:\Google_drive\Python_\SeleniumPython\Facebook" />
       <recent name="D:\Google_drive\Python_\SeleniumPython\Tinder" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests\Behave" />
+      <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests\Behave\features" />
+      <recent name="D:\Python_\PythonAutomats\Tests\Skype\Skype_api_tests" />
+      <recent name="D:\Google_drive\Python_\SeleniumPython\Skype" />
+      <recent name="D:\Google_drive\Python_\SeleniumPython\Utils\Songs_" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -575,13 +574,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00426" summary="update">
-      <created>1512914036828</created>
-      <option name="number" value="00426" />
-      <option name="presentableId" value="LOCAL-00426" />
-      <option name="project" value="LOCAL" />
-      <updated>1512914036828</updated>
     </task>
     <task id="LOCAL-00427" summary="fix">
       <created>1512914140981</created>
@@ -919,7 +911,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521887119594</updated>
     </task>
-    <option name="localTasksCounter" value="475" />
+    <task id="LOCAL-00475" summary="update">
+      <created>1521889259846</created>
+      <option name="number" value="00475" />
+      <option name="presentableId" value="LOCAL-00475" />
+      <option name="project" value="LOCAL" />
+      <updated>1521889259846</updated>
+    </task>
+    <option name="localTasksCounter" value="476" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -975,7 +974,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31304348" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31304348" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1021,9 +1020,9 @@
     <MESSAGE value="Refactor" />
     <MESSAGE value="update song on demand face" />
     <MESSAGE value="refactor" />
-    <MESSAGE value="update" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1120,34 +1119,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Spotify/auth.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="32" lean-forward="false" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-643338342/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85867">
-          <caret line="5051" column="8" lean-forward="false" selection-start-line="5051" selection-start-column="8" selection-end-line="5051" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Lib/multiprocessing/process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4148">
-          <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Lib/site-packages/spotipy/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Lib/typing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34782">
@@ -1351,13 +1322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="49" column="19" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Song_On_Demand/song_on_demand.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1376,7 +1340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,7 +1347,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1392,7 +1354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1414,25 +1375,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="272">
           <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="37" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog_Tests/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Skype/skype_bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="1122">
           <caret line="72" column="8" lean-forward="false" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
           <folding />
         </state>
@@ -1443,17 +1396,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1484,11 +1427,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="527">
           <caret line="33" column="57" lean-forward="false" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/screens/AddPost_Log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/screens/Login_Log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/screens/Login_as_admin_2018-03-24_12_09_42/Login_as_admin_Log_2018-03-24_12_09_42.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/screens/Add_post_scenario_--_@1.7_posts_2018-03-24_12_09_22/Add_post_scenario_--_@1.7_posts_Log_2018-03-24_12_09_22.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

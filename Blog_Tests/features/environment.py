@@ -26,15 +26,17 @@ def before_step(context, step):
 
 
 def after_scenario(context, scenario):
-    log("Test Finished", context.log_file)
+    log("Test Finished: " + context.scenario_name, context.log_file)
+    log("Status: " + str(scenario.status), context.log_file)
     tear_down(context)
 
 
 def after_step(context, step):
     take_screenshot(context, context.screen_dir_name + "\\", "%s_%s" % (context.scenario_name, step.name))
-    if BEHAVE_DEBUG and step.status == "failed":
+    log("Status: " + str(step.status), context.log_file)
+    if BEHAVE_DEBUG and str(step.status) == "failed":
         import ipdb
-        log("TEST FAIL")
+        log("TEST FAIL", context.log_file)
         log(str(ipdb.post_mortem(step.exc_traceback)), context.log_file)
 
 
