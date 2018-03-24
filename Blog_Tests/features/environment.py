@@ -27,13 +27,13 @@ def before_step(context, step):
 
 def after_scenario(context, scenario):
     log("Test Finished: " + context.scenario_name, context.log_file)
-    log("Status: " + str(scenario.status), context.log_file)
+    log("Scenario status: " + str(scenario.status), context.log_file)
     tear_down(context)
 
 
 def after_step(context, step):
     take_screenshot(context, context.screen_dir_name + "\\", "%s_%s" % (context.scenario_name, step.name))
-    log("Status: " + str(step.status), context.log_file)
+    log("Step status: " + str(step.status), context.log_file)
     if BEHAVE_DEBUG and str(step.status) == "failed":
         import ipdb
         log("TEST FAIL", context.log_file)
@@ -43,4 +43,4 @@ def after_step(context, step):
 def after_feature(context, feature):
     log("Feature Finished: " + feature.name, context.log_feature_file)
     log("Skip reason: " + str(feature.skip_reason), context.log_feature_file)
-    log("Status: " + str(feature.status), context.log_feature_file)
+    log("Feature status: " + str(feature.status), context.log_feature_file)
