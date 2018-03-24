@@ -1,5 +1,6 @@
-from Blog_Tests.Pages.post_page import POSTPage
 from selenium.webdriver.common.by import By
+
+from Blog_Tests.Pages.post_page import POSTPage
 
 
 class BlogPage:
@@ -11,6 +12,6 @@ class BlogPage:
         self.driver = driver_arg
 
     def open_latest_post(self):
-        latests_posts = self.driver.find_elements(*self.latest_posts)
-        latests_posts[0].click()
+        latest_posts = self.driver.find_elements(*self.latest_posts)
+        latest_posts[0].click()
         return POSTPage(self.driver)

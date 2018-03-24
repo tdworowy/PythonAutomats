@@ -14,7 +14,7 @@ class POSTPage:
     def check_post(self, POST_obj):
         title_text = self.driver.find_element(*self.title).text
         content_text = self.driver.find_element(*self.content).text
-        tags  = self.driver.find_element(*self.tags).text
+        tags = self.driver.find_element(*self.tags).text
         print("Check if %s == %s" % (title_text, POST_obj.title))
         assert title_text == POST_obj.title
         print("Check if %s == %s" % (content_text, POST_obj.body))
