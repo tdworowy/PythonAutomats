@@ -38,6 +38,8 @@ def after_step(context, step):
         import ipdb
         log("TEST FAIL", context.log_file)
         log(str(ipdb.post_mortem(step.exc_traceback)), context.log_file)
+        log(context.get_log('browser'), context.log_file)
+        log(context.get_log('driver'), context.log_file)
 
 
 def after_feature(context, feature):
