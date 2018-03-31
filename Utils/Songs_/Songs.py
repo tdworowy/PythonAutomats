@@ -22,19 +22,26 @@ LAST_UPDATED = "E:\Google_drive\Songs\LastUpdated.txt"
 # ALL
 
 def get_pages_count(url):
-    response = requests.get(url).text
-    soup = BeautifulSoup(response, "html.parser")
-    pagination_list = soup.find('ul', class_="pagination-list")
-    pages = pagination_list.find_all('a')
+    try:
+        response = requests.get(url).text
+        soup = BeautifulSoup(response, "html.parser")
+        pagination_list = soup.find('ul', class_="pagination-list")
+        pages = pagination_list.find_all('a')
+    except Exception as ex:
+        log(ex)
     return int(max([page.text for page in pages[:-1]]))
 
 
 def get_titles(url):
-    response = requests.get(url).text
-    soup = BeautifulSoup(response, "html.parser")
-    titles = soup.find_all("a", class_="link-block-target")
-    titles = str(titles)
-    titles = titles.split(">")
+    log("Get songs from: %s" %url)
+    try:
+        response = requests.get(url).text
+        soup = BeautifulSoup(response, "html.parser")
+        titles = soup.find_all("a", class_="link-block-target")
+        titles = str(titles)
+        titles = titles.split(">")
+    except Exception as ex:
+        log(ex)
     return clear_titles(titles)
 
 
