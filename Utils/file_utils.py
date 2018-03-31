@@ -38,3 +38,8 @@ def combine_files(count, file_path, folder_path, prefix):
             with open(fname) as infile:
                 for line in infile:
                     outfile.write(line)
+
+
+def remove_files(files):
+    for file in files:
+        os.remove(file)

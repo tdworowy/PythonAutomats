@@ -5,7 +5,7 @@ from shutil import copyfile
 import requests
 from bs4 import BeautifulSoup
 
-from Utils.file_utils import to_file, remove_duplicates, combine_files
+from Utils.file_utils import to_file, remove_duplicates, combine_files, remove_files
 from Utils.utils import log
 
 FOLDER_PATH = "E:\Google_drive\Songs\\"
@@ -118,5 +118,6 @@ if __name__ == '__main__':
     distribution(parts=pool_count, user_='theRoobal')
 
     combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList")
+    remove_files([r'%s\songs%s.txt' % (FOLDER_PATH ,i) for i in range(1,pool_count+1)])
     remove_duplicates(FILE_PATH)
     copyfile(FILE_PATH, "songs.txt")
