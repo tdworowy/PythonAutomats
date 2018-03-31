@@ -42,17 +42,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="steps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,8 +84,8 @@
       <file leaf-file-name="Songs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+            <state relative-caret-position="352">
+              <caret line="138" column="1" lean-forward="true" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -306,7 +295,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.update_all_packages">
+  <component name="RunManager" selected="Python.Songs">
+    <configuration name="Songs" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SeleniumPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Utils/Songs_" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Selenium" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -320,24 +327,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="pip_utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SeleniumPython" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Utils/pip_utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -503,19 +492,19 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list>
-      <item itemvalue="Python.pip_utils" />
       <item itemvalue="Python.run_artifactory" />
       <item itemvalue="Python.song_on_demand_face" />
       <item itemvalue="Python.run" />
       <item itemvalue="Python.update_all_packages" />
+      <item itemvalue="Python.Songs" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Songs" />
         <item itemvalue="Python.update_all_packages" />
         <item itemvalue="Python.run" />
         <item itemvalue="Python.song_on_demand_face" />
         <item itemvalue="Python.run_artifactory" />
-        <item itemvalue="Python.pip_utils" />
       </list>
     </recent_temporary>
   </component>
@@ -529,27 +518,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00439" summary="update">
-      <created>1516453951374</created>
-      <option name="number" value="00439" />
-      <option name="presentableId" value="LOCAL-00439" />
-      <option name="project" value="LOCAL" />
-      <updated>1516453951375</updated>
-    </task>
-    <task id="LOCAL-00440" summary="update">
-      <created>1516454001780</created>
-      <option name="number" value="00440" />
-      <option name="presentableId" value="LOCAL-00440" />
-      <option name="project" value="LOCAL" />
-      <updated>1516454001780</updated>
-    </task>
-    <task id="LOCAL-00441" summary="update">
-      <created>1516487293556</created>
-      <option name="number" value="00441" />
-      <option name="presentableId" value="LOCAL-00441" />
-      <option name="project" value="LOCAL" />
-      <updated>1516487293556</updated>
     </task>
     <task id="LOCAL-00442" summary="fix">
       <created>1516488099454</created>
@@ -873,7 +841,28 @@
       <option name="project" value="LOCAL" />
       <updated>1522484352653</updated>
     </task>
-    <option name="localTasksCounter" value="488" />
+    <task id="LOCAL-00488" summary="fix">
+      <created>1522485122188</created>
+      <option name="number" value="00488" />
+      <option name="presentableId" value="LOCAL-00488" />
+      <option name="project" value="LOCAL" />
+      <updated>1522485122188</updated>
+    </task>
+    <task id="LOCAL-00489" summary="fix">
+      <created>1522485135313</created>
+      <option name="number" value="00489" />
+      <option name="presentableId" value="LOCAL-00489" />
+      <option name="project" value="LOCAL" />
+      <updated>1522485135313</updated>
+    </task>
+    <task id="LOCAL-00490" summary="update">
+      <created>1522485769569</created>
+      <option name="number" value="00490" />
+      <option name="presentableId" value="LOCAL-00490" />
+      <option name="project" value="LOCAL" />
+      <updated>1522485769569</updated>
+    </task>
+    <option name="localTasksCounter" value="491" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -921,16 +910,16 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14857745" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14857745" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50692964" side_tool="true" weight="0.34561214" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3270925" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32826087" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49307036" weight="0.41847825" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49307036" weight="0.41830066" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.24947146" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32929516" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.31304348" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.45315903" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -977,9 +966,9 @@
     <MESSAGE value="update song on demand face" />
     <MESSAGE value="refactor" />
     <MESSAGE value="add theRoobal" />
-    <MESSAGE value="update" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1063,6 +1052,11 @@
           <line>27</line>
           <option name="timeStamp" value="128" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Utils/Songs_/Songs.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -1071,20 +1065,17 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="130" />
+      <option name="time" value="131" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="url" />
+        <watch expression="url" />
+        <watch expression="pages" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Static_Analize/pylint_Run_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="71" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1443,10 +1434,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Start Page.url">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        <state relative-caret-position="352">
+          <caret line="138" column="1" lean-forward="true" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
