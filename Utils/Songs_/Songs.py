@@ -123,6 +123,6 @@ if __name__ == '__main__':
     distribution(parts=pool_count, user_='theRoobal')
 
     combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList")
-    remove_files([r'%s\songs%s.txt' % (FOLDER_PATH ,i) for i in range(1,pool_count+1)])
+    remove_files([r'%s\songsList%s.txt' % (FOLDER_PATH, i) for i in range(1, pool_count + 1)])
     remove_duplicates(FILE_PATH)
     copyfile(FILE_PATH, "songs.txt")
