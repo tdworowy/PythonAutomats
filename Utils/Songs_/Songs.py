@@ -106,14 +106,16 @@ def distribution(parts, min_=1, max=0, user_='TotaledThomas', target=get_songs):
 
 
 def update_songs_distribution():
-    distribution(parts=6, max=60, target=_update_songs)
+    distribution(parts=6, max=60, user_='TotaledThomas', target=_update_songs)
+    distribution(parts=6, max=60, user_='theRoobal', target=_update_songs)
     remove_duplicates(FILE_PATH)
 
 
 if __name__ == '__main__':
     pool_count = 10
 
-    distribution(pool_count)
+    distribution(parts=pool_count, user_='TotaledThomas')
+    distribution(parts=pool_count, user_='theRoobal')
 
     combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList")
     remove_duplicates(FILE_PATH)
