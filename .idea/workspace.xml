@@ -4,7 +4,6 @@
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utils/Songs_/Songs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Songs_/Songs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/file_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/file_utils.py" afterDir="false" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,18 +38,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
               <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pylint_Run_.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Static_Analize/pylint_Run_.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="71" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -108,11 +95,20 @@
       <file leaf-file-name="Songs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="120" column="23" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+            <state relative-caret-position="697">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mutable_list.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/site-packages/django/contrib/gis/geos/mutable_list.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="181" column="24" selection-start-line="181" selection-start-column="14" selection-end-line="181" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -534,20 +530,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00435" summary="update">
-      <created>1513522225720</created>
-      <option name="number" value="00435" />
-      <option name="presentableId" value="LOCAL-00435" />
-      <option name="project" value="LOCAL" />
-      <updated>1513522225720</updated>
-    </task>
-    <task id="LOCAL-00436" summary="update">
-      <created>1513525472392</created>
-      <option name="number" value="00436" />
-      <option name="presentableId" value="LOCAL-00436" />
-      <option name="project" value="LOCAL" />
-      <updated>1513525472413</updated>
-    </task>
     <task id="LOCAL-00437" summary="fix">
       <created>1514042169140</created>
       <option name="number" value="00437" />
@@ -877,7 +859,21 @@
       <option name="project" value="LOCAL" />
       <updated>1522482884871</updated>
     </task>
-    <option name="localTasksCounter" value="484" />
+    <task id="LOCAL-00484" summary="update">
+      <created>1522483670737</created>
+      <option name="number" value="00484" />
+      <option name="presentableId" value="LOCAL-00484" />
+      <option name="project" value="LOCAL" />
+      <updated>1522483670737</updated>
+    </task>
+    <task id="LOCAL-00485" summary="update">
+      <created>1522483764378</created>
+      <option name="number" value="00485" />
+      <option name="presentableId" value="LOCAL-00485" />
+      <option name="project" value="LOCAL" />
+      <updated>1522483764378</updated>
+    </task>
+    <option name="localTasksCounter" value="486" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -981,9 +977,9 @@
     <MESSAGE value="update song on demand face" />
     <MESSAGE value="fix" />
     <MESSAGE value="refactor" />
-    <MESSAGE value="update" />
     <MESSAGE value="add theRoobal" />
-    <option name="LAST_COMMIT_MESSAGE" value="add theRoobal" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1079,16 +1075,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/update_all/update_all_packages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Static_Analize/pylint_Run_.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1450,10 +1436,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Python/Lib/site-packages/django/contrib/gis/geos/mutable_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="181" column="24" selection-start-line="181" selection-start-column="14" selection-end-line="181" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="120" column="23" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+        <state relative-caret-position="697">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

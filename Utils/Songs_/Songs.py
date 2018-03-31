@@ -44,7 +44,11 @@ def clear_titles(titles):
         try:
             # print(text)
             if "—" in text:
-                i = text.index("title=\"") + 7
+                try:
+                    i = text.index("title=\"") + 7
+                except ValueError:
+                    i = text.index("title=\'") + 7
+
                 temp = text[i:-1].replace("—", "-")
                 clean_titles.append(temp + "\n")
 
