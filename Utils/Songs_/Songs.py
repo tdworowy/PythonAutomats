@@ -51,6 +51,7 @@ def clear_titles(titles):
         except Exception as ex:
             log('EXCEPTION in clean_titles')
             log(ex)
+            log(text)
             continue
     return clean_titles
 
