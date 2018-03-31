@@ -29,7 +29,10 @@ def get_pages_count(url):
         pages = pagination_list.find_all('a')
     except Exception as ex:
         log(ex)
-    return int(max([page.text for page in pages[:-1]]))
+    page_count = int(max([page.text for page in pages[:-1]]))
+    log("URL: %s" % url)
+    log("Page count: %s" % page_count)
+    return page_count
 
 
 def get_titles(url):
