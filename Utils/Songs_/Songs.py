@@ -56,7 +56,6 @@ def clear_titles(titles):
 
 
 def get_songs(min, max, user='TotaledThomas', file_path=FILE_PATH):
-    open(file_path, 'w').close()
     url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
     titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(min, max + 1)])
     for tiles_list in titles_map:
@@ -114,6 +113,7 @@ def update_songs_distribution():
 if __name__ == '__main__':
     pool_count = 10
 
+    open(FILE_PATH, 'w').close()
     distribution(parts=pool_count, user_='TotaledThomas')
     distribution(parts=pool_count, user_='theRoobal')
 
