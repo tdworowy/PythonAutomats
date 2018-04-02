@@ -49,9 +49,9 @@ def distribution_threads(ps, min_, max_, parts):
 
 
 def distribution_processes(parts, target, ps, min_, max_, ):
-    rest = max % parts
+    rest = max_ % parts
     min = min_
-    inc = (max - min_) // parts
+    inc = (max_ - min_) // parts
     max = min_ + inc
     processes = []
     for i in range(1, parts + 1):

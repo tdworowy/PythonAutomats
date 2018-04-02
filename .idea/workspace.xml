@@ -96,8 +96,8 @@
       <file leaf-file-name="portscaner.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Utils/web/portscaner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="73" column="83" selection-start-line="73" selection-start-column="83" selection-end-line="73" selection-end-column="83" />
+            <state relative-caret-position="326">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -542,13 +542,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00445" summary="update song on demand face">
-      <created>1518167271276</created>
-      <option name="number" value="00445" />
-      <option name="presentableId" value="LOCAL-00445" />
-      <option name="project" value="LOCAL" />
-      <updated>1518167271276</updated>
-    </task>
     <task id="LOCAL-00446" summary="update">
       <created>1518167426629</created>
       <option name="number" value="00446" />
@@ -885,7 +878,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522679523649</updated>
     </task>
-    <option name="localTasksCounter" value="494" />
+    <task id="LOCAL-00494" summary="update">
+      <created>1522679565451</created>
+      <option name="number" value="00494" />
+      <option name="presentableId" value="LOCAL-00494" />
+      <option name="project" value="LOCAL" />
+      <updated>1522679565453</updated>
+    </task>
+    <option name="localTasksCounter" value="495" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1439,8 +1439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils/web/portscaner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="73" column="83" selection-start-line="73" selection-start-column="83" selection-end-line="73" selection-end-column="83" />
+        <state relative-caret-position="326">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
