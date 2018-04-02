@@ -1,7 +1,7 @@
 import _thread
 import os
 import sys
-import time
+from multiprocessing import Process
 from socket import socket, AF_INET, SOCK_STREAM, gethostbyname, SOL_SOCKET, SO_REUSEADDR
 
 from Utils.decorators import log_exception
@@ -36,7 +36,7 @@ class PortScanner:
             f1.write(str(opened_ports).replace("[", "").replace("]", ""))
 
 
-def distribution(ps, min_, max_, parts):
+def distribution_threads(ps, min_, max_, parts):
     rest = max_ % parts
     min = min_
     inc = (max_ - min_) // parts
@@ -48,13 +48,30 @@ def distribution(ps, min_, max_, parts):
         min = min + inc
 
 
+def distribution_processes(parts, target, ps, min_=1, max=0, ):
+    rest = max % parts
+    min = min_
+    inc = (max - min_) // parts
+    max = min_ + inc
+    processes = []
+    for i in range(1, parts + 1):
+        if i == parts: max = max + rest
+        process = Process(target=target, args=(ps, min, max, 10))
+        max = max + inc
+        min = min + inc
+        processes.append(process)
+
+    for process in processes:
+        process.start()
+
+    for process in processes:
+        process.join()
+
+
 @log_exception()
 def main(host="127.0.0.1", min=0, max=65534, parts=10):
     ps = PortScanner(host)
-    distribution(ps, min, max, parts)
-    time.sleep(120)
-    while _thread._count() > 0:
-        time.sleep(120)
+    distribution_processes(parts=parts, target=distribution_threads, min=min, max=max, ps=ps)
 
 
 if __name__ == '__main__':
