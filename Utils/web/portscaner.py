@@ -33,7 +33,7 @@ class PortScanner:
             opened_ports = [x[0] for x in list(results) if x[1] == 0]
             print("Scan Done...")
             for port_number in opened_ports:
-                f1.writelines(port_number)
+                f1.write(port_number+"\n")
 
         if os.stat(file_name).st_size == 0:
                 os.remove(file_name)

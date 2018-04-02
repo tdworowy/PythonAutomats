@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/file_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/file_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utils/web/portscaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/web/portscaner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/web/results/placeholder.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/web/results/placeholder.txt" afterDir="false" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="portscaner.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="portscaner.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Utils/web/portscaner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+            <state relative-caret-position="356">
+              <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -36,7 +34,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="placeholder.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="typing.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/typing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="2077" column="8" selection-start-line="2077" selection-start-column="8" selection-end-line="2077" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="placeholder.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils/web/results/placeholder.txt">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -63,11 +70,6 @@
       </file>
       <file leaf-file-name="Ports_127.0.0.1_12_13.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils/web/results/Ports_127.0.0.1_12_13.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="Ports_127.0.0.1_18_19.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/web/results/Ports_127.0.0.1_18_19.txt">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -170,8 +172,8 @@
         <option value="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" />
         <option value="$PROJECT_DIR$/Youtube/Youtube_Bot.py" />
         <option value="$PROJECT_DIR$/Utils/file_utils.py" />
-        <option value="$PROJECT_DIR$/Utils/web/portscaner.py" />
         <option value="$PROJECT_DIR$/Utils/web/results/placeholder.txt" />
+        <option value="$PROJECT_DIR$/Utils/web/portscaner.py" />
       </list>
     </option>
   </component>
@@ -484,20 +486,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00452" summary="update">
-      <created>1518182615571</created>
-      <option name="number" value="00452" />
-      <option name="presentableId" value="LOCAL-00452" />
-      <option name="project" value="LOCAL" />
-      <updated>1518182615572</updated>
-    </task>
-    <task id="LOCAL-00453" summary="fix">
-      <created>1518182998328</created>
-      <option name="number" value="00453" />
-      <option name="presentableId" value="LOCAL-00453" />
-      <option name="project" value="LOCAL" />
-      <updated>1518182998340</updated>
     </task>
     <task id="LOCAL-00454" summary="fix">
       <created>1518183217187</created>
@@ -828,7 +816,21 @@
       <option name="project" value="LOCAL" />
       <updated>1522687145839</updated>
     </task>
-    <option name="localTasksCounter" value="501" />
+    <task id="LOCAL-00501" summary="fix">
+      <created>1522688105053</created>
+      <option name="number" value="00501" />
+      <option name="presentableId" value="LOCAL-00501" />
+      <option name="project" value="LOCAL" />
+      <updated>1522688105054</updated>
+    </task>
+    <task id="LOCAL-00502" summary="fix">
+      <created>1522688663723</created>
+      <option name="number" value="00502" />
+      <option name="presentableId" value="LOCAL-00502" />
+      <option name="project" value="LOCAL" />
+      <updated>1522688663723</updated>
+    </task>
+    <option name="localTasksCounter" value="503" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1037,16 +1039,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Utils/web/portscaner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Google_Docks/google_api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -1324,18 +1316,25 @@
     <entry file="file://$PROJECT_DIR$/Utils/web/results/Ports_127.0.0.1_7_8.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/web/results/placeholder.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/Python/Lib/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="2077" column="8" selection-start-line="2077" selection-start-column="8" selection-end-line="2077" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/web/portscaner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        <state relative-caret-position="356">
+          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/web/results/placeholder.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
