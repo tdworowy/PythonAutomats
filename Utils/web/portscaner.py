@@ -35,6 +35,8 @@ class PortScanner:
             opened_ports = [x[0] for x in list(results) if x[1] == 0]
             log("Scan Done...")
             f1.write(str(opened_ports).replace("[", "").replace("]", ""))
+            if os.stat(f1.name).st_size == 0:
+                os.remove(f1.name)
 
 
 def distribution_threads(ps, min_, max_, parts):
