@@ -46,7 +46,7 @@ def combine_all_files(folder_path, output_file):
     files = [f for f in os.listdir(folder_path) if isfile(join(folder_path, f))]
     with open(output_file, 'w') as outfile:
         for fname in files:
-            with open(fname) as infile:
+            with open("%s//%s" % (folder_path, fname)) as infile:
                 for line in infile:
                     outfile.write(line)
 

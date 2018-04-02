@@ -30,7 +30,7 @@ class PortScanner:
             print("Host: %s IP: %s" % (self.host, host_ip))
             print("Scan in progress...")
             results = map(self.scan_host, [port for port in range(min, max + 1)])
-            opened_ports = [x[0] for x in list(results) if x[1] == 0]
+            opened_ports = [str(x[0])+"\n" for x in list(results) if x[1] == 0]
             print("Scan Done...")
             f1.write(str(opened_ports).replace("[", "").replace("]", ""))
 
@@ -78,7 +78,7 @@ def distribution_processes(parts, target, ps, min_, max_, ):
 
 
 @log_exception()
-def main(host="127.0.0.1", min=0, max=65534, parts=10):
+def main(host="127.0.0.1", min=0, max=100, parts=10):
     ps = PortScanner(host)
     distribution_processes(parts=parts, target=distribution_threads, min_=min, max_=max, ps=ps)
     combine_all_files(ps.path, "%s/ports.txt" % ps.path)
