@@ -48,7 +48,7 @@ def distribution_threads(ps, min_, max_, parts):
         min = min + inc
 
 
-def distribution_processes(parts, target, ps, min_=1, max=0, ):
+def distribution_processes(parts, target, ps, min_, max_, ):
     rest = max % parts
     min = min_
     inc = (max - min_) // parts
@@ -71,7 +71,7 @@ def distribution_processes(parts, target, ps, min_=1, max=0, ):
 @log_exception()
 def main(host="127.0.0.1", min=0, max=65534, parts=10):
     ps = PortScanner(host)
-    distribution_processes(parts=parts, target=distribution_threads, min=min, max=max, ps=ps)
+    distribution_processes(parts=parts, target=distribution_threads, min_=min, max_=max, ps=ps)
 
 
 if __name__ == '__main__':
