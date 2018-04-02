@@ -30,9 +30,10 @@ class PortScanner:
             print("Host: %s IP: %s" % (self.host, host_ip))
             print("Scan in progress...")
             results = map(self.scan_host, [port for port in range(min, max + 1)])
-            opened_ports = [str(x[0])+"\n" for x in list(results) if x[1] == 0]
+            opened_ports = [x[0] for x in list(results) if x[1] == 0]
             print("Scan Done...")
-            f1.write(str(opened_ports).replace("[", "").replace("]", ""))
+            for port_number in opened_ports:
+                f1.writelines(port_number)
 
         if os.stat(file_name).st_size == 0:
                 os.remove(file_name)
