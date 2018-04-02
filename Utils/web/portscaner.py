@@ -1,8 +1,8 @@
-import _thread
 import os
 import sys
 from multiprocessing import Process
 from socket import socket, AF_INET, SOCK_STREAM, gethostbyname, SOL_SOCKET, SO_REUSEADDR
+from threading import Thread
 
 from Utils.decorators import log_exception
 from Utils.utils import log
@@ -41,11 +41,18 @@ def distribution_threads(ps, min_, max_, parts):
     min = min_
     inc = (max_ - min_) // parts
     max = min_ + inc
+    threads = []
     for i in range(1, parts + 1):
         if i == parts: max = max + rest
-        _thread.start_new_thread(ps.scan_ports, (min, max))
+        threads.append(Thread(target=ps.scan_ports, args=(min, max)))
         max = max + inc
         min = min + inc
+
+    for thread in threads:
+        thread.start()
+
+    for thread in threads:
+        thread.join()
 
 
 def distribution_processes(parts, target, ps, min_, max_, ):
@@ -75,7 +82,7 @@ def main(host="127.0.0.1", min=0, max=65534, parts=10):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) > 0:
+    if len(sys.argv) > 1:
         host_ = sys.argv[1]
         min = sys.argv[2]
         max = sys.argv[3]
