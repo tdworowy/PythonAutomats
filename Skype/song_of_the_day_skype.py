@@ -10,7 +10,7 @@ from Skype.skype_bot import SkypeBot
 from Utils.Songs_.Songs import FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Utils.utils import log, message_by_time, save_history
-from Youtube.Youtube_Bot import get_youtube_URL
+from Youtube.Youtube_Bot import get_youtube_url
 
 
 class SongOfTheDay():
@@ -63,7 +63,7 @@ def main(login, password):
     song_title = songs[ran]
     log(song_title)
     song = SongOfTheDay([login, password])
-    url = get_youtube_URL(song.driver, song_title.strip())
+    url = get_youtube_url(song.driver, song_title.strip())
     try:
         song.sent_song_API(url, ["Szopy Reaktywacja!", "Shame"])
     except Exception as e:

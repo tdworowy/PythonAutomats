@@ -10,7 +10,7 @@ from Tinder.tinder_Api import TinderMessageBot
 from Utils.Songs_.Songs import FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Utils.utils import log, save_history
-from Youtube.Youtube_Bot import get_youtube_URL
+from Youtube.Youtube_Bot import get_youtube_url
 
 
 class SongOfTheDay():
@@ -51,7 +51,7 @@ def main(login, password, names):
     song = SongOfTheDay()
     song.log_in(login, password, 'tomasz.dworowy')
     for name in names:
-        url = get_youtube_URL(song.driver, song_title.strip())
+        url = get_youtube_url(song.driver, song_title.strip())
         song.sent_song(url, name)
 
 

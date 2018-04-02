@@ -10,7 +10,7 @@ from Facebook.facebook_api import FaceBookMessageBot
 from Utils.Songs_.Songs import FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Utils.utils import log, message_by_time, save_history
-from Youtube.Youtube_Bot import get_youtube_URL
+from Youtube.Youtube_Bot import get_youtube_url
 
 
 class SongOfTheDayFace:
@@ -55,7 +55,7 @@ def main(login, password, thread_id):
 
     song = SongOfTheDayFace()
     song.set_up()
-    url = get_youtube_URL(song.driver, song_title.strip())
+    url = get_youtube_url(song.driver, song_title.strip())
     song.login_FB(login, password)
     song.sent_song([url], thread_id)
     song.tear_down()

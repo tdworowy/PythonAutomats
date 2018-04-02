@@ -5,16 +5,16 @@ import time
 from functools import partial
 from multiprocessing import Process
 from os import listdir
-from os.path import isfile, join
 from threading import Thread
 
 from fbchat import ThreadType
+from os.path import isfile, join
 
 from Facebook.facebook_monitor import FaceThreadMonitor, start_monitor
 from Facebook.song_of_the_day_facebook_message import SongOfTheDayFace
 from Utils.Songs_.Songs import FILE_PATH
 from Utils.file_utils import create_file_if_not_exist
-from Youtube.Youtube_Bot import get_youtube_URL
+from Youtube.Youtube_Bot import get_youtube_url
 
 
 def get_ides(path, file, checked):
@@ -45,7 +45,7 @@ def send_song(song_, thread_id, thread_type):
     ran = random.randrange(len(songs))
     song_title = songs[ran]
     song_.set_up()
-    url = get_youtube_URL(song_.driver, song_title.strip())
+    url = get_youtube_url(song_.driver, song_title.strip())
     song_.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
     song_.tear_down()
 
