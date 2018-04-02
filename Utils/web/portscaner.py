@@ -80,7 +80,7 @@ def distribution_processes(parts, target, ps, min_, max_, ):
 def main(host="127.0.0.1", min=0, max=65534, parts=10):
     ps = PortScanner(host)
     distribution_processes(parts=parts, target=distribution_threads, min_=min, max_=max, ps=ps)
-    combine_all_files(ps.path, "ports.txt")
+    combine_all_files(ps.path, "%s/ports.txt" % ps.path)
 
 
 if __name__ == '__main__':
