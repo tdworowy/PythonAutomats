@@ -6,13 +6,12 @@ from threading import Thread
 
 from Utils.decorators import log_exception
 from Utils.file_utils import combine_all_files
-from Utils.utils import log
 
 
 class PortScanner:
     def __init__(self, host):
         self.host = host
-        self.path = os.path.dirname(os.path.abspath(__file__))
+        self.path = "%s\\results" % os.path.dirname(os.path.abspath(__file__))
 
     def scan_host(self, port, debug=False):
         soc = socket(AF_INET, SOCK_STREAM)
@@ -21,22 +20,22 @@ class PortScanner:
         code = soc.connect_ex((self.host, port))
         soc.close()
         if debug: print("Port checked: %s response %s" % (port, code))
-        if code == 0: log("Port %s is open" % port)
         return port, code
 
-    @log_exception()
     def scan_ports(self, min, max):
-        log("Ports range: %s to %s" % (min, max))
-        with open("%s\\results\Ports_%s_%s_%s.txt" % (self.path, self.host, min, max), "w") as f1:
+        print("Ports range: %s to %s" % (min, max))
+        file_name = "%s\Ports_%s_%s_%s.txt" % (self.path, self.host, min, max)
+        with open(file_name, "w") as f1:
             host_ip = gethostbyname(self.host)
-            log("Host: %s IP: %s" % (self.host, host_ip))
-            log("Scan in progress...")
+            print("Host: %s IP: %s" % (self.host, host_ip))
+            print("Scan in progress...")
             results = map(self.scan_host, [port for port in range(min, max + 1)])
             opened_ports = [x[0] for x in list(results) if x[1] == 0]
-            log("Scan Done...")
+            print("Scan Done...")
             f1.write(str(opened_ports).replace("[", "").replace("]", ""))
-            if os.stat(f1.name).st_size == 0:
-                os.remove(f1.name)
+
+        if os.stat(file_name).st_size == 0:
+                os.remove(file_name)
 
 
 def distribution_threads(ps, min_, max_, parts):
