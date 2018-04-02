@@ -5,6 +5,7 @@ from socket import socket, AF_INET, SOCK_STREAM, gethostbyname, SOL_SOCKET, SO_R
 from threading import Thread
 
 from Utils.decorators import log_exception
+from Utils.file_utils import combine_all_files
 from Utils.utils import log
 
 
@@ -79,6 +80,7 @@ def distribution_processes(parts, target, ps, min_, max_, ):
 def main(host="127.0.0.1", min=0, max=65534, parts=10):
     ps = PortScanner(host)
     distribution_processes(parts=parts, target=distribution_threads, min_=min, max_=max, ps=ps)
+    combine_all_files(ps.path, "ports.txt")
 
 
 if __name__ == '__main__':

@@ -1,5 +1,7 @@
 import os
 
+from os.path import isfile, join
+
 
 def to_file(titles, file_path):
     with open(file_path, 'a') as f:
@@ -35,6 +37,15 @@ def combine_files(count, file_path, folder_path, prefix):
     file_names = [folder_path + "%s%s.txt" % (prefix, str(i)) for i in range(1, count + 1)]
     with open(file_path, 'w') as outfile:
         for fname in file_names:
+            with open(fname) as infile:
+                for line in infile:
+                    outfile.write(line)
+
+
+def combine_all_files(folder_path, output_file):
+    files = [f for f in os.listdir(folder_path) if isfile(join(folder_path, f))]
+    with open(output_file, 'w') as outfile:
+        for fname in files:
             with open(fname) as infile:
                 for line in infile:
                     outfile.write(line)
