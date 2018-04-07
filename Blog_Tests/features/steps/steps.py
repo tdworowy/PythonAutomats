@@ -40,7 +40,7 @@ def login_as_admin(context):
 
 
 @Then('admin page is opened')
-def admin_apge_is_opened(context):
+def admin_page_is_opened(context):
     context.admin_page.check_if_page_opened()
 
 
@@ -55,5 +55,6 @@ def add_post(context, title, body):
 
 @then('post is displayed on main page')
 def check_post(context):
+    open_blog_page(context)
     context.post_page = context.blog_page.open_latest_post()
     context.post_page.check_post(context.post)
