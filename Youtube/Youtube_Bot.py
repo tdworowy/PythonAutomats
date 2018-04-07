@@ -1,3 +1,4 @@
+from selenium.common.exceptions import ElementNotVisibleException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -17,7 +18,7 @@ def get_youtube_url(driver, phrase):
     action_send(driver, phrase)
     first_result = driver.find_element_by_css_selector("div[id='title-wrapper'] h3 a")
     first_result.click()
-    WebDriverWait(driver, 1)
+    WebDriverWait(driver, 3,ignored_exceptions=ElementNotVisibleException).until(lambda x: x.find_element_by_id("subscribe-button"))
     url = driver.current_url
     try:
         driver.quit()
