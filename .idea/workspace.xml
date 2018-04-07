@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog_Tests/features/addPosts.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_Tests/features/addPosts.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog_Tests/features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_Tests/features/login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog_Tests/features/steps/steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_Tests/features/steps/steps.py" afterDir="false" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,29 +49,40 @@
       <file leaf-file-name="addPosts.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Blog_Tests/features/addPosts.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            <state relative-caret-position="221">
+              <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="steps.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="steps.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+            <state relative-caret-position="340">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
-                <element signature="e#0#45#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.feature" pinned="false" current-in-tab="false">
+      <file leaf-file-name="environment.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blog_Tests/features/environment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.feature" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Blog_Tests/features/login.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="5" />
+              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -193,9 +202,9 @@
         <option value="$PROJECT_DIR$/Utils/file_utils.py" />
         <option value="$PROJECT_DIR$/Utils/web/results/placeholder.txt" />
         <option value="$PROJECT_DIR$/Utils/web/portscaner.py" />
-        <option value="$PROJECT_DIR$/Blog_Tests/features/login.feature" />
         <option value="$PROJECT_DIR$/Blog_Tests/features/addPosts.feature" />
         <option value="$PROJECT_DIR$/Blog_Tests/features/steps/steps.py" />
+        <option value="$PROJECT_DIR$/Blog_Tests/features/login.feature" />
       </list>
     </option>
   </component>
@@ -502,13 +511,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00455" summary="fix">
-      <created>1518183649381</created>
-      <option name="number" value="00455" />
-      <option name="presentableId" value="LOCAL-00455" />
-      <option name="project" value="LOCAL" />
-      <updated>1518183649381</updated>
     </task>
     <task id="LOCAL-00456" summary="fix">
       <created>1518184086868</created>
@@ -846,7 +848,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522688988110</updated>
     </task>
-    <option name="localTasksCounter" value="504" />
+    <task id="LOCAL-00504" summary="update tests">
+      <created>1523088409609</created>
+      <option name="number" value="00504" />
+      <option name="presentableId" value="LOCAL-00504" />
+      <option name="project" value="LOCAL" />
+      <updated>1523088409610</updated>
+    </task>
+    <option name="localTasksCounter" value="505" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -952,7 +961,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="online calculator tests" />
     <MESSAGE value="online calculator tests update" />
     <MESSAGE value="faceBook bot work in progress" />
     <MESSAGE value="chrome driver update" />
@@ -977,7 +985,8 @@
     <MESSAGE value="upfate" />
     <MESSAGE value="fix" />
     <MESSAGE value="update but shit won't work" />
-    <option name="LAST_COMMIT_MESSAGE" value="update but shit won't work" />
+    <MESSAGE value="update tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="update tests" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1074,12 +1083,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py</url>
-          <line>46</line>
+          <line>47</line>
           <option name="timeStamp" value="138" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py</url>
-          <line>32</line>
+          <line>33</line>
           <option name="timeStamp" value="139" />
         </line-breakpoint>
       </breakpoints>
@@ -1094,13 +1103,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Python/Lib/multiprocessing/process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="270" selection-start-line="270" selection-end-line="270" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Lib/multiprocessing/spawn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1768">
@@ -1433,27 +1435,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/login.feature">
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="5" />
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blog_Tests/features/addPosts.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        <state relative-caret-position="221">
+          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py">
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/login.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
         </state>
       </provider>
     </entry>
