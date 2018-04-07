@@ -39,11 +39,6 @@ def login_as_admin(context):
     context.login_page.login(ADMIN_LOGIN, ADMIN_PASSWORD)
 
 
-@Then('admin page is opened')
-def admin_page_is_opened(context):
-    context.admin_page.check_if_page_opened()
-
-
 @when('user adds Post {title} {body}')
 def add_post(context, title, body):
     import time
@@ -51,6 +46,11 @@ def add_post(context, title, body):
 
     context.post = POST(title + "_" + str(ms), body, "TestTag", "1", True)  # 1 means admin
     context.admin_page.add_post(context.post)
+
+
+@Then('admin page is opened')
+def admin_page_is_opened(context):
+    context.admin_page.check_if_page_opened()
 
 
 @then('post is displayed on main page')
