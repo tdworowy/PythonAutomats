@@ -1,6 +1,6 @@
 from behave import *
 
-from Blog_Tests.Pages.base_page import set_up
+from Blog_Tests.Pages.base_page import set_up, open_page
 from Blog_Tests.dataModels.postmodel import POST
 
 PORT = 8083
@@ -17,7 +17,7 @@ def get_url(context):
 
 @given("open blog page")
 def open_blog_page(context):
-    set_up(context, BLOG_PAGE_URL)
+    open_page(context, BLOG_PAGE_URL)
 
 
 @given('user is logged as Admin')
