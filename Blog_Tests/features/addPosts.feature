@@ -1,13 +1,8 @@
 Feature: AddPost
     Scenario Outline: Add post scenario
-     Given open login page
-     Then login page is opened
-     When login admin
-     Then admin page is opened
-     When add Post <title> <body>
-     Given open blog page
-     When open Last post
-     Then check post
+     Given user is logged as Admin
+     When user adds Post <title> <body>
+     Then post is displayed on main page
     Examples: posts
     | title          | body |
     | test1          | test test    |

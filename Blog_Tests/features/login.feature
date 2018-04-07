@@ -1,6 +1,5 @@
 Feature: Login
     Scenario: Login as admin
-    Given open login page
-    Then login page is opened
-    When login admin
+    Given User is on Login Page
+    When user login in as admin
     Then admin page is opened
