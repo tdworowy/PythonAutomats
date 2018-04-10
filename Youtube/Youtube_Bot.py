@@ -1,7 +1,10 @@
 from selenium.common.exceptions import ElementNotVisibleException
 from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
+
+title = (By.CSS_SELECTOR, "div[id='title-wrapper'] h3 a")
 
 
 def action_send(driver, txt):
@@ -9,16 +12,17 @@ def action_send(driver, txt):
     actions.send_keys(txt)
     actions.send_keys(Keys.ENTER)
     actions.perform()
-    WebDriverWait(driver, 1)
 
 
 def get_youtube_url(driver, phrase):
     driver.get('https://www.youtube.com')
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(2)
     action_send(driver, phrase)
-    first_result = driver.find_element_by_css_selector("div[id='title-wrapper'] h3 a")
+    WebDriverWait(driver, 4, ignored_exceptions=ElementNotVisibleException).until(lambda x: x.find_element(*title))
+    first_result = driver.find_element(*title)
     first_result.click()
-    WebDriverWait(driver, 3,ignored_exceptions=ElementNotVisibleException).until(lambda x: x.find_element_by_id("subscribe-button"))
+    WebDriverWait(driver, 4, ignored_exceptions=ElementNotVisibleException).until(
+        lambda x: x.find_element_by_id("subscribe-button"))
     url = driver.current_url
     try:
         driver.quit()
