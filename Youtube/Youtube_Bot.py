@@ -16,7 +16,7 @@ def action_send(driver, txt):
 
 def get_youtube_url(driver, phrase):
     driver.get('https://www.youtube.com')
-    driver.implicitly_wait(2)
+    driver.implicitly_wait(10)
     action_send(driver, phrase)
     WebDriverWait(driver, 4, ignored_exceptions=ElementNotVisibleException).until(lambda x: x.find_element(*title))
     first_result = driver.find_element(*title)
