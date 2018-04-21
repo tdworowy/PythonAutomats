@@ -6,7 +6,7 @@ from datetime import date
 
 history_path = "E:\Google_drive\Songs\History"
 
-logging.basicConfig(format="%(levelname)s|%(asctime)s|%(message)s ")
+logging.basicConfig(format="%(levelname)s %(asctime)s %(message)s")
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
@@ -14,6 +14,7 @@ logger.setLevel(logging.DEBUG)
 
 def log(path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
     file_handler = logging.FileHandler(path)
+    file_handler.setFormatter(logging.Formatter("%(levelname)s|%(asctime)s|%(message)s"))
     if file_handler.baseFilename not in [handler.baseFilename for handler in logger.handlers[1:] if handler]:
         logger.addHandler(file_handler)
 
