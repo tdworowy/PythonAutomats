@@ -90,7 +90,6 @@ def check_last_updated():
 
 
 def _update_songs(min=1, max=60, user='TotaledThomas', file_path=FILE_PATH):
-    if check_last_updated(): return 0
     url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYSS" % user
     new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(min, max + 1)])
     for tiles_list in new_titles_map:
@@ -121,6 +120,10 @@ def distribution(parts, min_=1, max=0, user_='TotaledThomas', target=get_songs):
 
 
 def update_songs_distribution():
+    mylogging.log().info("Update songs")
+    if check_last_updated():
+        mylogging.log().info("Songs already updated")
+        return 0
     distribution(parts=6, max=60, user_='TotaledThomas', target=_update_songs)
     distribution(parts=6, max=60, user_='theRoobal', target=_update_songs)
     remove_duplicates(FILE_PATH)
