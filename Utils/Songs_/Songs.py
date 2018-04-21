@@ -133,8 +133,8 @@ if __name__ == '__main__':
     pool_count = 10
 
     open(FILE_PATH, 'w').close()
-    distribution(parts=pool_count, user_='TotaledThomas')
-    distribution(parts=pool_count, user_='theRoobal')
+    distribution(parts=pool_count, user_='TotaledThomas',target=get_songs)
+    distribution(parts=pool_count, user_='theRoobal',target=get_songs)
 
     combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList")
     remove_files([r'%s\songsList%s.txt' % (FOLDER_PATH, i) for i in range(1, pool_count + 1)])
