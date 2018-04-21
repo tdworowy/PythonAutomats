@@ -47,12 +47,13 @@ class SongOfTheDayFace:
 @log_exception()
 def main(login, password, thread_id):
     update_songs_distribution()
-    log().info("Get random song")
+    song = SongOfTheDayFace()
+    song.mylogging.log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs = f.read()
     song_title = choice(songs.split("\n"))
 
-    song = SongOfTheDayFace()
+
     song.set_up()
     url = get_youtube_url(song.driver, song_title.strip())
     song.login_FB(login, password)

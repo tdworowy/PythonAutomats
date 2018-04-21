@@ -54,8 +54,8 @@ class SongOfTheDay():
 
 @log_exception()
 def main(login, password):
-    song = SongOfTheDay([login, password])
     update_songs_distribution()
+    song = SongOfTheDay([login, password])
     song.mylogging.log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs = f.read()
@@ -68,7 +68,7 @@ def main(login, password):
     try:
         song.sent_song_API(url, ["Szopy Reaktywacja!", "Shame"])
     except Exception as e:
-        log().error("API error: %s" % str(e))
+        song.mylogging.log().error("API error: %s" % str(e))
         song.sent_song_UI(url, ["Szopy Reaktywacja!", "Shame"])
 
 

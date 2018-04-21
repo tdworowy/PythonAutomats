@@ -41,8 +41,8 @@ class SongOfTheDay():
 
 @log_exception()
 def main(login, password, names):
-    song = SongOfTheDay()
     update_songs_distribution()
+    song = SongOfTheDay()
     song.mylogging.log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs_list = f.read()
