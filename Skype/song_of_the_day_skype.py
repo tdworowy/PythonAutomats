@@ -1,6 +1,6 @@
 import os
-import random
 import sys
+from random import choice
 
 from selenium import webdriver
 
@@ -22,7 +22,7 @@ class SongOfTheDay():
 
     def sent_song_API(self, songURL, gropus):
         sa = SkypeApi(self.authentication[0], self.authentication[1])
-        log(songURL)
+        log().info(songURL)
         sa.set_chats(gropus)
         sa.send_message(message_by_time())
         sa.send_message(songURL)
@@ -32,7 +32,7 @@ class SongOfTheDay():
             save_history(songURL, "Skype.txt")
 
     def sent_song_UI(self, songURL, gropus):
-        log(songURL)
+        log().info(songURL)
         sb = SkypeBot(self.driver)
         sb.login(self.authentication)
 
@@ -54,20 +54,19 @@ class SongOfTheDay():
 @log_exception()
 def main(login, password):
     update_songs_distribution()
-    log("Get random song")
+    log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs = f.read()
     songs = songs.split("\n")
 
-    ran = random.randrange(len(songs))
-    song_title = songs[ran]
-    log(song_title)
+    song_title = choice(songs.split("\n")
+                        )
     song = SongOfTheDay([login, password])
     url = get_youtube_url(song.driver, song_title.strip())
     try:
         song.sent_song_API(url, ["Szopy Reaktywacja!", "Shame"])
     except Exception as e:
-        log("API error: %s" % str(e))
+        log().error("API error: %s" % str(e))
         song.sent_song_UI(url, ["Szopy Reaktywacja!", "Shame"])
 
 

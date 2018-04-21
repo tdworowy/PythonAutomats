@@ -1,5 +1,5 @@
-import random
 import sys
+from random import choice
 
 from selenium import webdriver
 
@@ -17,7 +17,7 @@ class SongOfTheDay:
 
     def sent_song(self, songs_urls):
         for songURL in songs_urls:
-            log(songURL)
+            log().info(songURL)
             self.face_bot.facebook_post(songURL)
 
     def set_up(self, page_id, app_id, app_secred):
@@ -34,14 +34,12 @@ class SongOfTheDay:
 @log_exception
 def main(page_id, app_id, app_secred):
     song = SongOfTheDay(page_id, app_id, app_secred)
-    f = open(FILE_PATH, 'r')
-    log("Get random song")
-    songs = f.read()
-    songs = songs.split("\n")
 
-    ran = random.randrange(len(songs))
-    log(songs[ran])
-    url = get_youtube_url(song.driver, songs[ran].strip())
+    log().info("Get random song")
+    with open(FILE_PATH, 'r') as f:
+        songs = f.read()
+
+    url = get_youtube_url(song.driver, choice(songs.split("\n")))
     song.sent_song([url])
     song.tear_down()
 

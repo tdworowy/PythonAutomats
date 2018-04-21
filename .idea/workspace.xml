@@ -3,7 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Youtube/Youtube_Bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Youtube/Youtube_Bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_Tests/features/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_Tests/features/environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/Behave/features/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/Behave/features/environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/Behave/features/steps/steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/Behave/features/steps/steps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Facebook/facebook_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/Facebook/facebook_post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" beforeDir="false" afterPath="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skype/add_person_to_chat.py" beforeDir="false" afterPath="$PROJECT_DIR$/Skype/add_person_to_chat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" beforeDir="false" afterPath="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Speed_Test/speed_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Speed_Test/speed_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify/spotify_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify/spotify_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Songs_/Songs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Songs_/Songs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/decorators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/utils.py" afterDir="false" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,86 +35,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="addPosts.feature" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog_Tests/features/addPosts.feature">
+      <file leaf-file-name="song_of_the_day_facebook_message.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="steps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Youtube_Bot.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Youtube/Youtube_Bot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="306">
+              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
               <folding>
-                <element signature="e#0#65#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wait.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Python/Lib/site-packages/selenium/webdriver/support/wait.py">
+      <file leaf-file-name="song_of_the_day_post_on_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+            <state relative-caret-position="255">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/base_page.py">
+      <file leaf-file-name="add_person_to_chat.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Skype/add_person_to_chat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="song_of_the_day_skype.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="speed_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Speed_Test/speed_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spotify_api.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Spotify/spotify_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1656">
+              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="song_of_the_day_tinder.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="decorators.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Songs.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/post_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/login_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/admin_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="22" column="32" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.feature" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog_Tests/features/login.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,10 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static_Analize/pylint_Run_.py" />
-        <option value="$PROJECT_DIR$/Blog_Tests/allure_report.py" />
-        <option value="$PROJECT_DIR$/Static_Analize/pylint_Run_.py" />
-        <option value="$PROJECT_DIR$/Tinder/tinder_Api.py" />
         <option value="$PROJECT_DIR$/Utils/grid/start_hub.py" />
         <option value="$PROJECT_DIR$/Utils/grid/start_hub_linuks.py" />
         <option value="$PROJECT_DIR$/Utils/grid/start_node.py" />
@@ -162,33 +195,23 @@
         <option value="$PROJECT_DIR$/Tests/Skype/Skype_api_tests/run.py" />
         <option value="$PROJECT_DIR$/Tests/Skype/Skype_api_tests/Behave/run.py" />
         <option value="$PROJECT_DIR$/Tests/Skype/Skype_api_tests/Behave/features/steps/steps.py" />
-        <option value="$PROJECT_DIR$/Utils/decorators.py" />
         <option value="$PROJECT_DIR$/Facebook/aut.txt" />
-        <option value="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" />
         <option value="$PROJECT_DIR$/Behave_test/run.py" />
         <option value="$PROJECT_DIR$/Calculator/Behave/run.py" />
         <option value="$PROJECT_DIR$/Spotify/auth.txt" />
-        <option value="$PROJECT_DIR$/Spotify/spotify_api.py" />
         <option value="$PROJECT_DIR$/Utils/processes_utils.py" />
         <option value="$PROJECT_DIR$/update_all/update_app_packages.py" />
         <option value="$PROJECT_DIR$/Utils/pip_utils.py" />
-        <option value="$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py" />
         <option value="$PROJECT_DIR$/Utils/run_artifactory.py" />
         <option value="$PROJECT_DIR$/Netflix/netflix.py" />
         <option value="$PROJECT_DIR$/Google_Docks/google_api.py" />
-        <option value="$PROJECT_DIR$/Speed_Test/speed_test.py" />
         <option value="$PROJECT_DIR$/Facebook/song_on_demand_face.py" />
         <option value="$PROJECT_DIR$/Facebook/facebook_monitor.py" />
         <option value="$PROJECT_DIR$/Facebook/facebook_api.py" />
-        <option value="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" />
         <option value="$PROJECT_DIR$/Blog_Tests/run.py" />
         <option value="$PROJECT_DIR$/Blog_Tests/Pages/admin_page.py" />
         <option value="$PROJECT_DIR$/Blog_Tests/Pages/blog_page.py" />
         <option value="$PROJECT_DIR$/Blog_Tests/Pages/post_page.py" />
-        <option value="$PROJECT_DIR$/Utils/utils.py" />
-        <option value="$PROJECT_DIR$/Blog_Tests/features/environment.py" />
-        <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
-        <option value="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" />
         <option value="$PROJECT_DIR$/Utils/file_utils.py" />
         <option value="$PROJECT_DIR$/Utils/web/results/placeholder.txt" />
         <option value="$PROJECT_DIR$/Utils/web/portscaner.py" />
@@ -197,6 +220,20 @@
         <option value="$PROJECT_DIR$/Blog_Tests/Pages/base_page.py" />
         <option value="$PROJECT_DIR$/Blog_Tests/features/steps/steps.py" />
         <option value="$PROJECT_DIR$/Youtube/Youtube_Bot.py" />
+        <option value="$PROJECT_DIR$/Utils/utils.py" />
+        <option value="$PROJECT_DIR$/Blog_Tests/features/environment.py" />
+        <option value="$PROJECT_DIR$/Calculator/Behave/features/environment.py" />
+        <option value="$PROJECT_DIR$/Calculator/Behave/features/steps/steps.py" />
+        <option value="$PROJECT_DIR$/Facebook/facebook_post.py" />
+        <option value="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" />
+        <option value="$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py" />
+        <option value="$PROJECT_DIR$/Skype/add_person_to_chat.py" />
+        <option value="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" />
+        <option value="$PROJECT_DIR$/Speed_Test/speed_test.py" />
+        <option value="$PROJECT_DIR$/Spotify/spotify_api.py" />
+        <option value="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" />
+        <option value="$PROJECT_DIR$/Utils/decorators.py" />
+        <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
       </list>
     </option>
   </component>
@@ -211,7 +248,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,12 +282,18 @@
             <path>
               <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
               <item name="Youtube" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -509,20 +551,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00461" summary="fix">
-      <created>1518186101464</created>
-      <option name="number" value="00461" />
-      <option name="presentableId" value="LOCAL-00461" />
-      <option name="project" value="LOCAL" />
-      <updated>1518186101464</updated>
-    </task>
-    <task id="LOCAL-00462" summary="fix">
-      <created>1518186128278</created>
-      <option name="number" value="00462" />
-      <option name="presentableId" value="LOCAL-00462" />
-      <option name="project" value="LOCAL" />
-      <updated>1518186128278</updated>
     </task>
     <task id="LOCAL-00463" summary="fix">
       <created>1518186503738</created>
@@ -853,7 +881,21 @@
       <option name="project" value="LOCAL" />
       <updated>1523118852533</updated>
     </task>
-    <option name="localTasksCounter" value="510" />
+    <task id="LOCAL-00510" summary="fix">
+      <created>1523384330358</created>
+      <option name="number" value="00510" />
+      <option name="presentableId" value="LOCAL-00510" />
+      <option name="project" value="LOCAL" />
+      <updated>1523384330358</updated>
+    </task>
+    <task id="LOCAL-00511" summary="fix">
+      <created>1523384536410</created>
+      <option name="number" value="00511" />
+      <option name="presentableId" value="LOCAL-00511" />
+      <option name="project" value="LOCAL" />
+      <updated>1523384536410</updated>
+    </task>
+    <option name="localTasksCounter" value="512" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -901,9 +943,10 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14857745" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14857745" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50692964" side_tool="true" weight="0.34561214" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3278867" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3270925" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32826087" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49307036" weight="0.41830066" />
@@ -921,30 +964,29 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14857745" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49307036" visible="true" weight="0.41830066" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Data View" order="3" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.24947146" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3270925" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32936078" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32826087" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14857745" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4640523" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50692964" side_tool="true" weight="0.34561214" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3270925" />
+      <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
-      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32826087" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1007,7 +1049,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Calculator/Behave/features/steps/steps.py</url>
-          <line>81</line>
+          <line>80</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1079,6 +1121,10 @@
           <line>2</line>
           <option name="timeStamp" value="137" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py</url>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -1087,41 +1133,10 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="141" />
+      <option name="time" value="142" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Youtube/Youtube_Bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Lib/typing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35190">
-          <caret line="2077" column="8" selection-start-line="2077" selection-start-column="8" selection-end-line="2077" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/web/portscaner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="83" column="26" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/threads_utils_/threads_utils.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1164,20 +1179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Skype/skype_bot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -1193,13 +1194,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blog_Tests/Logs.log" />
-    <entry file="file://$PROJECT_DIR$/Speed_Test/speed_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/blog_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1247,27 +1241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="32" column="9" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Facebook/facebook_post.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1320,13 +1293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/file_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -1351,32 +1317,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Lib/typing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35190">
           <caret line="2077" column="8" selection-start-line="2077" selection-start-column="8" selection-end-line="2077" selection-end-column="8" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2210">
-          <caret line="138" selection-start-line="138" selection-end-line="138" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/environment.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Blog_Tests/features/login.feature">
       <provider selected="true" editor-type-id="text-editor">
@@ -1399,24 +1345,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/login_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/base_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1427,19 +1359,149 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/admin_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="32" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="32" />
+        <state>
+          <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/steps/steps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Youtube/Youtube_Bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="47" column="79" selection-start-line="47" selection-start-column="79" selection-end-line="47" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Behave/features/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/Behave/features/steps/steps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="104" column="56" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Facebook/facebook_post.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Skype/add_person_to_chat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Speed_Test/speed_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spotify/spotify_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1656">
+          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>

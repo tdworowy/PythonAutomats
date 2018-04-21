@@ -25,7 +25,7 @@ class SpotifyApi:
             return token
 
         else:
-            log("Can't get token for", user_name)
+            log().info("Can't get token for: %s" % user_name)
 
     def __init__(self, user_name, client_id, client_secret, redirect_uri):
         self.user_name = user_name

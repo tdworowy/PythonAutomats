@@ -1,11 +1,12 @@
 import time
 
-from Calculator.Elements.Calculator import CalculatorElements
-from Chrome_Driver_Folder.driver_path import get_driver_path
-from Utils.utils import log
 from behave import *
 from selenium import webdriver
 from selenium.webdriver.remote.webdriver import WebDriver
+
+from Calculator.Elements.Calculator import CalculatorElements
+from Chrome_Driver_Folder.driver_path import get_driver_path
+from Utils.utils import log
 
 SERVER = 'http://www.calculator.net/'
 CHROME = {
@@ -42,19 +43,18 @@ def set_up(context):
 #     context.driver = driver
 
 
-
-def getURL(context):
+def get_url(context):
     return context.driver.current_url
 
 
 # def tearDown(context):
 #     context.driver.quit()
-def tearDown(context):
+def tear_down(context):
     context.driver.quit()
 
 
 @given('open scientific calculator')
-def openscientificCalculator(context):
+def open_scientific_calculator(context):
     context.calculator.open_calculator()
     context.open = context.calculator.scientific_calculator_check()
     time.sleep(1)
@@ -79,7 +79,7 @@ def sum3(context):
 
 
 @when('sum {sum}')
-def sumP(context, sum):
+def parametrized_sum(context, sum):
     ele = sum.split(',')
     x = int(ele[0])
     y = int(ele[1])
@@ -87,21 +87,21 @@ def sumP(context, sum):
 
 
 @then('check calculator')
-def checkifCalculatorIsDisplayed(context):
+def check_if_calculator_is_displayed(context):
     assert context.open is True
 
 
 @then('check result')
-def checkResult(context):
+def check_result(context):
     actual = context.calculator.get_calc_result()
-    log("Check result: " + context.result, context.logFile)
-    log("Actual result: " + actual, context.logFile)
+    log(context.logFile).info("Check result: " + context.result)
+    log(context.logFile).info("Actual result: " + actual)
     assert context.result == context.calculator.get_calc_result()
 
 
 @then('check {result}')
-def checkResult2(context, result):
+def parametrized_check_result(context, result):
     actual = context.calculator.get_calc_result()
-    log("Check result: " + result, context.logFile)
-    log("Actual result: " + actual, context.logFile)
+    log(context.logFile).info("Check result: " + result)
+    log(context.logFile).info("Actual result: " + actual)
     assert result == context.calculator.get_calc_result()

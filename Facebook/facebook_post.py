@@ -1,6 +1,7 @@
 import facebook
-from Utils.utils import log
 from facepy import utils
+
+from Utils.utils import log
 
 
 class FaceBookPost:
@@ -16,9 +17,9 @@ class FaceBookPost:
 
     def facebook_post(self, message):
         api = self.get_api()
-        log("Post message %s" % message)
+        log().info("Post message %s" % message)
         status = api.put_wall_post(message)
-        log(status)
+        log().info(status)
 
     def get_api(self):
         graph = facebook.GraphAPI(self.cfg['access_token'])

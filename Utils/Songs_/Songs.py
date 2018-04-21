@@ -28,15 +28,15 @@ def get_pages_count(url):
         pagination_list = soup.find('ul', class_="pagination-list")
         pages = pagination_list.find_all('a')
     except Exception as ex:
-        log(ex)
+        log().error(ex)
     page_count = (max([int(page.text) for page in pages[:-1]]))
-    log("URL: %s" % url)
-    log("Page count: %s" % page_count)
+    log().info("URL: %s" % url)
+    log().info("Page count: %s" % page_count)
     return page_count
 
 
 def get_titles(url):
-    log("Get songs from: %s" % url)
+    log().info("Get songs from: %s" % url)
     try:
         response = requests.get(url).text
         soup = BeautifulSoup(response, "html.parser")
@@ -44,7 +44,7 @@ def get_titles(url):
         titles = str(titles)
         titles = titles.split(">")
     except Exception as ex:
-        log(ex)
+        log().warning(ex)
     return clear_titles(titles)
 
 
@@ -63,9 +63,9 @@ def clear_titles(titles):
                 clean_titles.append(temp + "\n")
 
         except Exception as ex:
-            log('EXCEPTION in clean_titles')
-            log(ex)
-            log(text)
+            log().error('EXCEPTION in clean_titles')
+            log().error(ex)
+            log().error(text)
             continue
     return clean_titles
 

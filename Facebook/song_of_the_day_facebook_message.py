@@ -1,6 +1,6 @@
 import os
-import random
 import sys
+from random import choice
 
 from fbchat.models import *
 from selenium import webdriver
@@ -23,7 +23,7 @@ class SongOfTheDayFace:
     def sent_song(self, songs_urls, thread_id, message=message_by_time(), thread_type=ThreadType.GROUP):
 
         for songURL in songs_urls:
-            log(songURL)
+            log().info(songURL)
             self.face_bot.send_message(message, thread_id, thread_type)
             self.face_bot.send_message(songURL, thread_id, thread_type)
             save_history(songURL, "FacebookMessage.txt")
@@ -46,12 +46,10 @@ class SongOfTheDayFace:
 @log_exception()
 def main(login, password, thread_id):
     update_songs_distribution()
-    log("Get random song")
+    log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs = f.read()
-    songs = songs.split("\n")
-    ran = random.randrange(len(songs))
-    song_title = songs[ran]
+    song_title = choice(songs.split("\n"))
 
     song = SongOfTheDayFace()
     song.set_up()

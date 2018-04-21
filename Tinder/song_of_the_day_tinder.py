@@ -1,5 +1,5 @@
-import random
 import sys
+from random import choice
 
 from selenium import webdriver
 
@@ -24,7 +24,7 @@ class SongOfTheDay():
         self.tm.logIn(id, token)
 
     def sent_song(self, song_URL, to):
-        log(song_URL)
+        log().info(song_URL)
         for match in self.tm.get_matches():
             if match.user.name == to:
                 log("Send message to: %s " % match.user.name)
@@ -41,13 +41,12 @@ class SongOfTheDay():
 @log_exception()
 def main(login, password, names):
     update_songs_distribution()
-    log("Get random song")
+    log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs_list = f.read()
     songs_list = songs_list.split("\n")
 
-    ran = random.randrange(len(songs_list))
-    song_title = songs_list[ran]
+    song_title = choice(songs_list)
     song = SongOfTheDay()
     song.log_in(login, password, 'tomasz.dworowy')
     for name in names:

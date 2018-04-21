@@ -1,6 +1,6 @@
 import time
 
-from Calculator.Behave.features.steps.steps import set_up, tearDown, getURL
+from Calculator.Behave.features.steps.steps import set_up, tear_down, get_url
 # logging.basicConfig(level=logging.DEBUG, filename="Logs.log")
 from Calculator.Behave.screens.screenPath import get_screen_path
 from Utils.utils import log, create_dir, take_screenshot
@@ -10,7 +10,7 @@ BEHAVE_DEBUG = True
 
 def before_feature(context, feature):
     context.logFeatureFile = get_screen_path() + "\\Log.txt"
-    log("Start Feature : " + feature.name, context.logFeatureFile)
+    log(context.logFeatureFile).info("Start Feature : " + feature.name)
 
 
 def before_scenario(context, scenario):
@@ -20,29 +20,29 @@ def before_scenario(context, scenario):
 
     context.logFile = context.screanDirName + "\\Log.txt"
 
-    log("Scenario started: " + scenario.name, context.logFile)
+    log(context.logFile).info("Scenario started: " + scenario.name)
     set_up(context)
-    log("URL: " + getURL(context), context.logFile)
+    log(context.logFile).info("URL: " + get_url(context))
 
 
 def before_step(context, step):
-    log("Step: " + step.name, context.logFile)
+    log(context.logFile).info("Step: " + step.name)
 
 
 def after_scenario(context, scenario):
-    log("Test Finished", context.logFile)
-    tearDown(context)
+    log(context.logFile).info("Test Finished")
+    tear_down(context)
 
 
 def after_step(context, step):
     take_screenshot(context, context.screanDirName + "\\", step.name)
     if BEHAVE_DEBUG and step.status == "failed":
         import ipdb
-        log("TEST FAIL")
-        log(str(ipdb.post_mortem(step.exc_traceback)), context.logFile)
+        log(context.logFile).error("TEST FAIL")
+        log(context.logFile).error(str(ipdb.post_mortem(step.exc_traceback)))
 
 
 def after_feature(context, feature):
-    log("Feature Finished: " + feature.name, context.logFeatureFile)
-    log("Skip reason: " + str(feature.skip_reason), context.logFeatureFile)
-    log("Status: " + feature.status, context.logFeatureFile)
+    log(context.logFeatureFile).info("Feature Finished: " + feature.name)
+    log(context.logFeatureFile).info("Skip reason: " + str(feature.skip_reason))
+    log(context.logFeatureFile).info("Status: " + feature.status)

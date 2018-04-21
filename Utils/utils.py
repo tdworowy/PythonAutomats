@@ -1,37 +1,31 @@
 import calendar
+import logging
 import os
 import time
 from datetime import date
 
-from Utils.file_utils import create_file_if_not_exist
-
 history_path = "E:\Google_drive\Songs\History"
 
+logging.basicConfig(format="	%(levelno)s|%(asctime)s|%(message)s ")
 
-def log(text, path=os.path.dirname(os.path.abspath(__file__)) + "\\log.txt"):
-    try:
-        text = str(text)
-        time_stump = time.strftime('%Y-%m-%d %H:%M:%S')
-        log = time_stump + " " + text + "\n"
-        print(log, flush=True)
-        print(path, flush=True)
-        create_file_if_not_exist(path)
-        with open(path, "a") as log_file:
-            log_file.write(log)
-    except Exception as ex:
-        print("ERROR while logging", flush=True)
-        print(str(ex), flush=True)
-        # raise RuntimeError
+
+def log(path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
+    file_handler = logging.FileHandler(path)
+    stream_handler = logging.StreamHandler()
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(file_handler)
+    logger.addHandler(stream_handler)
+    return logger
 
 
 def save_history(text, file):
-    log(text, history_path + file)
+    log(history_path + file).info(text)
 
 
 def log_result(test_name, result):
     message = "Name: {x} Result {y}".format(x=test_name, y=result)
-    print(message)
-    log(message, "TestsResultLog.txt")
+    log("TestsResultLog.txt").info(message)
 
 
 def create_dir(context, name):

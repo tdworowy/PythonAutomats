@@ -16,7 +16,7 @@ def test_speed(log_=True):
     s.download()
     s.upload()
     res = s.results.dict()
-    if log_: log(res)
+    if log_: log().info(res)
     return res
 
 
@@ -25,4 +25,4 @@ if __name__ == "__main__":
         time_stump = time.strftime('%Y-%m-%d %H:%M:%S')
         res = str(test_speed())
         f.write("%s, %s\n" % (time_stump, res))
-        log(res, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Utils')) + "\\log.txt")
+        log(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Utils')) + "\\log.txt").info(res)
