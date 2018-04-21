@@ -19,11 +19,10 @@ class MyLogging:
         file_handler.setLevel(logging.DEBUG)
 
         for logger in self.loggers:
-            try:
-                if file_handler.baseFilename in [handler.baseFilename for handler in logger.handlers if handler]:
-                    return logger
-            except AttributeError:
-                pass
+
+            if file_handler.baseFilename in [handler.baseFilename for handler in logger.handlers if
+                                             hasattr(handler, 'baseFilename')]:
+                return logger
         else:
             new_logger = logging.getLogger("Logger%s" % self.index)
             self.index += 1

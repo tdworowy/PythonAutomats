@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" beforeDir="false" afterPath="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" beforeDir="false" afterPath="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/utils.py" afterDir="false" />
     </list>
     <ignored path="Selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,15 +22,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spotify_api.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Spotify/spotify_api.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1479">
-              <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pylint_Run_.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Static_Analize/pylint_Run_.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,14 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="song_of_the_day_tinder.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="song_of_the_day_tinder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
+            <state relative-caret-position="510">
               <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -67,14 +53,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="374">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/logging/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-371">
+              <caret line="1006" column="40" selection-start-line="1006" selection-start-column="39" selection-end-line="1006" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -96,9 +91,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
               <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -115,7 +107,7 @@
       <file leaf-file-name="Songs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="-170">
               <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
             </state>
           </provider>
@@ -211,7 +203,6 @@
         <option value="$PROJECT_DIR$/Facebook/facebook_post.py" />
         <option value="$PROJECT_DIR$/Skype/add_person_to_chat.py" />
         <option value="$PROJECT_DIR$/Utils/log.log" />
-        <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/Blog_Tests/features/environment.py" />
         <option value="$PROJECT_DIR$/Calculator/Behave/features/environment.py" />
         <option value="$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py" />
@@ -222,6 +213,7 @@
         <option value="$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py" />
         <option value="$PROJECT_DIR$/Skype/song_of_the_day_skype.py" />
         <option value="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" />
+        <option value="$PROJECT_DIR$/Utils/utils.py" />
       </list>
     </option>
   </component>
@@ -268,11 +260,6 @@
               <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
               <item name="Utils" type="462c0819:PsiDirectoryNode" />
               <item name="Songs_" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonAutomats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonAutomats" type="462c0819:PsiDirectoryNode" />
-              <item name="Youtube" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -535,20 +522,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00470" summary="update">
-      <created>1519201369504</created>
-      <option name="number" value="00470" />
-      <option name="presentableId" value="LOCAL-00470" />
-      <option name="project" value="LOCAL" />
-      <updated>1519201369504</updated>
-    </task>
-    <task id="LOCAL-00471" summary="update">
-      <created>1519295493141</created>
-      <option name="number" value="00471" />
-      <option name="presentableId" value="LOCAL-00471" />
-      <option name="project" value="LOCAL" />
-      <updated>1519295493141</updated>
     </task>
     <task id="LOCAL-00472" summary="update">
       <created>1519305244244</created>
@@ -879,7 +852,21 @@
       <option name="project" value="LOCAL" />
       <updated>1524299811509</updated>
     </task>
-    <option name="localTasksCounter" value="519" />
+    <task id="LOCAL-00519" summary="fix">
+      <created>1524300170544</created>
+      <option name="number" value="00519" />
+      <option name="presentableId" value="LOCAL-00519" />
+      <option name="project" value="LOCAL" />
+      <updated>1524300170544</updated>
+    </task>
+    <task id="LOCAL-00520" summary="fix">
+      <created>1524300804317</created>
+      <option name="number" value="00520" />
+      <option name="presentableId" value="LOCAL-00520" />
+      <option name="project" value="LOCAL" />
+      <updated>1524300804317</updated>
+    </task>
+    <option name="localTasksCounter" value="521" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1107,7 +1094,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Utils/utils.py</url>
-          <line>19</line>
+          <line>16</line>
           <option name="timeStamp" value="142" />
         </line-breakpoint>
       </breakpoints>
@@ -1287,13 +1274,6 @@
     <entry file="file://$PROJECT_DIR$/Utils/log.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://D:/Python/Lib/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="1805" column="4" selection-start-line="1805" selection-start-column="4" selection-end-line="1805" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blog_Tests/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1439,30 +1419,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1475,10 +1435,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
+        <state relative-caret-position="510">
           <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-371">
+          <caret line="1006" column="40" selection-start-line="1006" selection-start-column="39" selection-end-line="1006" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
