@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
+    <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="update">
+      <change afterPath="$PROJECT_DIR$/Utils/logs_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/utils.py" afterDir="false" />
     </list>
@@ -22,28 +23,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pylint_Run_.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Static_Analize/pylint_Run_.py">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="68">
+              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="song_of_the_day_tinder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="update_all_packages.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/update_all/update_all_packages.py">
+      <file leaf-file-name="pip_utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/pip_utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
@@ -53,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Utils/utils.py">
+      <file leaf-file-name="logs_tests.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Utils/logs_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
-              <caret line="77" column="46" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
+            <state relative-caret-position="380">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -65,23 +58,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Python/Lib/logging/__init__.py">
+      <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/unittest/case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-371">
-              <caret line="1006" column="40" selection-start-line="1006" selection-start-column="39" selection-end-line="1006" selection-end-column="40" />
+            <state relative-caret-position="-3810">
+              <caret line="336" column="6" selection-start-line="336" selection-start-column="6" selection-end-line="336" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="song_of_the_day_post_on_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_post_on_page.py">
+      <file leaf-file-name="typing.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Lib/typing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="2053" column="8" selection-start-line="2053" selection-start-column="8" selection-end-line="2053" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -89,35 +79,11 @@
       <file leaf-file-name="song_of_the_day_facebook_message.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="48" column="23" lean-forward="true" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="song_of_the_day_skype.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Skype/song_of_the_day_skype.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Songs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="decorators.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/decorators.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            <state relative-caret-position="-246">
+              <caret line="26" column="45" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Utils/grid/start_hub_linuks.py" />
         <option value="$PROJECT_DIR$/Utils/grid/start_node.py" />
         <option value="$PROJECT_DIR$/Utils/grid/start_node_Linuks.py" />
         <option value="$PROJECT_DIR$/Skype/skype_api_.py" />
@@ -214,6 +179,7 @@
         <option value="$PROJECT_DIR$/Tinder/song_of_the_day_tinder.py" />
         <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
         <option value="$PROJECT_DIR$/Utils/utils.py" />
+        <option value="$PROJECT_DIR$/Utils/logs_tests.py" />
       </list>
     </option>
   </component>
@@ -300,7 +266,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.utils">
+  <component name="RunManager" selected="Python tests.Unittests in logs_tests.py">
     <configuration name="Songs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SeleniumPython" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -373,24 +339,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="update_all_packages" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SeleniumPython" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/update_all" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/update_all/update_all_packages.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="utils" type="PythonConfigurationType" factoryName="Python">
       <module name="SeleniumPython" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -437,6 +385,32 @@
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <method />
+    </configuration>
+    <configuration name="Unittests for logs_tests.LogsTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;logs_tests.LogsTests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="Unittests in logs_tests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Utils/logs_tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
       <module name="Selenium" />
@@ -498,17 +472,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.utils" />
-      <item itemvalue="Python.update_all_packages" />
       <item itemvalue="Python.Songs" />
       <item itemvalue="Python.portscaner" />
       <item itemvalue="Python.threads_utils" />
+      <item itemvalue="Python tests.Unittests for logs_tests.LogsTests" />
+      <item itemvalue="Python tests.Unittests in logs_tests.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in logs_tests.py" />
+        <item itemvalue="Python tests.Unittests for logs_tests.LogsTests" />
         <item itemvalue="Python.threads_utils" />
         <item itemvalue="Python.portscaner" />
         <item itemvalue="Python.Songs" />
-        <item itemvalue="Python.update_all_packages" />
       </list>
     </recent_temporary>
   </component>
@@ -522,13 +498,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
-    </task>
-    <task id="LOCAL-00475" summary="update">
-      <created>1521889259846</created>
-      <option name="number" value="00475" />
-      <option name="presentableId" value="LOCAL-00475" />
-      <option name="project" value="LOCAL" />
-      <updated>1521889259846</updated>
     </task>
     <task id="LOCAL-00476" summary="update">
       <created>1521895616388</created>
@@ -866,39 +835,46 @@
       <option name="project" value="LOCAL" />
       <updated>1524301487459</updated>
     </task>
-    <option name="localTasksCounter" value="524" />
+    <task id="LOCAL-00524" summary="fix">
+      <created>1524301868191</created>
+      <option name="number" value="00524" />
+      <option name="presentableId" value="LOCAL-00524" />
+      <option name="project" value="LOCAL" />
+      <updated>1524301868191</updated>
+    </task>
+    <option name="localTasksCounter" value="525" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_OnlineCalculatorTests_py_(2) - 2017.05.07 at 16h 25m 09s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests.py (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_logs_tests_py - 2018.04.21 at 11h 59m 03s.xml">
+      <configuration name="Unittests in logs_tests.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests_py_(2) - 2017.05.07 at 16h 25m 33s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests.py (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_logs_tests_py - 2018.04.21 at 11h 59m 06s.xml">
+      <configuration name="Unittests in logs_tests.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests_py_(2) - 2017.05.07 at 16h 26m 04s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests.py (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_logs_tests_py - 2018.04.21 at 11h 59m 55s.xml">
+      <configuration name="Unittests in logs_tests.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests_py_(2) - 2017.05.07 at 16h 26m 53s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests.py (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_logs_tests_py - 2018.04.21 at 12h 03m 58s.xml">
+      <configuration name="Unittests in logs_tests.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests_py_(2) - 2017.05.07 at 16h 28m 43s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests.py (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_logs_tests_py - 2018.04.21 at 12h 04m 24s.xml">
+      <configuration name="Unittests in logs_tests.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests_py_(2) - 2017.05.07 at 16h 31m 01s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests.py (2)" configurationId="tests" />
+    <history-entry file="Unittests_for_logs_tests_LogsTests - 2018.04.21 at 12h 04m 33s.xml">
+      <configuration name="Unittests for logs_tests.LogsTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests_py_(2) - 2017.05.07 at 16h 32m 02s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests.py (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_logs_tests_py - 2018.04.21 at 12h 47m 38s.xml">
+      <configuration name="Unittests in logs_tests.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests_py_(2) - 2017.05.07 at 16h 34m 45s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests.py (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_logs_tests_py - 2018.04.21 at 12h 47m 54s.xml">
+      <configuration name="Unittests in logs_tests.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests_py_(2) - 2017.05.07 at 16h 36m 27s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests.py (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_logs_tests_py - 2018.04.21 at 12h 48m 20s.xml">
+      <configuration name="Unittests in logs_tests.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_OnlineCalculatorTests_py_(2) - 2017.05.07 at 16h 40m 43s.xml">
-      <configuration name="Unittests in OnlineCalculatorTests.py (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_logs_tests_py - 2018.04.21 at 12h 49m 11s.xml">
+      <configuration name="Unittests in logs_tests.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -920,7 +896,7 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3270925" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32826087" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49307036" weight="0.41830066" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49307036" visible="true" weight="0.42265797" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.24947146" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32929516" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -1094,8 +1070,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Utils/utils.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="142" />
+          <line>85</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Utils/logs_tests.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="146" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -1105,111 +1086,10 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="144" />
+      <option name="time" value="147" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Facebook/facebook_monitor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="62" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Facebook/facebook_id.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Facebook/facebook_api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chrome_Driver_Folder/driver_path.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Buse_Time_Table/time_table_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Lib/multiprocessing/process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="270" selection-start-line="270" selection-end-line="270" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Lib/multiprocessing/spawn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="127" column="4" lean-forward="true" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/file_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/web/portscaner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="83" column="67" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5236">
-          <caret line="308" selection-start-line="308" selection-end-line="308" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Lib/typing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35190">
-          <caret line="2077" column="8" selection-start-line="2077" selection-start-column="8" selection-end-line="2077" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog_Tests/features/addPosts.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/post_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog_Tests/Pages/base_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Lib/site-packages/selenium/webdriver/support/wait.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -1280,24 +1160,6 @@
           <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/pip_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/log1.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/log2.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/log3.log">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Behave_test/features/steps/steps.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1440,13 +1302,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="48" column="23" lean-forward="true" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/Songs_/Songs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1454,10 +1309,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/file_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-643338342/nt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-86">
+          <caret line="380" column="4" selection-start-line="380" selection-start-column="4" selection-end-line="380" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Facebook/facebook_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-246">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/log2.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/log3.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/log1.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/test_logging_singlelog1.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/test_logging_more_fies_and_loggerslog3.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/test_logging_more_fies_and_loggerslog2.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/test_logging_more_fies_and_loggerslog1.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/test_logging_more_timeslog1.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/Python/Lib/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="2053" column="8" selection-start-line="2053" selection-start-column="8" selection-end-line="2053" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/pip_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/test_logging_more_fieslog3.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/test_logging_more_fieslog2.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/test_logging_more_fieslog1.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="77" column="46" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
+        <state relative-caret-position="68">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3810">
+          <caret line="336" column="6" selection-start-line="336" selection-start-column="6" selection-end-line="336" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/logs_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
