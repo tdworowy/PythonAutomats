@@ -9,16 +9,14 @@ history_path = "E:\Google_drive\Songs\History"
 
 class MyLogging:
     def __init__(self):
-        name = "Logger1"
-        logger = logging.getLogger(name)
-        logger.setLevel(logging.DEBUG)
+        logging.basicConfig(format="%(levelname)s|%(asctime)s|%(message)s")
         self.loggers = []
-        self.index = 2
-        logging.basicConfig(format="%(levelname)s %(asctime)s %(message)s")
+        self.index = 1
 
     def log(self, path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
         file_handler = logging.FileHandler(path)
         file_handler.setFormatter(logging.Formatter("%(levelname)s|%(asctime)s|%(message)s"))
+        file_handler.setLevel(logging.DEBUG)
 
         for logger in self.loggers:
             try:
