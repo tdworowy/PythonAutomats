@@ -8,7 +8,7 @@ BEHAVE_DEBUG = True
 
 
 def before_feature(context, feature):
-    context.log_feature_file = get_screen_path() + "\\%s_Log.txt" % feature.name
+    context.log_feature_file = get_screen_path() + "\\%s_Log.log" % feature.name
     log(context.log_feature_file).info("Start Feature: " + feature.name)
 
 
@@ -17,7 +17,7 @@ def before_scenario(context, scenario):
     context.time_stump = str(time.strftime('%Y-%m-%d_%H_%M_%S'))
     context.screen_dir_name = get_screen_path() + "\\" + context.scenario_name + "_" + context.time_stump
     create_dir(context, context.screen_dir_name)
-    context.log_file = context.screen_dir_name + "\\%s_Log_%s.txt" % (context.scenario_name, context.time_stump)
+    context.log_file = context.screen_dir_name + "\\%s_Log_%s.log" % (context.scenario_name, context.time_stump)
     log(context.log_file).info("Scenario started: " + scenario.name)
 
 
