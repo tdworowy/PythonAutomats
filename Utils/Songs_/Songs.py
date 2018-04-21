@@ -6,12 +6,11 @@ import requests
 from bs4 import BeautifulSoup
 
 from Utils.file_utils import to_file, remove_duplicates, combine_files, remove_files
-from Utils.utils import log
+from Utils.utils import MyLogging
 
 FOLDER_PATH = "E:\Google_drive\Songs\\"
 FILE_PATH = "E:\Google_drive\Songs\songsList.txt"
 LAST_UPDATED = "E:\Google_drive\Songs\LastUpdated.txt"
-
 
 # PAGES = 2
 # LAST_7_DAYS
@@ -20,6 +19,8 @@ LAST_UPDATED = "E:\Google_drive\Songs\LastUpdated.txt"
 # LAST_180_DAYS
 # LAST_365_DAYS
 # ALL
+mylogging = MyLogging()
+
 
 def get_pages_count(url):
     try:
@@ -28,15 +29,15 @@ def get_pages_count(url):
         pagination_list = soup.find('ul', class_="pagination-list")
         pages = pagination_list.find_all('a')
     except Exception as ex:
-        log().error(ex)
+        mylogging.log().error(ex)
     page_count = (max([int(page.text) for page in pages[:-1]]))
-    log().info("URL: %s" % url)
-    log().info("Page count: %s" % page_count)
+    mylogging.log().info("URL: %s" % url)
+    mylogging.log().info("Page count: %s" % page_count)
     return page_count
 
 
 def get_titles(url):
-    log().info("Get songs from: %s" % url)
+    mylogging.log().info("Get songs from: %s" % url)
     try:
         response = requests.get(url).text
         soup = BeautifulSoup(response, "html.parser")
@@ -44,7 +45,7 @@ def get_titles(url):
         titles = str(titles)
         titles = titles.split(">")
     except Exception as ex:
-        log().warning(ex)
+        mylogging.log().warning(ex)
     return clear_titles(titles)
 
 
@@ -63,9 +64,9 @@ def clear_titles(titles):
                 clean_titles.append(temp + "\n")
 
         except Exception as ex:
-            log().error('EXCEPTION in clean_titles')
-            log().error(ex)
-            log().error(text)
+            mylogging.log().error('EXCEPTION in clean_titles')
+            mylogging.log().error(ex)
+            mylogging.log().error(text)
             continue
     return clean_titles
 
