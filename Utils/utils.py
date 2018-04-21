@@ -6,16 +6,16 @@ from datetime import date
 
 history_path = "E:\Google_drive\Songs\History"
 
-logging.basicConfig(format="	%(levelno)s|%(asctime)s|%(message)s ")
+logging.basicConfig(format="	%(levelname)s|%(asctime)s|%(message)s ")
 
 
 def log(path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
     file_handler = logging.FileHandler(path)
-    stream_handler = logging.StreamHandler()
+    # stream_handler = logging.StreamHandler()
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
     logger.addHandler(file_handler)
-    logger.addHandler(stream_handler)
+    # logger.addHandler(stream_handler)
     return logger
 
 
