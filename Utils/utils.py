@@ -6,16 +6,17 @@ from datetime import date
 
 history_path = "E:\Google_drive\Songs\History"
 
-logging.basicConfig(format="	%(levelname)s|%(asctime)s|%(message)s ")
+logging.basicConfig(format="%(levelname)s|%(asctime)s|%(message)s ")
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
 
 
 def log(path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
     file_handler = logging.FileHandler(path)
-    # stream_handler = logging.StreamHandler()
-    logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
-    logger.addHandler(file_handler)
-    # logger.addHandler(stream_handler)
+    if file_handler.baseFilename not in [handler.baseFilename for handler in logger.handlers[1:] if handler]:
+        logger.addHandler(file_handler)
+
     return logger
 
 
@@ -53,3 +54,9 @@ def characters(frm, to):
 
 def get_millis():
     return int(round(time.time() * 1000))
+
+
+if __name__ == "__main__":
+    log().info("TEST")
+    log().info("TEST2")
+    log().info("TEST3")
