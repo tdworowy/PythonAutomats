@@ -6,11 +6,13 @@ from datetime import date
 
 history_path = "E:\Google_drive\Songs\History"
 
+loggers = []
+
 
 class MyLogging:
     def __init__(self):
         logging.basicConfig(format="%(levelname)s|%(asctime)s|%(message)s")
-        self.loggers = []
+
         self.index = 1
 
     def log(self, path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
@@ -18,8 +20,7 @@ class MyLogging:
         file_handler.setFormatter(logging.Formatter("%(levelname)s|%(asctime)s|%(message)s"))
         file_handler.setLevel(logging.DEBUG)
 
-        for logger in self.loggers:
-
+        for logger in loggers:
             if file_handler.baseFilename in [handler.baseFilename for handler in logger.handlers if
                                              hasattr(handler, 'baseFilename')]:
                 return logger
@@ -28,7 +29,7 @@ class MyLogging:
             self.index += 1
             new_logger.setLevel(logging.DEBUG)
             new_logger.addHandler(file_handler)
-            self.loggers.append(new_logger)
+            loggers.append(new_logger)
             return new_logger
 
     def save_history(self, text, file):
@@ -72,3 +73,6 @@ if __name__ == "__main__":
     mylogging.log("log1.log").info("TEST")
     mylogging.log("log2.log").info("TEST2")
     mylogging.log("log3.log").info("TEST3")
+    mylogging2 = MyLogging()
+    mylogging2.log("log1.log").info("TEST_NEW1")
+    mylogging2.log("log1.log").info("TEST_NEW@")
