@@ -9,13 +9,14 @@ from Facebook.facebook_token import get_access_token
 from Tinder.tinder_Api import TinderMessageBot
 from Utils.Songs_.Songs import FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
-from Utils.utils import log, save_history
+from Utils.utils import MyLogging
 from Youtube.Youtube_Bot import get_youtube_url
 
 
 class SongOfTheDay():
     def __init__(self):
         self.set_up()
+        self.mylogging = MyLogging()
 
     def log_in(self, login, passw, name):
         token = get_access_token(login, passw)
@@ -24,14 +25,14 @@ class SongOfTheDay():
         self.tm.logIn(id, token)
 
     def sent_song(self, song_URL, to):
-        log().info(song_URL)
+        self.mylogging.log().info(song_URL)
         for match in self.tm.get_matches():
             if match.user.name == to:
-                log("Send message to: %s " % match.user.name)
+                self.mylogging.log("Send message to: %s " % match.user.name)
                 match.message("[ Auto song for: %s :D ]" % match.user.name)
                 match.message(song_URL)
-                save_history("Song for %s" % match.user.name, "Tinder.txt")
-                save_history(song_URL, "Tinder.txt")
+                self.mylogging.save_history("Song for %s" % match.user.name, "Tinder.txt")
+                self.mylogging.save_history(song_URL, "Tinder.txt")
 
     def set_up(self):
         chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
@@ -40,14 +41,15 @@ class SongOfTheDay():
 
 @log_exception()
 def main(login, password, names):
+    song = SongOfTheDay()
     update_songs_distribution()
-    log().info("Get random song")
+    song.mylogging.log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs_list = f.read()
     songs_list = songs_list.split("\n")
 
     song_title = choice(songs_list)
-    song = SongOfTheDay()
+
     song.log_in(login, password, 'tomasz.dworowy')
     for name in names:
         url = get_youtube_url(song.driver, song_title.strip())

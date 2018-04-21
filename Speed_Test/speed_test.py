@@ -4,9 +4,9 @@ import time
 import speedtest
 
 from Utils.decorators import log_exception
-from Utils.utils import log
+from Utils.utils import MyLogging
 
-
+mylogging = MyLogging()
 @log_exception()
 def test_speed(log_=True):
     servers = []
@@ -16,7 +16,7 @@ def test_speed(log_=True):
     s.download()
     s.upload()
     res = s.results.dict()
-    if log_: log().info(res)
+    if log_: mylogging.log().info(res)
     return res
 
 
@@ -25,4 +25,4 @@ if __name__ == "__main__":
         time_stump = time.strftime('%Y-%m-%d %H:%M:%S')
         res = str(test_speed())
         f.write("%s, %s\n" % (time_stump, res))
-        log(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Utils')) + "\\log.txt").info(res)
+        mylogging.log(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Utils')) + "\\log.txt").info(res)

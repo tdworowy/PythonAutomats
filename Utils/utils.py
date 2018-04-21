@@ -6,28 +6,40 @@ from datetime import date
 
 history_path = "E:\Google_drive\Songs\History"
 
-logging.basicConfig(format="%(levelname)s %(asctime)s %(message)s")
 
-logger = logging.getLogger()
-logger.setLevel(logging.DEBUG)
+class MyLogging:
+    def __init__(self):
+        name = "Logger1"
+        logger = logging.getLogger(name)
+        logger.setLevel(logging.DEBUG)
+        self.loggers = []
+        self.index = 2
+        logging.basicConfig(format="%(levelname)s %(asctime)s %(message)s")
 
+    def log(self, path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
+        file_handler = logging.FileHandler(path)
+        file_handler.setFormatter(logging.Formatter("%(levelname)s|%(asctime)s|%(message)s"))
 
-def log(path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
-    file_handler = logging.FileHandler(path)
-    file_handler.setFormatter(logging.Formatter("%(levelname)s|%(asctime)s|%(message)s"))
-    if file_handler.baseFilename not in [handler.baseFilename for handler in logger.handlers[1:] if handler]:
-        logger.addHandler(file_handler)
+        for logger in self.loggers:
+            try:
+                if file_handler.baseFilename in [handler.baseFilename for handler in logger.handlers if handler]:
+                    return logger
+            except AttributeError:
+                pass
+        else:
+            new_logger = logging.getLogger("Logger%s" % self.index)
+            self.index += 1
+            new_logger.setLevel(logging.DEBUG)
+            new_logger.addHandler(file_handler)
+            self.loggers.append(new_logger)
+            return new_logger
 
-    return logger
+    def save_history(self, text, file):
+        self.log(history_path + file).info(text)
 
-
-def save_history(text, file):
-    log(history_path + file).info(text)
-
-
-def log_result(test_name, result):
-    message = "Name: {x} Result {y}".format(x=test_name, y=result)
-    log("TestsResultLog.txt").info(message)
+    def log_result(self, test_name, result):
+        message = "Name: {x} Result {y}".format(x=test_name, y=result)
+        self.log("TestsResultLog.txt").info(message)
 
 
 def create_dir(context, name):
@@ -44,8 +56,9 @@ def take_screenshot_(driver, path, file):
 
 
 def message_by_time():
+    mylogging = MyLogging()
     date_today = date.today()
-    log("Today is: " + str(calendar.day_name[date_today.weekday()]) + " " + str(date.today()))
+    mylogging.log("Today is: " + str(calendar.day_name[date_today.weekday()]) + " " + str(date.today()))
     return "Song for " + str(calendar.day_name[date_today.weekday()]) + " " + str(date.today()) + " [AUTO] "
 
 
@@ -58,6 +71,7 @@ def get_millis():
 
 
 if __name__ == "__main__":
-    log().info("TEST")
-    log().info("TEST2")
-    log().info("TEST3")
+    mylogging = MyLogging()
+    mylogging.log("log1.log").info("TEST")
+    mylogging.log("log2.log").info("TEST2")
+    mylogging.log("log3.log").info("TEST3")

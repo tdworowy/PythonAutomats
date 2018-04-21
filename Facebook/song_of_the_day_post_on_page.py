@@ -7,17 +7,18 @@ from Chrome_Driver_Folder.driver_path import get_driver_path
 from Facebook.facebook_post import FaceBookPost
 from Utils.Songs_.Songs import FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
-from Utils.utils import log
+from Utils.utils import MyLogging
 from Youtube.Youtube_Bot import get_youtube_url
 
 
 class SongOfTheDay:
     def __init__(self, page_id, app_id, app_secred):
         self.set_up(page_id, app_id, app_secred)
+        self.mylogging = MyLogging()
 
     def sent_song(self, songs_urls):
         for songURL in songs_urls:
-            log().info(songURL)
+            self.mylogging.log().info(songURL)
             self.face_bot.facebook_post(songURL)
 
     def set_up(self, page_id, app_id, app_secred):
@@ -35,7 +36,7 @@ class SongOfTheDay:
 def main(page_id, app_id, app_secred):
     song = SongOfTheDay(page_id, app_id, app_secred)
 
-    log().info("Get random song")
+    song.mylogging.log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs = f.read()
 

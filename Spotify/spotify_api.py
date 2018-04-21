@@ -6,7 +6,7 @@ import spotipy
 from spotipy import util
 
 from Utils.file_utils import combine_files, create_file_if_not_exist, remove_duplicates
-from Utils.utils import log
+from Utils.utils import MyLogging
 
 SONGS_PATH = "E:\Google_drive\Songs\songsList.txt"
 FOLDER_PATH = "E:\Google_drive\Songs\\"
@@ -15,8 +15,14 @@ FILE_PATH = "E:\Google_drive\Songs\songsIDs.txt"
 
 class SpotifyApi:
 
-    @staticmethod
-    def get_token(user_name, client_id, client_secret, redirect_uri):
+    def __init__(self, user_name, client_id, client_secret, redirect_uri):
+        self.mylogging = MyLogging()
+        self.user_name = user_name
+        token = self.get_token(user_name, client_id, client_secret, redirect_uri)
+        self.sp = spotipy.Spotify(auth=token)
+
+
+    def get_token(self, user_name, client_id, client_secret, redirect_uri):
         """https://developer.spotify.com/web-api/using-scopes/"""
         scope = 'playlist-modify-public'
         token = util.prompt_for_user_token(username=user_name, scope=scope, client_id=client_id,
@@ -25,12 +31,7 @@ class SpotifyApi:
             return token
 
         else:
-            log().info("Can't get token for: %s" % user_name)
-
-    def __init__(self, user_name, client_id, client_secret, redirect_uri):
-        self.user_name = user_name
-        token = self.get_token(user_name, client_id, client_secret, redirect_uri)
-        self.sp = spotipy.Spotify(auth=token)
+            self.mylogging.log().info("Can't get token for: %s" % user_name)
 
     def get_playlists(self):
         return self.sp.current_user_playlists()
