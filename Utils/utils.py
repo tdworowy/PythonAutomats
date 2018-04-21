@@ -28,9 +28,11 @@ class MyLogging:
             file_handler = logging.FileHandler(path)
             file_handler.setFormatter(logging.Formatter("%(levelname)s|%(asctime)s|%(message)s"))
             file_handler.setLevel(logging.DEBUG)
+
             new_logger = logging.getLogger("Logger%s" % self.milis())
             new_logger.setLevel(logging.DEBUG)
             new_logger.addHandler(file_handler)
+
             loggers.append(new_logger)
             return new_logger
 
