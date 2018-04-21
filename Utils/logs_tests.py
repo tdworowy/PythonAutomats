@@ -8,9 +8,6 @@ class LogsTests(unittest.TestCase):
     def setUp(self):
         self.mylogging = MyLogging()
 
-    # def tearDown(self):
-    #     os.system('del /f /q *.log')
-
     def test_logging_single(self):
         pref = "test_logging_single"
 
