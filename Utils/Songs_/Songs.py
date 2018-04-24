@@ -64,7 +64,6 @@ def clear_titles(titles):
                 clean_titles.append(temp + "\n")
 
         except Exception as ex:
-            mylogging.log().error('EXCEPTION in clean_titles')
             mylogging.log().error(ex)
             mylogging.log().error(text)
             continue
