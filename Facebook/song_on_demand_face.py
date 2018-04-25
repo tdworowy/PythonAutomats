@@ -30,7 +30,7 @@ def get_ides(path, file, checked):
 
 
 def check_queue(path):
-    files = [f for f in listdir(path) if isfile(join(path, f))]
+    files = [f for f in listdir(path) if isfile(join(path, f))] #TODO change to queue
     checked_list = [path + "checked\\" + os.path.splitext(file)[0] + "_checked.txt" for file in files]
     map(create_file_if_not_exist, checked_list)
     partial_get_ides = partial(get_ides, path)

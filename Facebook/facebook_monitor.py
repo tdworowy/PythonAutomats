@@ -11,9 +11,9 @@ class FaceThreadMonitor:
         self.thread_ID = thread_ID
 
     def monitor_thread(self, phrases):
-        for massage in self.face_bot.get_messages(self.thread_ID):
+        for massage in self.face_bot.get_messages(self.thread_ID): #TODO optimize (on event)
             if str(massage.text) in phrases:
-                path = self.path + self.thread_ID + ".txt"
+                path = self.path + self.thread_ID + ".txt"#TODO change to queue
                 create_file_if_not_exist(path)
                 with open(path, 'r+') as f:
                     msg = str((massage.text, massage.timestamp))
