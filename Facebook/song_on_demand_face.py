@@ -1,10 +1,10 @@
 import os
-import random
 import sys
 import time
 from functools import partial
 from multiprocessing import Process
 from os import listdir
+from random import choice
 from threading import Thread
 
 from fbchat import ThreadType
@@ -30,7 +30,7 @@ def get_ides(path, file, checked):
 
 
 def check_queue(path):
-    files = [f for f in listdir(path) if isfile(join(path, f))] #TODO change to queue
+    files = [f for f in listdir(path) if isfile(join(path, f))]  # TODO change to queue
     checked_list = [path + "checked\\" + os.path.splitext(file)[0] + "_checked.txt" for file in files]
     map(create_file_if_not_exist, checked_list)
     partial_get_ides = partial(get_ides, path)
@@ -41,9 +41,7 @@ def check_queue(path):
 def send_song(song_, thread_id, thread_type):
     with open(FILE_PATH, 'r') as f:
         songs = f.read()
-    songs = songs.split("\n")
-    ran = random.randrange(len(songs))
-    song_title = songs[ran]
+    song_title = choice(songs.split("\n"))
     song_.set_up()
     url = get_youtube_url(song_.driver, song_title.strip())
     song_.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
