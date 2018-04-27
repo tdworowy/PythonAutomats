@@ -66,6 +66,8 @@ if __name__ == '__main__':
         if os.path.isfile(file):
             with open(file) as f:
                 time_stumps = f.read().split(',')
+        else:
+            open(file, 'w').close()
 
         queue = Queue()
 
