@@ -58,9 +58,7 @@ def take_screenshot_(driver, path, file):
 
 
 def message_by_time():
-    mylogging = MyLogging()
     date_today = date.today()
-    mylogging.log("Today is: " + str(calendar.day_name[date_today.weekday()]) + " " + str(date.today()))
     return "Song for " + str(calendar.day_name[date_today.weekday()]) + " " + str(date.today()) + " [AUTO] "
 
 
