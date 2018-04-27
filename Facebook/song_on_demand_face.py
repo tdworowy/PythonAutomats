@@ -47,9 +47,10 @@ def send_songs_threads(song_, thread_type, queue, time_stumps):
 
 
 def save_time_stumps(file, time_stumps):
-    if time_stumps:
-        write_to_file_no_duplicates(file, time_stumps)
-    time.sleep(60)
+    while 1:
+        if time_stumps:
+            write_to_file_no_duplicates(file, time_stumps)
+        time.sleep(60)
 
 
 if __name__ == '__main__':
