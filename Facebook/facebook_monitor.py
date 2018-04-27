@@ -1,10 +1,6 @@
 import time
 from threading import Thread
 
-from Utils.utils import MyLogging
-
-mylogging = MyLogging()
-
 
 class FaceThreadMonitor:
     def __init__(self, face_bot, thread_ID):
@@ -31,7 +27,7 @@ def start_monitor(phraze, face_thread_monitor_list, queue):
             threads.append(thread)
             thread.start()
         except Exception as ex:
-            mylogging.log().error(ex)
+            print(ex)
 
     for thread in threads:
         thread.join()
