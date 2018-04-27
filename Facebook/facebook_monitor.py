@@ -1,44 +1,36 @@
 import time
 from threading import Thread
 
-from Utils.utils import create_file_if_not_exist
+from Utils.utils import MyLogging
 
 
 class FaceThreadMonitor:
-    def __init__(self, face_bot, path, thread_ID):
+    def __init__(self, face_bot, thread_ID):
         self.face_bot = face_bot
-        self.path = path
         self.thread_ID = thread_ID
+        self.mylogging = MyLogging()
 
-    def monitor_thread(self, phrases):
-        for massage in self.face_bot.get_messages(self.thread_ID): #TODO optimize (on event)
-            if str(massage.text) in phrases:
-                path = self.path + self.thread_ID + ".txt"#TODO change to queue
-                create_file_if_not_exist(path)
-                with open(path, 'r+') as f:
-                    msg = str((massage.text, massage.timestamp))
-                    line_found = any(msg in line for line in f)
-                    if not line_found:
-                        f.write(msg + "\n")
-                        f.flush()
+    def monitor_thread(self, phrases, queue):
+        for message in self.face_bot.get_messages(self.thread_ID):
+            if str(message.text) in phrases:
+                msg = str((self.thread_ID.text, message.timestamp))
+                queue.put(msg)
 
-    def monitor(self, phrase):
+    def monitor(self, phrase, queue):
         while 1:
-            self.monitor_thread(phrase)
+            self.monitor_thread(phrase, queue)
             time.sleep(300)
 
 
-def start_monitor(phraze, face_thread_monitor_list):
-        threads = []
-        for ftm in face_thread_monitor_list:
-            try:
-                thread = Thread(target=ftm.monitor, args=(phraze,))
-                threads.append(thread)
-                thread.start()
-            except Exception:
-                import traceback
-                traceback.print_exc()
+def start_monitor(phraze, face_thread_monitor_list, quee):
+    threads = []
+    for ftm in face_thread_monitor_list:
+        try:
+            thread = Thread(target=ftm.monitor, args=(phraze, quee))
+            threads.append(thread)
+            thread.start()
+        except Exception as ex:
+            ftm.mylogging.log().error(ex)
 
-        for thread in threads:
-            thread.join()
-
+    for thread in threads:
+        thread.join()
