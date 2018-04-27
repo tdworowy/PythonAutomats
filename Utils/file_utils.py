@@ -29,7 +29,7 @@ def write_to_file_no_duplicates(path, elements):
         for ele in elements:
             in_file = [line.strip() for line in f2.readlines()]
             if ele not in in_file:
-                f1.write(ele + '\n')
+                f1.write(ele.strip() + '\n')
             f2.seek(0)
 
 
