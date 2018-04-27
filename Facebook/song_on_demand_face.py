@@ -19,7 +19,6 @@ from Youtube.Youtube_Bot import get_youtube_url
 time_stumps = []
 
 
-
 def check_queue(queue):
     msg = queue.get()
     msq = msg.split(',')
@@ -53,7 +52,7 @@ if __name__ == '__main__':
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]
 
-    file = "time_stumps.txt"
+    file = os.path.dirname(os.path.abspath(__file__))+"\\time_stumps.txt"
     try:
         if os.path.isfile(file) and os.path.getsize(file) > 0:
             with open(file) as f:
