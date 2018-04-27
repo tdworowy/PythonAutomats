@@ -1,3 +1,4 @@
+import os
 import sys
 import time
 from multiprocessing import Process
@@ -10,6 +11,7 @@ from fbchat import ThreadType
 from Facebook.facebook_monitor import FaceThreadMonitor, start_monitor
 from Facebook.song_of_the_day_facebook_message import SongOfTheDayFace
 from Utils.Songs_.Songs import FILE_PATH
+from Utils.file_utils import write_to_file_no_duplicates
 from Utils.utils import MyLogging
 from Youtube.Youtube_Bot import get_youtube_url
 
@@ -60,6 +62,11 @@ def send_songs_threads(song_, thread_type, queue):
 
 
 if __name__ == '__main__':
+    file = "time_stumps.txt"
+    if os.path.isfile(file):
+        with open(file) as f:
+            time_stumps = f.read().split(',')
+
     queue = Queue()
 
     PHASE = ["[SONG]", "[song]"]
@@ -86,4 +93,6 @@ if __name__ == '__main__':
         process.join()
 
     while 1:
+        write_to_file_no_duplicates(file, time_stumps)
+        time.sleep(300)
         pass
