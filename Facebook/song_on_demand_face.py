@@ -61,7 +61,7 @@ def send_songs_threads(song_, thread_type, queue):
 
 if __name__ == '__main__':
     queue = Queue()
-    queue.not_empty()
+
     PHASE = ["[SONG]", "[song]"]
 
     THREADID1 = '1252344071467839'  # group
