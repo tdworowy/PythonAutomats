@@ -1,4 +1,3 @@
-import os
 import sys
 import time
 from multiprocessing import Process
@@ -19,18 +18,6 @@ from Youtube.Youtube_Bot import get_youtube_url
 time_stumps = []
 
 mylogging = MyLogging()
-
-
-def get_ides(path, file, checked):
-    ids = []
-    file_name = os.path.splitext(file)[0]
-    f2 = open(checked, 'r+')
-    with open(path + "\\" + file, 'r') as f:
-        for line in f.readlines():
-            if not any(line in line2 for line2 in f2):
-                ids.append(file_name)
-                f2.write(line + '\n')
-    return ids
 
 
 def check_queue(queue):
