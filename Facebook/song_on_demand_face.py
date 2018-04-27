@@ -19,8 +19,6 @@ from Youtube.Youtube_Bot import get_youtube_url
 
 time_stumps = []
 
-mylogging = MyLogging()
-
 
 def check_queue(queue):
     msg = queue.get()
@@ -43,6 +41,7 @@ def send_song(song_, thread_id, thread_type):
 
 def send_songs_threads(song_, thread_type, queue):
     threads = []
+    mylogging = MyLogging()
     while 1:
         if queue.not_empty:
             threads_ids = check_queue(queue)
