@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf4c10d-5d26-4734-a65c-ac64d2e8ac26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Facebook/facebook_monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Facebook/facebook_monitor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Facebook/song_on_demand_face.py" beforeDir="false" afterPath="$PROJECT_DIR$/Facebook/song_on_demand_face.py" afterDir="false" />
     </list>
     <ignored path="Selenium.iws" />
@@ -49,8 +50,8 @@
       <file leaf-file-name="file_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils/file_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="392">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -76,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facebook_monitor.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="facebook_monitor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Facebook/facebook_monitor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="25" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="25" />
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -99,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="song_on_demand_face.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="song_on_demand_face.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Facebook/song_on_demand_face.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="85" column="96" selection-start-line="85" selection-start-column="96" selection-end-line="85" selection-end-column="96" />
+            <state>
+              <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -219,8 +220,8 @@
         <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/Utils/logs_tests.py" />
         <option value="$PROJECT_DIR$/Utils/Songs_/Songs.py" />
-        <option value="$PROJECT_DIR$/Facebook/facebook_monitor.py" />
         <option value="$PROJECT_DIR$/Facebook/song_on_demand_face.py" />
+        <option value="$PROJECT_DIR$/Facebook/facebook_monitor.py" />
       </list>
     </option>
   </component>
@@ -552,20 +553,6 @@
       <option name="presentableId" value="Default" />
       <updated>1478794627490</updated>
     </task>
-    <task id="LOCAL-00489" summary="fix">
-      <created>1522485135313</created>
-      <option name="number" value="00489" />
-      <option name="presentableId" value="LOCAL-00489" />
-      <option name="project" value="LOCAL" />
-      <updated>1522485135313</updated>
-    </task>
-    <task id="LOCAL-00490" summary="update">
-      <created>1522485769569</created>
-      <option name="number" value="00490" />
-      <option name="presentableId" value="LOCAL-00490" />
-      <option name="project" value="LOCAL" />
-      <updated>1522485769569</updated>
-    </task>
     <task id="LOCAL-00491" summary="Fix">
       <created>1522486792498</created>
       <option name="number" value="00491" />
@@ -895,7 +882,21 @@
       <option name="project" value="LOCAL" />
       <updated>1524853323656</updated>
     </task>
-    <option name="localTasksCounter" value="538" />
+    <task id="LOCAL-00538" summary="fix">
+      <created>1524853509001</created>
+      <option name="number" value="00538" />
+      <option name="presentableId" value="LOCAL-00538" />
+      <option name="project" value="LOCAL" />
+      <updated>1524853509001</updated>
+    </task>
+    <task id="LOCAL-00539" summary="fix">
+      <created>1524853640846</created>
+      <option name="number" value="00539" />
+      <option name="presentableId" value="LOCAL-00539" />
+      <option name="project" value="LOCAL" />
+      <updated>1524853640846</updated>
+    </task>
+    <option name="localTasksCounter" value="540" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1496,16 +1497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/file_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/song_of_the_day_facebook_message.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1513,22 +1504,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Facebook/facebook_monitor.py">
+    <entry file="file://$PROJECT_DIR$/Utils/file_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="25" />
+        <state relative-caret-position="392">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Facebook/song_on_demand_face.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="85" column="96" selection-start-line="85" selection-start-column="96" selection-end-line="85" selection-end-column="96" />
+        <state>
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Facebook/facebook_monitor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

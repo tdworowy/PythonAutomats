@@ -12,11 +12,14 @@ from Facebook.facebook_monitor import FaceThreadMonitor, start_monitor
 from Facebook.song_of_the_day_facebook_message import SongOfTheDayFace
 from Utils.Songs_.Songs import FILE_PATH
 from Utils.file_utils import write_to_file_no_duplicates
+from Utils.utils import MyLogging
 from Youtube.Youtube_Bot import get_youtube_url
 
 # from os.path import isfile, join
 
 time_stumps = []
+
+mylogging = MyLogging()
 
 
 def check_queue(queue):
@@ -50,7 +53,7 @@ def send_songs_threads(song_, thread_type, queue):
                         threads.append(thread)
                         thread.start()
                     except Exception as ex:
-                        print(ex)
+                        mylogging.log().error(ex)
 
                 for thread in threads:
                     thread.join()

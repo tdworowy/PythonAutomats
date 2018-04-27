@@ -1,14 +1,12 @@
 import time
 from threading import Thread
 
-from Utils.utils import MyLogging
-
 
 class FaceThreadMonitor:
     def __init__(self, face_bot, thread_ID):
         self.face_bot = face_bot
         self.thread_ID = thread_ID
-        self.mylogging = MyLogging()
+        # self.mylogging = MyLogging()
 
     def monitor_thread(self, phrases, queue):
         for message in self.face_bot.get_messages(self.thread_ID):
@@ -30,7 +28,8 @@ def start_monitor(phraze, face_thread_monitor_list, quee):
             threads.append(thread)
             thread.start()
         except Exception as ex:
-            ftm.mylogging.log().error(ex)
+            pass
+            # ftm.mylogging.log().error(ex)
 
     for thread in threads:
         thread.join()
