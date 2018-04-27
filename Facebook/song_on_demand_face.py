@@ -55,7 +55,7 @@ def send_song(song_, thread_id, thread_type):
 def send_songs_threads(song_, thread_type, queue):
     threads = []
     while 1:
-        if queue.not_empty():
+        if queue.not_empty:
             threads_ids = check_queue(queue)
             if threads_ids:
                 for thread_id in threads_ids:
