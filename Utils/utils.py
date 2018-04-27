@@ -12,7 +12,7 @@ loggers = []
 class MyLogging:
     def __init__(self):
         logging.basicConfig(format="%(levelname)s|%(asctime)s|%(message)s")
-        self.milis = lambda: int(round(time.time() * 1000))
+
 
     @staticmethod
     def claer_loggers():
@@ -29,7 +29,7 @@ class MyLogging:
             file_handler.setFormatter(logging.Formatter("%(levelname)s|%(asctime)s|%(message)s"))
             file_handler.setLevel(logging.DEBUG)
 
-            new_logger = logging.getLogger("Logger%s" % self.milis())
+            new_logger = logging.getLogger("Logger%s" % get_millis())
             new_logger.setLevel(logging.DEBUG)
             new_logger.addHandler(file_handler)
 

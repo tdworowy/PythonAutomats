@@ -1,10 +1,10 @@
 import os
+import re
 import sys
 import time
 from multiprocessing import Process
 from multiprocessing import Queue
 from random import choice
-from threading import Thread
 
 from fbchat import ThreadType
 
@@ -19,13 +19,14 @@ from Youtube.Youtube_Bot import get_youtube_url
 time_stumps = []
 
 
+
 def check_queue(queue):
     msg = queue.get()
     msq = msg.split(',')
     time_stump = msq[1]
     if time_stump not in time_stumps:
         time_stumps.append(time_stump)
-    return msq[0]
+        return re.search(r"\d+", msq[0]).group()
 
 
 def send_song(song_, thread_id, thread_type):
@@ -39,21 +40,11 @@ def send_song(song_, thread_id, thread_type):
 
 
 def send_songs_threads(song_, thread_type, queue):
-    threads = []
     while 1:
-        if queue.not_empty:
-            threads_ids = check_queue(queue)
-            if threads_ids:
-                for thread_id in threads_ids:
-                    try:
-                        thread = Thread(target=send_song, args=(song_, thread_id, thread_type))
-                        threads.append(thread)
-                        thread.start()
-                    except Exception as ex:
-                        print(ex)
-
-                for thread in threads:
-                    thread.join()
+        if not queue.empty():
+            thread_id = check_queue(queue)
+            if thread_id:
+                send_song(song_, thread_id, thread_type)
         else:
             time.sleep(2)
 
@@ -61,9 +52,10 @@ def send_songs_threads(song_, thread_type, queue):
 if __name__ == '__main__':
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]
+
     file = "time_stumps.txt"
     try:
-        if os.path.isfile(file):
+        if os.path.isfile(file) and os.path.getsize(file) > 0:
             with open(file) as f:
                 time_stumps = f.read().split(',')
         else:
@@ -93,8 +85,10 @@ if __name__ == '__main__':
             process.join()
 
         while 1:
-            write_to_file_no_duplicates(file, time_stumps)
+            if time_stumps:
+                write_to_file_no_duplicates(file, time_stumps)
             time.sleep(300)
             pass
     finally:
-        write_to_file_no_duplicates(file, time_stumps)
+        if time_stumps:
+            write_to_file_no_duplicates(file, time_stumps)
