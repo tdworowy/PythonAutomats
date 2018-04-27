@@ -19,7 +19,7 @@ class FaceBookMessageBot:
         except Exception as ex:
             print(str(ex))
             if repeat > 0:
-                sleep(30)
+                sleep(10)
                 self.login(self.email, self.passwd)
                 self.send_message(message, thread_id, thread_type, repeat - 1)
             else:

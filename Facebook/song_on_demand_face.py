@@ -59,6 +59,8 @@ def send_songs_threads(song_, thread_type, queue):
 
 
 if __name__ == '__main__':
+    user = sys.argv[1]
+    passw = sys.argv[2] + " " + sys.argv[3]
     file = "time_stumps.txt"
     try:
         if os.path.isfile(file):
@@ -72,8 +74,6 @@ if __name__ == '__main__':
         THREADID1 = '1252344071467839'  # group
         THREADID2 = '100000471818643'  # user
 
-        user = sys.argv[1]
-        passw = sys.argv[2] + " " + sys.argv[3]
         song = SongOfTheDayFace()
         song.login_FB(user, passw)
 
