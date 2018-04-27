@@ -13,9 +13,8 @@ from Utils.Songs_.Songs import FILE_PATH
 from Utils.file_utils import write_to_file_no_duplicates
 from Youtube.Youtube_Bot import get_youtube_url
 
-# from os.path import isfile, join
 
-manager = Manager()
+# from os.path import isfile, join
 
 
 def check_queue(queue, time_stumps):
@@ -37,10 +36,10 @@ def send_song(song_, thread_id, thread_type):
     song_.tear_down()
 
 
-def send_songs_threads(song_, thread_type, queue):
+def send_songs_threads(song_, thread_type, queue, time_stumps):
     while 1:
         if not queue.empty():
-            thread_id = check_queue(queue)
+            thread_id = check_queue(queue, time_stumps)
             if thread_id:
                 send_song(song_, thread_id, thread_type)
         else:
@@ -58,6 +57,7 @@ if __name__ == '__main__':
     passw = sys.argv[2] + " " + sys.argv[3]
 
     file = os.path.dirname(os.path.abspath(__file__)) + "\\time_stumps.txt"
+    manager = Manager()
     time_stumps = manager.list()
     try:
         if os.path.isfile(file) and os.path.getsize(file) > 0:
@@ -71,7 +71,7 @@ if __name__ == '__main__':
         PHASE = ["[SONG]", "[song]"]
 
         THREADID1 = '1252344071467839'  # group
-        THREADID2 = '100000471818643'  # user
+        # THREADID2 = '100000471818643'  # user
 
         song = SongOfTheDayFace()
         song.login_FB(user, passw)
