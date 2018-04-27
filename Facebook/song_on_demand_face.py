@@ -39,9 +39,8 @@ def send_song(song_, thread_id, thread_type):
     song_.tear_down()
 
 
-def send_songs_threads(song_, thread_type, queue):
+def send_songs_threads(song_, thread_type, queue,mylogging):
     threads = []
-    mylogging = MyLogging()
     while 1:
         if queue.not_empty:
             threads_ids = check_queue(queue)
@@ -66,6 +65,7 @@ if __name__ == '__main__':
         with open(file) as f:
             time_stumps = f.read().split(',')
 
+    mylogging = MyLogging()
     queue = Queue()
 
     PHASE = ["[SONG]", "[song]"]
@@ -83,7 +83,7 @@ if __name__ == '__main__':
 
     # process1 = Process(target=start_monitor, args=(PHASE, [fm1, fm2], queue))
     process1 = Process(target=start_monitor, args=(PHASE, [fm1], queue))
-    process2 = Process(target=send_songs_threads, args=(song, ThreadType.GROUP, queue))
+    process2 = Process(target=send_songs_threads, args=(song, ThreadType.GROUP, queue, mylogging))
 
     for process in [process1, process2]:
         process.start()
