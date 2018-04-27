@@ -20,7 +20,7 @@ from Youtube.Youtube_Bot import get_youtube_url
 def check_queue(queue, time_stumps):
     msg = queue.get()
     msq = msg.split(',')
-    time_stump = msq[1]
+    time_stump = re.search(r"\d+", msq[1]).group()
     if time_stump not in time_stumps:
         time_stumps.append(time_stump)
         return re.search(r"\d+", msq[0]).group()
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     try:
         if os.path.isfile(file) and os.path.getsize(file) > 0:
             with open(file) as f:
-                time_stumps = manager.list(f.read().split(','))
+                time_stumps = manager.list(f.read().split('\n'))
         else:
             open(file, 'w').close()
 
