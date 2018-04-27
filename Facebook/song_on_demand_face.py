@@ -16,10 +16,9 @@ from Youtube.Youtube_Bot import get_youtube_url
 # from os.path import isfile, join
 
 manager = Manager()
-time_stumps = manager.list()
 
 
-def check_queue(queue):
+def check_queue(queue, time_stumps):
     msg = queue.get()
     msq = msg.split(',')
     time_stump = msq[1]
@@ -48,7 +47,7 @@ def send_songs_threads(song_, thread_type, queue):
             time.sleep(2)
 
 
-def save_time_stumps(file):
+def save_time_stumps(file, time_stumps):
     if time_stumps:
         write_to_file_no_duplicates(file, time_stumps)
     time.sleep(60)
@@ -59,10 +58,11 @@ if __name__ == '__main__':
     passw = sys.argv[2] + " " + sys.argv[3]
 
     file = os.path.dirname(os.path.abspath(__file__)) + "\\time_stumps.txt"
+    time_stumps = manager.list()
     try:
         if os.path.isfile(file) and os.path.getsize(file) > 0:
             with open(file) as f:
-                time_stumps = f.read().split(',')
+                time_stumps = manager.list(f.read().split(','))
         else:
             open(file, 'w').close()
 
@@ -81,8 +81,8 @@ if __name__ == '__main__':
 
         # process1 = Process(target=start_monitor, args=(PHASE, [fm1, fm2], queue))
         process1 = Process(target=start_monitor, args=(PHASE, [fm1], queue))
-        process2 = Process(target=send_songs_threads, args=(song, ThreadType.GROUP, queue))
-        process3 = Process(target=save_time_stumps, args=(file,))
+        process2 = Process(target=send_songs_threads, args=(song, ThreadType.GROUP, queue, time_stumps))
+        process3 = Process(target=save_time_stumps, args=(file, time_stumps))
 
         for process in [process1, process2, process3]:
             process.start()
