@@ -2,7 +2,7 @@ import os
 import sys
 import time
 from multiprocessing import Process
-from queue import Queue
+from multiprocessing import Queue
 from random import choice
 from threading import Thread
 
