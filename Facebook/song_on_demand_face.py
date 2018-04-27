@@ -84,10 +84,10 @@ if __name__ == '__main__':
         process1 = Process(target=start_monitor, args=(PHASE, [fm1], queue))
         process2 = Process(target=send_songs_threads, args=(song, ThreadType.GROUP, queue))
 
-        for process in [process1, process1]:
+        for process in [process1, process2]:
             process.start()
 
-        for process in [process1, process1]:
+        for process in [process1, process2]:
             process.join()
 
         while 1:

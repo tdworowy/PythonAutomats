@@ -10,7 +10,7 @@ class FaceThreadMonitor:
     def monitor_thread(self, phrases, queue):
         for message in self.face_bot.get_messages(self.thread_ID):
             if str(message.text) in phrases:
-                msg = str((self.thread_ID.text, message.timestamp))
+                msg = str((self.thread_ID, message.timestamp))
                 queue.put(msg)
 
     def monitor(self, phrase, queue):
