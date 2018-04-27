@@ -2,8 +2,7 @@ import os
 import re
 import sys
 import time
-from multiprocessing import Process
-from multiprocessing import Queue
+from multiprocessing import Process, Queue, Manager
 from random import choice
 
 from fbchat import ThreadType
@@ -16,7 +15,8 @@ from Youtube.Youtube_Bot import get_youtube_url
 
 # from os.path import isfile, join
 
-time_stumps = []
+manager = Manager()
+time_stumps = manager.list()
 
 
 def check_queue(queue):
