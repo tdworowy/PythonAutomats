@@ -1,0 +1,45 @@
+NFO:root:2017-05-13 11:17:16
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Login as admin
+INFO:root:URL: http://localhost:8081/admin/login/
+INFO:root:Step: login page is opened
+INFO:root:2017-05-13 11:20:46
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Login as admin
+INFO:root:URL: http://localhost:8081/admin/login/
+INFO:root:Step: login page is opened
+INFO:root:Step: login admin
+INFO:root:Step: admin page is opened
+INFO:root:Test Finished
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Skip reason: None
+INFO:root:Status: passed
+INFO:root:2017-05-13 11:34:49
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Login as admin
+INFO:root:URL: http://localhost:8081/admin/login/
+INFO:root:Step: login page is opened
+INFO:root:Step: login admin
+INFO:root:Step: admin page is opened
+INFO:root:Test Finished
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Skip reason: None
+INFO:root:Status: passed
+INFO:root:2017-05-13 12:04:29
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Login as admin
+INFO:root:2017-05-13 12:06:01
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Login as admin
+INFO:root:Step: open login page
+INFO:root:2017-05-13 12:06:35
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Scenario started: Login as admin
+INFO:root:Step: open login page
+INFO:root:Step: login page is opened
+INFO:root:Step: login admin
+INFO:root:Step: admin page is opened
+INFO:root:Test Finished
+INFO:root:Feature name: Scientific Calculator1
+INFO:root:Skip reason: None
+INFO:root:Status: passed
