@@ -1,8 +1,0 @@
-2017-06-28 17:11:35 Scenario started: Sum scenario -- @1.6 Numbers
-2017-06-28 17:11:41 URL: http://www.calculator.net/
-2017-06-28 17:11:41 Step: open scientific calculator
-2017-06-28 17:11:44 Step: sum 0,9999
-2017-06-28 17:11:46 Step: check 9999.
-2017-06-28 17:11:47 Check result: 9999.
-2017-06-28 17:11:47 Actual result: 9999.
-2017-06-28 17:11:47 Test Finished
