@@ -1,0 +1,100 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PythonAutomats.Facebook.facebook_token &#8212; PythonAutomats 0.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for PythonAutomats.Facebook.facebook_token</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">import</span> <span class="nn">robobrowser</span>
+
+<span class="c1"># from https://github.com/charliewolf/pynder/issues/136#issuecomment-298481491</span>
+<span class="n">MOBILE_USER_AGENT</span> <span class="o">=</span> <span class="s2">&quot;Mozilla/5.0 (Linux; U; en-gb; KFTHWI Build/JDQ39) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.16 Safari/535.19&quot;</span>
+<span class="n">FB_AUTH</span> <span class="o">=</span> <span class="s2">&quot;https://www.facebook.com/v2.6/dialog/oauth?redirect_uri=fb464891386855067%3A</span><span class="si">%2F%2F</span><span class="s2">authorize</span><span class="si">%2F</span><span class="s2">&amp;display=touch&amp;state=%7B</span><span class="si">%22c</span><span class="s2">hallenge</span><span class="si">%22%</span><span class="s2">3A%22IUUkEUqIGud332lfu%252BMJhxL4Wlc%253D</span><span class="si">%22%</span><span class="s2">2C%220_auth_logger_id</span><span class="si">%22%</span><span class="s2">3A</span><span class="si">%2230F</span><span class="s2">06532-A1B9-4B10-BB28-B29956C71AB1</span><span class="si">%22%</span><span class="s2">2C</span><span class="si">%22c</span><span class="s2">om.facebook.sdk_client_state</span><span class="si">%22%</span><span class="s2">3Atrue%2C%223_method</span><span class="si">%22%</span><span class="s2">3A</span><span class="si">%22s</span><span class="s2">fvc_auth</span><span class="si">%22%</span><span class="s2">7D&amp;scope=user_birthday%2Cuser_photos%2Cuser_education_history%2Cemail%2Cuser_relationship_details%2Cuser_friends%2Cuser_work_history%2Cuser_likes&amp;response_type=token%2Csigned_request&amp;default_audience=friends&amp;return_scopes=true&amp;auth_type=rerequest&amp;client_id=464891386855067&amp;ret=login&amp;sdk=ios&amp;logger_id=30F06532-A1B9-4B10-BB28-B29956C71AB1&amp;ext=1470840777&amp;hash=AeZqkIcf-NEW6vBd&quot;</span>
+
+
+<div class="viewcode-block" id="get_access_token"><a class="viewcode-back" href="../../../PythonAutomats.Facebook.html#PythonAutomats.Facebook.facebook_token.get_access_token">[docs]</a><span class="k">def</span> <span class="nf">get_access_token</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">robobrowser</span><span class="o">.</span><span class="n">RoboBrowser</span><span class="p">(</span><span class="n">user_agent</span><span class="o">=</span><span class="n">MOBILE_USER_AGENT</span><span class="p">,</span> <span class="n">parser</span><span class="o">=</span><span class="s2">&quot;html5lib&quot;</span><span class="p">)</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">FB_AUTH</span><span class="p">)</span>
+
+    <span class="n">f</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">get_form</span><span class="p">()</span>
+    <span class="n">f</span><span class="p">[</span><span class="s2">&quot;pass&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">password</span>
+    <span class="n">f</span><span class="p">[</span><span class="s2">&quot;email&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">email</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">submit_form</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">get_form</span><span class="p">()</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">submit_form</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">submit</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">submit_fields</span><span class="p">[</span><span class="s1">&#39;__CONFIRM__&#39;</span><span class="p">])</span>
+    <span class="n">access_token</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;access_token=([\w\d]+)&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span><span class="o">.</span><span class="n">groups</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">access_token</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Tomasz Dworowy.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
