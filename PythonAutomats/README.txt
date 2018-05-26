@@ -1,1 +1,0 @@
-Some staff i write in python :)
