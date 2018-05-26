@@ -8,8 +8,7 @@ Welcome to PythonAutomats's documentation!
 
 .. toctree::
    :maxdepth: 20
-
-
+ 
 
 Indices and tables
 ==================

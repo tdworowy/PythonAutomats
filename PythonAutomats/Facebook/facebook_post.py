@@ -1,5 +1,6 @@
 import facebook
-from Utils.utils import log
+#from Utils.utils import log
+from Utils.utils import MyLogging
 from facepy import utils
 
 
@@ -13,12 +14,13 @@ class FaceBookPost:
             "page_id": page_id,
             "access_token": "TODO"
         }
+        self.mylogging = MyLogging()
 
     def facebook_post(self, message):
         api = self.get_api()
-        log().info("Post message %s" % message)
+        self.mylogging.log().info("Post message %s" % message)
         status = api.put_wall_post(message)
-        log().info(status)
+        self.mylogging.log().info(status)
 
     def get_api(self):
         graph = facebook.GraphAPI(self.cfg['access_token'])

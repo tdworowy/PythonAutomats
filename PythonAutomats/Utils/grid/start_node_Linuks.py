@@ -16,5 +16,5 @@ def run(command):
     import os
     os.system(command)
 
-
-run(node_execution)
+if __name__ == "__main__":
+    run(node_execution)

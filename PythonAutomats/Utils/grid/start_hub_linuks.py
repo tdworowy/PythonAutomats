@@ -13,5 +13,5 @@ def run(command):
     import os
     os.system(command)
 
-
-run(hub_execution)
+if __name__ == "__main__":
+    run(hub_execution)

@@ -12,9 +12,12 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import sys
+
 # sys.path.insert(0, os.path.abspath('.'))
+from PythonAutomats.project_path import get_project_path
+
+sys.path.insert(0, get_project_path())
 
 
 # -- Project information -----------------------------------------------------

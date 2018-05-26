@@ -2,7 +2,7 @@ import sys
 
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Skype.skype_bot import SkypeBot
-from Utils.utils import log
+from Utils.utils import MyLogging
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 
@@ -15,6 +15,7 @@ class AddPersonToChat:
         self.skype_bot = SkypeBot(self.driver)
 
     def __init__(self):
+        self.mylogging = MyLogging()
         self.set_up()
 
     def login(self, authentication):
@@ -26,7 +27,7 @@ class AddPersonToChat:
         self.skype_bot.add_person_button_click()
         actions = ActionChains(self.driver)
         for name in names:
-            log().info("Try add %s to chat %s" % (name, chat))
+            self.mylogging.log().info("Try add %s to chat %s" % (name, chat))
             actions.send_keys(name)
             actions.perform()
             self.skype_bot.search_item_click(name)
@@ -46,7 +47,6 @@ if __name__ == '__main__':
         # while(1):
         ap.add_person_to_chat(["Adam Franica"])
     except Exception as ex:
-        log().error(str(ex))
-
+        print(ex)
     finally:
         ap.tear_down()

@@ -1,5 +1,3 @@
-import _thread
-
 from Chrome_Driver_Folder.driver_path import get_driver_path
 
 selenium_server_path = "D:\selenium"
@@ -19,6 +17,3 @@ def run(command):
     import os
     os.system(command)
 
-
-_thread.start_new_thread(run(hub_execution), ())
-_thread.start_new_thread(run(node_execution), ())  # don't start second thread
