@@ -1,3 +1,3 @@
 sphinx-apidoc -o docs PythonAutomats
 cd docs
-make html
+make clean && make html
