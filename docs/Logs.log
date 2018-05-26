@@ -1,3 +1,0 @@
-DEBUG:parse:format 'a {hand}' -> 'a (?P<hand>.+?)'
-DEBUG:parse:format 'the dealer sums the cards' -> 'the dealer sums the cards'
-DEBUG:parse:format 'the {total:d} is correct' -> 'the (?P<total>[-+ ]?\\d+|0[xX][0-9a-fA-F]+|\\d+|0[bB][01]+|0[oO][0-7]+) is correct'
