@@ -1,0 +1,168 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PythonAutomats.Utils.logs_tests &#8212; PythonAutomats 0.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for PythonAutomats.Utils.logs_tests</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="kn">from</span> <span class="nn">Utils.utils</span> <span class="k">import</span> <span class="n">MyLogging</span>
+
+
+<div class="viewcode-block" id="LogsTests"><a class="viewcode-back" href="../../../PythonAutomats.Utils.html#PythonAutomats.Utils.logs_tests.LogsTests">[docs]</a><span class="k">class</span> <span class="nc">LogsTests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LogsTests.setUp"><a class="viewcode-back" href="../../../PythonAutomats.Utils.html#PythonAutomats.Utils.logs_tests.LogsTests.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mylogging</span> <span class="o">=</span> <span class="n">MyLogging</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="LogsTests.test_logging_single"><a class="viewcode-back" href="../../../PythonAutomats.Utils.html#PythonAutomats.Utils.logs_tests.LogsTests.test_logging_single">[docs]</a>    <span class="k">def</span> <span class="nf">test_logging_single</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">pref</span> <span class="o">=</span> <span class="s2">&quot;test_logging_single&quot;</span>
+
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;TEST&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mylogging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log1.log&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log1.log&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">f1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="LogsTests.test_logging_more_times"><a class="viewcode-back" href="../../../PythonAutomats.Utils.html#PythonAutomats.Utils.logs_tests.LogsTests.test_logging_more_times">[docs]</a>    <span class="k">def</span> <span class="nf">test_logging_more_times</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">pref</span> <span class="o">=</span> <span class="s2">&quot;test_logging_more_times&quot;</span>
+        <span class="n">message1</span> <span class="o">=</span> <span class="s2">&quot;TEST1&quot;</span>
+        <span class="n">message2</span> <span class="o">=</span> <span class="s2">&quot;TEST2&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mylogging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log1.log&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mylogging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log1.log&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message2</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log1.log&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">message1</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message2</span> <span class="ow">in</span> <span class="n">lines</span></div>
+
+<div class="viewcode-block" id="LogsTests.test_logging_more_fies"><a class="viewcode-back" href="../../../PythonAutomats.Utils.html#PythonAutomats.Utils.logs_tests.LogsTests.test_logging_more_fies">[docs]</a>    <span class="k">def</span> <span class="nf">test_logging_more_fies</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">pref</span> <span class="o">=</span> <span class="s2">&quot;test_logging_more_fies&quot;</span>
+        <span class="n">message1</span> <span class="o">=</span> <span class="s2">&quot;TEST1&quot;</span>
+        <span class="n">message2</span> <span class="o">=</span> <span class="s2">&quot;TEST2&quot;</span>
+        <span class="n">message3</span> <span class="o">=</span> <span class="s2">&quot;TEST3&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mylogging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log1.log&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mylogging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log2.log&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mylogging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log3.log&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message3</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log1.log&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">message1</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message3</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log2.log&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">message1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message2</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message3</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log3.log&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">message1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message3</span> <span class="ow">in</span> <span class="n">lines</span></div>
+
+<div class="viewcode-block" id="LogsTests.test_logging_more_fies_and_loggers"><a class="viewcode-back" href="../../../PythonAutomats.Utils.html#PythonAutomats.Utils.logs_tests.LogsTests.test_logging_more_fies_and_loggers">[docs]</a>    <span class="k">def</span> <span class="nf">test_logging_more_fies_and_loggers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">pref</span> <span class="o">=</span> <span class="s2">&quot;test_logging_more_fies_and_loggers&quot;</span>
+        <span class="n">mylogging2</span> <span class="o">=</span> <span class="n">MyLogging</span><span class="p">()</span>
+        <span class="n">message1</span> <span class="o">=</span> <span class="s2">&quot;TEST1&quot;</span>
+        <span class="n">message2</span> <span class="o">=</span> <span class="s2">&quot;TEST2&quot;</span>
+        <span class="n">message3</span> <span class="o">=</span> <span class="s2">&quot;TEST3&quot;</span>
+        <span class="n">message4</span> <span class="o">=</span> <span class="s2">&quot;TEST4&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mylogging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log1.log&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mylogging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log2.log&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mylogging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log3.log&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message3</span><span class="p">)</span>
+
+        <span class="n">mylogging2</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log1.log&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message4</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log1.log&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">message1</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message4</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message3</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log2.log&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">message1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message4</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message2</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message3</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">pref</span> <span class="o">+</span> <span class="s2">&quot;log3.log&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">message1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message4</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lines</span>
+        <span class="k">assert</span> <span class="n">message3</span> <span class="ow">in</span> <span class="n">lines</span></div></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Tomasz Dworowy.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
