@@ -15,10 +15,11 @@ class MyLogging:
 
 
     @staticmethod
-    def claer_loggers():
+    def clear_loggers():
         while loggers: loggers.pop()
 
-    def log(self, path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
+    @staticmethod
+    def log(path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
         for logger in loggers:
             if path in [handler.baseFilename for handler in logger.handlers if
                                              hasattr(handler, 'baseFilename')]:
