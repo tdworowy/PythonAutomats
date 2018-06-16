@@ -2,7 +2,7 @@ import time
 
 from Calculator.Elements.Calculator import CalculatorElements
 from Chrome_Driver_Folder.driver_path import get_driver_path
-from Utils.utils import log
+from Utils.utils import MyLogging
 from behave import *
 from selenium import webdriver
 from selenium.webdriver.remote.webdriver import WebDriver
@@ -17,6 +17,7 @@ CHROME = {
 
 @given('set up')
 def set_up(context):
+    context.my_loggin = MyLogging()
     remote = False
     if remote:
         # self.driver = WebDriver("http://localhost:4444/wd/hub", "chrome", "ANY")
@@ -93,14 +94,14 @@ def check_if_calculator_is_displayed(context):
 @then('check result')
 def check_result(context):
     actual = context.calculator.get_calc_result()
-    log(context.logFile).info("Check result: " + context.result)
-    log(context.logFile).info("Actual result: " + actual)
+    context.my_loggin.log(context.logFile).info("Check result: " + context.result)
+    context.my_loggin.log(context.logFile).info("Actual result: " + actual)
     assert context.result == context.calculator.get_calc_result()
 
 
 @then('check {result}')
 def parametrized_check_result(context, result):
     actual = context.calculator.get_calc_result()
-    log(context.logFile).info("Check result: " + result)
-    log(context.logFile).info("Actual result: " + actual)
+    context.my_loggin.log(context.logFile).info("Check result: " + result)
+    context.my_loggin.log(context.logFile).info("Actual result: " + actual)
     assert result == context.calculator.get_calc_result()
