@@ -2,7 +2,7 @@ import requests
 
 
 def test_roobal():
-    """Test roobal page"""
+    """Test roobal page."""
     response = requests.get("http://robertmarek.pl")
     while 1:
         print(response)

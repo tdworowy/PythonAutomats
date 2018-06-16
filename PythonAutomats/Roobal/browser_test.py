@@ -4,7 +4,9 @@ from selenium.common.exceptions import ElementNotVisibleException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
+
 def test_roobal_browser():
+    """Test roobal page."""
     chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
     driver = webdriver.Chrome(chrome_driver_path)
     title = (By.CLASS_NAME, "text-logo")
