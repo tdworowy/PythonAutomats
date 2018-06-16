@@ -6,12 +6,12 @@ from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
 
-try:
-    import argparse
-
-    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-except ImportError:
-    flags = None
+# try:
+#     import argparse
+#
+#     flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
+# except ImportError:
+#     flags = None
 
 # TODO
 SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
@@ -59,5 +59,6 @@ def read_document():
     #         # Print columns A and E, which correspond to indices 0 and 4.
     #         print('%s, %s' % (row[0], row[4]))
 
-# if __name__ == '__main__':
-#     main()
+
+if __name__ == '__main__':
+     pass
