@@ -24,7 +24,7 @@ def _hand_total(hand):
     return total
 
 
-class Dealer():
+class Dealer:
     def __init__(self):
         self.hand = []
 
