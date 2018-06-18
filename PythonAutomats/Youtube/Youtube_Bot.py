@@ -8,7 +8,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 title = (By.CSS_SELECTOR, "div[id='title-wrapper'] h3 a")
 
 logger = MyLogging()
+
+
 def action_send(driver, txt):
+    logger.log().info(txt)
     actions = ActionChains(driver)
     actions.send_keys(txt)
     actions.send_keys(Keys.ENTER)
