@@ -1,0 +1,30 @@
+pipeline {
+
+    agent { label 'master'}
+
+    stages {
+
+    stage('Run Tests')
+    {
+
+        steps{
+            build 'PythonAutomats_unittests'
+        }
+    }
+     stage('Publish documentation ')
+    {
+
+        steps{
+            build 'PythonAutomats_publish_sphinx_doc'
+        }
+    }
+     stage('Send song')
+    {
+
+        steps{
+            build 'songOfTheDayFacebook'
+        }
+    }
+
+ }
+}
