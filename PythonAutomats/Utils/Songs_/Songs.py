@@ -53,16 +53,18 @@ def get_titles(url: "url to lastfm profile"):
 
 
 def clear_titles(titles: "titles list"):
-    """Clean titles."""
+    """Clear titles."""
     clean_titles = []
+    title_1 = "title=\""
+    title_2 = "title=\'"
     for text in titles:
         try:
             # print(text)
             if "—" in text:
                 try:
-                    i = text.index("title=\"") + 7
+                    i = text.index(title_1) + len(title_1)
                 except ValueError:
-                    i = text.index("title=\'") + 7
+                    i = text.index(title_2) + len(title_2)
 
                 temp = text[i:-1].replace("—", "-")
                 clean_titles.append(temp + "\n")
