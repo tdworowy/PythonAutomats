@@ -8,11 +8,11 @@ from Skype.skype_bot import SkypeBot
 from Utils.Songs_.Songs import FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Utils.utils import MyLogging, message_by_time
-from Youtube.Youtube_Bot import get_youtube_url
+from Youtube.Youtube_bot_requests import get_youtube_url
 from selenium import webdriver
 
 
-class SongOfTheDay():
+class SongOfTheDay:
     def __init__(self, authentication):
         chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chrome_driver_path)
@@ -60,10 +60,9 @@ def main(login, password):
         songs = f.read()
     songs = songs.split("\n")
 
-    song_title = choice(songs.split("\n")
-                        )
+    song_title = choice(songs.split("\n"))
 
-    url = get_youtube_url(song.driver, song_title.strip())
+    url = get_youtube_url(song_title.strip())
     try:
         song.sent_song_API(url, ["Szopy Reaktywacja!", "Shame"])
     except Exception as e:

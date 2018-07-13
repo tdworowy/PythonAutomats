@@ -9,7 +9,7 @@ from Facebook.facebook_monitor import FaceThreadMonitor, start_monitor
 from Facebook.song_of_the_day_facebook_message import SongOfTheDayFace
 from Utils.Songs_.Songs import FILE_PATH
 from Utils.file_utils import write_to_file_no_duplicates
-from Youtube.Youtube_Bot import get_youtube_url
+from Youtube.Youtube_bot_requests import get_youtube_url
 from fbchat import ThreadType
 
 
@@ -29,10 +29,8 @@ def send_song(song_, thread_id, thread_type):
     with open(FILE_PATH, 'r') as f:
         songs = f.read()
     song_title = choice(songs.split("\n"))
-    song_.set_up()
-    url = get_youtube_url(song_.driver, song_title.strip())
+    url = get_youtube_url(song_title.strip())
     song_.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
-    song_.tear_down()
 
 
 def send_songs_threads(song_, thread_type, queue, time_stumps):
