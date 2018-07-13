@@ -9,7 +9,7 @@ class LogsTests(unittest.TestCase):
         self.mylogging = MyLogging()
 
     def test_logging_single(self):
-        pref = "test_logging_single"
+        pref = "test_logging_single_"
 
         message = "TEST"
         self.mylogging.log(pref + "log1.log").info(message)
@@ -17,7 +17,7 @@ class LogsTests(unittest.TestCase):
             assert message in f1.read()
 
     def test_logging_more_times(self):
-        pref = "test_logging_more_times"
+        pref = "test_logging_more_times_"
         message1 = "TEST1"
         message2 = "TEST2"
         self.mylogging.log(pref + "log1.log").info(message1)
@@ -28,7 +28,7 @@ class LogsTests(unittest.TestCase):
         assert message2 in lines
 
     def test_logging_more_fies(self):
-        pref = "test_logging_more_fies"
+        pref = "test_logging_more_fies_"
         message1 = "TEST1"
         message2 = "TEST2"
         message3 = "TEST3"
@@ -53,7 +53,7 @@ class LogsTests(unittest.TestCase):
         assert message3 in lines
 
     def test_logging_more_fies_and_loggers(self):
-        pref = "test_logging_more_fies_and_loggers"
+        pref = "test_logging_more_fies_and_loggers_"
         mylogging2 = MyLogging()
         message1 = "TEST1"
         message2 = "TEST2"
