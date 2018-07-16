@@ -1,10 +1,14 @@
 import re
 
 import requests
+from Utils.utils import MyLogging
 from bs4 import BeautifulSoup
+
+logger = MyLogging()
 
 
 def get_youtube_url(query):
+    logger.log().info(query)
     response = requests.get("https://www.youtube.com/results?search_query=%s" % query).text
     soup = BeautifulSoup(response, "html.parser")
     urls = soup.find_all(href=True)
