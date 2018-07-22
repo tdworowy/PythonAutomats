@@ -1,4 +1,3 @@
-a
 import unittest
 
 from Utils.utils import MyLogging
