@@ -14,7 +14,7 @@ class LogsTests(unittest.TestCase):
         message = "TEST"
         self.mylogging.log(pref + "log1.log").info(message)
         with open(pref + "log1.log") as f1:
-            assert message in f1.read()
+            self.assertIn(message, f1.read())
 
     def test_logging_more_times(self):
         pref = "test_logging_more_times_"
@@ -24,8 +24,8 @@ class LogsTests(unittest.TestCase):
         self.mylogging.log(pref + "log1.log").info(message2)
         with open(pref + "log1.log") as f1:
             lines = f1.read()
-        assert message1 in lines
-        assert message2 in lines
+        self.assertIn(message1, lines)
+        self.assertIn(message2, lines)
 
     def test_logging_more_fies(self):
         pref = "test_logging_more_fies_"
@@ -38,19 +38,19 @@ class LogsTests(unittest.TestCase):
 
         with open(pref + "log1.log") as f1:
             lines = f1.read()
-        assert message1 in lines
-        assert message2 not in lines
-        assert message3 not in lines
+        self.assertIn(message1, lines)
+        self.assertNotIn(message2, lines)
+        self.assertNotIn(message3, lines)
         with open(pref + "log2.log") as f1:
             lines = f1.read()
-        assert message1 not in lines
-        assert message2 in lines
-        assert message3 not in lines
+        self.assertNotIn(message1, lines)
+        self.assertIn(message2, lines)
+        self.assertNotIn(message3, lines)
         with open(pref + "log3.log") as f1:
             lines = f1.read()
-        assert message1 not in lines
-        assert message2 not in lines
-        assert message3 in lines
+        self.assertNotIn(message1, lines)
+        self.assertNotIn(message2, lines)
+        self.assertIn(message3, lines)
 
     def test_logging_more_fies_and_loggers(self):
         pref = "test_logging_more_fies_and_loggers_"
@@ -67,23 +67,23 @@ class LogsTests(unittest.TestCase):
 
         with open(pref + "log1.log") as f1:
             lines = f1.read()
-        assert message1 in lines
-        assert message4 in lines
-        assert message2 not in lines
-        assert message3 not in lines
+        self.assertIn(message1, lines)
+        self.assertIn(message4, lines)
+        self.assertNotIn(message2, lines)
+        self.assertNotIn(message3, lines)
         with open(pref + "log2.log") as f1:
             lines = f1.read()
-        assert message1 not in lines
-        assert message4 not in lines
-        assert message2 in lines
-        assert message3 not in lines
+        self.assertNotIn(message1, lines)
+        self.assertNotIn(message4, lines)
+        self.assertIn(message2, lines)
+        self.assertNotIn(message3, lines)
 
         with open(pref + "log3.log") as f1:
             lines = f1.read()
-        assert message1 not in lines
-        assert message4 not in lines
-        assert message2 not in lines
-        assert message3 in lines
+        self.assertNotIn(message1, lines)
+        self.assertNotIn(message4, lines)
+        self.assertNotIn(message2, lines)
+        self.assertIn(message3, lines)
 
 
 if __name__ == '__main__':
