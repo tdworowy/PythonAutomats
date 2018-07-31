@@ -30,7 +30,7 @@ def send_song(song_, thread_id, thread_type):
         songs = f.read()
     song_title = choice(songs.split("\n"))
     url = get_youtube_url(song_title.strip())
-    song_.sent_song([url], thread_id, "SONG ON DEMAND", thread_type)
+    song_.sent_songs([url], thread_id, "SONG ON DEMAND", thread_type)
 
 
 def send_songs_threads(song_, thread_type, queue, time_stumps):

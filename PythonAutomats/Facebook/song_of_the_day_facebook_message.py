@@ -18,10 +18,14 @@ class SongOfTheDayFace:
     def login_FB(self, login, passw):
         self.face_bot.login(login, passw)
 
-    def sent_song(self, songs_urls, thread_id, message=message_by_time(), thread_type=ThreadType.GROUP):
+    def sent_messages(self, messages, thread_id, thread_type=ThreadType.GROUP):
+        for message in messages:
+            self.mylogging.log().info(messages)
+            self.face_bot.send_message(message, thread_id, thread_type)
+
+    def sent_songs(self, songs_urls, thread_id, thread_type=ThreadType.GROUP):
         for songURL in songs_urls:
             self.mylogging.log().info(songURL)
-            self.face_bot.send_message(message, thread_id, thread_type)
             self.face_bot.send_message(songURL, thread_id, thread_type)
             self.mylogging.save_history(songURL, "FacebookMessage.txt")
 
@@ -40,7 +44,8 @@ def main(login, password, thread_id):
 
     url = get_youtube_url(song_title.strip())
     song.login_FB(login, password)
-    song.sent_song([url], thread_id)
+    song.sent_messages([message_by_time(), "Title: %s" % song_title], thread_id)
+    song.sent_songs([url], thread_id)
     song.logout()
 
 
