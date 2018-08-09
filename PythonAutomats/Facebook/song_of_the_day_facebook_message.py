@@ -44,7 +44,7 @@ def main(login, password, thread_id):
 
     url = get_youtube_url(song_title.strip())
     song.login_FB(login, password)
-    song.sent_messages([message_by_time(), "Title: %s" % song_title], thread_id)
+    song.sent_messages([message_by_time(), "Title: %s" % song_title, "Total songs count: %s" % len(songs)], thread_id)
     song.sent_songs([url], thread_id)
     song.logout()
 
