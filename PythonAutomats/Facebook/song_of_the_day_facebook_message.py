@@ -40,7 +40,8 @@ def main(login, password, thread_id):
     song.mylogging.log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs = f.read()
-    song_title = choice(songs.split("\n"))
+        songs = songs.split("\n")
+    song_title = choice(songs)
 
     url = get_youtube_url(song_title.strip())
     song.login_FB(login, password)
