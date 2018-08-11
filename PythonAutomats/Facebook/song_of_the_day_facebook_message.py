@@ -27,7 +27,9 @@ class SongOfTheDayFace:
         for songURL in songs_urls:
             self.mylogging.log().info(songURL)
             self.face_bot.send_message(songURL, thread_id, thread_type)
-            self.mylogging.save_history(songURL, "FacebookMessage.txt")
+
+    def save_history(self, message):
+        self.mylogging.save_history(message, "FacebookMessage.txt")
 
     def logout(self):
         self.face_bot.logout()
@@ -40,13 +42,15 @@ def main(login, password, thread_id):
     song.mylogging.log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs = f.read()
-        songs = songs.split("\n")
+
+    songs = songs.split("\n")
     song_title = choice(songs)
 
     url = get_youtube_url(song_title.strip())
     song.login_FB(login, password)
     song.sent_messages([message_by_time(), "Title: %s" % song_title, "Total songs count: %s" % len(songs)], thread_id)
     song.sent_songs([url], thread_id)
+    song.save_history("Title: %s url: %s " % (song_title, url))
     song.logout()
 
 
