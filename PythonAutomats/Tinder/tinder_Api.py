@@ -1,10 +1,12 @@
+from functools import partial
+
 import pynder
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Facebook.facebook_id import get_facebook_ID
 from Facebook.facebook_token import get_access_token
 from Utils.utils import MyLogging
 from selenium import webdriver
-from functools import partial
+
 
 class TinderMessageBot:
     def logIn(self, id, token):
@@ -13,7 +15,7 @@ class TinderMessageBot:
     def get_matches(self):
         return self.session.matches()
 
-    def get_nerby(self):
+    def get_nearby(self):
         return self.session.nearby_users(200)
 
     def get_FB_friends(self):
@@ -83,7 +85,7 @@ def like_FB(tm, friendName):
     for friend in tm.get_FB_friends():
         if friend.get_tinder_information().name == friendName:
             user = friend.get_tinder_information()
-            for near in tm.get_nerby():
+            for near in tm.get_nearby():
                 print('check %s %s' % (near.name, near.id))
                 print('fb friedn ID: %s' % user.id)
                 if user.id == near.id:
@@ -93,7 +95,7 @@ def like_FB(tm, friendName):
 
 def get_near_data(tm):
     return ['Name: %s \nage: %s\ndistance: %s\nbio: %s\nphotos: %s' % (
-        near.name, near.age, near.distance_km, near.bio, near.photos_obj) for near in tm.get_nerby()]
+        near.name, near.age, near.distance_km, near.bio, near.photos_obj) for near in tm.get_nearby()]
 
 
 if __name__ == "__main__":
