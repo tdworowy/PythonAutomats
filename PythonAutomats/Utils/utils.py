@@ -13,7 +13,6 @@ class MyLogging:
     def __init__(self):
         logging.basicConfig(format="%(levelname)s|%(asctime)s|%(message)s")
 
-
     @staticmethod
     def clear_loggers():
         while loggers: loggers.pop()
@@ -22,7 +21,7 @@ class MyLogging:
     def log(path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
         for logger in loggers:
             if path in [handler.baseFilename for handler in logger.handlers if
-                                             hasattr(handler, 'baseFilename')]:
+                        hasattr(handler, 'baseFilename')]:
                 return logger
         else:
 
@@ -69,5 +68,3 @@ def characters(frm, to):
 
 def get_millis():
     return int(round(time.time() * 1000))
-
-

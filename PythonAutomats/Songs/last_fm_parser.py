@@ -20,7 +20,7 @@ LAST_UPDATED = "E:\Google_drive\Songs\LastUpdated.txt"
 # LAST_180_DAYS
 # LAST_365_DAYS
 # ALL
-mylogging = MyLogging()
+my_logging = MyLogging()
 
 
 def get_pages_count(url: "url to lastfm pages list"):
@@ -31,16 +31,16 @@ def get_pages_count(url: "url to lastfm pages list"):
         pagination_list = soup.find('ul', class_="pagination-list")
         pages = pagination_list.find_all('a')
     except Exception as ex:
-        mylogging.log().error(ex)
+        my_logging.log().error(ex)
     page_count = (max([int(page.text) for page in pages[:-1]]))
-    mylogging.log().info("URL: %s" % url)
-    mylogging.log().info("Page count: %s" % page_count)
+    my_logging.log().info("URL: %s" % url)
+    my_logging.log().info("Page count: %s" % page_count)
     return page_count
 
 
 def get_titles(url: "url to lastfm profile"):
     """Get songs titles."""
-    mylogging.log().info("Get songs from: %s" % url)
+    my_logging.log().info("Get songs from: %s" % url)
     try:
         response = requests.get(url).text
         soup = BeautifulSoup(response, "html.parser")
@@ -48,7 +48,7 @@ def get_titles(url: "url to lastfm profile"):
         titles = str(titles)
         titles = titles.split(">")
     except Exception as ex:
-        mylogging.log().warning(ex)
+        my_logging.log().warning(ex)
     return clear_titles(titles)
 
 
@@ -70,8 +70,8 @@ def clear_titles(titles: "titles list"):
                 clean_titles.append(temp + "\n")
 
         except Exception as ex:
-            mylogging.log().error(ex)
-            mylogging.log().error(text)
+            my_logging.log().error(ex)
+            my_logging.log().error(text)
             continue
     return clean_titles
 
@@ -130,9 +130,9 @@ def distribution(parts, min_=1, max=0, user_ :"lastfm user name"='TotaledThomas'
 
 def update_songs_distribution():
     """Use multiprocessing to speed up lastfm parsing."""
-    mylogging.log().info("Update songs")
+    my_logging.log().info("Update songs")
     if check_last_updated():
-        mylogging.log().info("Songs already updated")
+        my_logging.log().info("Songs already updated")
         return 0
     distribution(parts=6, max=60, user_='TotaledThomas', target=_update_songs)
     distribution(parts=6, max=60, user_='theRoobal', target=_update_songs)

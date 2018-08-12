@@ -16,7 +16,7 @@ def main(login, password, thread_id):
     update_songs_distribution()
     face_bot = FaceBookMessageBot(thread_id=thread_id, thread_type=ThreadType.GROUP)
     song = SongOfTheDay(face_bot)
-    song.mylogging.log().info("Get random song")
+    song.my_logging.log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs = f.read()
 

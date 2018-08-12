@@ -1,5 +1,6 @@
 import time
 
+from Utils.utils import MyLogging
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -52,7 +53,7 @@ class SkypeBot():
         WebDriverWait(self.driver, 40).until(EC.visibility_of_any_elements_located(self.input_field))
         time.sleep(1)
 
-    def login_facebook(self, authentication):
+    def login_facebook(self, login, password):
         self.open_skype()
 
         login_FB = self.driver.find_element(*self.login_FB)
@@ -60,28 +61,28 @@ class SkypeBot():
 
         login_field = self.driver.find_element(*self.login_email)
         login_field.click()
-        login_field.send_keys(authentication[0])
+        login_field.send_keys(login)
 
         pass_field = self.driver.find_element(*self.login_password)
         pass_field.click()
-        pass_field.send_keys(authentication[1])
+        pass_field.send_keys(password)
 
         login_button = self.driver.find_element(*self.login_button)
         login_button.click()
         self.wait_for_input_field()
 
-    def login(self, authentication):
+    def login(self, login, password):
         self.open_skype()
         login_field = self.driver.find_element(*self.login_skype)
         login_field.click()
-        login_field.send_keys(authentication[0])
+        login_field.send_keys(login)
 
         login_button = self.driver.find_element(*self.login_skype_button)
         login_button.click()
 
         pass_field = self.driver.find_element(*self.login_skype_password)
         pass_field.click()
-        pass_field.send_keys(authentication[1])
+        pass_field.send_keys(password)
 
         self.send_enter()
         self.wait_for_input_field()
@@ -122,3 +123,18 @@ class SkypeBot():
                 return False
         except Exception:
             return False
+
+
+class SkypeBotAdapter:
+    def __init__(self, skype_bot, groups):
+        self.my_logging = MyLogging()
+        self.skype_bot = skype_bot
+        self.groups = groups
+
+    def login(self, login, passwod):
+        self.skype_bot.login(login, passwod)
+
+    def send_message(self, message):
+        self.my_logging.log().info(message)
+        self.skype_bot.set_chats(self.groups)
+        self.skype_bot.send_message_to_selected(message)

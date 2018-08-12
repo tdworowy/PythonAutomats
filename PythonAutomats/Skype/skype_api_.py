@@ -1,18 +1,16 @@
 import re
-import sys
 
+from Utils.utils import MyLogging
 from skpy import Skype
 
 
 class SkypeApi:
-    def clear_chats(self):
-        self.skype = Skype(self.login, self.passw)
+    def login(self, login, passw):
+        self.skype = Skype(login, passw)
         self.chats = None
 
-    def __init__(self, login, passw):
-        self.login = login
-        self.passw = passw
-        self.clear_chats()
+    def __init__(self):
+        self.chats = None
 
     def get_contact_id(self, first, last):
         for contact in self.skype.contacts.search(first + ' ' + last):
@@ -46,7 +44,8 @@ class SkypeApi:
         self.__get_all_messages(list(self.chats)[0], messages)
         return messages
 
-    def __get_all_messages(self, chat, list_):
+    @staticmethod
+    def __get_all_messages(chat, list_):
         last_len = 0
         while 1:
             list_.extend(chat.getMsgs())
@@ -68,10 +67,17 @@ class SkypeApi:
         return links
 
 
-if __name__ == '__main__':
-    user = sys.argv[1]
-    passw = sys.argv[2]
-    sa = SkypeApi(user, passw)
-    print(sa.skype.conn.connected)
-    # links = sa.getLinks("Learning is an awesome journey")
-    # writeToFileNoDuplicates("D:\Google_drive\links_from_skype\links.txt",links)
+class SkypeApiAdapter:
+    def __init__(self, skype_api, groups):
+        self.my_logging = MyLogging()
+        self.skype_api = skype_api
+        self.groups = groups
+
+    def login(self, login, passwod):
+        self.skype_api.login(login, passwod)
+
+    def send_message(self, message):
+        self.my_logging.log().info(message)
+        self.skype_api.set_chats(self.groups)
+        self.skype_api.send_message(message)
+

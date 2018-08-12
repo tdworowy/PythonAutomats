@@ -11,8 +11,8 @@ from selenium import webdriver
 
 
 class SongOfTheDay:
-    def __init__(self, page_id, app_id, app_secred):
-        self.set_up(page_id, app_id, app_secred)
+    def __init__(self, page_id, app_id, app_secret):
+        self.set_up(page_id, app_id, app_secret)
         self.mylogging = MyLogging()
 
     def sent_song(self, songs_urls):
@@ -20,12 +20,12 @@ class SongOfTheDay:
             self.mylogging.log().info(songURL)
             self.face_bot.facebook_post(songURL)
 
-    def set_up(self, page_id, app_id, app_secred):
+    def set_up(self, page_id, app_id, app_secret):
         update_songs_distribution()
         chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chrome_driver_path)
         self.driver.implicitly_wait(2)
-        self.face_bot = FaceBookPost(page_id, app_id, app_secred)
+        self.face_bot = FaceBookPost(page_id, app_id, app_secret)
 
     def tear_down(self):
         self.driver.quit()

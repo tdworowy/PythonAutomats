@@ -13,16 +13,16 @@ from selenium import webdriver
 @log_exception()
 def main(login, password, names):
     update_songs_distribution()
-    tinderBot = TinderMessageBot()
+    tinder_bot = TinderMessageBot()
     chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
     driver = webdriver.Chrome(chrome_driver_path)
     with open(FILE_PATH, 'r') as f:
         songs_list = f.read()
     songs_list = songs_list.split("\n")
     song_title = choice(songs_list)
-    adapter = TinderAdapter(tiderBot=tinderBot, name='tomasz.dworowy', recivers=names, driver=driver)
+    adapter = TinderAdapter(tiderBot=tinder_bot, name='tomasz.dworowy', receivers=names, driver=driver)
     song = SongOfTheDay(adapter)
-    song.mylogging.log().info("Get random song")
+    song.my_logging.log().info("Get random song")
     song.login(login, password)
     url = get_youtube_url(song_title.strip())
     song.sent_songs([url])

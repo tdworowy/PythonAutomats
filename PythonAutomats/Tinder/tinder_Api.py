@@ -1,5 +1,3 @@
-from functools import partial
-
 import pynder
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Facebook.facebook_id import get_facebook_ID
@@ -40,20 +38,12 @@ class TinderAdapter:
         id = get_facebook_ID(self.driver, self.name)
         self.tm.logIn(id, token)
 
-    def sent_songs(self, urls):
-        for receiver in self.receivers:
-            send = partial(self.sent_songs, to=receiver)
-            map(send, urls)
-
-    def sent_song(self, song_URL, to):
-        self.mylogging.log().info(song_URL)
+    def send_message(self, message):
         for match in self.tm.get_matches():
-            if match.user.name == to:
+            if match.user.name in self.receivers:
                 self.mylogging.log("Send message to: %s " % match.user.name)
                 match.message("[ Auto song for: %s :D ]" % match.user.name)
-                match.message(song_URL)
-                self.mylogging.save_history("Song for %s" % match.user.name, "Tinder.txt")
-                self.mylogging.save_history(song_URL, "Tinder.txt")
+                match.message(message)
 
 
 def print_matches(tm):
@@ -61,7 +51,7 @@ def print_matches(tm):
         print(match)
 
 
-def logIn(login, passw, fbname):
+def login(login, passw, fbname):
     chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
     driver = webdriver.Chrome(chrome_driver_path)
     token = get_access_token(login, passw)
@@ -99,7 +89,7 @@ def get_near_data(tm):
 
 
 if __name__ == "__main__":
-    tm = logIn('', '', '')
+    tm = login('', '', '')
     # likeFB(tm,"")
     print_FB_friends(tm)
     # printMatches(tm)

@@ -9,7 +9,7 @@ class FaceBookPost:
     def get_aut_token(app_id, app_secred):
         return utils.get_application_access_token(app_id, app_secred)
 
-    def __init__(self, page_id, app_id, app_secred):
+    def __init__(self, page_id, app_id, app_secret):
         self.cfg = {
             "page_id": page_id,
             "access_token": "TODO"
