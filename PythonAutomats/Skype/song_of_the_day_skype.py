@@ -5,14 +5,14 @@ from random import choice
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Skype.skype_api_ import SkypeApi
 from Skype.skype_bot import SkypeBot
-from Utils.Songs_.Songs import FILE_PATH, update_songs_distribution
+from Songs.last_fm_parser import FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Utils.utils import MyLogging, message_by_time
 from Youtube.Youtube_bot_requests import get_youtube_url
 from selenium import webdriver
 
 
-class SongOfTheDay:
+class SongOfTheDaySkype:
     def __init__(self, authentication):
         chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
         self.driver = webdriver.Chrome(chrome_driver_path)
@@ -54,7 +54,7 @@ class SongOfTheDay:
 @log_exception()
 def main(login, password):
     update_songs_distribution()
-    song = SongOfTheDay([login, password])
+    song = SongOfTheDaySkype([login, password])
     song.mylogging.log().info("Get random song")
     with open(FILE_PATH, 'r') as f:
         songs = f.read()

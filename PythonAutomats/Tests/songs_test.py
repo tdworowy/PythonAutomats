@@ -1,6 +1,6 @@
 import unittest
 
-from Utils.Songs_.Songs import clear_titles
+from Songs.last_fm_parser import clear_titles
 
 
 class TestSongs(unittest.TestCase):

@@ -2,8 +2,9 @@ import pynder
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Facebook.facebook_id import get_facebook_ID
 from Facebook.facebook_token import get_access_token
+from Utils.utils import MyLogging
 from selenium import webdriver
-
+from functools import partial
 
 class TinderMessageBot:
     def logIn(self, id, token):
@@ -20,6 +21,37 @@ class TinderMessageBot:
 
     def update_location(self, latitude, longitude):
         self.session.update_location(latitude, longitude)
+
+
+class TinderAdapter:
+
+    def __init__(self, name, receivers, driver, tiderBot):
+        self.tm = tiderBot
+        self.name = name
+        self.mylogging = MyLogging()
+        self.receivers = receivers
+        self.driver = driver
+
+    def login(self, login, passw):
+        token = get_access_token(login, passw)
+
+        id = get_facebook_ID(self.driver, self.name)
+        self.tm.logIn(id, token)
+
+    def sent_songs(self, urls):
+        for receiver in self.receivers:
+            send = partial(self.sent_songs, to=receiver)
+            map(send, urls)
+
+    def sent_song(self, song_URL, to):
+        self.mylogging.log().info(song_URL)
+        for match in self.tm.get_matches():
+            if match.user.name == to:
+                self.mylogging.log("Send message to: %s " % match.user.name)
+                match.message("[ Auto song for: %s :D ]" % match.user.name)
+                match.message(song_URL)
+                self.mylogging.save_history("Song for %s" % match.user.name, "Tinder.txt")
+                self.mylogging.save_history(song_URL, "Tinder.txt")
 
 
 def print_matches(tm):

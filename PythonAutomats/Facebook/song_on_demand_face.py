@@ -6,8 +6,8 @@ from multiprocessing import Process, Queue, Manager
 from random import choice
 
 from Facebook.facebook_monitor import FaceThreadMonitor, start_monitor
-from Facebook.song_of_the_day_facebook_message import SongOfTheDayFace
-from Utils.Songs_.Songs import FILE_PATH
+from Facebook.song_of_the_day_facebook_message import SongOfTheDay
+from Songs.last_fm_parser import FILE_PATH
 from Utils.file_utils import write_to_file_no_duplicates
 from Youtube.Youtube_bot_requests import get_youtube_url
 from fbchat import ThreadType
@@ -25,20 +25,21 @@ def check_queue(queue, time_stumps):
         return re.search(r"\d+", msq[0]).group()
 
 
-def send_song(song_, thread_id, thread_type):
+def send_song(api):
     with open(FILE_PATH, 'r') as f:
         songs = f.read()
     song_title = choice(songs.split("\n"))
     url = get_youtube_url(song_title.strip())
-    song_.sent_songs([url], thread_id, "SONG ON DEMAND", thread_type)
+    api.sent_songs([url])
 
 
-def send_songs_threads(song_, thread_type, queue, time_stumps):
+def send_songs_threads(api):
     while 1:
         if not queue.empty():
             thread_id = check_queue(queue, time_stumps)
             if thread_id:
-                send_song(song_, thread_id, thread_type)
+                api.thread_id = thread_id
+                send_song(api)
         else:
             time.sleep(60)
 
@@ -71,10 +72,11 @@ if __name__ == '__main__':
         THREADID1 = '1252344071467839'  # group
         # THREADID2 = '100000471818643'  # user
 
-        song = SongOfTheDayFace()
-        song.login_FB(user, passw)
+        face_bot = FaceBookMessageBot(thread_id=THREADID1, thread_type=ThreadType.GROUP)
+        song = SongOfTheDay(api=face_bot)
+        song.login(user, passw)
 
-        fm1 = FaceThreadMonitor(song.face_bot, THREADID1)
+        fm1 = FaceThreadMonitor(face_bot, THREADID1)
         # fm2 = FaceThreadMonitor(song.face_bot, THREADID2)
 
         # process1 = Process(target=start_monitor, args=(PHASE, [fm1, fm2], queue))

@@ -3,7 +3,7 @@ from random import choice
 
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Facebook.facebook_post import FaceBookPost
-from Utils.Songs_.Songs import FILE_PATH, update_songs_distribution
+from Songs.last_fm_parser import FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Utils.utils import MyLogging
 from Youtube.Youtube_Bot import get_youtube_url
