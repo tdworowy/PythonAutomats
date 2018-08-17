@@ -98,7 +98,7 @@ def check_last_updated():
 
 def _update_songs(min=1, max=60, user: "lastfm user name"='TotaledThomas', file_path: "path to songlist.txt"=FILE_PATH):
     """Update existing songs list (use songs from last 30 days)"""
-    url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYSS" % user
+    url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYS" % user
     new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(min, max + 1)])
     for tiles_list in new_titles_map:
         to_file(tiles_list, file_path)
@@ -136,7 +136,10 @@ def update_songs_distribution():
         return 0
     distribution(parts=6, max=60, user_='TotaledThomas', target=_update_songs)
     distribution(parts=6, max=60, user_='theRoobal', target=_update_songs)
+    combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList")
+    remove_files([r'%s\songsList%s.txt' % (FOLDER_PATH, i) for i in range(1, pool_count + 1)])
     remove_duplicates(FILE_PATH)
+    copyfile(FILE_PATH, "songs.txt")
 
 
 if __name__ == '__main__':
