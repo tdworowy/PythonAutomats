@@ -30,8 +30,8 @@ def __get_pages_count(url: "url to lastfm pages list"):
         soup = BeautifulSoup(response, "html.parser")
         pagination_list = soup.find('ul', class_="pagination-list")
         pages = pagination_list.find_all('a')
-    except Exception as ex:
-        my_logging.log().error(ex)
+    except UnboundLocalError:
+        return 0
     page_count = (max([int(page.text) for page in pages[:-1]]))
     my_logging.log().info("URL: %s" % url)
     my_logging.log().info("Page count: %s" % page_count)
