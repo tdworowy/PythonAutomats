@@ -139,7 +139,7 @@ def update_songs_distribution():
     pool_count = 6
     distribution(parts=pool_count, max=60, user_='TotaledThomas', target=_update_songs)
     distribution(parts=pool_count, max=60, user_='theRoobal', target=_update_songs)
-    combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList")
+    combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList", 'a')
     remove_files([r'%s\songsList%s.txt' % (FOLDER_PATH, i) for i in range(1, pool_count + 1)])
     remove_duplicates(FILE_PATH)
     copyfile(FILE_PATH, "songs.txt")

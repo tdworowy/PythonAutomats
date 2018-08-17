@@ -33,9 +33,9 @@ def write_to_file_no_duplicates(path, elements):
             f2.seek(0)
 
 
-def combine_files(count, file_path, folder_path, prefix):
+def combine_files(count, file_path, folder_path, prefix, mode='W'):
     file_names = [folder_path + "%s%s.txt" % (prefix, str(i)) for i in range(1, count + 1)]
-    with open(file_path, 'w') as outfile:
+    with open(file_path, mode) as outfile:
         for fname in file_names:
             with open(fname) as infile:
                 for line in infile:
