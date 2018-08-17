@@ -23,7 +23,7 @@ LAST_UPDATED = "E:\Google_drive\Songs\LastUpdated.txt"
 my_logging = MyLogging()
 
 
-def get_pages_count(url: "url to lastfm pages list"):
+def __get_pages_count(url: "url to lastfm pages list"):
     """Get number of pages."""
     try:
         response = requests.get(url).text
@@ -36,6 +36,14 @@ def get_pages_count(url: "url to lastfm pages list"):
     my_logging.log().info("URL: %s" % url)
     my_logging.log().info("Page count: %s" % page_count)
     return page_count
+
+
+def get_pages_count(user_, all=True):
+    if all:
+        url = 'https://www.last.fm/pl/user/%s/library/tracks' % user_
+    else:
+        url = "https://www.last.fm/pl/user/%s/library?page=1&date_preset=LAST_30_DAYS" % user_
+    return __get_pages_count(url)
 
 
 def get_titles(url: "url to lastfm profile"):
@@ -106,11 +114,10 @@ def _update_songs(min=1, max=60, user: "lastfm user name" = 'TotaledThomas',
 
 
 def distribution(parts, min_=1, max=0, user_: "lastfm user name" = 'TotaledThomas',
-                 target: "target function" = get_songs):
+                 target: "target function" = get_songs, all=True):
     """Use multiprocessing to speed up lastfm parsing."""
     if max == 0:
-        url = 'https://www.last.fm/pl/user/%s/library/tracks' % user_
-        max = get_pages_count(url)
+        max = get_pages_count(user_, all)
     rest = max % parts
     min = min_
     inc = (max - min_) // parts
@@ -136,9 +143,9 @@ def update_songs_distribution():
     if check_last_updated():
         my_logging.log().info("Songs already updated")
         return 0
-    pool_count = 6
-    distribution(parts=pool_count, max=60, user_='TotaledThomas', target=_update_songs)
-    distribution(parts=pool_count, max=60, user_='theRoobal', target=_update_songs)
+    pool_count = 10
+    distribution(parts=pool_count, user_='TotaledThomas', target=_update_songs, all=False)
+    distribution(parts=pool_count, user_='theRoobal', target=_update_songs, all=False)
     combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList", 'a')
     remove_files([r'%s\songsList%s.txt' % (FOLDER_PATH, i) for i in range(1, pool_count + 1)])
     remove_duplicates(FILE_PATH)
