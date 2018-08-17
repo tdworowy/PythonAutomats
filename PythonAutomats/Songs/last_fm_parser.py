@@ -30,7 +30,7 @@ def __get_pages_count(url: "url to lastfm pages list"):
         soup = BeautifulSoup(response, "html.parser")
         pagination_list = soup.find('ul', class_="pagination-list")
         pages = pagination_list.find_all('a')
-    except UnboundLocalError:
+    except AttributeError:
         return 0
     page_count = (max([int(page.text) for page in pages[:-1]]))
     my_logging.log().info("URL: %s" % url)
@@ -95,13 +95,19 @@ def get_songs(min, max, user: "lastfm user name" = 'TotaledThomas', file_path: "
 def check_last_updated():
     """Check last update time -- stored in txt file"""
     date_today = date.today()
-    with (open(LAST_UPDATED, 'r')) as f3:
-        if f3.readline() == str(date_today):
+    with (open(LAST_UPDATED, 'r')) as f:
+        if f.readline() == str(date_today):
             return True
         else:
-            f3 = open(LAST_UPDATED, 'w')
-            f3.write(str(date_today))
             return False
+
+
+def save_last_updated():
+    """Update last update time -- stored in txt file"""
+    date_today = date.today()
+    with open(LAST_UPDATED, 'w') as f:
+        f.write(str(date_today))
+    return False
 
 
 def _update_songs(min=1, max=60, user: "lastfm user name" = 'TotaledThomas',
@@ -150,6 +156,7 @@ def update_songs_distribution():
     remove_files([r'%s\songsList%s.txt' % (FOLDER_PATH, i) for i in range(1, pool_count + 1)])
     remove_duplicates(FILE_PATH)
     copyfile(FILE_PATH, "songs.txt")
+    save_last_updated()
 
 
 if __name__ == '__main__':
@@ -163,3 +170,4 @@ if __name__ == '__main__':
     remove_files([r'%s\songsList%s.txt' % (FOLDER_PATH, i) for i in range(1, pool_count + 1)])
     remove_duplicates(FILE_PATH)
     copyfile(FILE_PATH, "songs.txt")
+    save_last_updated()
