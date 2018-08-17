@@ -1,4 +1,5 @@
 from datetime import date
+from enum import Enum
 from multiprocessing import Process
 from shutil import copyfile
 
@@ -13,13 +14,16 @@ FOLDER_PATH = "E:\Google_drive\Songs\\"
 FILE_PATH = "E:\Google_drive\Songs\songsList.txt"
 LAST_UPDATED = "E:\Google_drive\Songs\LastUpdated.txt"
 
-# PAGES = 2
-# LAST_7_DAYS
-# LAST_30_DAYS
-# LAST_90_DAYS
-# LAST_180_DAYS
-# LAST_365_DAYS
-# ALL
+
+class Period(Enum):
+    LAST_7_DAYS = "LAST_7_DAYS"
+    LAST_30_DAYS = "LAST_30_DAYS"
+    LAST_90_DAYS = "LAST_90_DAYS"
+    LAST_180_DAYS = "LAST_180_DAYS"
+    LAST_365_DAYS = "LAST_365_DAYS"
+    ALL = "ALL"
+
+
 my_logging = MyLogging()
 
 
@@ -42,21 +46,18 @@ def get_pages_count(user_, all=True):
     if all:
         url = 'https://www.last.fm/pl/user/%s/library/tracks' % user_
     else:
-        url = "https://www.last.fm/pl/user/%s/library?page=1&date_preset=LAST_30_DAYS" % user_
+        url = "https://www.last.fm/pl/user/%s/library?page=1&date_preset=%s" % (user_, Period.LAST_30_DAYS.value)
     return __get_pages_count(url)
 
 
 def get_titles(url: "url to lastfm profile"):
     """Get songs titles."""
     my_logging.log().info("Get songs from: %s" % url)
-    try:
-        response = requests.get(url).text
-        soup = BeautifulSoup(response, "html.parser")
-        titles = soup.find_all("a", class_="link-block-target")
-        titles = str(titles)
-        titles = titles.split(">")
-    except Exception as ex:
-        my_logging.log().warning(ex)
+    response = requests.get(url).text
+    soup = BeautifulSoup(response, "html.parser")
+    titles = soup.find_all("a", class_="link-block-target")
+    titles = str(titles)
+    titles = titles.split(">")
     return clear_titles(titles)
 
 
@@ -96,10 +97,7 @@ def check_last_updated():
     """Check last update time -- stored in txt file"""
     date_today = date.today()
     with (open(LAST_UPDATED, 'r')) as f:
-        if f.readline() == str(date_today):
-            return True
-        else:
-            return False
+        return f.readline() == str(date_today)
 
 
 def save_last_updated():
@@ -113,7 +111,8 @@ def save_last_updated():
 def _update_songs(min=1, max=60, user: "lastfm user name" = 'TotaledThomas',
                   file_path: "path to songlist.txt" = FILE_PATH):
     """Update existing songs list (use songs from last 30 days)"""
-    url = lambda i: "https://www.last.fm/pl/user/%s/library?page=%s&date_preset=LAST_30_DAYS" % (user, str(i))
+    url = lambda i: "https://www.last.fm/pl/user/%s/library?page=%s&date_preset=%s" % (
+    user, str(i), Period.LAST_30_DAYS.value)
     new_titles_map = map(get_titles, [url(i) for i in range(min, max + 1)])
     for tiles_list in new_titles_map:
         to_file(tiles_list, file_path)
@@ -159,7 +158,7 @@ def update_songs_distribution():
     save_last_updated()
 
 
-if __name__ == '__main__':
+def get_all_songs():
     pool_count = 10
 
     open(FILE_PATH, 'w').close()
@@ -171,3 +170,7 @@ if __name__ == '__main__':
     remove_duplicates(FILE_PATH)
     copyfile(FILE_PATH, "songs.txt")
     save_last_updated()
+
+
+if __name__ == '__main__':
+    get_all_songs()
