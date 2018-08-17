@@ -76,7 +76,7 @@ def clear_titles(titles: "titles list"):
     return clean_titles
 
 
-def get_songs(min, max, user: "lastfm user name"='TotaledThomas', file_path: "path to songlist.txt"=FILE_PATH):
+def get_songs(min, max, user: "lastfm user name" = 'TotaledThomas', file_path: "path to songlist.txt" = FILE_PATH):
     """Get songs form lastfp user profile."""
     url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
     titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(min, max + 1)])
@@ -96,15 +96,17 @@ def check_last_updated():
             return False
 
 
-def _update_songs(min=1, max=60, user: "lastfm user name"='TotaledThomas', file_path: "path to songlist.txt"=FILE_PATH):
+def _update_songs(min=1, max=60, user: "lastfm user name" = 'TotaledThomas',
+                  file_path: "path to songlist.txt" = FILE_PATH):
     """Update existing songs list (use songs from last 30 days)"""
-    url = "https://www.last.fm/pl/user/%s/library?date_preset=LAST_30_DAYS" % user
-    new_titles_map = map(get_titles, [url + "&page=%s" % str(i) for i in range(min, max + 1)])
+    url = lambda i: "https://www.last.fm/pl/user/%s/library?page=%s&date_preset=LAST_30_DAYS" % (user, str(i))
+    new_titles_map = map(get_titles, [url(i) for i in range(min, max + 1)])
     for tiles_list in new_titles_map:
         to_file(tiles_list, file_path)
 
 
-def distribution(parts, min_=1, max=0, user_ :"lastfm user name"='TotaledThomas', target: "target function"=get_songs):
+def distribution(parts, min_=1, max=0, user_: "lastfm user name" = 'TotaledThomas',
+                 target: "target function" = get_songs):
     """Use multiprocessing to speed up lastfm parsing."""
     if max == 0:
         url = 'https://www.last.fm/pl/user/%s/library/tracks' % user_
@@ -134,8 +136,9 @@ def update_songs_distribution():
     if check_last_updated():
         my_logging.log().info("Songs already updated")
         return 0
-    distribution(parts=6, max=60, user_='TotaledThomas', target=_update_songs)
-    distribution(parts=6, max=60, user_='theRoobal', target=_update_songs)
+    pool_count = 6
+    distribution(parts=pool_count, max=60, user_='TotaledThomas', target=_update_songs)
+    distribution(parts=pool_count, max=60, user_='theRoobal', target=_update_songs)
     combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList")
     remove_files([r'%s\songsList%s.txt' % (FOLDER_PATH, i) for i in range(1, pool_count + 1)])
     remove_duplicates(FILE_PATH)
@@ -146,8 +149,8 @@ if __name__ == '__main__':
     pool_count = 10
 
     open(FILE_PATH, 'w').close()
-    distribution(parts=pool_count, user_='TotaledThomas',target=get_songs)
-    distribution(parts=pool_count, user_='theRoobal',target=get_songs)
+    distribution(parts=pool_count, user_='TotaledThomas', target=get_songs)
+    distribution(parts=pool_count, user_='theRoobal', target=get_songs)
 
     combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList")
     remove_files([r'%s\songsList%s.txt' % (FOLDER_PATH, i) for i in range(1, pool_count + 1)])
