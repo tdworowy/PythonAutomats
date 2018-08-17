@@ -10,8 +10,8 @@ class SongOfTheDay:
         self.api.login(login, passw)
 
     def sent_messages(self, messages):
+        self.my_logging.log().info(messages)
         for message in messages:
-            self.my_logging.log().info(messages)
             self.api.send_message(message)
 
     def sent_songs(self, songs_urls):
