@@ -1,6 +1,4 @@
-import os
-
-from os.path import isfile, join
+from os import path, listdir, remove
 
 
 def to_file(titles, file_path):
@@ -20,7 +18,7 @@ def remove_duplicates(file_path):
 
 
 def create_file_if_not_exist(path):
-    if not os.path.isfile(path):
+    if not path.isfile(path):
         open(path, 'w').close()
 
 
@@ -43,7 +41,7 @@ def combine_files(count, file_path, folder_path, prefix, mode='w'):
 
 
 def combine_all_files(folder_path, output_file):
-    files = [f for f in os.listdir(folder_path) if isfile(join(folder_path, f))]
+    files = [f for f in listdir(folder_path) if path.isfile(path.join(folder_path, f))]
     with open(output_file, 'w') as outfile:
         for fname in files:
             with open("%s//%s" % (folder_path, fname)) as infile:
@@ -53,4 +51,4 @@ def combine_all_files(folder_path, output_file):
 
 def remove_files(files):
     for file in files:
-        os.remove(file)
+        remove(file)
