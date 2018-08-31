@@ -13,9 +13,6 @@ from Youtube.Youtube_bot_requests import get_youtube_url
 from fbchat import ThreadType
 
 
-# from os.path import isfile, join
-
-
 def check_queue(queue, time_stumps):
     msg = queue.get()
     msq = msg.split(',')
