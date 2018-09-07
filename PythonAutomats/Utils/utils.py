@@ -50,11 +50,11 @@ def create_dir(context, name):
 
 
 def take_screenshot(context, path, file):
-    context.driver.save_screenshot(path + file.replace(' ', '_') + '.png')
+    context.driver.save_screenshot(os.path.join(path, file.replace(' ', '_') + '.png'))
 
 
 def take_screenshot_(driver, path, file):
-    driver.save_screenshot(path + file.replace(' ', '_') + '.png')
+    driver.save_screenshot(os.path.join(path,file.replace(' ', '_') + '.png'))
 
 
 def message_by_time():
