@@ -11,6 +11,7 @@ SONGS_PATH = "E:\Google_drive\Songs\songsList.txt"
 FOLDER_PATH = "E:\Google_drive\Songs\\"
 FILE_PATH = "E:\Google_drive\Songs\songsIDs.txt"
 
+#https://developer.spotify.com/dashboard/applications/c70703140d1847f8a3260cd112565fbd
 
 class SpotifyApi:
 
@@ -19,7 +20,6 @@ class SpotifyApi:
         self.user_name = user_name
         token = self.get_token(user_name, client_id, client_secret, redirect_uri)
         self.sp = spotipy.Spotify(auth=token)
-
 
     def get_token(self, user_name, client_id, client_secret, redirect_uri):
         """https://developer.spotify.com/web-api/using-scopes/"""
@@ -146,3 +146,4 @@ if __name__ == "__main__":
             playlist_count += 1
             play_list_id = sa.create_playlist("My_all%s" % str(playlist_count))['id']
             offset = 99
+#TODO Dont't work
