@@ -1,12 +1,11 @@
 import os
 import sys
-from random import choice
 
 from Api.Songs import ApiAdapter
 from Facebook.facebook_api import FaceBookMessageBot
-from Songs.last_fm_parser import FILE_PATH, update_songs_distribution
+from Songs.last_fm_parser import update_songs_distribution
 from Utils.decorators import log_exception
-from Utils.utils import message_by_time
+from Wiki.wiki_bot import get_random_wiki_page_title
 from Youtube.Youtube_bot_requests import get_youtube_url
 from fbchat.models import *
 
@@ -15,20 +14,12 @@ from fbchat.models import *
 def main(login, password, thread_id):
     update_songs_distribution()
     face_bot = FaceBookMessageBot(thread_id=thread_id, thread_type=ThreadType.GROUP)
-    song = ApiAdapter(face_bot)
-    song.my_logging.log().info("Get random song")
-    with open(FILE_PATH, 'r') as f:
-        songs = f.read()
+    api = ApiAdapter(face_bot)
 
-    songs = songs.split("\n")
-    song_title = choice(songs)
-
-    url = get_youtube_url(song_title.strip())
-    song.login(login, password)
-    song.sent_messages([message_by_time(), "Title: %s" % song_title, "Total songs count: %s" % len(songs)])
-    song.sent_messages([url])
-    song.save_history("Title: %s url: %s " % (song_title, url), "FacebookMessage.txt")
-    song.logout()
+    title = get_youtube_url(get_random_wiki_page_title())
+    api.login(login, password)
+    api.sent_messages(["Random staff of the day:", title])
+    api.logout()
 
 
 if __name__ == '__main__':

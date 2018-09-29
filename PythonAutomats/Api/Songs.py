@@ -1,7 +1,7 @@
 from Utils.utils import MyLogging
 
 
-class SongOfTheDay:
+class ApiAdapter:
     def __init__(self, api):
         self.api = api
         self.my_logging = MyLogging()
@@ -13,11 +13,6 @@ class SongOfTheDay:
         self.my_logging.log().info(messages)
         for message in messages:
             self.api.send_message(message)
-
-    def sent_songs(self, songs_urls):
-        for songURL in songs_urls:
-            self.my_logging.log().info(songURL)
-            self.api.send_message(songURL)
 
     def save_history(self, message, file):
         self.my_logging.save_history(message, file)

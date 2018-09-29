@@ -2,7 +2,7 @@ import sys
 from random import choice
 
 from Chrome_Driver_Folder.driver_path import get_driver_path
-from Songs.Songs import SongOfTheDay
+from Api.Songs import ApiAdapter
 from Songs.last_fm_parser import FILE_PATH, update_songs_distribution
 from Tinder.tinder_Api import TinderMessageBot, TinderAdapter
 from Utils.decorators import log_exception
@@ -21,11 +21,11 @@ def main(login, password, names):
     songs_list = songs_list.split("\n")
     song_title = choice(songs_list)
     adapter = TinderAdapter(tiderBot=tinder_bot, name='tomasz.dworowy', receivers=names, driver=driver)
-    song = SongOfTheDay(adapter)
+    song = ApiAdapter(adapter)
     song.my_logging.log().info("Get random song")
     song.login(login, password)
     url = get_youtube_url(song_title.strip())
-    song.sent_songs([url])
+    song.sent_messages([url])
 
 
 if __name__ == '__main__':

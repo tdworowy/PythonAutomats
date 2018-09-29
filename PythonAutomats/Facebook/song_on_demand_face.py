@@ -6,7 +6,7 @@ from multiprocessing import Process, Queue, Manager
 from random import choice
 
 from Facebook.facebook_monitor import FaceThreadMonitor, start_monitor
-from Facebook.song_of_the_day_facebook_message import SongOfTheDay
+from Facebook.song_of_the_day_facebook_message import ApiAdapter
 from Songs.last_fm_parser import FILE_PATH
 from Utils.file_utils import write_to_file_no_duplicates
 from Youtube.Youtube_bot_requests import get_youtube_url
@@ -27,7 +27,7 @@ def send_song(api):
         songs = f.read()
     song_title = choice(songs.split("\n"))
     url = get_youtube_url(song_title.strip())
-    api.sent_songs([url])
+    api.sent_messages([url])
 
 
 def send_songs_threads(api):
@@ -70,7 +70,7 @@ if __name__ == '__main__':
         # THREADID2 = '100000471818643'  # user
 
         face_bot = FaceBookMessageBot(thread_id=THREADID1, thread_type=ThreadType.GROUP)
-        song = SongOfTheDay(api=face_bot)
+        song = ApiAdapter(api=face_bot)
         song.login(user, passw)
 
         fm1 = FaceThreadMonitor(face_bot, THREADID1)
