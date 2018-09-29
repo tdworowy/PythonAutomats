@@ -16,9 +16,10 @@ def main(login, password, thread_id):
     face_bot = FaceBookMessageBot(thread_id=thread_id, thread_type=ThreadType.GROUP)
     api = ApiAdapter(face_bot)
 
-    title = get_youtube_url(get_random_wiki_page_title())
+    title = get_random_wiki_page_title()
+    url = get_youtube_url(title)
     api.login(login, password)
-    api.sent_messages(["Random staff of the day:", title])
+    api.sent_messages(["Random staff of the day:", title, url])
     api.logout()
 
 
