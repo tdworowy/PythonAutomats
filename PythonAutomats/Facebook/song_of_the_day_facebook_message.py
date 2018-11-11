@@ -16,6 +16,7 @@ def main(login, password, thread_id):
     face_bot = FaceBookMessageBot(thread_id=thread_id, thread_type=ThreadType.GROUP)
     song = ApiAdapter(face_bot)
     song.my_logging.log().info("Get random song")
+
     with open(os.path.join(FOLDER_PATH, "thomasList.Txt"), 'r') as f:
         thomsa_songs = f.read().split("\n")
 
@@ -28,10 +29,12 @@ def main(login, password, thread_id):
     thomas_url = get_youtube_url(thomas_song_title.strip())
     roobal_url = get_youtube_url(thomas_song_title.strip())
     song.login(login, password)
-    song.sent_messages(["Thomas songs", "Title: %s" % thomas_song_title, "Total songs count: %s" % len(thomsa_songs)])
+
+    song.sent_messages(["Thomas song", "Title: %s" % thomas_song_title, "Total songs count: %s" % len(thomsa_songs)])
     song.sent_messages([thomas_url])
-    song.sent_messages(["Roobal songs", "Title: %s" % roobal_song_title,  "Total songs count: %s" % len(roobal_songs)])
+    song.sent_messages(["Roobal song", "Title: %s" % roobal_song_title,  "Total songs count: %s" % len(roobal_songs)])
     song.sent_messages([roobal_url])
+
     song.save_history("Title: %s url: %s " % (thomas_song_title, thomas_url), "FacebookMessage.txt")
     song.save_history("Title: %s url: %s " % (roobal_song_title, roobal_url), "FacebookMessage.txt")
     song.logout()
