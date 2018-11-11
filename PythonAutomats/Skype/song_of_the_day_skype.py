@@ -2,11 +2,11 @@ import os
 import sys
 from random import choice
 
+from Api.Songs import ApiAdapter
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Skype.skype_api_ import SkypeApi, SkypeApiAdapter
 from Skype.skype_bot import SkypeBot, SkypeBotAdapter
-from Api.Songs import ApiAdapter
-from Songs.last_fm_parser import FILE_PATH, update_songs_distribution
+from Songs.last_fm_parser import FOLDER_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Youtube.Youtube_bot_requests import get_youtube_url
 from selenium import webdriver
@@ -24,7 +24,7 @@ def main(login, password, groups):
     song_api = ApiAdapter(skype_adapter)
     song_ui = ApiAdapter(skype_bot_adapter)
     song_api.my_logging.log().info("Get random song")
-    with open(FILE_PATH, 'r') as f:
+    with open(FOLDER_PATH, 'r') as f:
         songs = f.read()
     songs = songs.split("\n")
     song_title = choice(songs)

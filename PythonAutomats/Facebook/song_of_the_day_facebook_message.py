@@ -4,7 +4,7 @@ from random import choice
 
 from Api.Songs import ApiAdapter
 from Facebook.facebook_api import FaceBookMessageBot
-from Songs.last_fm_parser import FILE_PATH, update_songs_distribution
+from Songs.last_fm_parser import FOLDER_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Youtube.Youtube_bot_requests import get_youtube_url
 from fbchat.models import *
@@ -16,10 +16,10 @@ def main(login, password, thread_id):
     face_bot = FaceBookMessageBot(thread_id=thread_id, thread_type=ThreadType.GROUP)
     song = ApiAdapter(face_bot)
     song.my_logging.log().info("Get random song")
-    with open(os.path.join(FILE_PATH, "thomasList.Txt"), 'r') as f:
+    with open(os.path.join(FOLDER_PATH, "thomasList.Txt"), 'r') as f:
         thomsa_songs = f.read().split("\n")
 
-    with open(os.path.join(FILE_PATH, "roobalList.Txt"), 'r') as f:
+    with open(os.path.join(FOLDER_PATH, "roobalList.Txt"), 'r') as f:
         roobal_songs = f.read().split("\n")
 
     thomas_song_title = choice(thomsa_songs)

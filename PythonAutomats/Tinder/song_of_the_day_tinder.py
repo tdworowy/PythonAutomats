@@ -1,9 +1,9 @@
 import sys
 from random import choice
 
-from Chrome_Driver_Folder.driver_path import get_driver_path
 from Api.Songs import ApiAdapter
-from Songs.last_fm_parser import FILE_PATH, update_songs_distribution
+from Chrome_Driver_Folder.driver_path import get_driver_path
+from Songs.last_fm_parser import FOLDER_PATH, update_songs_distribution
 from Tinder.tinder_Api import TinderMessageBot, TinderAdapter
 from Utils.decorators import log_exception
 from Youtube.Youtube_bot_requests import get_youtube_url
@@ -16,7 +16,7 @@ def main(login, password, names):
     tinder_bot = TinderMessageBot()
     chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
     driver = webdriver.Chrome(chrome_driver_path)
-    with open(FILE_PATH, 'r') as f:
+    with open(FOLDER_PATH, 'r') as f:
         songs_list = f.read()
     songs_list = songs_list.split("\n")
     song_title = choice(songs_list)

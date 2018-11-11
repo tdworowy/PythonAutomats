@@ -7,7 +7,7 @@ from random import choice
 
 from Facebook.facebook_monitor import FaceThreadMonitor, start_monitor
 from Facebook.song_of_the_day_facebook_message import ApiAdapter
-from Songs.last_fm_parser import FILE_PATH
+from Songs.last_fm_parser import FOLDER_PATH
 from Utils.file_utils import write_to_file_no_duplicates
 from Youtube.Youtube_bot_requests import get_youtube_url
 from fbchat import ThreadType
@@ -23,7 +23,7 @@ def check_queue(queue, time_stumps):
 
 
 def send_song(api):
-    with open(FILE_PATH, 'r') as f:
+    with open(FOLDER_PATH, 'r') as f:
         songs = f.read()
     song_title = choice(songs.split("\n"))
     url = get_youtube_url(song_title.strip())

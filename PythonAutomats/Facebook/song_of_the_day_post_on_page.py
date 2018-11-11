@@ -3,7 +3,7 @@ from random import choice
 
 from Chrome_Driver_Folder.driver_path import get_driver_path
 from Facebook.facebook_post import FaceBookPost
-from Songs.last_fm_parser import FILE_PATH, update_songs_distribution
+from Songs.last_fm_parser import FOLDER_PATH, update_songs_distribution
 from Utils.decorators import log_exception
 from Utils.utils import MyLogging
 from Youtube.Youtube_Bot import get_youtube_url
@@ -36,7 +36,7 @@ def main(page_id, app_id, app_secred):
     song = SongOfTheDay(page_id, app_id, app_secred)
 
     song.mylogging.log().info("Get random song")
-    with open(FILE_PATH, 'r') as f:
+    with open(FOLDER_PATH, 'r') as f:
         songs = f.read()
 
     url = get_youtube_url(song.driver, choice(songs.split("\n")))
