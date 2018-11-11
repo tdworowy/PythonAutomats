@@ -110,9 +110,9 @@ def save_last_updated():
 
 def _update_songs(min=1, max=60, user: "lastfm user name" = 'TotaledThomas',
                   file_path: "path to songlist.txt" = FOLDER_PATH):
-    """Update existing songs list (use songs from last 30 days)"""
+    """Update existing songs list"""
     url = lambda i: "https://www.last.fm/pl/user/%s/library?page=%s&date_preset=%s" % (
-        user, str(i), Period.LAST_30_DAYS.value)
+        user, str(i), Period.ALL.value)
     new_titles_map = map(get_titles, [url(i) for i in range(min, max + 1)])
     for tiles_list in new_titles_map:
         to_file(tiles_list, file_path)
