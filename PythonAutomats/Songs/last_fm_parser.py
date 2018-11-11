@@ -110,7 +110,7 @@ def save_last_updated():
 
 def _update_songs(min=1, max=60, user: "lastfm user name" = 'TotaledThomas',
                   file_path: "path to songlist.txt" = FOLDER_PATH):
-    """Update existing songs list"""
+    """Update existing songs list (use songs from last 30 days)"""
     url = lambda i: "https://www.last.fm/pl/user/%s/library?page=%s&date_preset=%s" % (
         user, str(i), Period.ALL.value)
     new_titles_map = map(get_titles, [url(i) for i in range(min, max + 1)])
@@ -157,8 +157,8 @@ def update_songs_distribution():
         my_logging.log().info("Songs already updated")
         return 0
     pool_count = 10
-    distribution(parts=pool_count, user_='TotaledThomas', target=_update_songs, all=False, file="thomas")
-    distribution(parts=pool_count, user_='theRoobal', target=_update_songs, all=False, file="roobal")
+    distribution(parts=pool_count, user_='TotaledThomas', target=get_songs, all=False, file="thomas")
+    distribution(parts=pool_count, user_='theRoobal', target=get_songs, all=False, file="roobal")
     generate_file(pool_count, "thomas")
     generate_file(pool_count, "roobal")
     save_last_updated()
