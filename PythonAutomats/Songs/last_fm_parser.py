@@ -1,3 +1,4 @@
+import os
 from datetime import date
 from enum import Enum
 from multiprocessing import Process
@@ -11,8 +12,9 @@ from bs4 import BeautifulSoup
 """This module pares songs from lastfm profile to .txt file """
 
 FOLDER_PATH = "E:\Google_drive\Songs\\"
-FILE_PATH = "E:\Google_drive\Songs\songsList.txt"
+FILE_PATH = "E:\Google_drive\Songs"
 LAST_UPDATED = "E:\Google_drive\Songs\LastUpdated.txt"
+
 
 
 class Period(Enum):
@@ -112,14 +114,14 @@ def _update_songs(min=1, max=60, user: "lastfm user name" = 'TotaledThomas',
                   file_path: "path to songlist.txt" = FILE_PATH):
     """Update existing songs list (use songs from last 30 days)"""
     url = lambda i: "https://www.last.fm/pl/user/%s/library?page=%s&date_preset=%s" % (
-    user, str(i), Period.LAST_30_DAYS.value)
+        user, str(i), Period.LAST_30_DAYS.value)
     new_titles_map = map(get_titles, [url(i) for i in range(min, max + 1)])
     for tiles_list in new_titles_map:
         to_file(tiles_list, file_path)
 
 
 def distribution(parts, min_=1, max=0, user_: "lastfm user name" = 'TotaledThomas',
-                 target: "target function" = get_songs, all=True):
+                 target: "target function" = get_songs, all=True, file="thomas"):
     """Use multiprocessing to speed up lastfm parsing."""
     if max == 0:
         max = get_pages_count(user_, all)
@@ -130,7 +132,7 @@ def distribution(parts, min_=1, max=0, user_: "lastfm user name" = 'TotaledThoma
     processes = []
     for i in range(1, parts + 1):
         if i == parts: max = max + rest
-        process = Process(target=target, args=(min, max, user_, FOLDER_PATH + "songsList%s.txt" % str(i)))
+        process = Process(target=target, args=(min, max, user_, FOLDER_PATH + "%sList%s.txt" % (file, str(i))))
         max = max + inc
         min = min + inc
         processes.append(process)
@@ -142,6 +144,14 @@ def distribution(parts, min_=1, max=0, user_: "lastfm user name" = 'TotaledThoma
         process.join()
 
 
+def generate_file(count, name):
+    file_path = os.path.join(FILE_PATH, "%sList.txt" % name)
+    combine_files(count, file_path, FOLDER_PATH, "%sList" % name, 'a')
+    remove_files([r'%s\%sList%s.txt' % (FOLDER_PATH, name, i) for i in range(1, count + 1)])
+    remove_duplicates(file_path)
+    copyfile(file_path, "%s.txt" % name)
+
+
 def update_songs_distribution():
     """Use multiprocessing to speed up lastfm parsing."""
     my_logging.log().info("Update songs")
@@ -149,12 +159,10 @@ def update_songs_distribution():
         my_logging.log().info("Songs already updated")
         return 0
     pool_count = 10
-    distribution(parts=pool_count, user_='TotaledThomas', target=_update_songs, all=False)
-    distribution(parts=pool_count, user_='theRoobal', target=_update_songs, all=False)
-    combine_files(pool_count, FILE_PATH, FOLDER_PATH, "songsList", 'a')
-    remove_files([r'%s\songsList%s.txt' % (FOLDER_PATH, i) for i in range(1, pool_count + 1)])
-    remove_duplicates(FILE_PATH)
-    copyfile(FILE_PATH, "songs.txt")
+    distribution(parts=pool_count, user_='TotaledThomas', target=_update_songs, all=False, file="thomas")
+    distribution(parts=pool_count, user_='theRoobal', target=_update_songs, all=False, file="roobal")
+    generate_file(pool_count, "thomas")
+    generate_file(pool_count, "roobal")
     save_last_updated()
 
 

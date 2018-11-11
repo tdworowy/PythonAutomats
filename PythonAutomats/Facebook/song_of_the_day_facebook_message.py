@@ -6,7 +6,6 @@ from Api.Songs import ApiAdapter
 from Facebook.facebook_api import FaceBookMessageBot
 from Songs.last_fm_parser import FILE_PATH, update_songs_distribution
 from Utils.decorators import log_exception
-from Utils.utils import message_by_time
 from Youtube.Youtube_bot_requests import get_youtube_url
 from fbchat.models import *
 
@@ -17,17 +16,24 @@ def main(login, password, thread_id):
     face_bot = FaceBookMessageBot(thread_id=thread_id, thread_type=ThreadType.GROUP)
     song = ApiAdapter(face_bot)
     song.my_logging.log().info("Get random song")
-    with open(FILE_PATH, 'r') as f:
-        songs = f.read()
+    with open(os.path.join(FILE_PATH, "thomasList.Txt"), 'r') as f:
+        thomsa_songs = f.read().split("\n")
 
-    songs = songs.split("\n")
-    song_title = choice(songs)
+    with open(os.path.join(FILE_PATH, "roobalList.Txt"), 'r') as f:
+        roobal_songs = f.read().split("\n")
 
-    url = get_youtube_url(song_title.strip())
+    thomas_song_title = choice(thomsa_songs)
+    roobal_song_title = choice(roobal_songs)
+
+    thomas_url = get_youtube_url(thomas_song_title.strip())
+    roobal_url = get_youtube_url(thomas_song_title.strip())
     song.login(login, password)
-    song.sent_messages([message_by_time(), "Title: %s" % song_title, "Total songs count: %s" % len(songs)])
-    song.sent_messages([url])
-    song.save_history("Title: %s url: %s " % (song_title, url), "FacebookMessage.txt")
+    song.sent_messages(["Thomas songs", "Title: %s" % thomas_song_title, "Total songs count: %s" % len(thomsa_songs)])
+    song.sent_messages([thomas_url])
+    song.sent_messages(["Roobal songs", "Title: %s" % roobal_song_title,  "Total songs count: %s" % len(roobal_songs)])
+    song.sent_messages([roobal_url])
+    song.save_history("Title: %s url: %s " % (thomas_song_title, thomas_url), "FacebookMessage.txt")
+    song.save_history("Title: %s url: %s " % (roobal_song_title, roobal_url), "FacebookMessage.txt")
     song.logout()
 
 
