@@ -16,7 +16,6 @@ FILE_PATH = "E:\Google_drive\Songs"
 LAST_UPDATED = "E:\Google_drive\Songs\LastUpdated.txt"
 
 
-
 class Period(Enum):
     LAST_7_DAYS = "LAST_7_DAYS"
     LAST_30_DAYS = "LAST_30_DAYS"
