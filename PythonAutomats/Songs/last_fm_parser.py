@@ -157,8 +157,8 @@ def update_songs_distribution():
         my_logging.log().info("Songs already updated")
         return 0
     pool_count = 10
-    distribution(parts=pool_count, user_='TotaledThomas', target=get_songs, all=False, file="thomas")
-    distribution(parts=pool_count, user_='theRoobal', target=get_songs, all=False, file="roobal")
+    distribution(parts=pool_count, user_='TotaledThomas', target=get_songs, all=True, file="thomas")
+    distribution(parts=pool_count, user_='theRoobal', target=get_songs, all=True, file="roobal")
     generate_file(pool_count, "thomas")
     generate_file(pool_count, "roobal")
     save_last_updated()
