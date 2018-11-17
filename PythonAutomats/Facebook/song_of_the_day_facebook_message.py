@@ -12,7 +12,6 @@ from fbchat.models import *
 
 @log_exception()
 def main(login, password, thread_id):
-
     def temp1():
         send_song_fasade(login, password, thread_id, "thomas")
 
@@ -37,7 +36,7 @@ def send_song_fasade(login, password, thread_id, last_fm_user):
     url = get_youtube_url(song_title.strip())
     song.login(login, password)
 
-    song.sent_messages(["%s song" % last_fm_user, "Title: %s" %  url, "Total songs count: %s" % len(songs)])
+    song.sent_messages(["%s song" % last_fm_user, "Title: %s" % song_title, "Total songs count: %s" % len(songs)])
     song.sent_messages([url])
     song.logout()
 
