@@ -12,7 +12,6 @@ from fbchat.models import *
 
 @log_exception()
 def main(login, password, thread_id):
-    choice()
 
     def temp1():
         send_song_fasade(login, password, thread_id, "thomas")
