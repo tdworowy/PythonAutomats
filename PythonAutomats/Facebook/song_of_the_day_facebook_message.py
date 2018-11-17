@@ -27,7 +27,7 @@ def main(login, password, thread_id):
     roobal_song_title = choice(roobal_songs)
 
     thomas_url = get_youtube_url(thomas_song_title.strip())
-    roobal_url = get_youtube_url(thomas_song_title.strip())
+    roobal_url = get_youtube_url(roobal_song_title.strip())
     song.login(login, password)
 
     song.sent_messages(["Thomas song", "Title: %s" % thomas_song_title, "Total songs count: %s" % len(thomsa_songs)])
