@@ -12,14 +12,8 @@ from fbchat.models import *
 
 @log_exception()
 def main(login, password, thread_id):
-    def temp1():
-        send_song_fasade(login, password, thread_id, "thomas")
-
-    def temp2():
-        send_song_fasade(login, password, thread_id, "roobal")
-
-    funcs = [temp1, temp2]
-    choice(funcs)()
+    last_fm_user = choice(["thomas", "roobal"])
+    send_song_fasade(login, password, thread_id, last_fm_user)
 
 
 def send_song_fasade(login, password, thread_id, last_fm_user):
