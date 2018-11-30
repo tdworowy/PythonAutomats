@@ -1,10 +1,10 @@
 from slackclient import SlackClient
 
 
-# https://api.slack.com/apps/AEG1HTY2X/oauth?success=1
 class SlackMessageBot:
     def __init__(self, channel):
-        slack_token = "xoxp-492033747443-492033747795-491994425636-5ab2826053d45947d6665050bb37584d"
+       # slack_token = "k23bJLBblTRldt0R6KzYq6Ue"
+        slack_token = "xoxp-492033747443-492033747795-493574383846-9177db6ea00ed7bccf26fc0aaf48de22"
         self.channel = channel
         self.client = SlackClient(slack_token)
 
