@@ -1,4 +1,5 @@
 import os
+import sys
 from random import choice
 
 from Api.Songs import ApiAdapter
@@ -9,14 +10,14 @@ from Youtube.Youtube_bot_requests import get_youtube_url
 
 
 @log_exception()
-def main(channel):
+def main(channel, token):
     last_fm_user = choice(["thomas", "roobal"])
-    send_song_fasade(channel, last_fm_user)
+    send_song_fasade(channel, last_fm_user, token)
 
 
-def send_song_fasade(channel, last_fm_user):
+def send_song_fasade(channel, last_fm_user, token):
     update_songs_distribution()
-    slack_bot = SlackMessageBot(channel=channel)
+    slack_bot = SlackMessageBot(channel=channel, token=token)
     song = ApiAdapter(slack_bot)
     song.my_logging.log().info("Get random song")
 
@@ -32,4 +33,5 @@ def send_song_fasade(channel, last_fm_user):
 
 
 if __name__ == '__main__':
-    main(channel="mitologia-bobrów")
+    token = sys.argv[1]
+    main(channel="mitologia-bobrów", token=token)

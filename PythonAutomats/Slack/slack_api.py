@@ -2,11 +2,9 @@ from slackclient import SlackClient
 
 
 class SlackMessageBot:
-    def __init__(self, channel):
-       # slack_token = "k23bJLBblTRldt0R6KzYq6Ue"
-        slack_token = "xoxp-492033747443-492033747795-493574383846-9177db6ea00ed7bccf26fc0aaf48de22"
+    def __init__(self, channel, token):
         self.channel = channel
-        self.client = SlackClient(slack_token)
+        self.client = SlackClient(token)
 
     def login(self, email, password):
         pass
