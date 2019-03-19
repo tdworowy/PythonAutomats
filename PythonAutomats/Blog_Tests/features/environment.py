@@ -1,7 +1,7 @@
 import time
 
 from Blog_Tests.Pages.base_page import tear_down
-from Blog_Tests.screens.screenPath import get_screen_path
+from Blog_Tests.screens.screen_path import get_screen_path
 from Utils.utils import create_dir, take_screenshot, MyLogging
 
 BEHAVE_DEBUG = True

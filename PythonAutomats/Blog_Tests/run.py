@@ -1,6 +1,6 @@
 import os
 
-from Blog_Tests.screens.screenPath import get_screen_path
+from Blog_Tests.screens.screen_path import get_screen_path
 
 
 def run_behave():
