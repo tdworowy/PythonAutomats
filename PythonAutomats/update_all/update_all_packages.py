@@ -1,10 +1,9 @@
 from subprocess import call
-
-from pip import _internal
+from pip._internal.operations import freeze
 
 
 def update_all():
-    packages = [dist.project_name for dist in _internal.get_installed_distributions()]
+    packages = [dist[:dist.rindex("=")-1] for dist in freeze.freeze()]
     for package in packages:
         try:
             call("pip install --upgrade " + str(package), shell=True)
