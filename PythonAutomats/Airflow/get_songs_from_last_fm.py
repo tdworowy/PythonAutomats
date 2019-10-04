@@ -12,6 +12,7 @@ from airflow.operators.python_operator import PythonOperator
 
 args = {
     'owner': 'airflow',
+    'start_date': airflow.utils.dates.days_ago(2),
 }
 
 dag = DAG(
