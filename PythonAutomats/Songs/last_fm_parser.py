@@ -6,7 +6,6 @@ from shutil import copyfile
 
 import requests
 from Utils.file_utils import to_file, remove_duplicates, combine_files, remove_files
-from Utils.utils import MyLogging
 from bs4 import BeautifulSoup
 
 """This module pares songs from lastfm profile to .txt file """
@@ -24,9 +23,6 @@ class Period(Enum):
     ALL = "ALL"
 
 
-my_logging = MyLogging()
-
-
 def __get_pages_count(url: "url to lastfm pages list"):
     """Get number of pages."""
     try:
@@ -37,8 +33,6 @@ def __get_pages_count(url: "url to lastfm pages list"):
     except AttributeError:
         return 0
     page_count = (max([int(page.text) for page in pages[:-1]]))
-    my_logging.log().info("URL: %s" % url)
-    my_logging.log().info("Page count: %s" % page_count)
     return page_count
 
 
@@ -52,7 +46,6 @@ def get_pages_count(user_, all=True):
 
 def get_titles(url: "url to lastfm profile"):
     """Get songs titles."""
-    my_logging.log().info("Get songs from: %s" % url)
     response = requests.get(url).text
     soup = BeautifulSoup(response, "html.parser")
     titles = soup.find_all("a", class_="link-block-target")
@@ -79,8 +72,7 @@ def clear_titles(titles: "titles list"):
                 clean_titles.append(temp + "\n")
 
         except Exception as ex:
-            my_logging.log().error(ex)
-            my_logging.log().error(text)
+            print(ex)
             continue
     return clean_titles
 
@@ -152,9 +144,7 @@ def generate_file(count, name):
 
 def update_songs_distribution():
     """Use multiprocessing to speed up lastfm parsing."""
-    my_logging.log().info("Update songs")
     if check_last_updated():
-        my_logging.log().info("Songs already updated")
         return 0
     pool_count = 10
     distribution(parts=pool_count, user_='TotaledThomas', target=get_songs, all=True, file="thomas")
