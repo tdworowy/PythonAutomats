@@ -27,7 +27,7 @@ def get_songs(ds, **kwargs):
 
 
 run_this = PythonOperator(
-    task_id='get_songs_from_last_fm',
+    task_id='get_songs_from_last_fm_task',
     provide_context=True,
     python_callable=get_songs,
     dag=dag,
