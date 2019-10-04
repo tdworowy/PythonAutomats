@@ -6,7 +6,7 @@ from builtins import range
 from pprint import pprint
 
 import airflow
-from Songs.last_fm_parser import get_titles
+from PythonAutomats.Songs.last_fm_parser import get_titles
 from airflow.models import DAG
 from airflow.operators.python_operator import PythonOperator
 
