@@ -15,7 +15,7 @@ args = {
 }
 
 dag = DAG(
-    dag_id='get_songs_from_last_fm',
+    dag_id='my_print',
     default_args=args,
     schedule_interval=None,
 )
@@ -25,7 +25,7 @@ def my_print(ds, **kwargs):
 
 
 run_this = PythonOperator(
-    task_id='get_songs_from_last_fm',
+    task_id='my_print_task',
     provide_context=True,
     python_callable=my_print,
     dag=dag,
