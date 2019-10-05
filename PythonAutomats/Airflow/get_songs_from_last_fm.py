@@ -35,8 +35,12 @@ def tag_songs(**kwargs):
     task_ids=['%s_songs' % user for user in users]
     arguments = task_instance.xcom_pull(task_ids=task_ids)
 
+    _new_list = []
+    for element in arguments:
+        _new_list.extend(element)
+
     _new_dic = {}
-    for _dic in arguments:
+    for _dic in _new_list:
         _new_dic.update(_dic)
 
     return list(map(lambda tuple: tag_song(tuple[0], tuple[1]), _new_dic.items()))

@@ -194,11 +194,13 @@ if __name__ == '__main__':
     for user in ["TotaledThomas","TheRoobal"]:
         url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
         titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(1, 2)])
-        arguments.extend(list(titles_map))
-
+        arguments.append(list(titles_map))
+    _new_list = []
+    for element in arguments:
+        _new_list.extend(element)
 
     _new_dic = {}
-    for _dic in arguments:
+    for _dic in _new_list:
         _new_dic.update(_dic)
 
     data = list(map(lambda tuple:tag_song(tuple[0],tuple[1]),_new_dic.items()))
