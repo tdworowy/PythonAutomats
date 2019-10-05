@@ -20,17 +20,17 @@ dag = DAG(
     default_args=args,
     schedule_interval=None,
 )
-
-def get_songs(ds, **kwargs):
-    get_titles('https://www.last.fm/pl/user/TotaledThomas/library/tracks')
-    get_titles('https://www.last.fm/pl/user/TheRoobal/library/tracks')
+def get_titles_for_user(user):
+    return get_titles('https://www.last.fm/pl/user/%s/library/tracks' % user)
 
 
-run_this = PythonOperator(
-    task_id='get_songs_from_last_fm_task',
-    provide_context=True,
-    python_callable=get_songs,
-    dag=dag,
-)
 
-run_this
+for user in ["TotaledThomas","TheRoobal"]:
+    task = PythonOperator(
+        task_id='%s_songs' % user,
+        python_callable=get_titles_for_user,
+        op_kwargs={'user': user},
+        dag=dag,
+    )
+
+task
