@@ -10,6 +10,8 @@ from Songs.last_fm_parser import get_titles,get_pages_count
 from airflow.models import DAG
 from airflow.operators.python_operator import PythonOperator
 
+users = ["TotaledThomas","TheRoobal"]
+
 args = {
     'owner': 'airflow',
     'start_date': airflow.utils.dates.days_ago(2),
@@ -22,15 +24,25 @@ dag = DAG(
 )
 def get_titles_for_user(user):
     url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
-    titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(1, get_pages_count(user) + 1)])
+    #last_page = get_pages_count(user) + 1
+    last_page = 10
+    titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(1, last_page)])
     titles = list(titles_map)
     print(titles)
     return titles
 
+def tag_songs(**kwargs):
+    task_instance = kwargs['task_instance']
+    task_ids=['%s_songs' % user for user in users]
+    arguments = task_instance.xcom_pull(task_ids=task_ids)
+    print(arguments)
 
 
+task_tag_songs = PythonOperator(task_id='Tag_songs',
+                          provide_context=True,
+                          python_callable=tag_songs, dag=dag)
 
-for user in ["TotaledThomas","TheRoobal"]:
+for user in users:
     task = PythonOperator(
         task_id='%s_songs' % user,
         python_callable=get_titles_for_user,
@@ -38,4 +50,4 @@ for user in ["TotaledThomas","TheRoobal"]:
         dag=dag,
     )
 
-task
+task >> tag_songs
