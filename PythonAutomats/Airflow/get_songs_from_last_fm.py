@@ -50,4 +50,4 @@ for user in users:
         dag=dag,
     )
 
-task >> tag_songs
+task >> task_tag_songs
