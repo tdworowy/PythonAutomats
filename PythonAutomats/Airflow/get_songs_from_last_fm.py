@@ -25,7 +25,7 @@ dag = DAG(
 def get_titles_for_user(user):
     url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
     #last_page = get_pages_count(user) + 1
-    last_page = 10
+    last_page = 2
     titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(1, last_page)])
     titles = list(titles_map)
     print(titles)
@@ -35,7 +35,12 @@ def tag_songs(**kwargs):
     task_instance = kwargs['task_instance']
     task_ids=['%s_songs' % user for user in users]
     arguments = task_instance.xcom_pull(task_ids=task_ids)
-    return list(map(lambda tuple: tag_song(*tuple),arguments))
+
+    _new_dic = {}
+    for _dic in arguments:
+        _new_dic.update(_dic)
+
+    return list(map(lambda tuple: tag_song(tuple[0], tuple[1]), _new_dic.items()))
 
 task_tag_songs = PythonOperator(task_id='Tag_songs',
                           provide_context=True,

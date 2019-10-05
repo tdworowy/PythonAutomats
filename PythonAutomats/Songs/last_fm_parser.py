@@ -190,4 +190,16 @@ def tag_song(song:str,band:str):
 
 if __name__ == '__main__':
     #get_all_songs()
-    print(tag_song("Ace of Spades","Motörhead"))
+    arguments = []
+    for user in ["TotaledThomas","TheRoobal"]:
+        url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
+        titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(1, 2)])
+        arguments.extend(list(titles_map))
+
+
+    _new_dic = {}
+    for _dic in arguments:
+        _new_dic.update(_dic)
+
+    data = list(map(lambda tuple:tag_song(tuple[0],tuple[1]),_new_dic.items()))
+    print(data)
