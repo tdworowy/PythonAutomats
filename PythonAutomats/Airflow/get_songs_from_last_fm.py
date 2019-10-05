@@ -6,7 +6,7 @@ from builtins import range
 from pprint import pprint
 
 import airflow
-from Songs.last_fm_parser import get_titles,get_pages_count
+from Songs.last_fm_parser import get_titles,get_pages_count,tag_song
 from airflow.models import DAG
 from airflow.operators.python_operator import PythonOperator
 
@@ -35,8 +35,7 @@ def tag_songs(**kwargs):
     task_instance = kwargs['task_instance']
     task_ids=['%s_songs' % user for user in users]
     arguments = task_instance.xcom_pull(task_ids=task_ids)
-    print(arguments)
-
+    return list(map(lambda tuple: tag_song(*tuple),arguments))
 
 task_tag_songs = PythonOperator(task_id='Tag_songs',
                           provide_context=True,
