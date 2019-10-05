@@ -28,7 +28,6 @@ def get_titles_for_user(user):
     last_page = 2
     titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(1, last_page)])
     titles = list(titles_map)
-    print(titles)
     return titles
 
 def tag_songs(**kwargs):
