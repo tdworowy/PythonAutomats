@@ -21,7 +21,10 @@ dag = DAG(
     schedule_interval=None,
 )
 def get_titles_for_user(user):
-    return get_titles('https://www.last.fm/pl/user/%s/library/tracks' % user)
+    titles = get_titles('https://www.last.fm/pl/user/%s/library/tracks' % user)
+    print(titles)
+    return titles
+
 
 
 
