@@ -48,10 +48,18 @@ def get_titles(url: "url to lastfm profile"):
     """Get songs titles."""
     response = requests.get(url).text
     soup = BeautifulSoup(response, "html.parser")
-    titles = soup.find_all("a", class_="link-block-target")
+    titles = soup.find_all("td", class_="chartlist-name")
+    artists = soup.find_all("td", class_="chartlist-artist")
+
     titles = str(titles)
     titles = titles.split(">")
-    return clear_titles(titles)
+
+    artists = str(artists)
+    artists = artists.split(">")
+
+    titles = clear_titles(titles)
+    artists = clear_titles(artists)
+    return  dict(zip(titles,artists))
 
 
 def clear_titles(titles: "titles list"):
@@ -62,14 +70,13 @@ def clear_titles(titles: "titles list"):
     for text in titles:
         try:
             # print(text)
-            if "—" in text:
+            if "title" in text:
                 try:
                     i = text.index(title_1) + len(title_1)
                 except ValueError:
                     i = text.index(title_2) + len(title_2)
 
-                temp = text[i:-1].replace("—", "-")
-                clean_titles.append(temp + "\n")
+                clean_titles.append(text[i:-1])
 
         except Exception as ex:
             print(ex)
