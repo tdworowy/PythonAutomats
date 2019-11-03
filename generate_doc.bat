@@ -1,3 +1,4 @@
+set PYTHONPATH=%PYTHONPATH%;%cd%\PythonAutomats
 sphinx-apidoc -o docs PythonAutomats
 cd docs
 xcopy *.rst source /i /y
