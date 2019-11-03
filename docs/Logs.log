@@ -1,0 +1,11 @@
+DEBUG:parse:format 'a {hand}' -> 'a (?P<hand>.+?)'
+DEBUG:parse:format 'the dealer sums the cards' -> 'the dealer sums the cards'
+DEBUG:parse:format 'the {total:d} is correct' -> 'the (?P<total>[-+ ]?\\d+|0[xX][0-9a-fA-F]+|0[bB][01]+|0[oO][0-7]+) is correct'
+DEBUG:pip.vcs:Registered VCS backend: git
+DEBUG:pip.vcs:Registered VCS backend: hg
+DEBUG:pip.pep425tags:Config variable 'Py_DEBUG' is unset, Python ABI tag may be incorrect
+DEBUG:pip.pep425tags:Config variable 'WITH_PYMALLOC' is unset, Python ABI tag may be incorrect
+DEBUG:pip.pep425tags:Config variable 'Py_DEBUG' is unset, Python ABI tag may be incorrect
+DEBUG:pip.pep425tags:Config variable 'WITH_PYMALLOC' is unset, Python ABI tag may be incorrect
+DEBUG:pip.vcs:Registered VCS backend: svn
+DEBUG:pip.vcs:Registered VCS backend: bzr
