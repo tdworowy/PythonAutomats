@@ -11,8 +11,8 @@ from bs4 import BeautifulSoup
 
 """This module pares songs from lastfm profile to .txt file """
 
-FOLDER_PATH = "E:\Google_drive\Songs\\"
-LAST_UPDATED = "E:\Google_drive\Songs\LastUpdated.txt"
+FOLDER_PATH = "Songs\\"
+LAST_UPDATED = "LastUpdated.txt"
 
 
 class Period(Enum):
@@ -60,7 +60,7 @@ def get_titles(url: "url to lastfm profile"):
 
     titles = clear_titles(titles)
     artists = clear_titles(artists)
-    return  dict(zip(titles,artists))
+    return dict(zip(titles, artists))
 
 
 def clear_titles(titles: "titles list"):
@@ -142,7 +142,7 @@ def distribution(parts, min_=1, max=0, user_: "lastfm user name" = 'TotaledThoma
         process.join()
 
 
-def generate_file(count:int, name:str):
+def generate_file(count: int, name: str):
     file_path = os.path.join(FOLDER_PATH, "%sList.txt" % name)
     combine_files(count, file_path, FOLDER_PATH, "%sList" % name, 'a')
     remove_files([r'%s\%sList%s.txt' % (FOLDER_PATH, name, i) for i in range(1, count + 1)])
@@ -176,22 +176,20 @@ def get_all_songs():
     save_last_updated()
 
 
-def tag_song(song:str,band:str):
-        url = "https://www.last.fm/music/%s/_/%s" %(band,song.replace(" ","+"))
-        response = requests.get(url).text
-        soup = BeautifulSoup(response, "html.parser")
-        tags = soup.find_all('li', class_="tag")
-        tags = [tag.get_text() for tag in tags]
-        data = {}
-        data['band'] = band
-        data['song'] = song
-        data['tags'] = tags
-        return json.dumps(data)
+def tag_song(song: str, band: str):
+    url = "https://www.last.fm/music/%s/_/%s" % (band, song.replace(" ", "+"))
+    response = requests.get(url).text
+    soup = BeautifulSoup(response, "html.parser")
+    tags = soup.find_all('li', class_="tag")
+    tags = [tag.get_text() for tag in tags]
+    data = {'band': band, 'song': song, 'tags': tags}
+    return json.dumps(data)
+
 
 if __name__ == '__main__':
-    #get_all_songs()
+    # get_all_songs()
     arguments = []
-    for user in ["TotaledThomas","TheRoobal"]:
+    for user in ["TotaledThomas", "TheRoobal"]:
         url = 'https://www.last.fm/pl/user/%s/library/tracks' % user
         titles_map = map(get_titles, [url + '?page= %s' % str(i) for i in range(1, 2)])
         arguments.append(list(titles_map))
@@ -203,5 +201,5 @@ if __name__ == '__main__':
     for _dic in _new_list:
         _new_dic.update(_dic)
 
-    data = list(map(lambda tuple:tag_song(tuple[0],tuple[1]),_new_dic.items()))
+    data = list(map(lambda tuple: tag_song(tuple[0], tuple[1]), _new_dic.items()))
     print(data)
