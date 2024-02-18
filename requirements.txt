@@ -1,0 +1,17 @@
+apache-airflow==2.7.2
+beautifulsoup4==4.12.3
+behave==1.2.6
+facepy==1.0.12
+fbchat==1.9.7
+ipdb==0.13.13
+pdfkit==1.0.0
+pip==24.0
+pynder==0.0.13
+Requests==2.31.0
+robobrowser==0.5.3
+selenium==4.17.2
+skpy==0.10.6
+slackclient==2.9.4
+speedtest==0.0.1
+spotipy==2.23.0
+Wiki==0.10
