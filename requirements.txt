@@ -14,4 +14,4 @@ skpy==0.10.6
 slackclient==2.9.4
 speedtest==0.0.1
 spotipy==2.23.0
-Wiki==0.10
+Wiki==0.10.1
