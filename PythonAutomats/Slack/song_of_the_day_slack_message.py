@@ -21,17 +21,23 @@ def send_song_fasade(channel, last_fm_user, token):
     song = ApiAdapter(slack_bot)
     song.my_logging.log().info("Get random song")
 
-    with open(os.path.join(FOLDER_PATH, "%sList.Txt" % last_fm_user), 'r') as f:
+    with open(os.path.join(FOLDER_PATH, "%sList.Txt" % last_fm_user), "r") as f:
         songs = f.read().split("\n")
 
     song_title = choice(songs)
 
     url = get_youtube_url(song_title.strip())
 
-    song.sent_messages(["%s song" % last_fm_user, "Title: %s" % song_title, "Total songs count: %s" % len(songs)])
+    song.sent_messages(
+        [
+            "%s song" % last_fm_user,
+            "Title: %s" % song_title,
+            "Total songs count: %s" % len(songs),
+        ]
+    )
     song.sent_messages([url])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     token = sys.argv[1]
     main(channel="mitologia-bobrów", token=token)

@@ -22,7 +22,7 @@ def send_song_fasade(login, password, thread_id, last_fm_user):
     song = ApiAdapter(face_bot)
     song.my_logging.log().info("Get random song")
 
-    with open(os.path.join(FOLDER_PATH, "%sList.Txt" % last_fm_user), 'r') as f:
+    with open(os.path.join(FOLDER_PATH, "%sList.Txt" % last_fm_user), "r") as f:
         songs = f.read().split("\n")
 
     song_title = choice(songs)
@@ -30,16 +30,22 @@ def send_song_fasade(login, password, thread_id, last_fm_user):
     url = get_youtube_url(song_title.strip())
     song.login(login, password)
 
-    song.sent_messages(["%s song" % last_fm_user, "Title: %s" % song_title, "Total songs count: %s" % len(songs)])
+    song.sent_messages(
+        [
+            "%s song" % last_fm_user,
+            "Title: %s" % song_title,
+            "Total songs count: %s" % len(songs),
+        ]
+    )
     song.sent_messages([url])
     song.logout()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
-    THREADID = '1252344071467839'
+    THREADID = "1252344071467839"
     if len(sys.argv) < 2:
-        with open(os.path.dirname(os.path.abspath(__file__)) + '\\aut.txt') as f:
+        with open(os.path.dirname(os.path.abspath(__file__)) + "\\aut.txt") as f:
             user = f.readline().strip()
             passw = f.readline().strip()
     else:

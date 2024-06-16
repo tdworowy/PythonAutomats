@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.remote.webdriver import WebDriver
 
-server = 'http://www.calculator.net/'
+server = "http://www.calculator.net/"
 
 
 class CalculatorBase(unittest.TestCase):
@@ -17,7 +17,7 @@ class CalculatorBase(unittest.TestCase):
             # self.driver = WebDriver("http://localhost:4444/wd/hub", "chrome", "ANY")
             self.driver = WebDriver("http://localhost:4444", DesiredCapabilities.CHROME)
         else:
-            chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+            chrome_driver_path = get_driver_path() + "\\chromedriver.exe"
             self.driver = webdriver.Chrome(chrome_driver_path)
         self.driver.get(server)
         self.calculator = CalculatorElements(self.driver)
@@ -26,7 +26,6 @@ class CalculatorBase(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
-
 
         # def remoteDriver(self):
         #   return  webdriver.Remote(

@@ -1,6 +1,6 @@
 import random
 
-_cards = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
+_cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 
 
 def _next_card():
@@ -11,8 +11,8 @@ def _hand_total(hand):
     values = [None, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 10]
     value_map = {k: v for k, v in zip(_cards, values)}
 
-    total = sum([value_map[card] for card in hand if card != 'A'])
-    ace_count = hand.count('A')
+    total = sum([value_map[card] for card in hand if card != "A"])
+    ace_count = hand.count("A")
 
     for i in range(ace_count, -1, -1):
         if i == 0:

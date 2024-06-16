@@ -14,7 +14,7 @@ from selenium import webdriver
 
 @log_exception()
 def main(login, password, groups):
-    chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+    chrome_driver_path = get_driver_path() + "\\chromedriver.exe"
     driver = webdriver.Chrome(chrome_driver_path)
     update_songs_distribution()
     skype_api = SkypeApi()
@@ -24,7 +24,7 @@ def main(login, password, groups):
     song_api = ApiAdapter(skype_adapter)
     song_ui = ApiAdapter(skype_bot_adapter)
     song_api.my_logging.log().info("Get random song")
-    with open(FOLDER_PATH, 'r') as f:
+    with open(FOLDER_PATH, "r") as f:
         songs = f.read()
     songs = songs.split("\n")
     song_title = choice(songs)
@@ -39,10 +39,10 @@ def main(login, password, groups):
         song_ui.sent_messages(url)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     if len(sys.argv) < 2:
-        with open(os.path.dirname(os.path.abspath(__file__)) + '\\aut.txt') as f:
+        with open(os.path.dirname(os.path.abspath(__file__)) + "\\aut.txt") as f:
             user = f.readline().strip()
             passw = f.readline().strip()
     else:

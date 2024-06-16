@@ -26,7 +26,8 @@ def log_exception(rize=True):
             except Exception as err:
                 my_logging.log().error(str(err))
                 my_logging.log().error(sys.exc_info())
-                if rize: raise RuntimeError
+                if rize:
+                    raise RuntimeError
 
         return func
 

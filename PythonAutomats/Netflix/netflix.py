@@ -14,16 +14,18 @@ from selenium.webdriver.support.wait import WebDriverWait
 NETFLIX_URLl = "https://www.netflix.com/browse"
 GENRE_URL = "https://www.netflix.com/browse/genre/"
 
-EMAIL_FIELD = (By.NAME, 'userLoginId')
-PASSWORD_FIELD = (By.NAME, 'password')
-GENRE_NAME = (By.CLASS_NAME, 'genreTitle')
-AVATAR = (By.CLASS_NAME, 'avatar-wrapper')
+EMAIL_FIELD = (By.NAME, "userLoginId")
+PASSWORD_FIELD = (By.NAME, "password")
+GENRE_NAME = (By.CLASS_NAME, "genreTitle")
+AVATAR = (By.CLASS_NAME, "avatar-wrapper")
 
 PATH = "cat.txt"
 LAST_COUNT = "count.txt"
 options = Options()
 options.add_argument("--headless")
-driver = webdriver.Firefox(executable_path="../drivers/geckodriver.exe", options=options)
+driver = webdriver.Firefox(
+    executable_path="../drivers/geckodriver.exe", options=options
+)
 
 
 def wait_for_element(locator: By, element: str, wait: int):
@@ -31,7 +33,7 @@ def wait_for_element(locator: By, element: str, wait: int):
     wait.until(expected_conditions.visibility_of_element_located((locator, element)))
 
 
-def find_element(locator: By, element: str, wait: int|float) -> WebElement:
+def find_element(locator: By, element: str, wait: int | float) -> WebElement:
     wait_for_element(locator, element, wait)
     return driver.find_element(locator, element)
 
@@ -50,9 +52,9 @@ def get_all_categories(login: str, password: str):
         last_category_number_file = open(LAST_COUNT).readline()
         start = str(int(last_category_number_file) + 1)
     else:
-        start = '0'
+        start = "0"
 
-    with open(PATH, 'a') as categories_file:
+    with open(PATH, "a") as categories_file:
         for i in range(int(start), 99999):
             driver.get(GENRE_URL + str(i))
             try:
@@ -65,12 +67,12 @@ def get_all_categories(login: str, password: str):
                 continue
             finally:
                 print(f"Count: {str(i)}")
-                with open(LAST_COUNT, 'w') as last_category_number_file:
+                with open(LAST_COUNT, "w") as last_category_number_file:
                     last_category_number_file.write(str(i))
                     last_category_number_file.flush()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     user = sys.argv[1]
     passw = sys.argv[2]
     get_all_categories(user, passw)

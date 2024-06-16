@@ -52,7 +52,7 @@ def print_matches(tm):
 
 
 def login(login, passw, fbname):
-    chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+    chrome_driver_path = get_driver_path() + "\\chromedriver.exe"
     driver = webdriver.Chrome(chrome_driver_path)
     token = get_access_token(login, passw)
     tm = TinderMessageBot()
@@ -76,20 +76,23 @@ def like_FB(tm, friendName):
         if friend.get_tinder_information().name == friendName:
             user = friend.get_tinder_information()
             for near in tm.get_nearby():
-                print('check %s %s' % (near.name, near.id))
-                print('fb friedn ID: %s' % user.id)
+                print("check %s %s" % (near.name, near.id))
+                print("fb friedn ID: %s" % user.id)
                 if user.id == near.id:
                     print(near.name)
                     near.like()
 
 
 def get_near_data(tm):
-    return ['Name: %s \nage: %s\ndistance: %s\nbio: %s\nphotos: %s' % (
-        near.name, near.age, near.distance_km, near.bio, near.photos_obj) for near in tm.get_nearby()]
+    return [
+        "Name: %s \nage: %s\ndistance: %s\nbio: %s\nphotos: %s"
+        % (near.name, near.age, near.distance_km, near.bio, near.photos_obj)
+        for near in tm.get_nearby()
+    ]
 
 
 if __name__ == "__main__":
-    tm = login('', '', '')
+    tm = login("", "", "")
     # likeFB(tm,"")
     print_FB_friends(tm)
     # printMatches(tm)

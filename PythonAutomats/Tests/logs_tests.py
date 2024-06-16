@@ -86,5 +86,5 @@ class LogsTests(unittest.TestCase):
         self.assertIn(message3, lines)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

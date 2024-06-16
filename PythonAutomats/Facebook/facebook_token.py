@@ -16,7 +16,9 @@ def get_access_token(email, password):
     f["email"] = email
     s.submit_form(f)
     f = s.get_form()
-    s.submit_form(f, submit=f.submit_fields['__CONFIRM__'])
-    access_token = re.search(r"access_token=([\w\d]+)", s.response.content.decode()).groups()[0]
+    s.submit_form(f, submit=f.submit_fields["__CONFIRM__"])
+    access_token = re.search(
+        r"access_token=([\w\d]+)", s.response.content.decode()
+    ).groups()[0]
 
     return access_token

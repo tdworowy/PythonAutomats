@@ -11,7 +11,8 @@ SONGS_PATH = "E:\Google_drive\Songs\songsList.txt"
 FOLDER_PATH = "E:\Google_drive\Songs\\"
 FILE_PATH = "E:\Google_drive\Songs\songsIDs.txt"
 
-#https://developer.spotify.com/dashboard/applications/c70703140d1847f8a3260cd112565fbd
+# https://developer.spotify.com/dashboard/applications/c70703140d1847f8a3260cd112565fbd
+
 
 class SpotifyApi:
 
@@ -23,9 +24,14 @@ class SpotifyApi:
 
     def get_token(self, user_name, client_id, client_secret, redirect_uri):
         """https://developer.spotify.com/web-api/using-scopes/"""
-        scope = 'playlist-modify-public'
-        token = util.prompt_for_user_token(username=user_name, scope=scope, client_id=client_id,
-                                           client_secret=client_secret, redirect_uri=redirect_uri)
+        scope = "playlist-modify-public"
+        token = util.prompt_for_user_token(
+            username=user_name,
+            scope=scope,
+            client_id=client_id,
+            client_secret=client_secret,
+            redirect_uri=redirect_uri,
+        )
         if token:
             return token
 
@@ -40,7 +46,7 @@ class SpotifyApi:
         ids = []
         for track in list(id_map):
             try:
-                ids.append(track['tracks']['items'][0]['id'])
+                ids.append(track["tracks"]["items"][0]["id"])
             except Exception as ex:
                 print(ex)
                 continue
@@ -48,20 +54,26 @@ class SpotifyApi:
 
     def save_tracks_ides_to_file(self, tracks_list, file_name):
         create_file_if_not_exist(file_name)
-        with open(file_name, "a")as f1:
+        with open(file_name, "a") as f1:
             for line in self.get_tracks_ids(tracks_list):
                 f1.write(line + "\n")
                 f1.flush()
 
-    def create_playlist(self, name, public=True, ):
-        user_id = sa.sp.current_user()['id']
+    def create_playlist(
+        self,
+        name,
+        public=True,
+    ):
+        user_id = sa.sp.current_user()["id"]
         return self.sp.user_playlist_create(user_id, name, public)
 
     def add_tracks(self, play_list_id, tracks_ides):
-        user_id = sa.sp.current_user()['id']
+        user_id = sa.sp.current_user()["id"]
         try:
-            self.sp.user_playlist_add_tracks(user=user_id, playlist_id=play_list_id, tracks=tracks_ides)
-        except Exception as  ex:
+            self.sp.user_playlist_add_tracks(
+                user=user_id, playlist_id=play_list_id, tracks=tracks_ides
+            )
+        except Exception as ex:
             print(ex)
             pass
 
@@ -76,9 +88,13 @@ def distribution(parts, target, tracks_list, min_=1, max=1):
     max = min_ + inc
     processes = []
     for i in range(1, parts + 1):
-        tracks_list_siced = tracks_list[min: max]
-        if i == parts: max = max + rest
-        process = Process(target=target, args=(tracks_list_siced, FOLDER_PATH + "song_ides%s.txt" % str(i)))
+        tracks_list_siced = tracks_list[min:max]
+        if i == parts:
+            max = max + rest
+        process = Process(
+            target=target,
+            args=(tracks_list_siced, FOLDER_PATH + "song_ides%s.txt" % str(i)),
+        )
         max = max + inc
         min = min + inc
         processes.append(process)
@@ -99,7 +115,9 @@ def songs_ides_distributed(sa, start):
     ides = start
     songs_count = ides + 200
     while ides < count:
-        distribution(pool_count, sa.save_tracks_ides_to_file, songs, min_=ides, max=songs_count)
+        distribution(
+            pool_count, sa.save_tracks_ides_to_file, songs, min_=ides, max=songs_count
+        )
         ides = songs_count
         songs_count = songs_count + 200
         time.sleep(2)
@@ -110,7 +128,7 @@ def songs_ides_distributed(sa, start):
 
 if __name__ == "__main__":
     START = 0
-    with open('auth.txt') as aut:
+    with open("auth.txt") as aut:
         user_name = aut.readline().strip()
         client_id = aut.readline().strip()
         client_secret = aut.readline().strip()
@@ -134,7 +152,7 @@ if __name__ == "__main__":
     stop = 99
     offset = 99
     playlist_count = 1
-    play_list_id = sa.create_playlist("My_all%s" % str(playlist_count))['id']
+    play_list_id = sa.create_playlist("My_all%s" % str(playlist_count))["id"]
 
     while stop <= count:
         ides_striped = [i.strip() for i in ides[start:stop]]
@@ -144,6 +162,6 @@ if __name__ == "__main__":
         offset = offset + 99
         if offset >= LIMIT:
             playlist_count += 1
-            play_list_id = sa.create_playlist("My_all%s" % str(playlist_count))['id']
+            play_list_id = sa.create_playlist("My_all%s" % str(playlist_count))["id"]
             offset = 99
-#TODO Dont't work
+# TODO Dont't work

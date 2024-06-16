@@ -34,5 +34,5 @@ class CalculatorTests(CalculatorBase):
         self.assertEqual(self.calculator.get_calc_result(), "2000.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test_program = unittest.main()

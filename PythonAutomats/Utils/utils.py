@@ -15,18 +15,24 @@ class MyLogging:
 
     @staticmethod
     def clear_loggers():
-        while loggers: loggers.pop()
+        while loggers:
+            loggers.pop()
 
     @staticmethod
     def log(path=os.path.dirname(os.path.abspath(__file__)) + "\\log.log"):
         for logger in loggers:
-            if path in [handler.baseFilename for handler in logger.handlers if
-                        hasattr(handler, 'baseFilename')]:
+            if path in [
+                handler.baseFilename
+                for handler in logger.handlers
+                if hasattr(handler, "baseFilename")
+            ]:
                 return logger
         else:
 
             file_handler = logging.FileHandler(path)
-            file_handler.setFormatter(logging.Formatter("%(levelname)s|%(asctime)s|%(message)s"))
+            file_handler.setFormatter(
+                logging.Formatter("%(levelname)s|%(asctime)s|%(message)s")
+            )
             file_handler.setLevel(logging.DEBUG)
 
             new_logger = logging.getLogger("Logger%s" % get_millis())
@@ -50,20 +56,26 @@ def create_dir(context, name):
 
 
 def take_screenshot(context, path, file):
-    context.driver.save_screenshot(os.path.join(path, file.replace(' ', '_') + '.png'))
+    context.driver.save_screenshot(os.path.join(path, file.replace(" ", "_") + ".png"))
 
 
 def take_screenshot_(driver, path, file):
-    driver.save_screenshot(os.path.join(path,file.replace(' ', '_') + '.png'))
+    driver.save_screenshot(os.path.join(path, file.replace(" ", "_") + ".png"))
 
 
 def message_by_time():
     date_today = date.today()
-    return "Song for " + str(calendar.day_name[date_today.weekday()]) + " " + str(date.today()) + " [AUTO] "
+    return (
+        "Song for "
+        + str(calendar.day_name[date_today.weekday()])
+        + " "
+        + str(date.today())
+        + " [AUTO] "
+    )
 
 
 def characters(frm, to):
-    return ','.join([chr(x) for x in range(frm, to)])  # max 1114111
+    return ",".join([chr(x) for x in range(frm, to)])  # max 1114111
 
 
 def get_millis():

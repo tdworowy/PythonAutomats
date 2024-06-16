@@ -3,13 +3,16 @@ from selenium.webdriver.common.by import By
 
 class CalculatorElements:
     def initialize_elements(self):
-        self.scientific_calculator_link = (By.LINK_TEXT, 'Scientific Calculator')
+        self.scientific_calculator_link = (By.LINK_TEXT, "Scientific Calculator")
         self.scientific_calculator = (By.ID, "sciout")
         self.calculator_result = (By.ID, "sciOutPut")
         self.plus_button = (By.CSS_SELECTOR, "span[onclick=\"r('+')\"]")
         self.change_button = (By.CSS_SELECTOR, "span[onclick=\"r('+/-')\"]")
         self.equal_button = (By.CSS_SELECTOR, "span[onclick=\"r('=')\"]")
-        self.number_buttons = [(By.CSS_SELECTOR, "span[onclick=\"r(%s)\"]" % number) for number in range(0, 10)]
+        self.number_buttons = [
+            (By.CSS_SELECTOR, 'span[onclick="r(%s)"]' % number)
+            for number in range(0, 10)
+        ]
 
     def __init__(self, driverArg):
         self.driver = driverArg
@@ -38,12 +41,14 @@ class CalculatorElements:
 
     def sum(self, num1, num2):
         self.number_button_click(abs(num1))
-        if num1 < 0: self.change_button_click()
+        if num1 < 0:
+            self.change_button_click()
 
         self.plus_button_click()
 
         self.number_button_click(abs(num2))
-        if num2 < 0: self.change_button_click()
+        if num2 < 0:
+            self.change_button_click()
         self.equal_button_click()
 
     def big_sum(self, num1, num2):

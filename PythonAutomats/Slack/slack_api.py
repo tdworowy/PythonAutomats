@@ -10,8 +10,4 @@ class SlackMessageBot:
         pass
 
     def send_message(self, message):
-        self.client.api_call(
-            "chat.postMessage",
-            channel=self.channel,
-            text=message
-        )
+        self.client.api_call("chat.postMessage", channel=self.channel, text=message)

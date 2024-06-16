@@ -9,7 +9,7 @@ from selenium.webdriver import ActionChains
 
 class AddPersonToChat:
     def set_up(self):
-        chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+        chrome_driver_path = get_driver_path() + "\\chromedriver.exe"
         self.driver = webdriver.Chrome(chrome_driver_path)
         self.driver.implicitly_wait(2)
         self.skype_bot = SkypeBot(self.driver)
@@ -36,7 +36,7 @@ class AddPersonToChat:
         self.driver.quit()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     ap = AddPersonToChat()
     try:

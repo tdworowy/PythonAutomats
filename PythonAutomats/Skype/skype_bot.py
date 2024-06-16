@@ -8,27 +8,30 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-class SkypeBot():
+class SkypeBot:
     def initialize_elements(self):
-        self.login_FB = (By.ID, 'loginWithFacebook')
-        self.login_email = (By.ID, 'email')
-        self.login_password = (By.ID, 'pass')
-        self.login_button = (By.ID, 'pass')
+        self.login_FB = (By.ID, "loginWithFacebook")
+        self.login_email = (By.ID, "email")
+        self.login_password = (By.ID, "pass")
+        self.login_button = (By.ID, "pass")
         self.input_field = (By.CSS_SELECTOR, "div.input input.inputField.fontSize-h4")
 
-        self.login_skype = (By.ID, 'username')
-        self.login_skype_button = (By.ID, 'signIn')
-        self.login_skype_password = (By.NAME, 'passwd')
+        self.login_skype = (By.ID, "username")
+        self.login_skype_button = (By.ID, "signIn")
+        self.login_skype_password = (By.NAME, "passwd")
 
-        self.group = (By.CLASS_NAME, 'list-selectable')
+        self.group = (By.CLASS_NAME, "list-selectable")
 
-        self.add_person_button = (By.CSS_SELECTOR, "button[class=\"btn secondary circle stroke\"]")
-        self.add_button = (By.CSS_SELECTOR, "button[aria-label=\"Add\"]")
+        self.add_person_button = (
+            By.CSS_SELECTOR,
+            'button[class="btn secondary circle stroke"]',
+        )
+        self.add_button = (By.CSS_SELECTOR, 'button[aria-label="Add"]')
 
-        self.content = (By.CSS_SELECTOR, "div[class=\"content\"] p")
+        self.content = (By.CSS_SELECTOR, 'div[class="content"] p')
 
     def set_search_item(self, user):
-        self.search_item = (By.CSS_SELECTOR, "li[title=\"" + user + "\"")
+        self.search_item = (By.CSS_SELECTOR, 'li[title="' + user + '"')
 
     def __init__(self, webdriver):
         self.driver = webdriver
@@ -47,10 +50,12 @@ class SkypeBot():
         actions.perform()
 
     def open_skype(self):
-        self.driver.get('https://web.Skype.com/pl/')
+        self.driver.get("https://web.Skype.com/pl/")
 
     def wait_for_input_field(self):
-        WebDriverWait(self.driver, 40).until(EC.visibility_of_any_elements_located(self.input_field))
+        WebDriverWait(self.driver, 40).until(
+            EC.visibility_of_any_elements_located(self.input_field)
+        )
         time.sleep(1)
 
     def login_facebook(self, login, password):
@@ -99,7 +104,7 @@ class SkypeBot():
         time.sleep(2)
 
     def add_person_button_click(self):
-        self.driver.implicitly_wait(5);
+        self.driver.implicitly_wait(5)
         self.driver.find_element(*self.add_person_button).click()
 
     def add_button_click(self):

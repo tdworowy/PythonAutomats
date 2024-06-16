@@ -23,11 +23,11 @@ def main(login, password, thread_id):
     api.logout()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
-    THREADID = '1252344071467839'
+    THREADID = "1252344071467839"
     if len(sys.argv) < 2:
-        with open(os.path.dirname(os.path.abspath(__file__)) + '\\aut.txt') as f:
+        with open(os.path.dirname(os.path.abspath(__file__)) + "\\aut.txt") as f:
             user = f.readline().strip()
             passw = f.readline().strip()
     else:

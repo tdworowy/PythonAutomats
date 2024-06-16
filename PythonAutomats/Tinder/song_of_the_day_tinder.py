@@ -14,13 +14,15 @@ from selenium import webdriver
 def main(login, password, names):
     update_songs_distribution()
     tinder_bot = TinderMessageBot()
-    chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+    chrome_driver_path = get_driver_path() + "\\chromedriver.exe"
     driver = webdriver.Chrome(chrome_driver_path)
-    with open(FOLDER_PATH, 'r') as f:
+    with open(FOLDER_PATH, "r") as f:
         songs_list = f.read()
     songs_list = songs_list.split("\n")
     song_title = choice(songs_list)
-    adapter = TinderAdapter(tiderBot=tinder_bot, name='tomasz.dworowy', receivers=names, driver=driver)
+    adapter = TinderAdapter(
+        tiderBot=tinder_bot, name="tomasz.dworowy", receivers=names, driver=driver
+    )
     song = ApiAdapter(adapter)
     song.my_logging.log().info("Get random song")
     song.login(login, password)
@@ -28,7 +30,7 @@ def main(login, password, names):
     song.sent_messages([url])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]
     nams = sys.argv[4]

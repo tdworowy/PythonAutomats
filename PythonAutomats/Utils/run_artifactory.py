@@ -9,5 +9,5 @@ def run_artifactory(path_to_bat):
     print(process.pid)
 
 
-if __name__ == '__main__':
-    run_artifactory(r'D:\artifactory\artifactory-oss-5.5.1\bin\artifactory.bat')
+if __name__ == "__main__":
+    run_artifactory(r"D:\artifactory\artifactory-oss-5.5.1\bin\artifactory.bat")

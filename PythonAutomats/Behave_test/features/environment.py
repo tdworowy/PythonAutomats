@@ -7,7 +7,7 @@ BEHAVE_DEBUG = True
 
 
 def before_all(context):
-    time_stump = time.strftime('%Y-%m-%d %H:%M:%S')
+    time_stump = time.strftime("%Y-%m-%d %H:%M:%S")
     logging.info(time_stump)
 
 
@@ -22,6 +22,7 @@ def before_step(context, step):
 def after_step(context, step):
     if BEHAVE_DEBUG and step.status == "failed":
         import ipdb
+
         logging.info(ipdb.post_mortem(step.exc_traceback))
 
 

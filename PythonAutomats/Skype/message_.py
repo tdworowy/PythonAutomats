@@ -7,7 +7,7 @@ from selenium import webdriver
 
 @log_exception
 def main(login, password):
-    chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+    chrome_driver_path = get_driver_path() + "\\chromedriver.exe"
     driver = webdriver.Chrome(chrome_driver_path)
     driver.implicitly_wait(2)
     skype_bot = SkypeBot(driver)
@@ -19,5 +19,5 @@ def main(login, password):
     skype_bot.send_message_to_selected(characters(10000, 10500))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main("", "")

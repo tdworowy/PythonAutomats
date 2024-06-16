@@ -22,7 +22,7 @@ class SongOfTheDay:
 
     def set_up(self, page_id, app_id, app_secret):
         update_songs_distribution()
-        chrome_driver_path = get_driver_path() + '\\chromedriver.exe'
+        chrome_driver_path = get_driver_path() + "\\chromedriver.exe"
         self.driver = webdriver.Chrome(chrome_driver_path)
         self.driver.implicitly_wait(2)
         self.face_bot = FaceBookPost(page_id, app_id, app_secret)
@@ -36,7 +36,7 @@ def main(page_id, app_id, app_secred):
     song = SongOfTheDay(page_id, app_id, app_secred)
 
     song.mylogging.log().info("Get random song")
-    with open(FOLDER_PATH, 'r') as f:
+    with open(FOLDER_PATH, "r") as f:
         songs = f.read()
 
     url = get_youtube_url(song.driver, choice(songs.split("\n")))
@@ -44,7 +44,7 @@ def main(page_id, app_id, app_secred):
     song.tear_down()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     page_id = sys.argv[1]
     app_id = sys.argv[2]
     app_secret = sys.argv[3]

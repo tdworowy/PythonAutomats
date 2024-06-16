@@ -13,7 +13,7 @@ class SkypeApi:
         self.chats = None
 
     def get_contact_id(self, first, last):
-        for contact in self.skype.contacts.search(first + ' ' + last):
+        for contact in self.skype.contacts.search(first + " " + last):
             if contact.name.first == first and contact.name.last == last:
                 print("Name: %s ID: %s" % (contact.name, contact.id))
                 return contact.id
@@ -25,7 +25,7 @@ class SkypeApi:
         self.chats = set()
         for chat in self.skype.chats.recent().values():
             print(chat)
-            if hasattr(chat, 'topic') and chat.topic in names:
+            if hasattr(chat, "topic") and chat.topic in names:
                 print("Found: %s" % chat)
                 self.chats.add(chat)
 
@@ -80,4 +80,3 @@ class SkypeApiAdapter:
         self.my_logging.log().info(message)
         self.skype_api.set_chats(self.groups)
         self.skype_api.send_message(message)
-

@@ -15,7 +15,7 @@ from fbchat import ThreadType
 
 def check_queue(queue, time_stumps):
     msg = queue.get()
-    msq = msg.split(',')
+    msq = msg.split(",")
     time_stump = re.search(r"\d+", msq[1]).group()
     if time_stump not in time_stumps:
         time_stumps.append(time_stump)
@@ -23,7 +23,7 @@ def check_queue(queue, time_stumps):
 
 
 def send_song(api):
-    with open(FOLDER_PATH, 'r') as f:
+    with open(FOLDER_PATH, "r") as f:
         songs = f.read()
     song_title = choice(songs.split("\n"))
     url = get_youtube_url(song_title.strip())
@@ -48,7 +48,7 @@ def save_time_stumps(file, time_stumps):
         time.sleep(120)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     user = sys.argv[1]
     passw = sys.argv[2] + " " + sys.argv[3]
 
@@ -58,15 +58,15 @@ if __name__ == '__main__':
     try:
         if os.path.isfile(file) and os.path.getsize(file) > 0:
             with open(file) as f:
-                time_stumps = manager.list(f.read().split('\n'))
+                time_stumps = manager.list(f.read().split("\n"))
         else:
-            open(file, 'w').close()
+            open(file, "w").close()
 
         queue = Queue()
 
         PHASE = ["[SONG]", "[song]"]
 
-        THREADID1 = '1252344071467839'  # group
+        THREADID1 = "1252344071467839"  # group
         # THREADID2 = '100000471818643'  # user
 
         face_bot = FaceBookMessageBot(thread_id=THREADID1, thread_type=ThreadType.GROUP)
@@ -78,7 +78,9 @@ if __name__ == '__main__':
 
         # process1 = Process(target=start_monitor, args=(PHASE, [fm1, fm2], queue))
         process1 = Process(target=start_monitor, args=(PHASE, [fm1], queue))
-        process2 = Process(target=send_songs_threads, args=(song, ThreadType.GROUP, queue, time_stumps))
+        process2 = Process(
+            target=send_songs_threads, args=(song, ThreadType.GROUP, queue, time_stumps)
+        )
         process3 = Process(target=save_time_stumps, args=(file, time_stumps))
 
         for process in [process1, process2, process3]:

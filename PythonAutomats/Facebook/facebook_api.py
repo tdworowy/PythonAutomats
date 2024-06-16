@@ -18,7 +18,11 @@ class FaceBookMessageBot:
     def send_message(self, message, repeat_on_fail=7):
         repeat = repeat_on_fail
         try:
-            self.client.send(Message(text=message), thread_id=self.thread_id, thread_type=self.thread_type)
+            self.client.send(
+                Message(text=message),
+                thread_id=self.thread_id,
+                thread_type=self.thread_type,
+            )
         except Exception as ex:
             print(str(ex))
             if repeat > 0:
@@ -30,9 +34,11 @@ class FaceBookMessageBot:
 
     def send_message_my(self, message):
         thread_type = ThreadType.USER
-        self.client.sendMessage(message, thread_id=self.client.client_id, thread_type=thread_type)
+        self.client.sendMessage(
+            message, thread_id=self.client.client_id, thread_type=thread_type
+        )
 
-    def get_messages(self,  limit=30, before=None):
+    def get_messages(self, limit=30, before=None):
         return self.client.fetchThreadMessages(self.thread_id, limit, before)
 
     def logout(self):

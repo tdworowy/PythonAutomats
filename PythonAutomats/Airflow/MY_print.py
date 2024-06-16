@@ -1,4 +1,3 @@
-
 from __future__ import print_function
 
 import time
@@ -10,22 +9,23 @@ from airflow.models import DAG
 from airflow.operators.python_operator import PythonOperator
 
 args = {
-    'owner': 'airflow',
-    'start_date': airflow.utils.dates.days_ago(2),
+    "owner": "airflow",
+    "start_date": airflow.utils.dates.days_ago(2),
 }
 
 dag = DAG(
-    dag_id='my_print',
+    dag_id="my_print",
     default_args=args,
     schedule_interval=None,
 )
 
+
 def my_print(ds, **kwargs):
-   print("TEST")
+    print("TEST")
 
 
 run_this = PythonOperator(
-    task_id='my_print_task',
+    task_id="my_print_task",
     provide_context=True,
     python_callable=my_print,
     dag=dag,
