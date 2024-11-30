@@ -1,4 +1,4 @@
-apache-airflow==2.7.2
+apache-airflow==2.9.0
 beautifulsoup4==4.12.3
 behave==1.2.6
 facepy==1.0.12
